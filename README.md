@@ -1,6 +1,6 @@
 ![Header](assets/img/ryder_isologotipos.png)
 
-# Pesticidas introducidos silenciosamente (PIS)
+# PIS - Mapa Normativo
 
 Módulo de Mapa Normativo para proyecto PIS de Democracia en Red
 
