@@ -2,7 +2,7 @@
 
 # Pesticidas introducidos silenciosamente (PIS)
 
-Dashboard y web para proyecto "Pesticidas introducidos silenciosamente" (PIS) de Democracia en Red
+Módulo de Mapa Normativo para proyecto PIS de Democracia en Red
 
 
 ## Setup
