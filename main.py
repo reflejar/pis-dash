@@ -16,38 +16,27 @@ import dash
 import dash_bootstrap_components as dbc
 from dash import html
 
-from componentes.navbar import Navbar
-from componentes.footer import Footer
-from componentes.filtros import Filtros
-from componentes.mapa import MapaNormativo
+from pages import (
+	mapa_normativo, 
+)
+
 
 # Se crea Dash y elegimos el tema
 app = dash.Dash(
 	__name__,
 	server=server,
 	external_stylesheets=[dbc.icons.BOOTSTRAP], # COSMO, FLATLY, LUX, MINTY
+	use_pages=True,
 	update_title="Actualizando...",
 	prevent_initial_callbacks=True,
 	title="PIS | Mapa normativo"
 )
 
+dash.register_page(mapa_normativo.__name__, title="Mapa Normativo", path='/mapa-normativo', layout=mapa_normativo.layout)
+
 
 # Se agregan los componentes de la web
-app.layout = html.Div(
-	children=[
-		Navbar,     
-		html.Div([
-				dbc.Row([
-					dbc.Col(Filtros, md=3),
-					dbc.Col(MapaNormativo, md=9)
-				]),
-				html.Hr(),
-				],
-				className="my-5 mx-5 min-vh-100",
-			),
-		Footer
-	]
-)
+app.layout = html.Div(children=[dash.page_container])
 
 
 # Se corre la aplicación

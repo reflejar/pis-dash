@@ -10,7 +10,7 @@ import json
 import pandas as pd
 
 
-from ._data import (
+from data import (
     cursos_geojson,
     escuelas_parcelas_geojson,
     cuerpos_geojson,
