@@ -1,9 +1,11 @@
 ![Header](assets/img/ryder_isologotipos.png)
 
-# PIS - Mapa Normativo
+# PIS - Aplicaciones Dash
 
-Módulo de Mapa Normativo para proyecto PIS de Democracia en Red
+Aplicaciones realizadas en python dash para proyecto PIS de Democracia en Red
 
+- Módulo de Mapa Normativo 
+- Módulo de Ranking Ambiental
 
 ## Setup
 
