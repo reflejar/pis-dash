@@ -29,11 +29,11 @@ app = dash.Dash(
 	use_pages=True,
 	update_title="Actualizando...",
 	prevent_initial_callbacks=True,
-	title="PIS | Mapa normativo"
+	title="PIS"
 )
 
-dash.register_page(mapa_normativo.__name__, title="Mapa Normativo", path='/mapa-normativo', layout=mapa_normativo.layout)
-dash.register_page(ranking_ambiental.__name__, title="Mapa Normativo", path='/ranking-ambiental', layout=ranking_ambiental.layout)
+dash.register_page(mapa_normativo.__name__, title="PIS | Mapa Normativo", path='/mapa-normativo', layout=mapa_normativo.layout)
+dash.register_page(ranking_ambiental.__name__, title="PIS | Ranking Ambiental", path='/ranking-ambiental', layout=ranking_ambiental.layout)
 
 
 # Se agregan los componentes de la web
