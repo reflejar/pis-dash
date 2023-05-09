@@ -3,11 +3,10 @@
 ############################
 from flask import Flask
 server = Flask(__name__)
+
 # Se incorporan endpoints necesarios para k8s
-@server.route('/k8s/readiness/')
+@server.route('/')
 def readiness(): return "OK", 200 
-@server.route('/k8s/liveness/') 
-def liveness(): return "OK", 200  
 
 ############################
 ### Se inicia Dash
@@ -17,7 +16,8 @@ import dash_bootstrap_components as dbc
 from dash import html
 
 from pages import (
-	mapa_normativo, 
+	mapa_normativo,
+	ranking_ambiental
 )
 
 
@@ -33,6 +33,7 @@ app = dash.Dash(
 )
 
 dash.register_page(mapa_normativo.__name__, title="Mapa Normativo", path='/mapa-normativo', layout=mapa_normativo.layout)
+dash.register_page(ranking_ambiental.__name__, title="Mapa Normativo", path='/ranking-ambiental', layout=ranking_ambiental.layout)
 
 
 # Se agregan los componentes de la web
