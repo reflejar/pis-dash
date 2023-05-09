@@ -2,10 +2,10 @@ version: '3'
 
 
 services:
-  web: &web
+  app: &app
     build:
       context: .
-    image: pis-normativo:latest
+    image: pis-dash:latest
     volumes:
       - .:/app
     ports:
