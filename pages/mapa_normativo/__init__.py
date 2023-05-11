@@ -5,6 +5,9 @@ import dash_bootstrap_components as dbc
 
 from .componentes.filtros import Filtros
 from .componentes.mapa import MapaNormativo
+from .componentes.footer_normativo import FooterNormativo
+
+
 
 
 layout = html.Div([
@@ -12,7 +15,14 @@ layout = html.Div([
             dbc.Col(Filtros, md=3),
             dbc.Col(MapaNormativo, md=9)
         ]),
+        html.Br(),
+        html.Br(),
         html.Hr(),
+        dbc.Row([
+            dbc.Col(FooterNormativo, md=12),
+        ])
+
+
         ],
         className="my-5 mx-5 min-vh-100",
     ) 
