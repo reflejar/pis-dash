@@ -78,6 +78,11 @@ FooterNormativo = dbc.Container(
         html.P([
             "+54 9 2265 41-8289"
         ]),
+        html.Br(),
+        html.I([
+            """*Los datos mostrados en este mapa se obtuvieron de esta fuente, y las distancias de protección utilizadas
+(zonas de exclusión) se obtuvieron de la siguiente fuente."""
+        ]),
 
     ],
     id="footer-normativo",
