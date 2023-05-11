@@ -26,7 +26,13 @@ escuelas_parcelas_amort=gpd.read_parquet("./data/escuelas_parcelas_amort.parquet
 cursos["tooltip"]="<b>Nombre</b>: "+cursos["NOMBRE"]+'<extra></extra>'
 cursos["popup"]=cursos["tooltip"]
 
-escuelas_parcelas["tooltip"]='<b>Nombre</b>: '+escuelas_parcelas["nombre.establecimiento"]+'<br>'+'<b>Nivel</b>: '+escuelas_parcelas["nivel"]+ '<br>'+'<b>Teléfono</b>: '+escuelas_parcelas["Tel"]+'<br>'+'<b>Email</b>: '+escuelas_parcelas["email"]+'<extra></extra>'
+concat_cols = lambda row: '<b>Nombre</b>: '+ row['nombre.establecimiento']+'<br>'+'<b>Nivel</b>: ' + row['nivel'] + '<br>'+'<b>Teléfono</b>: '+row["Tel"]+'<br>'+'<b>Email</b>: '+row["email"]+ ("<hr>"+ '<b>Nombre</b>: '+ row['nombre.establecimiento1']+'<br>'+'<b>Nivel</b>: ' + row['nivel1']+ '<br>'+'<b>Teléfono</b>: '+row["Tel1"]+'<br>'+'<b>Email</b>: '+row["email1"] if row['nombre.establecimiento1']!="-" or row['nivel1']!="-" else '')
+
+escuelas_parcelas['tooltip'] = escuelas_parcelas.apply(concat_cols, axis=1)
+escuelas_parcelas['count'] = escuelas_parcelas['tooltip'].apply(lambda x: x.count("<b>Nivel</b>"))
+escuelas_parcelas['tooltip'] = escuelas_parcelas.apply(lambda row: "<b>Edificio Escolar Compartido</b><br><br>"  + row['tooltip'] if row['count'] > 1 else row['tooltip'], axis=1)
+
+#escuelas_parcelas["tooltip"]='<b>Nombre</b>: '+escuelas_parcelas["nombre.establecimiento"]+'<br>'+'<b>Nivel</b>: '+escuelas_parcelas["nivel"]+ '<br>'+'<b>Teléfono</b>: '+escuelas_parcelas["Tel"]+'<br>'+'<b>Email</b>: '+escuelas_parcelas["email"]+'<extra></extra>'
 escuelas_parcelas["popup"]=escuelas_parcelas["tooltip"]
 
 cuerpos["tooltip"]='<b>Nombre</b>: '+cuerpos["NOMBRE"]+'<br>'+'<b>Tipo</b>: '+cuerpos['TIPO']+'<extra></extra>'
