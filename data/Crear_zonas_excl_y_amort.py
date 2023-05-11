@@ -118,11 +118,20 @@ escuelas_en_parcelas = gpd.read_file("./Inputs/escuelas_en_parcelas.geojson")
 # escuelas_en_parcelas["Tel"]="("+escuelas_en_parcelas["característica.telefónica"]+") "+escuelas_en_parcelas['teléfono']
 # escuelas_en_parcelas["Tel"][escuelas_en_parcelas["Tel"].str.contains('one')] = "-"
 # escuelas_en_parcelas = escuelas_en_parcelas[escuelas_en_parcelas['ubicación'].str.contains('Rural')]
-escuelas_en_parcelas["nivel"]=escuelas_en_parcelas["nivel"].fillna("-")
-escuelas_en_parcelas["email"]=escuelas_en_parcelas["email"].fillna("-")
-escuelas_en_parcelas["Tel"]=escuelas_en_parcelas["Tel"].fillna("-")
-escuelas_en_parcelas["nombre.establecimiento"]=escuelas_en_parcelas["nombre.establecimiento"].fillna("-")
-escuelas_en_parcelas["direccion"]=escuelas_en_parcelas["direccion"].fillna("-")
+
+#Remplazar NA por - en todas las columnas de nivel. email, etc
+for idx in [i for i, c in enumerate(escuelas_en_parcelas.columns) if c.startswith("nivel")]:
+    escuelas_en_parcelas.iloc[:, idx] = escuelas_en_parcelas.iloc[:, idx].fillna("-")
+for idx in [i for i, c in enumerate(escuelas_en_parcelas.columns) if c.startswith("email")]:
+    escuelas_en_parcelas.iloc[:, idx] = escuelas_en_parcelas.iloc[:, idx].fillna("-")
+for idx in [i for i, c in enumerate(escuelas_en_parcelas.columns) if c.startswith("Tel")]:
+    escuelas_en_parcelas.iloc[:, idx] = escuelas_en_parcelas.iloc[:, idx].fillna("-")
+for idx in [i for i, c in enumerate(escuelas_en_parcelas.columns) if c.startswith("nombre.establecimiento")]:
+    escuelas_en_parcelas.iloc[:, idx] = escuelas_en_parcelas.iloc[:, idx].fillna("-")
+for idx in [i for i, c in enumerate(escuelas_en_parcelas.columns) if c.startswith("direccion")]:
+    escuelas_en_parcelas.iloc[:, idx] = escuelas_en_parcelas.iloc[:, idx].fillna("-")    
+
+
 
 escuelas_en_parcelas.to_parquet("./escuelas_parcelas.parquet")
 
