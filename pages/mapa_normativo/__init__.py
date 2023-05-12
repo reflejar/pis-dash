@@ -12,8 +12,8 @@ from .componentes.footer_normativo import FooterNormativo
 
 layout = html.Div([
         dbc.Row([
-            dbc.Col(Filtros, md=3),
-            dbc.Col(MapaNormativo, md=9)
+            dbc.Col(Filtros, lg=3),
+            dbc.Col(MapaNormativo, lg=9)
         ]),
         html.Br(),
         html.Br(),
