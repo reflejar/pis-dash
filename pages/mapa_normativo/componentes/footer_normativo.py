@@ -4,16 +4,22 @@ import dash_bootstrap_components as dbc
 
 FooterNormativo = dbc.Container(
     [
+        html.H4("Detalle de las distancias protegidas según la ordenanza citada", className="text-white"),
         dbc.Table([
-            html.Thead(html.Tr([html.Th("BIENES PROTEGIDOS"), html.Th("EXCLUSIÓN AÉREA") , html.Th("ZONA DE EXCLUSIÓN"), html.Th("ZONA DE AMORTIGUAMIENTO")]), className="bs-primary"),
+            html.Thead(
+                html.Tr([
+                    html.Th("BIENES PROTEGIDOS"), html.Th("EXCLUSIÓN AÉREA") , html.Th("ZONA DE EXCLUSIÓN"), html.Th("ZONA DE AMORTIGUAMIENTO"),
+                ],
+                className="text-white")
+            , className="bg-secondary"),
             html.Tbody([
-                html.Tr([html.Td("Zonas urbanas"), html.Td("2000 m"), html.Td("1000 Mts"), html.Td("500 Mts")]),
-                html.Tr([html.Td("Población Rural"), html.Td("2000 m"), html.Td("1000 Mts"), html.Td("500 Mts")]),
-                html.Tr([html.Td("Escuelas Rurales"), html.Td("300 m"), html.Td("200 Mts"), html.Td("100 Mts")]),
-                html.Tr([html.Td("Estaciones de bombeo*"), html.Td("0 m"), html.Td("50 Mts"), html.Td("100 Mts")]),
-                html.Tr([html.Td("Superficies de agua"), html.Td("0 m"), html.Td("50 Mts"), html.Td("50 Mts")]), 
-                
-                ])
+                html.Tr([html.Td("Zonas urbanas"), html.Td("2000 m"), html.Td("1000 Mts"), html.Td("500 Mts")], className="text-dark"),
+                html.Tr([html.Td("Población Rural"), html.Td("2000 m"), html.Td("1000 Mts"), html.Td("500 Mts")], className="text-dark"),
+                html.Tr([html.Td("Escuelas Rurales"), html.Td("300 m"), html.Td("200 Mts"), html.Td("100 Mts")], className="text-dark"),
+                html.Tr([html.Td("Estaciones de bombeo*"), html.Td("0 m"), html.Td("50 Mts"), html.Td("100 Mts")], className="text-dark"),
+                html.Tr([html.Td("Superficies de agua"), html.Td("0 m"), html.Td("50 Mts"), html.Td("50 Mts")], className="text-dark"), 
+                ], className="bg-white bg-opacity-75"
+                )
         ],  bordered=True),
         html.I([
             "*Las estaciones de bombeo contemplan tambien las camaras de inspeccion de agua abastecimiento público."
