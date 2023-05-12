@@ -252,8 +252,8 @@ MapaNormativo = html.Div(
                 id="pane_escuelas"
             ),            
         ], 
-        style={'width': '1080px', 'height': '720px'},
-        className="mt-3"
+        # style={'width': '1080px', 'height': '720px'},
+        className="mt-3 min-vh-75"
         ),
     ]
 )
