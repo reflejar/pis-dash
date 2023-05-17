@@ -17,7 +17,8 @@ from dash import html
 
 from pages import (
 	mapa_normativo,
-	ranking_ambiental
+	ranking_ambiental,
+	indicadores_ambientales
 )
 
 
@@ -34,6 +35,7 @@ app = dash.Dash(
 
 dash.register_page(mapa_normativo.__name__, title="PIS | Mapa Normativo", path='/mapa-normativo', layout=mapa_normativo.layout)
 dash.register_page(ranking_ambiental.__name__, title="PIS | Ranking Ambiental", path='/ranking-ambiental', layout=ranking_ambiental.layout)
+dash.register_page(indicadores_ambientales.__name__, title="PIS | Indicadores Ambientales", path='/indicadores-ambientales', layout=indicadores_ambientales.layout)
 
 
 # Se agregan los componentes de la web
