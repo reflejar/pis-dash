@@ -19,7 +19,8 @@ Filtros_censos = html.Div([
                         searchable = True,
                         placeholder = 'Selecciona un municipio..',
                         value=[""],
-                        clearable=True
+                        clearable=True,
+                        
                         )], 
                         className='col-md-3'),
 
