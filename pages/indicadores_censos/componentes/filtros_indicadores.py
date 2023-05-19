@@ -1,7 +1,7 @@
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 
-from data.base_indicadores import anio_censo, municipios
+from pages.indicadores_censos.data_censo.base_indicadores import anio_censo, partidos
 
 Filtros_censos = html.Div([
     dbc.Container(
@@ -11,13 +11,13 @@ Filtros_censos = html.Div([
                 html.Div(className='col-3'), 
                          
                 dbc.Col([
-                    html.Label(htmlFor="select-municipios", title='Municipios'),
+                    html.Label(htmlFor="select-partidos", title='partidos'),
                     dcc.Dropdown(
-                        id="select-municipios",
-                        options=municipios,
+                        id="select-partido",
+                        options=partidos,
                         multi=True,
                         searchable = True,
-                        placeholder = 'Selecciona un municipio..',
+                        placeholder = 'Selecciona un partido..',
                         value=[""],
                         clearable=True
                         )], 
@@ -38,5 +38,5 @@ Filtros_censos = html.Div([
                 ]),
         ]),
     ],
-    id="filtros",
+    id="filtros-censo",
 )
