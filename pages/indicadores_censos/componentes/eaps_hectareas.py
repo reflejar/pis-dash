@@ -59,10 +59,8 @@ EAPS_HA = dbc.Container(
                         ),
                     ],
                     id="modal",
-                    size="xl",
                 ),
             ],
-            style={"width": "18rem"},
         )
     ],
     className="p-5",
