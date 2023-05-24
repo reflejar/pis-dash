@@ -186,7 +186,7 @@ escuelas_amort.to_parquet("./escuelas_parcelas_amort.parquet")
 # escuelas_amort.to_parquet("./Inputs/escuelas_amort.parquet")
 
 ####  Superficies de agua #####
-cuerpos=gpd.read_file("./Inputs/cuerpos.geojson")
+cuerpos=gpd.read_file("./Inputs/cuerpos.geojson",encoding="ASCI")
 cuerpos=cuerpos.reset_index()
 
 cuerpos.to_parquet("./cuerpos.parquet")
