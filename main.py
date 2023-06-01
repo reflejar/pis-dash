@@ -33,7 +33,8 @@ app = dash.Dash(
 	use_pages=True,
 	update_title="Actualizando...",
 	prevent_initial_callbacks=True,
-	title="PIS"
+	title="PIS",
+	suppress_callback_exceptions=True,
 )
 
 dash.register_page(mapa_normativo.__name__, title="PIS | Mapa Normativo", path='/mapa-normativo', layout=mapa_normativo.layout)
