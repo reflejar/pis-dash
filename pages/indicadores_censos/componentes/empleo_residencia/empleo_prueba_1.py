@@ -6,14 +6,13 @@ from pages.indicadores_censos.data_censo.base_indicadores import base_censos, VA
 import plotly.graph_objects as go
 import plotly.express as px
 import plotly.colors as colors
+
 ##### VARIABLES ######
 
 VAR_TOTAL_EAPS = 'Total EAPS'
 VAR_EAPS_Q = 'Cantidad de EAPs'
-
-# # colores
-# color_territorial = '#6E5FA8'
-# color_estatal = '#BDBDBD'
+#COLOR
+color_empleo_residencia = '#EF7418'
 
 # Titulos
 graph_title =  'Cantidad de EAPS según el año del censo'
@@ -25,13 +24,21 @@ df_eaps_q = df_base_original[[VAR_ANIO_CENSO, VAR_PARTIDO, VAR_TOTAL_EAPS]]
 df_eaps_q = df_eaps_q.rename(columns = {VAR_TOTAL_EAPS: VAR_EAPS_Q})
 
 
-EAPS_HA = dbc.Container(
+EMPLEO_PRUEBA = dbc.Container(
     [
         dbc.Card(
             [
-                
-                dbc.CardHeader(graph_title),
-                dbc.CardBody(dcc.Graph(id="q-eaps-total")),
+                dbc.CardBody(
+                    Hash(dbc.Row(
+                        [
+                        dbc.Col(dcc.Graph(id="empleo-prueba-1"), md=12),
+                        ]
+                    ),
+                    size=24,
+                    color=color_empleo_residencia,
+                    )
+                    
+                )
                 # dbc.CardFooter(
                 #     dbc.Button("Ampliar", id="open-modal-button", color="primary"),
                 # ),
@@ -54,12 +61,12 @@ EAPS_HA = dbc.Container(
             id="tarjeta_eaps_cantidad"
         )
     ],
-    className="contenedor-eaps-cantidad",
+    className="contenedor-empleo-prueba",
     
 )
 
 @callback(
-    Output("q-eaps-total", "figure"), 
+    Output("empleo-prueba-1", "figure"), 
     [
         Input("select-partido", "value")
     ]
@@ -79,7 +86,7 @@ def update_bar_chart(partidos):
 
     df = df.groupby(by = [VAR_ANIO_CENSO])[VAR_EAPS_Q].sum().reset_index()
 
-    fig = px.bar(df, x=VAR_ANIO_CENSO, y=VAR_EAPS_Q, color_discrete_sequence=["#316397"])
+    fig = px.bar(df, x=VAR_ANIO_CENSO, y=VAR_EAPS_Q, color_discrete_sequence=[color_empleo_residencia],text=VAR_EAPS_Q)
     fig.update_layout(barmode='stack', plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
     fig.update_xaxes( title_text = "Año del censo", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
     fig.update_yaxes(title_text = "Cantidad de EAPS",  title_font=dict(size=12,family='Verdana',color='black'), tickfont=dict(family='Calibri', color='black', size=10))

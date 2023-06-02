@@ -4,9 +4,7 @@ from dash import html
 import dash_bootstrap_components as dbc
 from .componentes.texto_inicial_indicadores import TextoIndicadores
 from .componentes.filtros_indicadores import Filtros_censos
-# from .componentes.concentracion_tierra import EAPS_HA
-# from .componentes.eaps_tamanio import Q_EAPs_tamanio
-from .componentes.tab_eaps_tamanio import card_example
+from .componentes.solapas_indicadores import SolapasIndicadores
 
 
 layout = html.Div([
@@ -19,7 +17,7 @@ layout = html.Div([
         dbc.Container(
         children=[
         dbc.Row([
-            dbc.Col(card_example, md=12)
+            dbc.Col(SolapasIndicadores, md=12)
             # dbc.Col("", md=1),            
             # dbc.Col(Q_EAPs_tamanio, md=5),                                      
                             ]),

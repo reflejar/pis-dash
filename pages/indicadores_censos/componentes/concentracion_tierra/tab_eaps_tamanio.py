@@ -4,7 +4,7 @@ from dash_loading_spinners import Hash
 import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
-from pages.indicadores_censos.componentes.concentracion_tierra import EAPS_HA
+from .concetracion_tierra import EAPS_HA
 
 card_example = html.Div([
     #html.H1('Analisis de los Censos Agropecuarios Nacionales'),
