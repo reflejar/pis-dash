@@ -31,7 +31,7 @@ Filtros_censos = html.Div([
                             options=anio_censo,
                             multi=True,
                             searchable=True,
-                            placeholder = 'Selecciona el año del censo..',
+                            placeholder = 'Selecciona el indicador..',
                             value=[""],
                             clearable=True
                         )],

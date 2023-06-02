@@ -8,6 +8,7 @@ server = Flask(__name__)
 @server.route('/')
 def readiness(): return """
     <h1><a href="/mapa-normativo">Mapa normativo</a></h1>
+    <h1><a href="/indicadores-censo">Indicadores censo</a></h1>
     <h1><a href="/ranking-ambiental">Ranking</a></h1>
 """, 200 
 
@@ -33,7 +34,8 @@ app = dash.Dash(
 	use_pages=True,
 	update_title="Actualizando...",
 	prevent_initial_callbacks=True,
-	title="PIS"
+	title="PIS",
+	suppress_callback_exceptions=True,
 )
 
 dash.register_page(mapa_normativo.__name__, title="PIS | Mapa Normativo", path='/mapa-normativo', layout=mapa_normativo.layout)

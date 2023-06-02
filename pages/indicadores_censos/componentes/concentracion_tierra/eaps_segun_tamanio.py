@@ -18,9 +18,9 @@ VAR_EAPS_Q = 'Cantidad de EAPs'
 VAR_TAMANIO_EAPS = 'Tamaño EAPs'
 
 
-# colores
-color_territorial = '#6E5FA8'
-color_estatal = '#BDBDBD'
+color_concentracion_tierra_1 = '#89370B'
+color_concentracion_tierra_2 = '#DEDE7C'
+
 
 # Titulos
 graph_title =  'Cantidad de EAPS según tamaño'
@@ -38,12 +38,10 @@ grandes_df_base[VAR_TAMANIO_EAPS] = 'Grandes (>500 ha)'
 
 df_base = pd.concat([pequenias_df_base, grandes_df_base])
 
-#totales_df_base = df_base[[VAR_EAPS_PEQ, VAR_ANIO_CENSO, VAR_PARTIDO]]
-
 ###### GRAFICO  #####   
 Q_EAPs_tamanio = dbc.Card(
             [  
-                dbc.CardHeader(graph_title),
+                #dbc.CardHeader(graph_title),
                 dbc.CardBody(
                     Hash(dbc.Row(
                         [
@@ -51,7 +49,7 @@ Q_EAPs_tamanio = dbc.Card(
                         ]
                     ),
                     size=24,
-                    color="#6e5fa8",
+                    color=color_concentracion_tierra_1,
                     )
                     
                 )
@@ -61,9 +59,6 @@ Q_EAPs_tamanio = dbc.Card(
             outline=True,
             id="censo-q-eaps-tamanio"
     )
-
-#                        dbc.Col("",id = 'texto-q-eaps-tamanio',md=12)
-
 
 @callback(
     Output("q-eaps-tamanio", "figure"), 
@@ -91,8 +86,9 @@ def update_bar_chart(partidos, periodos):
 #        return NoHayDatos['linea']
 
     df = df.groupby(by = [VAR_ANIO_CENSO, VAR_TAMANIO_EAPS])[VAR_EAPS_Q].sum().reset_index()
+    df[VAR_EAPS_Q]= round(df[VAR_EAPS_Q],2)
 
-    fig = px.histogram(df, x=VAR_ANIO_CENSO, y=VAR_EAPS_Q, color=VAR_TAMANIO_EAPS, barnorm='percent')
+    fig = px.histogram(df, x=VAR_ANIO_CENSO, y=VAR_EAPS_Q, color=VAR_TAMANIO_EAPS, barnorm='percent', text_auto=True, color_discrete_sequence=[color_concentracion_tierra_1, color_concentracion_tierra_2 ])
     fig.update_layout(barmode='stack', plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
     fig.update_xaxes( title_text = "", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
     fig.update_yaxes(title_text = "Distribución de EAPs según tamaño",  title_font=dict(size=12,family='Verdana',color='black'), tickfont=dict(family='Calibri', color='black', size=10))
