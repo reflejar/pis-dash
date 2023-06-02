@@ -8,6 +8,7 @@ server = Flask(__name__)
 @server.route('/')
 def readiness(): return """
     <h1><a href="/mapa-normativo">Mapa normativo</a></h1>
+    <h1><a href="/indicadores-censo">Indicadores censo</a></h1>
     <h1><a href="/ranking-ambiental">Ranking</a></h1>
 """, 200 
 
