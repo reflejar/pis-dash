@@ -80,7 +80,7 @@ def update_bar_chart(partidos):
     df = df_eaps_q.copy()
     
     if len(sel_partido) >0:
-        mask = df[VAR_PARTIDO].isin(sel_partido)
+        mask = df[VAR_PARTIDO]==partidos
         df = df[mask]
     
 

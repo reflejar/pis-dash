@@ -63,23 +63,18 @@ EMPLEO_PRUEBA_2 = dbc.Card(
 @callback(
     Output("q-empleo-prueba-2", "figure"), 
     [
-        Input("select-partido", "value"),
-        Input("select-periodo", "value")
+        Input("select-partido", "value")
     ]
 )
 
-def update_bar_chart(partidos, periodos):
+def update_bar_chart(partidos):
 
     sel_partido = [c for c in partidos if c != '']
-    sel_periodo = [c for c in periodos if c != '']
 
     df = df_base.copy()
     
     if len(sel_partido) >0:
         mask = df[VAR_PARTIDO].isin(sel_partido)
-        df = df[mask]
-    if len(sel_periodo) >0:
-        mask = df[VAR_ANIO_CENSO].isin(sel_periodo)
         df = df[mask]
 
 #    if len(df) == 0:
