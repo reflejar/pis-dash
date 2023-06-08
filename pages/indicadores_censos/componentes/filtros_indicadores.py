@@ -18,8 +18,8 @@ Filtros_censos = html.Div([
                         options=partidos,
                         multi=False,
                         searchable = True,
-                        placeholder = 'Selecciona un partido..',
-                        value=[""],
+                        placeholder = 'Buenos Aires',
+                        value='Buenos Aires',
                         clearable=True,
                         
                         )], 

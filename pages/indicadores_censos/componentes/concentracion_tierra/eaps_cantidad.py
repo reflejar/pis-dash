@@ -38,22 +38,22 @@ EAPS_HA = dbc.Container(
                     color=color_concentracion_tierra_1,
                     )
                     
-                )
-                # dbc.CardFooter(
-                #     dbc.Button("Ampliar", id="open-modal-button", color="primary"),
-                # ),
-                # dbc.Modal(
-                #     [
-                #         dbc.ModalHeader(graph_title),
-                #         dbc.ModalBody(
-                #            dcc.Graph(id="q-eaps-total"),
-                #         ),
-                #         dbc.ModalFooter(
-                #             dbc.Button("Cerrar", id="close-modal-button", className="ml-auto", n_clicks=0)
-                #         ),
-                #     ],
-                #     id="modal",
-                # ),
+                ),
+                dbc.CardFooter(
+                    dbc.Button("Ampliar", id="open-modal-button-tamano-eaps", color="primary"),
+                ),
+                dbc.Modal(
+                    [
+                        dbc.ModalHeader(graph_title),
+                        dbc.ModalBody(
+                           dcc.Graph(id="modal-graph"),
+                        ),
+                        dbc.ModalFooter(
+                            dbc.Button("Cerrar", id="close-modal-button", className="ml-auto", n_clicks=0)
+                        ),
+                    ],
+                    id="modal",
+                ),
             ],
             color="light", 
             class_name="shadow",
@@ -66,7 +66,9 @@ EAPS_HA = dbc.Container(
 )
 
 @callback(
-    Output("q-eaps-total", "figure"), 
+    [
+        Output("q-eaps-total", "figure"),
+    ], 
     [
         Input("select-partido", "value")
     ]
@@ -93,14 +95,32 @@ def update_bar_chart(partidos):
     fig.update_layout(yaxis=dict(tickformat="."))
     return fig
 
-# @callback(
-#     Output("modal", "is_open"),
-#     [Input("open-modal-button", "n_clicks"), Input("close-modal-button", "n_clicks")],
-#     [State("modal", "is_open")],
-# )
-# def toggle_modal(open_clicks, close_clicks, is_open):
-#     if open_clicks:
-#         return not is_open
-#     elif close_clicks:
-#         return False
-#     return is_open
+@callback(
+    [
+        Output("modal", "is_open"),
+        Output("modal-graph", "figure")
+    ],
+    [
+        Input("close-modal-button", "n_clicks"),
+        Input("open-modal-button-tamano-eaps", "n_clicks"),
+
+
+    
+    ],
+    [
+        State("modal", "is_open"),
+        State("select-partido", "value")
+
+    ],
+)
+def toggle_modal(
+    close_clicks, 
+    open_clicks_tamano_eaps, 
+    is_open,
+    state_partidos
+):
+    if open_clicks_tamano_eaps:
+        return not is_open, update_bar_chart(state_partidos)
+    elif close_clicks:
+        return False, None
+    return is_open, None

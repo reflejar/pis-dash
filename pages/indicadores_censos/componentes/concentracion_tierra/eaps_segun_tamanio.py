@@ -4,6 +4,7 @@ from dash_loading_spinners import Hash
 import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
+import pickle
 #from tools.componentes import NoHayDatos, Alert
 
 from pages.indicadores_censos.data_censo.base_indicadores import base_censos, VAR_ANIO_CENSO, VAR_PARTIDO, VAR_ULTIMO_ANIO_CENSO, VAR_ANIO_CENSO_1988, VAR_ANIO_CENSO_2002
@@ -23,7 +24,7 @@ color_concentracion_tierra_2 = '#DEDE7C'
 
 
 # Titulos
-graph_title =  'Participación de EAPs pequeñas y grandes'
+graph_title =  'PARTICIPACÍON DE EAPs PEQUEÑAS Y GRANDES y grandes'
 
 # BASE DE DATOS
 df_base_original = base_censos.copy()
@@ -41,7 +42,7 @@ df_base = pd.concat([pequenias_df_base, grandes_df_base])
 ###### GRAFICO  #####   
 Q_EAPs_tamanio = dbc.Card(
             [  
-                dbc.CardHeader(html.H6(graph_title,style={'font-size': '20px'}, className="text-dark")),
+                #dbc.CardHeader(html.H6(graph_title,style={'font-size': '20px'}, className="text-dark")),
                 dbc.CardBody(
                     Hash(dbc.Row(
                         [
@@ -83,7 +84,7 @@ def update_bar_chart(partidos):
     df[VAR_EAPS_Q]= round(df[VAR_EAPS_Q],2)
 
     fig = px.histogram(df, x=VAR_ANIO_CENSO, y=VAR_EAPS_Q, color=VAR_TAMANIO_EAPS, barnorm='percent', text_auto=True, color_discrete_sequence=[color_concentracion_tierra_1, color_concentracion_tierra_2 ])
-    fig.update_layout(barmode='stack', plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
+    fig.update_layout(title=graph_title, showlegend=False, barmode='stack', plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
     fig.update_xaxes( title_text = "", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
     fig.update_yaxes(title_text = "Distribución de EAPs según tamaño",  title_font=dict(size=12,family='Verdana',color='black'), tickfont=dict(family='Calibri', color='black', size=10))
 
@@ -126,7 +127,7 @@ def update_epas_tamanio_text(partidos):
 
     var_intercensal = ((cantidad_eaps_2018 - cantidad_eaps_1988)/cantidad_eaps_1988)*100
 
-    partido_seleccionado = 'Provincia de Buenos Aires' if partidos[0]=='' else partidos
+    partido_seleccionado = partidos
 
     mensaje = f"""En {partido_seleccionado} se registraron {cantidad_eaps_2018} Explotaciones Agropecuarias según 
     el CNA de 2018. También podemos observar que {cantidad_peq_eaps_2018} EAPS, es decir, el {proporcion_peq_2018}% son pequeñas. 
