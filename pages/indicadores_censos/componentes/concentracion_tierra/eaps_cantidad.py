@@ -6,6 +6,8 @@ from pages.indicadores_censos.data_censo.base_indicadores import base_censos, VA
 import plotly.graph_objects as go
 import plotly.express as px
 import plotly.colors as colors
+from .modal_tierra import modal_tierra
+
 
 ##### VARIABLES ######
 
@@ -40,38 +42,27 @@ EAPS_HA = dbc.Container(
                     
                 ),
                 dbc.CardFooter(
-                    dbc.Button("Ampliar", id="open-modal-button-tamano-eaps", color="primary"),
+                    dbc.Button("Ampliar", id="open-modal-button-eaps", color="warning",style={"background-color": "#89370B", "border-color": "#DEDE7C"}),
                 ),
-                dbc.Modal(
-                    [
-                        dbc.ModalHeader(graph_title),
-                        dbc.ModalBody(
-                           dcc.Graph(id="modal-graph"),
-                        ),
-                        dbc.ModalFooter(
-                            dbc.Button("Cerrar", id="close-modal-button", className="ml-auto", n_clicks=0)
-                        ),
-                    ],
-                    id="modal",
-                ),
+                
             ],
             color="light", 
             class_name="shadow",
             outline=True,
             id="tarjeta_eaps_cantidad"
-        )
+        ),
+        modal_tierra,
     ],
     className="contenedor-eaps-cantidad",
     
 )
 
+
 @callback(
-    [
         Output("q-eaps-total", "figure"),
-    ], 
-    [
-        Input("select-partido", "value")
-    ]
+        
+        Input("select-partido", "value"),
+        
 )
 
 def update_bar_chart(partidos):
@@ -93,34 +84,7 @@ def update_bar_chart(partidos):
     fig.update_xaxes( title_text = "Año del censo", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
     fig.update_yaxes(title_text = "Cantidad de EAPS",  title_font=dict(size=12,family='Verdana',color='black'), tickfont=dict(family='Calibri', color='black', size=10))
     fig.update_layout(yaxis=dict(tickformat="."))
+
     return fig
-
-@callback(
-    [
-        Output("modal", "is_open"),
-        Output("modal-graph", "figure")
-    ],
-    [
-        Input("close-modal-button", "n_clicks"),
-        Input("open-modal-button-tamano-eaps", "n_clicks"),
-
-
     
-    ],
-    [
-        State("modal", "is_open"),
-        State("select-partido", "value")
-
-    ],
-)
-def toggle_modal(
-    close_clicks, 
-    open_clicks_tamano_eaps, 
-    is_open,
-    state_partidos
-):
-    if open_clicks_tamano_eaps:
-        return not is_open, update_bar_chart(state_partidos)
-    elif close_clicks:
-        return False, None
-    return is_open, None
+    

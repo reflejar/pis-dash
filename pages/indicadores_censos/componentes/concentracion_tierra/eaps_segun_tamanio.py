@@ -5,6 +5,9 @@ import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
 import pickle
+from .modal_tierra import modal_tierra
+
+
 #from tools.componentes import NoHayDatos, Alert
 
 from pages.indicadores_censos.data_censo.base_indicadores import base_censos, VAR_ANIO_CENSO, VAR_PARTIDO, VAR_ULTIMO_ANIO_CENSO, VAR_ANIO_CENSO_1988, VAR_ANIO_CENSO_2002
@@ -39,33 +42,42 @@ grandes_df_base[VAR_TAMANIO_EAPS] = 'Grandes (>500 ha)'
 
 df_base = pd.concat([pequenias_df_base, grandes_df_base])
 
-###### GRAFICO  #####   
-Q_EAPs_tamanio = dbc.Card(
-            [  
-                #dbc.CardHeader(html.H6(graph_title,style={'font-size': '20px'}, className="text-dark")),
-                dbc.CardBody(
-                    Hash(dbc.Row(
-                        [
-                        dbc.Col(dcc.Graph(id="q-eaps-tamanio"), md=12),
-                        ]
+###### GRAFICO  #####  
+ 
+Q_EAPs_tamanio =dbc.Container(
+            [
+                dbc.Card(
+                            [  
+                                #dbc.CardHeader(html.H6(graph_title,style={'font-size': '20px'}, className="text-dark")),
+                                dbc.CardBody(
+                                    Hash(dbc.Row(
+                                        [
+                                        dbc.Col(dcc.Graph(id="q-eaps-tamanio"), md=12),
+                                        ]
+                                    ),
+                                    size=24,
+                                    color=color_concentracion_tierra_1,
+                                    )
+                                    
+                                ),
+                                dbc.CardFooter(
+                                    dbc.Button("Ampliar", id="open-modal-button-tamanio", color="warning",style={"background-color": "#89370B", "border-color": "#DEDE7C"}),
+                                ),
+                            ],
+                            color="light", 
+                            class_name="shadow",
+                            outline=True,
+                            id="censo-q-eaps-tamanio"
                     ),
-                    size=24,
-                    color=color_concentracion_tierra_1,
-                    )
-                    
-                )
-            ],
-            color="light", 
-            class_name="shadow",
-            outline=True,
-            id="censo-q-eaps-tamanio"
-    )
+                    modal_tierra,
+    ],
+    className="contenedor-eaps-tamanio",
+    
+)                
 
 @callback(
-    Output("q-eaps-tamanio", "figure"), 
-    [
-        Input("select-partido", "value")
-    ]
+        Output("q-eaps-tamanio", "figure"),
+        Input("select-partido", "value"),
 )
 
 def update_bar_chart(partidos):
@@ -87,6 +99,7 @@ def update_bar_chart(partidos):
     fig.update_layout(title=graph_title, showlegend=False, barmode='stack', plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
     fig.update_xaxes( title_text = "", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
     fig.update_yaxes(title_text = "Distribución de EAPs según tamaño",  title_font=dict(size=12,family='Verdana',color='black'), tickfont=dict(family='Calibri', color='black', size=10))
+    
 
     return fig
 

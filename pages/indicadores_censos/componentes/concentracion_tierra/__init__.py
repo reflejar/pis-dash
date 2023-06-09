@@ -2,6 +2,7 @@ from dash import html, dcc, Input, Output, callback
 import dash_bootstrap_components as dbc
 from .eaps_cantidad import EAPS_HA
 from .eaps_segun_tamanio import Q_EAPs_tamanio, EAPs_tamanio_texto
+from .modal_tierra import modal_tierra
 
 Concentracion_Tierra = html.Div([
             html.Br(),
@@ -40,5 +41,7 @@ Concentracion_Tierra = html.Div([
                     html.Br(),
                     html.Br(),    
                     dbc.Row(EAPs_tamanio_texto)],md=5),                       
-            ])])
+                ]),
+                # html.Div([modal_tierra]),
+            ])
                 
