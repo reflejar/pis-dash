@@ -76,9 +76,8 @@ FooterNormativo = dbc.Container(
         ]),
         html.Br(),
         html.H4("ORDENANZA:", className="text-white"),
-        html.P([
-            "FALTA LINK, NO FUNCIONA"
-        ]),
+        html.A("Aquí", href="https://drive.google.com/file/d/1SVmW-3-_LIpqGGVsO2Ud4o3vmxoja5mo/view", target="_blank"),
+        html.Br(),
         html.Br(),
         html.H4("CANAL DE DENUNCIAS:", className="text-white"),
         html.P([
@@ -87,7 +86,8 @@ FooterNormativo = dbc.Container(
         html.Br(),
         html.I([
             """*Los datos mostrados en este mapa se obtuvieron de esta fuente, y las distancias de protección utilizadas
-(zonas de exclusión) se obtuvieron de la siguiente fuente."""
+(zonas de exclusión) se obtuvieron de la siguiente """,
+        html.A("fuente", href="https://drive.google.com/file/d/1SVmW-3-_LIpqGGVsO2Ud4o3vmxoja5mo/view", target="_blank")
         ]),
 
     ],

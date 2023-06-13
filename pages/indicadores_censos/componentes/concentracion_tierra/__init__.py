@@ -1,8 +1,10 @@
 from dash import html, dcc, Input, Output, callback
 import dash_bootstrap_components as dbc
 from .eaps_cantidad import EAPS_HA
-from .eaps_segun_tamanio import Q_EAPs_tamanio
+from .eaps_segun_tamanio import Q_EAPs_tamanio, EAPs_tamanio_texto
+from .eaps_pequenias_variacion import EAPs_pequenias, EAPs_pequenias_texto
 
+from .modal_tierra import modal_tierra
 
 Concentracion_Tierra = html.Div([
             html.Br(),
@@ -16,29 +18,44 @@ Concentracion_Tierra = html.Div([
                 html.Br(),
                 html.Br(),
                 html.Br(),
+                #html.H6('Cantidad de EAPs según año del censo', style={'font-size': '20px'}, className="text-white"),
+                html.Br(),
                 dbc.Col([
-                    html.H6('Cantidad de EAPs según año del censo', style={'font-size': '20px'}, className="text-white"),
+                    dbc.Row(EAPs_pequenias),
                     html.Br(),
-                    html.P("""Las explotaciones agropecuarias.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.""", className="text-white"),
-                    dbc.Row(EAPS_HA),
                     html.Br(),
-                    dbc.Row(html.P(""" [Este texto se modificaría según el/los partidos de PBA seleccionados] Podemos observar cómo en los últimos 30 años, la Provincia de Buenos Aires perdió xxxx EAPS, representando una caída del xxxx del total de EAPS.""", className="text-white")),
                     ], md=5),
-                dbc.Col(md=1),
                 dbc.Col([
-                    html.H6('Cantidad de EAPs según tamaño', style={'font-size': '20px'}, className="text-white"),
                     html.Br(),
-                    html.P("""El tamaño de las explotaciones agropecuarias.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.""", className="text-white"),
+                    html.Br(),    
+                    dbc.Row(EAPs_pequenias_texto)],
+                        md=5),
+                        ]),
+                #html.H6('Partipación de EAPs pequeñas y grandes', style={'font-size': '20px'}, className="text-white"),
+                html.Br(),
+                dbc.Row([
+                    dbc.Col([
                     dbc.Row(Q_EAPs_tamanio),
                     html.Br(),
-                    dbc.Row(html.P(""" [Este texto se modificaría según el/los partidos de PBA seleccionados] 
-                    Si bien pudimos observar en el gráfico anterior que las EAPS pequeñas representaban una 
-                    mayor cantidad de EAPS que las grandes, se puede apreciar que las EAPS grandes poseen el 
-                    XX.XX de la superficie, es decir, poseen la mayor cantidad de tierras. Mientras que las EAPS pequeñas 
-                    alcanzan a ocupar apenas el XX.XX de la superficie.""", className="text-white")),
-                    ], md=5),                    
+                    html.Br(),
+                     ], md=5),
+                    dbc.Col([
+                    html.Br(),
+                    html.Br(),    
+                    dbc.Row(EAPs_tamanio_texto)],md=5),                       
+                ]),
+                html.Br(),
+                dbc.Row([
+                    dbc.Col([
+                    dbc.Row(EAPS_HA),
+                    html.Br(),
+                    html.Br(),
+                     ], md=5),
+                    dbc.Col([
+                    html.Br(),
+                    html.Br(),    
+                    dbc.Row(html.P('falta..'))],md=5),                       
+                ]),
+                # html.Div([modal_tierra]),
             ])
-            
-       ]), 
+                

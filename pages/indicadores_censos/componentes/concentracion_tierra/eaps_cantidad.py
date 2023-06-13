@@ -6,6 +6,8 @@ from pages.indicadores_censos.data_censo.base_indicadores import base_censos, VA
 import plotly.graph_objects as go
 import plotly.express as px
 import plotly.colors as colors
+from .modal_tierra import modal_tierra
+
 
 ##### VARIABLES ######
 
@@ -15,7 +17,7 @@ VAR_EAPS_Q = 'Cantidad de EAPs'
 color_concentracion_tierra_1 = '#89370B'
 
 # Titulos
-graph_title =  'Cantidad de EAPS según el año del censo'
+graph_title =  'Cantidad de EAPs'
 
 # BASE DE DATOS
 df_base_original = base_censos.copy()
@@ -38,38 +40,29 @@ EAPS_HA = dbc.Container(
                     color=color_concentracion_tierra_1,
                     )
                     
-                )
-                # dbc.CardFooter(
-                #     dbc.Button("Ampliar", id="open-modal-button", color="primary"),
-                # ),
-                # dbc.Modal(
-                #     [
-                #         dbc.ModalHeader(graph_title),
-                #         dbc.ModalBody(
-                #            dcc.Graph(id="q-eaps-total"),
-                #         ),
-                #         dbc.ModalFooter(
-                #             dbc.Button("Cerrar", id="close-modal-button", className="ml-auto", n_clicks=0)
-                #         ),
-                #     ],
-                #     id="modal",
-                # ),
+                ),
+                dbc.CardFooter(
+                    dbc.Button("Ampliar", id="open-modal-button-eaps", color="warning",style={"background-color": "#89370B", "border-color": "#DEDE7C"}),
+                ),
+                
             ],
             color="light", 
             class_name="shadow",
             outline=True,
             id="tarjeta_eaps_cantidad"
-        )
+        ),
+        modal_tierra,
     ],
     className="contenedor-eaps-cantidad",
     
 )
 
+
 @callback(
-    Output("q-eaps-total", "figure"), 
-    [
-        Input("select-partido", "value")
-    ]
+        Output("q-eaps-total", "figure"),
+        
+        Input("select-partido", "value"),
+        
 )
 
 def update_bar_chart(partidos):
@@ -80,7 +73,7 @@ def update_bar_chart(partidos):
     df = df_eaps_q.copy()
     
     if len(sel_partido) >0:
-        mask = df[VAR_PARTIDO].isin(sel_partido)
+        mask = df[VAR_PARTIDO]==partidos
         df = df[mask]
     
 
@@ -91,16 +84,7 @@ def update_bar_chart(partidos):
     fig.update_xaxes( title_text = "Año del censo", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
     fig.update_yaxes(title_text = "Cantidad de EAPS",  title_font=dict(size=12,family='Verdana',color='black'), tickfont=dict(family='Calibri', color='black', size=10))
     fig.update_layout(yaxis=dict(tickformat="."))
-    return fig
 
-# @callback(
-#     Output("modal", "is_open"),
-#     [Input("open-modal-button", "n_clicks"), Input("close-modal-button", "n_clicks")],
-#     [State("modal", "is_open")],
-# )
-# def toggle_modal(open_clicks, close_clicks, is_open):
-#     if open_clicks:
-#         return not is_open
-#     elif close_clicks:
-#         return False
-#     return is_open
+    return fig
+    
+    

@@ -4,9 +4,13 @@ from dash_loading_spinners import Hash
 import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
+import pickle
+from .modal_tierra import modal_tierra
+
+
 #from tools.componentes import NoHayDatos, Alert
 
-from pages.indicadores_censos.data_censo.base_indicadores import base_censos, VAR_ANIO_CENSO, VAR_PARTIDO
+from pages.indicadores_censos.data_censo.base_indicadores import base_censos, VAR_ANIO_CENSO, VAR_PARTIDO, VAR_ULTIMO_ANIO_CENSO, VAR_ANIO_CENSO_1988, VAR_ANIO_CENSO_2002
 
 ##### VARIABLES ######
 
@@ -23,7 +27,7 @@ color_concentracion_tierra_2 = '#DEDE7C'
 
 
 # Titulos
-graph_title =  'Cantidad de EAPS según tamaño'
+graph_title =  'PARTICIPACIÓN DE EAPs SEGÚN TAMAÑO'
 
 # BASE DE DATOS
 df_base_original = base_censos.copy()
@@ -38,48 +42,51 @@ grandes_df_base[VAR_TAMANIO_EAPS] = 'Grandes (>500 ha)'
 
 df_base = pd.concat([pequenias_df_base, grandes_df_base])
 
-###### GRAFICO  #####   
-Q_EAPs_tamanio = dbc.Card(
-            [  
-                #dbc.CardHeader(graph_title),
-                dbc.CardBody(
-                    Hash(dbc.Row(
-                        [
-                        dbc.Col(dcc.Graph(id="q-eaps-tamanio"), md=12),
-                        ]
+###### GRAFICO  #####  
+ 
+Q_EAPs_tamanio =dbc.Container(
+            [
+                dbc.Card(
+                            [  
+                                #dbc.CardHeader(html.H6(graph_title,style={'font-size': '20px'}, className="text-dark")),
+                                dbc.CardBody(
+                                    Hash(dbc.Row(
+                                        [
+                                        dbc.Col(dcc.Graph(id="q-eaps-tamanio"), md=12),
+                                        ]
+                                    ),
+                                    size=24,
+                                    color=color_concentracion_tierra_1,
+                                    )
+                                    
+                                ),
+                                dbc.CardFooter(
+                                    dbc.Button("Ampliar", id="open-modal-button-tamanio", color="warning",style={"background-color": "#89370B", "border-color": "#DEDE7C"}),
+                                ),
+                            ],
+                            color="light", 
+                            class_name="shadow",
+                            outline=True,
+                            id="censo-q-eaps-tamanio"
                     ),
-                    size=24,
-                    color=color_concentracion_tierra_1,
-                    )
-                    
-                )
-            ],
-            color="light", 
-            class_name="shadow",
-            outline=True,
-            id="censo-q-eaps-tamanio"
-    )
+                    modal_tierra,
+    ],
+    className="contenedor-eaps-tamanio",
+    
+)                
 
 @callback(
-    Output("q-eaps-tamanio", "figure"), 
-    [
+        Output("q-eaps-tamanio", "figure"),
         Input("select-partido", "value"),
-        Input("select-periodo", "value")
-    ]
 )
 
-def update_bar_chart(partidos, periodos):
-
-    sel_partido = [c for c in partidos if c != '']
-    sel_periodo = [c for c in periodos if c != '']
+def update_bar_chart(partidos):
 
     df = df_base.copy()
+    sel_partido = [c for c in partidos if c != ""]
     
     if len(sel_partido) >0:
-        mask = df[VAR_PARTIDO].isin(sel_partido)
-        df = df[mask]
-    if len(sel_periodo) >0:
-        mask = df[VAR_ANIO_CENSO].isin(sel_periodo)
+        mask = df[VAR_PARTIDO]==partidos
         df = df[mask]
 
 #    if len(df) == 0:
@@ -89,62 +96,56 @@ def update_bar_chart(partidos, periodos):
     df[VAR_EAPS_Q]= round(df[VAR_EAPS_Q],2)
 
     fig = px.histogram(df, x=VAR_ANIO_CENSO, y=VAR_EAPS_Q, color=VAR_TAMANIO_EAPS, barnorm='percent', text_auto=True, color_discrete_sequence=[color_concentracion_tierra_1, color_concentracion_tierra_2 ])
-    fig.update_layout(barmode='stack', plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
-    fig.update_xaxes( title_text = "", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
+    fig.update_layout(title={"text": graph_title,"font": {"size": 20, "color": "black", "family": "Arial"}}, showlegend=False, barmode='stack', plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
+    fig.update_xaxes( title_text = "Año del censo", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
     fig.update_yaxes(title_text = "Distribución de EAPs según tamaño",  title_font=dict(size=12,family='Verdana',color='black'), tickfont=dict(family='Calibri', color='black', size=10))
+    
 
     return fig
 
 
-# @callback(
-#     Output("texto-por-partido", "children"), 
-#     [
-#         Input("select-partidoes", "value"),
-#         Input("select-periodo", "value")
-#     ]
-# )
-# # def update_por_partido_text(partidoes, periodos):
-    sel_partido = [c for c in partidoes if c != '']
-    sel_periodos = [c for c in periodos if c != '']
-
-    df = df_territorial.copy().reset_index()
-
-    if len(sel_partido) >0:
-
-        #CALCULO
-        mask = df[VAR_PARTIDO].isin(sel_partido)
-        df = df[mask]
+EAPs_tamanio_texto = html.H6(id="texto-eaps-tamanio" , style={'font-size': '20px'}, className="text-white")
 
 
-    if len(sel_periodos) >0:
-        mask = df[VAR_ANIO_CENSO].isin(sel_periodos)
-        df = df[mask]
 
-    if len(df) == 0:
-        return NoHayDatos['alert']
+@callback(
+     Output("texto-eaps-tamanio", "children"), 
+     [
+         Input("select-partido", "value"),
+     ]
+ )
 
-    cantidad_fem_mes = df[var_fem].sum()
-    participacion= df.groupby(by = VAR_PARTIDO)[var_fem].sum().reset_index()
-    participacion['PARTICIPACIÓN'] = (participacion[var_fem]/cantidad_fem_mes)*100
-    max_part = participacion['PARTICIPACIÓN'].max()
-    partido_max_part = participacion[participacion['PARTICIPACIÓN']==max_part][VAR_PARTIDO].astype(str).unique().tolist()
-    max_part = round(max_part, 1)
-    max_partido_text = agregar_y_list(sel_partido, partido_max_part)
 
-    partido_list = sel_partido if len(sel_partido)>0 else ['América Latina y el Caribe']
-    partido_text = agregar_y_list(sel_partido, partido_list)
-
-    anos = df.copy()
-    anos_list = anos[VAR_ANIO_CENSO].astype(str).unique().tolist()
-    anos_text = agregar_y_list(sel_periodos, anos_list)
-
-    ano_en_curso = [c for c in anos_list if c == str(ano_corriente)]
-    anos_enteros = [c for c in anos_list if c != str(ano_corriente)]
-
+def update_epas_tamanio_text(partidos):
+    df = df_base.copy()
+    sel_partido = [c for c in partidos if c != '']
     
-    mensaje = Alert([
-        html.P(f'Durante {anos_text} en {partido_text} se registraron {cantidad_fem_mes} feminicidios, el {max_part}% de ellos sucedieron en {max_partido_text}.', style={'font-size': '20px'}),       
-    ])
+    if len(sel_partido) >0:
+        mask = df[VAR_PARTIDO]==partidos
+        df = df[mask]
+
+    df = df.groupby(by = [VAR_ANIO_CENSO, VAR_TAMANIO_EAPS])[VAR_EAPS_Q].sum().reset_index()
+    df[VAR_EAPS_Q]= round(df[VAR_EAPS_Q],2)
+
+    df_2018 = df[df[VAR_ANIO_CENSO]== VAR_ULTIMO_ANIO_CENSO].copy()
+    cantidad_eaps_2018 = int(df_2018[VAR_EAPS_Q].sum())
+    cantidad_peq_eaps_2018 = int(df_2018[df_2018[VAR_TAMANIO_EAPS]== 'Pequeñas (<=500 ha)'][VAR_EAPS_Q].sum())
+    cantidad_grandes_eaps_2018 = int(df_2018[df_2018[VAR_TAMANIO_EAPS]== 'Grandes (>500 ha)'][VAR_EAPS_Q].sum())
+
+    proporcion_grandes_2018 = round((cantidad_grandes_eaps_2018/cantidad_eaps_2018)*100,2)
+    proporcion_peq_2018 = round((cantidad_peq_eaps_2018/cantidad_eaps_2018)*100,2)
+
+    cantidad_eaps_2002 = int(df[df[VAR_ANIO_CENSO]== VAR_ANIO_CENSO_2002][VAR_EAPS_Q].sum())
+    cantidad_eaps_1988 = int(df[df[VAR_ANIO_CENSO]== VAR_ANIO_CENSO_1988][VAR_EAPS_Q].sum())
+
+    var_intercensal = ((cantidad_eaps_2018 - cantidad_eaps_1988)/cantidad_eaps_1988)*100
+
+    partido_seleccionado = partidos
+
+    mensaje = f"""En {partido_seleccionado} se registraron {cantidad_eaps_2018} Explotaciones Agropecuarias según 
+    el CNA de 2018. También podemos observar que {cantidad_peq_eaps_2018} EAPS, es decir, el {proporcion_peq_2018}% son pequeñas. 
+    Mientras que {cantidad_grandes_eaps_2018} EAPS, es decir el {proporcion_grandes_2018}% son grandes."""
+
 
 
     return mensaje  
