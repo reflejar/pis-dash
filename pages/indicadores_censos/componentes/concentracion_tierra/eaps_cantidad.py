@@ -17,7 +17,7 @@ VAR_EAPS_Q = 'Cantidad de EAPs'
 color_concentracion_tierra_1 = '#89370B'
 
 # Titulos
-graph_title =  'Cantidad de EAPS según el año del censo'
+graph_title =  'Cantidad de EAPs'
 
 # BASE DE DATOS
 df_base_original = base_censos.copy()

@@ -27,7 +27,7 @@ color_concentracion_tierra_2 = '#DEDE7C'
 
 
 # Titulos
-graph_title =  'PARTICIPACÍON DE EAPs PEQUEÑAS Y GRANDES y grandes'
+graph_title =  'PARTICIPACIÓN DE EAPs SEGÚN TAMAÑO'
 
 # BASE DE DATOS
 df_base_original = base_censos.copy()
@@ -96,8 +96,8 @@ def update_bar_chart(partidos):
     df[VAR_EAPS_Q]= round(df[VAR_EAPS_Q],2)
 
     fig = px.histogram(df, x=VAR_ANIO_CENSO, y=VAR_EAPS_Q, color=VAR_TAMANIO_EAPS, barnorm='percent', text_auto=True, color_discrete_sequence=[color_concentracion_tierra_1, color_concentracion_tierra_2 ])
-    fig.update_layout(title=graph_title, showlegend=False, barmode='stack', plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
-    fig.update_xaxes( title_text = "", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
+    fig.update_layout(title={"text": graph_title,"font": {"size": 20, "color": "black", "family": "Arial"}}, showlegend=False, barmode='stack', plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
+    fig.update_xaxes( title_text = "Año del censo", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
     fig.update_yaxes(title_text = "Distribución de EAPs según tamaño",  title_font=dict(size=12,family='Verdana',color='black'), tickfont=dict(family='Calibri', color='black', size=10))
     
 
