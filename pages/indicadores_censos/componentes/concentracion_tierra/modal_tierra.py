@@ -20,7 +20,10 @@ modal_tierra=dbc.Modal(
 @callback(
     [
         Output("modal-tierra", "is_open"), 
-        Output("modal-graph", "figure" )
+        Output("modal-graph", "figure" ),
+        Output("open-modal-button-eaps", "n_clicks"), 
+        Output("open-modal-button-tamanio", "n_clicks"), 
+        Output("open-modal-button-pequenias", "n_clicks"), 
     ],
     [
         Input("open-modal-button-eaps", "n_clicks"), 
@@ -46,11 +49,11 @@ def toggle_modal(
     figure_pequenias
 ):
     if open_clicks_eaps:
-        return not is_open,figure_eaps
+        return not is_open,figure_eaps,0,0,0
     elif open_clicks_tamanio:
-        return not is_open,figure_tamanio
+        return not is_open,figure_tamanio,0,0,0
     elif open_clicks_pequenias:
-        return not is_open,figure_pequenias
+        return not is_open,figure_pequenias,0,0,0
     elif close_clicks:
-        return False, dash.no_update
-    return is_open, dash.no_update
+        return False, dash.no_update,0,0,0
+    return is_open, dash.no_update,0,0,0

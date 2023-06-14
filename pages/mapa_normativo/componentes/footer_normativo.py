@@ -85,9 +85,15 @@ FooterNormativo = dbc.Container(
         ]),
         html.Br(),
         html.I([
-            """*Los datos mostrados en este mapa se obtuvieron de esta fuente, y las distancias de protección utilizadas
-(zonas de exclusión) se obtuvieron de la siguiente """,
-        html.A("fuente", href="https://drive.google.com/file/d/1SVmW-3-_LIpqGGVsO2Ud4o3vmxoja5mo/view", target="_blank")
+            "**Este mapa integra información de diversidad de fuentes: ",
+        html.A("Datos abiertos de escuelas de la Provincia de Buenos Aires", href="https://catalogo.datos.gba.gob.ar/dataset/establecimientos-educativos/archivo/3951210e-7e0e-4fed-bbf1-0183e704c9ae", target="_blank"),  
+            """ ,la georreferenciación de cursos de agua, parajes rurales y poblados urbanos a 
+            partir de imágenes satelitales, """,
+        html.A("información poblacional", href="https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-6", target="_blank"),
+            """ proveniente del INDEC, en suma a un conjunto de correcciones y precisiones 
+            reportadas desde el territorio. Las distancias de protección utilizadas (zonas de exclusión/amortiguamiento) 
+            se obtienen del texto original de cada """,
+        html.A("ordenanza municipal.", href="https://drive.google.com/file/d/1SVmW-3-_LIpqGGVsO2Ud4o3vmxoja5mo/view", target="_blank")
         ]),
 
     ],
