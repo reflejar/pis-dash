@@ -1,8 +1,9 @@
 from dash import html, dcc, Input, Output, callback
 import dash_bootstrap_components as dbc
-from .empleo_prueba_1 import EMPLEO_PRUEBA
-from .empleo_prueba_2 import EMPLEO_PRUEBA_2
-
+from .residencia_mujeres import residencia_mujeres
+from .residencia_mujeres import texto_residentes_mujeres
+from .residencia_varones import residencia_varones
+from .residencia_varones import texto_residentes_varones
 
 Empleo = html.Div([
             html.Br(),
@@ -16,31 +17,27 @@ Empleo = html.Div([
                 html.Br(),
                 html.Br(),
                 html.Br(),
-                html.H6('Cantidad de EAPs según año del censo', style={'font-size': '20px'}, className="text-white"),
+                html.H6('Cantidad de mujeres residentes en zonas rurales', style={'font-size': '20px'}, className="text-white"),
+                html.Br(),
                 html.Br(),
                 dbc.Col([
-                    dbc.Row(EMPLEO_PRUEBA),
+                    dbc.Row(residencia_mujeres),
                     html.Br(),
                     html.Br(),
                     ], md=5),
-                dbc.Col( html.P(""" Ut enim ad minim veniam, 
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""", className="text-white")
-                        ,md=5),
+                dbc.Col( texto_residentes_mujeres,md=5),
                         ]),
-                html.H6('Cantidad de EAPs según tamaño', style={'font-size': '20px'}, className="text-white"),
+                html.H6('Cantidad de varones residentes en zonas rurales', style={'font-size': '20px'}, className="text-white"),
                 html.Br(),
                 dbc.Row([
                     dbc.Col([
-                    dbc.Row(EMPLEO_PRUEBA_2),
+                    dbc.Row(residencia_varones),
                     html.Br(),
                     html.Br(),
                      ], md=5),
-                    dbc.Col( html.P(""" Ut enim ad minim veniam, 
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""", className="text-white")
-                        ,md=5),                       
-            ])])
+                    dbc.Col( texto_residentes_varones,md=5),                       
+            ]),
+
+            
+            ])
                 

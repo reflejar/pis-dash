@@ -20,7 +20,7 @@ Filtros_censos = html.Div([
                         searchable = True,
                         placeholder = 'Buenos Aires',
                         value='Buenos Aires',
-                        clearable=True,
+                        clearable=False,
                         
                         )], 
                         className='col-md-3'),
