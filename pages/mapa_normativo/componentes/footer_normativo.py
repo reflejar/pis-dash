@@ -87,7 +87,7 @@ FooterNormativo = dbc.Container(
         html.I([
             "**Este mapa integra información de diversidad de fuentes: ",
         html.A("Datos abiertos de escuelas de la Provincia de Buenos Aires", href="https://catalogo.datos.gba.gob.ar/dataset/establecimientos-educativos/archivo/3951210e-7e0e-4fed-bbf1-0183e704c9ae", target="_blank"),  
-            """ ,la georreferenciación de cursos de agua, parajes rurales y poblados urbanos a 
+            """, la georreferenciación de cursos de agua, parajes rurales y poblados urbanos a 
             partir de imágenes satelitales, """,
         html.A("información poblacional", href="https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-6", target="_blank"),
             """ proveniente del INDEC, en suma a un conjunto de correcciones y precisiones 
