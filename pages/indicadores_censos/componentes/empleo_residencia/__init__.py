@@ -17,7 +17,8 @@ Empleo = html.Div([
                 html.Br(),
                 html.Br(),
                 html.Br(),
-                html.H6('Cantidad de EAPs según año del censo', style={'font-size': '20px'}, className="text-white"),
+                html.H6('Cantidad de mujeres residentes en zonas rurales', style={'font-size': '20px'}, className="text-white"),
+                html.Br(),
                 html.Br(),
                 dbc.Col([
                     dbc.Row(residencia_mujeres),
@@ -26,7 +27,7 @@ Empleo = html.Div([
                     ], md=5),
                 dbc.Col( texto_residentes_mujeres,md=5),
                         ]),
-                html.H6('Cantidad de EAPs según tamaño', style={'font-size': '20px'}, className="text-white"),
+                html.H6('Cantidad de varones residentes en zonas rurales', style={'font-size': '20px'}, className="text-white"),
                 html.Br(),
                 dbc.Row([
                     dbc.Col([
