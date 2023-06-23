@@ -2,9 +2,7 @@ from dash import html, dcc, Input, Output, callback
 import dash_bootstrap_components as dbc
 from .eaps_cantidad import EAPS_CANTIDAD
 from .eaps_segun_tamanio import Q_EAPs_tamanio, EAPs_tamanio_texto
-from .eaps_pequenias_variacion import EAPs_pequenias, EAPs_pequenias_texto
-
-from .modal_tierra import modal_tierra
+from .eaps_superficie_ha import EAPs_SUPERFICIE, EAPs_superficie_texto
 
 Concentracion_Tierra = html.Div([
             html.Br(),
@@ -25,22 +23,18 @@ Concentracion_Tierra = html.Div([
                     dbc.Row(EAPS_CANTIDAD),
                     html.Br(),
                     html.Br(),
-                     ], md=5),
-                    dbc.Col([
-                    html.Br(),
-                    html.Br(),    
-                    dbc.Row(html.P('falta..'))],md=5),                       
+                     ], md=5),                   
                 ]),
                 html.Br(),
                 dbc.Col([
-                    dbc.Row(EAPs_pequenias),
+                    dbc.Row(EAPs_SUPERFICIE),
                     html.Br(),
                     html.Br(),
                     ], md=5),
                 dbc.Col([
                     html.Br(),
                     html.Br(),    
-                    dbc.Row(EAPs_pequenias_texto)],
+                    dbc.Row(EAPs_superficie_texto)],
                         md=5),
                         ]),
                 #html.H6('Partipación de EAPs pequeñas y grandes', style={'font-size': '20px'}, className="text-white"),

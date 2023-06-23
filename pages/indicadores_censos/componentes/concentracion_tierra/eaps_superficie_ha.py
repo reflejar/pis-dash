@@ -14,30 +14,30 @@ from pages.indicadores_censos.data_censo.base_indicadores import base_censos, VA
 
 ##### VARIABLES ######
 
-VAR_EAPS_PEQ = 'EAPS pequeñas (<= 500ha)'
+VAR_SUPERFICIE_HA = 'Superficie promedio'
 
 color_concentracion_tierra_1 = '#89370B'
 
 # Titulos
-graph_title =  'EAPs PEQUEÑAS (<=500ha)'
+graph_title =  'Superficie promedio de EAPs (ha)'
 
 # BASE DE DATOS
 df_base_original = base_censos.copy()
 
-pequenias_df_base = df_base_original[[VAR_EAPS_PEQ, VAR_ANIO_CENSO, VAR_PARTIDO]]
+superficie_promedio_df = df_base_original[[VAR_SUPERFICIE_HA, VAR_ANIO_CENSO, VAR_PARTIDO]]
 
-df_base = pequenias_df_base.copy()
+df_base = superficie_promedio_df.copy()
 
 ###### GRAFICO  #####  
  
-EAPs_pequenias =dbc.Container(
+EAPs_SUPERFICIE =dbc.Container(
             [
                 dbc.Card(
                             [  
                                 dbc.CardBody(
                                     Hash(dbc.Row(
                                         [
-                                        dbc.Col(dcc.Graph(id="eaps-pequenias"), md=12),
+                                        dbc.Col(dcc.Graph(id="eaps-superficie"), md=12),
                                         ]
                                     ),
                                     size=24,
@@ -46,22 +46,22 @@ EAPs_pequenias =dbc.Container(
                                     
                                 ),
                                 dbc.CardFooter(
-                                    dbc.Button("Ampliar", id="open-modal-button-pequenias", color="warning",style={"background-color": "#89370B", "border-color": "#DEDE7C"}),
+                                    dbc.Button("Ampliar", id="open-modal-button-superficie", color="warning",style={"background-color": "#89370B", "border-color": "#DEDE7C"}),
                                 ),
                             ],
                             color="light", 
                             class_name="shadow",
                             outline=True,
-                            id="censo-eaps-pequenias"
+                            id="censo-eaps-superficie"
                     ),
                     modal_tierra,
     ],
-    className="contenedor-eaps-pequenias",
+    className="contenedor-eaps-superficie",
     
 )                
 
 @callback(
-        Output("eaps-pequenias", "figure"),
+        Output("eaps-superficie", "figure"),
         Input("select-partido", "value"),
 )
 
@@ -77,10 +77,10 @@ def update_bar_chart(partidos):
 #    if len(df) == 0:
 #        return NoHayDatos['linea']
 
-    df = df.groupby(by = [VAR_ANIO_CENSO])[VAR_EAPS_PEQ].sum().reset_index()
-    df[VAR_EAPS_PEQ]= round(df[VAR_EAPS_PEQ],2)
+    df = df.groupby(by = [VAR_ANIO_CENSO])[VAR_SUPERFICIE_HA].sum().reset_index()
+    #df[VAR_SUPERFICIE_HA]= round(df[VAR_SUPERFICIE_HA],2)
 
-    fig = px.bar(df, x=VAR_ANIO_CENSO, y=VAR_EAPS_PEQ, text_auto=VAR_EAPS_PEQ)
+    fig = px.bar(df, x=VAR_ANIO_CENSO, y=VAR_SUPERFICIE_HA, text_auto=VAR_SUPERFICIE_HA)
     fig.update_traces(marker_color=color_concentracion_tierra_1)  # Modificar el color de las barras
     fig.update_layout(title={"text": graph_title,"font": {"size": 20, "color": "black", "family": "Arial"}}, showlegend=False, plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
     fig.update_layout(yaxis=dict(tickformat=',',ticksuffix='k'))
@@ -89,19 +89,19 @@ def update_bar_chart(partidos):
     return fig
 
 
-EAPs_pequenias_texto = html.H6(id="texto-eaps-pequenias" , style={'font-size': '20px'}, className="text-white")
+EAPs_superficie_texto = html.H6(id="texto-eaps-superficie" , style={'font-size': '20px'}, className="text-white")
 
 
 
 @callback(
-     Output("texto-eaps-pequenias", "children"), 
+     Output("texto-eaps-superficie", "children"), 
      [
          Input("select-partido", "value"),
      ]
  )
 
 
-def update_epas_pequenias_text(partidos):
+def update_epas_superficie_text(partidos):
     df = df_base.copy()
     sel_partido = [c for c in partidos if c != '']
     
@@ -109,13 +109,13 @@ def update_epas_pequenias_text(partidos):
         mask = df[VAR_PARTIDO]==partidos
         df = df[mask]
 
-    df = df.groupby(by = [VAR_ANIO_CENSO])[VAR_EAPS_PEQ].sum().reset_index()
-    df[VAR_EAPS_PEQ]= round(df[VAR_EAPS_PEQ],2)
+    df = df.groupby(by = [VAR_ANIO_CENSO])[VAR_SUPERFICIE_HA].sum().reset_index()
+    df[VAR_SUPERFICIE_HA]= round(df[VAR_SUPERFICIE_HA],2)
 
     df_2018 = df[df[VAR_ANIO_CENSO]== VAR_ULTIMO_ANIO_CENSO].copy()
-    cantidad_eaps_2018 = int(df_2018[VAR_EAPS_PEQ].sum())
-    cantidad_eaps_2002 = int(df[df[VAR_ANIO_CENSO]== VAR_ANIO_CENSO_2002][VAR_EAPS_PEQ].sum())
-    cantidad_eaps_1988 = int(df[df[VAR_ANIO_CENSO]== VAR_ANIO_CENSO_1988][VAR_EAPS_PEQ].sum())
+    cantidad_eaps_2018 = int(df_2018[VAR_SUPERFICIE_HA].sum())
+    cantidad_eaps_2002 = int(df[df[VAR_ANIO_CENSO]== VAR_ANIO_CENSO_2002][VAR_SUPERFICIE_HA].sum())
+    cantidad_eaps_1988 = int(df[df[VAR_ANIO_CENSO]== VAR_ANIO_CENSO_1988][VAR_SUPERFICIE_HA].sum())
 
     var_intercensal = round(((cantidad_eaps_2018 - cantidad_eaps_1988)/cantidad_eaps_1988)*100, 2)
 
@@ -123,7 +123,8 @@ def update_epas_pequenias_text(partidos):
 
     partido_seleccionado = partidos
 
-    mensaje = f"""En {partido_seleccionado} se registraron {cantidad_eaps_2018} explotaciones agropecuarias con un tamaño menor o igual a 500 hectáreas según 
-    el CNA de 2018. Además, se observa {var_texto} de EAPS pequeñas del {var_intercensal}% si se compara con las EAPs del CNA del año 1988."""
+    mensaje = f"""Al mismo tiempo, en [la provincia de Buenos Aires] la superficie promedio de las EAPs 
+        [aumentó] XX hectáreas. Esto explica la caída en cantidad de EAPs a lo largo del tiempo, dado que las explotaciones 
+        agropecuarias tienen cada vez una mayor superficie en promedio. Se puede apreciar con claridad que existe una gran acumulacion de tierra en pocas EAPs. """
 
     return mensaje  
