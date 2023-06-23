@@ -1,6 +1,6 @@
 from dash import html, dcc, Input, Output, callback
 import dash_bootstrap_components as dbc
-from .eaps_cantidad import EAPS_HA
+from .eaps_cantidad import EAPS_CANTIDAD
 from .eaps_segun_tamanio import Q_EAPs_tamanio, EAPs_tamanio_texto
 from .eaps_pequenias_variacion import EAPs_pequenias, EAPs_pequenias_texto
 
@@ -12,13 +12,25 @@ Concentracion_Tierra = html.Div([
                 html.Br(),
                 html.Br(),
                 html.H6('CONCENTRACIÓN DE LA TIERRA', style={'font-size': '25px'}, className="text-white"),
-                html.P("""En esta sección se muestra.....Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. """, className="text-white"),
+                html.P("""Siguiendo al INDEC, se utilizará como unidad de referencia a las explotaciones agropecuarias (EAP). Para entenderlo más fácilmente, 
+                    podemos pensar a las EAPs como los "campos" de Argentina. Se tomará como EAPS grandes a aquellas 
+                    que posean más de 500 hectáreas, mientras que las EAPs pequeñas serán las que tengan menos de 500 hectáreas.""", className="text-white"),
                 html.Br(),
                 html.Br(),
                 html.Br(),
                 #html.H6('Cantidad de EAPs según año del censo', style={'font-size': '20px'}, className="text-white"),
+                html.Br(),
+                dbc.Row([
+                    dbc.Col([
+                    dbc.Row(EAPS_CANTIDAD),
+                    html.Br(),
+                    html.Br(),
+                     ], md=5),
+                    dbc.Col([
+                    html.Br(),
+                    html.Br(),    
+                    dbc.Row(html.P('falta..'))],md=5),                       
+                ]),
                 html.Br(),
                 dbc.Col([
                     dbc.Row(EAPs_pequenias),
@@ -43,18 +55,6 @@ Concentracion_Tierra = html.Div([
                     html.Br(),
                     html.Br(),    
                     dbc.Row(EAPs_tamanio_texto)],md=5),                       
-                ]),
-                html.Br(),
-                dbc.Row([
-                    dbc.Col([
-                    dbc.Row(EAPS_HA),
-                    html.Br(),
-                    html.Br(),
-                     ], md=5),
-                    dbc.Col([
-                    html.Br(),
-                    html.Br(),    
-                    dbc.Row(html.P('falta..'))],md=5),                       
                 ]),
                 # html.Div([modal_tierra]),
             ])

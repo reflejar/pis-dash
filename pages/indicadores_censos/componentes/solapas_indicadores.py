@@ -14,9 +14,8 @@ SolapasIndicadores = html.Div([
     dbc.Tabs(id="tabs", active_tab='tab-1', children=[
         dbc.Tab(label='Concentración de tierras', tab_id='tab-1', label_style={"color":'#FFFFFF' , 'font-size': '22px', 'background-color':color_concentracion_tierra ,'border-top-left-radius': '0px','border-top-right-radius': '0px'}),
         dbc.Tab(label='Empleo y residencia', tab_id='tab-2',label_style={"color":'#FFFFFF' , 'font-size': '22px', 'background-color':color_empleo_residencia ,'border-top-left-radius': '0px','border-top-right-radius': '0px'}),
-        dbc.Tab(label='Cultivos', tab_id='tab-3', label_style={"color":'#FFFFFF' , 'font-size': '22px', 'background-color':color_cultivos ,'border-top-left-radius': '0px','border-top-right-radius': '0px'}),
-        dbc.Tab(label='Modo de producción', tab_id='tab-4', label_style={"color":'#FFFFFF' , 'font-size': '22px', 'background-color':color_modo_produccion ,'border-top-left-radius': '0px','border-top-right-radius': '0px'}),
-        dbc.Tab(label='Resumen', tab_id='tab-5', label_style={"color":'#FFFFFF' , 'font-size': '22px', 'background-color':color_resumen ,'border-top-left-radius': '0px','border-top-right-radius': '0px'}),
+        dbc.Tab(label='Modo de producción', tab_id='tab-3', label_style={"color":'#FFFFFF' , 'font-size': '22px', 'background-color':color_cultivos ,'border-top-left-radius': '0px','border-top-right-radius': '0px'}),
+        dbc.Tab(label='Resumen', tab_id='tab-4', label_style={"color":'#FFFFFF' , 'font-size': '22px', 'background-color':color_resumen ,'border-top-left-radius': '0px','border-top-right-radius': '0px'}),
     ]),
     html.Div(id='tabs-content')
 ])

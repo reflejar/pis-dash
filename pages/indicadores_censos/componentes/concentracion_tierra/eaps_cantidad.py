@@ -26,7 +26,7 @@ df_eaps_q = df_base_original[[VAR_ANIO_CENSO, VAR_PARTIDO, VAR_TOTAL_EAPS]]
 df_eaps_q = df_eaps_q.rename(columns = {VAR_TOTAL_EAPS: VAR_EAPS_Q})
 
 
-EAPS_HA = dbc.Container(
+EAPS_CANTIDAD = dbc.Container(
     [
         dbc.Card(
             [
