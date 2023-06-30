@@ -16,40 +16,50 @@ Concentracion_Tierra = html.Div([
                 html.Br(),
                 html.Br(),
                 html.Br(),
+                ]),
                 #html.H6('Cantidad de EAPs según año del censo', style={'font-size': '20px'}, className="text-white"),
                 html.Br(),
-                dbc.Row([
+            dbc.Row([
                     dbc.Col([
                     dbc.Row(EAPS_CANTIDAD),
-                    html.Br(),
-                    html.Br(),
-                     ], md=5),                   
-                ]),
-                html.Br(),
-                dbc.Col([
-                    dbc.Row(EAPs_SUPERFICIE),
-                    html.Br(),
-                    html.Br(),
-                    ], md=5),
-                dbc.Col([
-                    html.Br(),
-                    html.Br(),    
-                    dbc.Row(EAPs_superficie_texto)],
-                        md=5),
-                        ]),
-                #html.H6('Partipación de EAPs pequeñas y grandes', style={'font-size': '20px'}, className="text-white"),
-                html.Br(),
-                dbc.Row([
+                        html.Br(),
+                        html.Br(),
+                        ], md=4),                   
+                    dbc.Col([
+                        dbc.Row(EAPs_SUPERFICIE),
+                        html.Br(),
+                        html.Br(),
+                        ], md=4),
                     dbc.Col([
                     dbc.Row(Q_EAPs_tamanio),
-                    html.Br(),
-                    html.Br(),
-                     ], md=5),
-                    dbc.Col([
-                    html.Br(),
-                    html.Br(),    
-                    dbc.Row(EAPs_tamanio_texto)],md=5),                       
-                ]),
+                        html.Br(),
+                        html.Br(),
+                        ], md=4)             
+                ])])
+                # html.Br(),
+                # dbc.Col([
+                #     dbc.Row(EAPs_SUPERFICIE),
+                #     html.Br(),
+                #     html.Br(),
+                #     ], md=5),
+                # dbc.Col([
+                #     html.Br(),
+                #     html.Br(),    
+                #     dbc.Row(EAPs_superficie_texto)],
+                #         md=5),
+                #         ]),
+                # #html.H6('Partipación de EAPs pequeñas y grandes', style={'font-size': '20px'}, className="text-white"),
+                # html.Br(),
+                # dbc.Row([
+                #     dbc.Col([
+                #     dbc.Row(Q_EAPs_tamanio),
+                #     html.Br(),
+                #     html.Br(),
+                #      ], md=5),
+                #     dbc.Col([
+                #     html.Br(),
+                #     html.Br(),    
+                #     dbc.Row(EAPs_tamanio_texto)],md=5),                       
+                # ]),
                 # html.Div([modal_tierra]),
-            ])
-                
+            #])

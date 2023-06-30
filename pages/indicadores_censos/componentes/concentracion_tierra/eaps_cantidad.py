@@ -34,9 +34,9 @@ EAPS_CANTIDAD = dbc.Container(
                     Hash(dbc.Row(
                         [
                         dbc.Col(dcc.Graph(id="q-eaps-total"), md=12),
-                        dbc.Col("""En los últimos 30 años, en [partido_seleccionado] han [disminuido] en un [XX%] la cantidad de EAPS. 
-                        En 1988 el numero de EAPS era de [XX] y en 2018 ese numero paso a ser de [XX] implicando una caida de [XX] 
-                        explotaciones agropecuarias.""", md=12)                        
+                        #dbc.Col("""En los últimos 30 años, en [partido_seleccionado] han [disminuido] en un [XX%] la cantidad de EAPS. 
+                        #En 1988 el numero de EAPS era de [XX] y en 2018 ese numero paso a ser de [XX] implicando una caida de [XX] 
+                        #explotaciones agropecuarias.""", md=12)                        
                         ]
                     ),
                     size=24,
@@ -45,7 +45,7 @@ EAPS_CANTIDAD = dbc.Container(
                     
                 ),
                 dbc.CardFooter(
-                    dbc.Button("Ampliar", id="open-modal-button-eaps", color="warning",style={"background-color": "#89370B", "border-color": "#DEDE7C"}),
+                    dbc.Button("AMPLIAR GRÁFICO", id="open-modal-button-eaps", color="warning",style={"background-color": "#89370B", "border-color": "#DEDE7C"}),
                 ),
                 
             ],

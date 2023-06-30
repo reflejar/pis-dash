@@ -46,7 +46,7 @@ EAPs_SUPERFICIE =dbc.Container(
                                     
                                 ),
                                 dbc.CardFooter(
-                                    dbc.Button("Ampliar", id="open-modal-button-superficie", color="warning",style={"background-color": "#89370B", "border-color": "#DEDE7C"}),
+                                    dbc.Button("AMPLIAR GRÁFICO", id="open-modal-button-superficie", color="warning",style={"background-color": "#89370B", "border-color": "#DEDE7C"}),
                                 ),
                             ],
                             color="light", 

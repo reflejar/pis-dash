@@ -10,7 +10,7 @@ modal_tierra=dbc.Modal(
                            dcc.Graph(id="modal-graph"),
                         ),
                         dbc.ModalFooter(
-                            dbc.Button("Cerrar", id="close-modal-button", className="ml-auto", color="warning",style={"background-color": "#89370B", "border-color": "#DEDE7C"}),
+                            dbc.Button("CERRAR GRÁFICO", id="close-modal-button", className="ml-auto", color="warning",style={"background-color": "#89370B", "border-color": "#DEDE7C"}),
                         ),
                     ],
                     id="modal-tierra",
