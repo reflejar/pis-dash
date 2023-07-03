@@ -4,7 +4,7 @@ from .concentracion_tierra import Concentracion_Tierra
 from .empleo_residencia import Empleo
 
 color_concentracion_tierra = '#89370B'
-color_empleo_residencia = '#EF7418'
+color_empleo_residencia = 'rgb(225, 134, 95)'
 color_cultivos = '#316397'
 color_modo_produccion = '#006101'
 color_resumen = '#4C4C4C'
