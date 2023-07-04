@@ -6,12 +6,12 @@ color_empleo='rgb(225, 134, 95)'
 
 modal_empleo=dbc.Modal(
                     [
-                        dbc.ModalHeader(id="titulo-modal-empleo"),
+                        
                         dbc.ModalBody(
                            dcc.Graph(id="modal-graph-empleo"),
                         ),
                         dbc.ModalFooter(
-                            dbc.Button("Cerrar", id="close-modal-button-empleo", className="ml-auto", color="warning",style={"background-color": color_empleo, "border-color": "#DEDE7C"}),
+                            dbc.Button("CERRAR GRÁFICO", id="close-modal-button-empleo", color="light",style={"background-color": color_empleo, "border-color": "#FFFFFF", "color": "#000000", "font-family": "Arial"},  className="mx-auto"), className="text-center", style={"background-color": "none","border": "none", "color": "none"}
                         ),
                     ],
                     id="modal-empleo",

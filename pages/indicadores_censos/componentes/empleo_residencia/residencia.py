@@ -19,7 +19,8 @@ color_empleo_1 = 'rgb(225, 134, 95)'
 color_empleo_2= 'rgb(77, 130, 133)'
 # Titulos
 graph_title =  'Residentes del campo'
-
+#Tipo de letra
+letra="Arial"
 # BASE DE DATOS
 df_mujeres = base_mujeres.copy()
 df_varones = base_varones.copy()
@@ -43,13 +44,14 @@ residencia =dbc.Container(
                                     
                                 ),
                                 dbc.CardFooter(
-                                    dbc.Button("Ampliar", id="open-modal-button-residentes", color="warning",style={"background-color": color_empleo_1, "border-color": "#DEDE7C"}),
+                                    dbc.Button("AMPLIAR GRÁFICO", id="open-modal-button-residentes", style={"background-color": color_empleo_1, "border-color": "#FFFFFF", "color": "#000000", "font-family": letra}), className="text-center", style={"background-color": "light","border": "none", "color": "light"}
                                 ),
                             ],
                             color="light", 
                             class_name="shadow",
                             outline=True,
-                            id="censo-residentes"
+                            id="censo-residentes",
+                            
                     ),
                     modal_empleo,
     ],
@@ -67,8 +69,8 @@ def update_bar_chart(partidos):
     
     fig = px.bar(x=df_mujeres[VAR_ANIO_CENSO], y=[df_mujeres[VAR_TOTAL], df_varones[VAR_TOTAL]])
 
-    # Calcular el porcentaje del total
-    total = df_mujeres[VAR_TOTAL] + df_varones[VAR_TOTAL]
+    # Calcular el porcentaje del total, que luego aparecen en las etiquetas emergentes 
+    total = df_mujeres[VAR_TOTAL].to_numpy() + df_varones[VAR_TOTAL].to_numpy()
     porcentaje_mujeres = df_mujeres[VAR_TOTAL] / total * 100
     porcentaje_varones = df_varones[VAR_TOTAL] / total * 100    
     
@@ -77,22 +79,58 @@ def update_bar_chart(partidos):
     for i, (var, nombre) in enumerate(zip([df_mujeres[VAR_TOTAL], df_varones[VAR_TOTAL]], nombres_variables)):
         fig.data[i].text = [nombre] * len(var)
         fig.update_traces(textposition='none')
-    fig.update_traces(hovertemplate='Residentes %{text}<br>Año del censo: %{x}<br>Cantidad de residentes:  %{y:.0f}<extra></extra>')
+        fig.data[i].customdata =  [porcentaje_mujeres, porcentaje_varones][i] #se establecen los porcentajes que luego salen en las etiquetas emergentes
     
-    fig.update_layout(title={"text": graph_title,"font": {"size": 20, "color": "black", "family": "Arial"}}, showlegend=False, plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
+    #Armar el texto de las etiquetas emergentes
+    fig.update_traces(hovertemplate='Residentes %{text}<br>Año del censo: %{x}<br>Cantidad de residentes:  %{y:.0f}<br>Porcentaje del total: %{customdata:.2f}%<extra></extra>')
+    
     fig.update_layout(yaxis=dict(tickformat=',',ticksuffix='k'))
-    fig.update_xaxes( title_text = "Año del censo", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
-    fig.update_yaxes( title_text = "Cantidad de residentes", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
-    fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix=''))
+    fig.update_xaxes( title_text = "Año del censo", title_font=dict(size=16, family=letra, color='black'), tickfont=dict(family=letra, color='black', size=11))
+    fig.update_yaxes( title_text = "Cantidad de residentes", title_font=dict(size=16, family=letra, color='black'), tickfont=dict(family=letra, color='black', size=11))
+    fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
+
     colors = [color_empleo_1, color_empleo_2]  # Colores personalizados para cada categoría
     for i, data in enumerate(fig.data):
         data.marker.color = colors[i]
-    # Ajustar el redondeo de las barras
+        data.name = nombres_variables[i]
+
     fig.update_traces(marker=dict(line=dict(width=0), )) # Eliminar el borde de las barras
     # Ajustar el espaciado entre las barras para dar la apariencia de redondez
     fig.update_layout(bargap=0.2)
     
-   
+    # Actualizar el diseño del gráfico
+    fig.update_layout(
+        title={
+        "text": f"<b>{graph_title}</b>",
+        "x": 0.5,
+        "y": 0.95,
+        "xanchor": "center",
+        "yanchor": "top",
+        "font": {
+            "size": 20,
+            "color": "black",
+            "family": letra
+        },
+        "yref": "container",
+        "yanchor": "top"
+        },
+        showlegend=True,
+        plot_bgcolor='rgba(0,0,0,0)',
+        xaxis_tickangle=-45,
+        hovermode="x",
+        legend=dict(
+            title='',
+            orientation="v",
+            xanchor='right',
+            x=1.05,
+            y=1,
+            bgcolor='rgba(255, 255, 255, 0)',
+            bordercolor='rgba(255, 255, 255, 0)',
+            tracegroupgap=10
+        )
+    )
+        
+    
 
     return fig
 
