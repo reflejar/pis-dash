@@ -17,7 +17,7 @@ from pages.indicadores_censos.data_censo.base_indicadores import base_censos, VA
 VAR_SUPERFICIE_HA = 'Superficie promedio'
 
 color_concentracion_tierra_1 = '#89370B'
-
+letra = 'Arial'
 # Titulos
 graph_title =  'Superficie promedio de EAPs (ha)'
 
@@ -46,8 +46,11 @@ EAPs_SUPERFICIE =dbc.Container(
                                     
                                 ),
                                 dbc.CardFooter(
-                                    dbc.Button("AMPLIAR GRÁFICO", id="open-modal-button-superficie", color="warning",style={"background-color": "#89370B", "border-color": "#DEDE7C"}),
-                                ),
+                                    dbc.Button("AMPLIAR GRÁFICO", 
+                                               id="open-modal-button-superficie", 
+                                               style={"background-color": color_concentracion_tierra_1, 
+                                                      "border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": letra}), 
+                                                className="text-center", style={"background-color": "light","border": "none", "color": "light"}),
                             ],
                             color="light", 
                             class_name="shadow",
@@ -85,6 +88,37 @@ def update_bar_chart(partidos):
     fig.update_layout(title={"text": graph_title,"font": {"size": 20, "color": "black", "family": "Arial"}}, showlegend=False, plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
     fig.update_layout(yaxis=dict(tickformat=',',ticksuffix='k'))
     fig.update_xaxes( title_text = "Año del censo", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
+        # Actualizar el diseño del gráfico
+    fig.update_layout(
+        title={
+        "text": f"<b>Superficie promedio de EAPs <br> en hectáreas</br> </b>",
+        "x": 0.5,
+        "y": 0.95,
+        "xanchor": "center",
+        "yanchor": "top",
+        "font": {
+            "size": 17,
+            "color": "black",
+            "family": letra
+        },
+        "yref": "container",
+        "yanchor": "top"
+        },
+        showlegend=True,
+        plot_bgcolor='rgba(0,0,0,0)',
+        xaxis_tickangle=-45,
+        hovermode="x",
+        legend=dict(
+            title='',
+            orientation="v",
+            xanchor='right',
+            x=1.05,
+            y=1,
+            bgcolor='rgba(255, 255, 255, 0)',
+            bordercolor='rgba(255, 255, 255, 0)',
+            tracegroupgap=10
+        )
+    )
 
     return fig
 

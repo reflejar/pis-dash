@@ -3,14 +3,19 @@ from dash import dcc, html, Input, Output, callback, State, no_update
 import dash_bootstrap_components as dbc
 import dash
 
+color_concentracion_tierra_1 = '#89370B'
+
 modal_tierra=dbc.Modal(
                     [
-                        dbc.ModalHeader(id="titulo-modal-tierra"),
+                        
                         dbc.ModalBody(
-                           dcc.Graph(id="modal-graph"),
+                           dcc.Graph(id="modal-graph-tierra"),
                         ),
                         dbc.ModalFooter(
-                            dbc.Button("CERRAR GRÁFICO", id="close-modal-button", className="ml-auto", color="warning",style={"background-color": "#89370B", "border-color": "#DEDE7C"}),
+                            dbc.Button("CERRAR GRÁFICO", 
+                                       id="close-modal-button-tierra", 
+                                       color="light",style={"background-color": color_concentracion_tierra_1, "border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": "Arial"},  
+                                       className="mx-auto"), className="text-center", style={"background-color": "none","border": "none", "color": "none"}
                         ),
                     ],
                     id="modal-tierra",
@@ -20,7 +25,7 @@ modal_tierra=dbc.Modal(
 @callback(
     [
         Output("modal-tierra", "is_open"), 
-        Output("modal-graph", "figure" ),
+        Output("modal-graph-tierra", "figure" ),
         Output("open-modal-button-eaps", "n_clicks"), 
         Output("open-modal-button-tamanio", "n_clicks"), 
         Output("open-modal-button-superficie", "n_clicks"), 
@@ -29,7 +34,7 @@ modal_tierra=dbc.Modal(
         Input("open-modal-button-eaps", "n_clicks"), 
         Input("open-modal-button-tamanio", "n_clicks"), 
         Input("open-modal-button-superficie", "n_clicks"), 
-        Input("close-modal-button", "n_clicks")
+        Input("close-modal-button-tierra", "n_clicks")
     ],
     [
         State("modal-tierra", "is_open"), 
