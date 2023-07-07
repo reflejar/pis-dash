@@ -16,7 +16,7 @@ from pages.indicadores_censos.data_censo.base_indicadores import base_censos, VA
 
 VAR_SUPERFICIE_HA = 'Superficie promedio'
 
-color_concentracion_tierra_1 = '#89370B'
+color_concentracion_tierra_1 = 'rgb(150, 79, 71)'
 letra = 'Arial'
 # Titulos
 graph_title =  'Superficie promedio de EAPs (ha)'

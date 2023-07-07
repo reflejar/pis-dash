@@ -4,14 +4,14 @@ from .eaps_cantidad import EAPS_CANTIDAD
 from .eaps_segun_tamanio import Q_EAPs_tamanio, EAPs_tamanio_texto
 from .eaps_superficie_ha import EAPs_SUPERFICIE, EAPs_superficie_texto
 
-color_concentracion_tierra_1 = '#89370B'
+color_concentracion_tierra_1 = 'rgb(150, 79, 71)'
 
 Concentracion_Tierra = html.Div([
             html.Br(),
             dbc.Row([
                 html.Br(),
                 html.Br(),
-                html.H6('CONCENTRACIÓN DE LA TIERRA', style={'font-size': '25px', 'color': color_concentracion_tierra_1}),
+                html.H6('Concentración de la tierra', style={'font-size': '25px', 'color': color_concentracion_tierra_1}),
                 html.P("""Siguiendo al INDEC, se utilizará como unidad de referencia a las explotaciones agropecuarias (EAP). Para entenderlo más fácilmente, 
                     podemos pensar a las EAPs como los "campos" de Argentina. Se tomará como EAPS grandes a aquellas 
                     que posean más de 500 hectáreas, mientras que las EAPs pequeñas serán las que tengan menos de 500 hectáreas.""", className="text-white"),

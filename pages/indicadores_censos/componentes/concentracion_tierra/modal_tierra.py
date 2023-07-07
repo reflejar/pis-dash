@@ -3,7 +3,7 @@ from dash import dcc, html, Input, Output, callback, State, no_update
 import dash_bootstrap_components as dbc
 import dash
 
-color_concentracion_tierra_1 = '#89370B'
+color_concentracion_tierra_1 = 'rgb(150, 79, 71)'
 
 modal_tierra=dbc.Modal(
                     [

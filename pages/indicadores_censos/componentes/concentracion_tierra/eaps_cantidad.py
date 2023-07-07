@@ -14,7 +14,7 @@ from .modal_tierra import modal_tierra
 VAR_TOTAL_EAPS = 'Total EAPS'
 VAR_EAPS_Q = 'Cantidad de EAPs'
 #COLOR
-color_concentracion_tierra_1 = '#89370B'
+color_concentracion_tierra_1 = 'rgb(150, 79, 71)'
 letra = 'Arial'
 
 # Titulos

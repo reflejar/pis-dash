@@ -24,8 +24,8 @@ VAR_TAMANIO_EAPS = 'Tamaño EAPs'
 letra = 'Arial'
 
 
-color_concentracion_tierra_1 = '#89370B'
-color_concentracion_tierra_2 = '#DEDE7C'
+color_concentracion_tierra_1 = 'rgb(225, 134, 95)'
+color_concentracion_tierra_2 = 'rgb(150, 79, 71)'
 
 
 # Titulos
@@ -65,7 +65,7 @@ Q_EAPs_tamanio =dbc.Container(
                                 dbc.CardFooter(
                                     dbc.Button("AMPLIAR GRÁFICO", 
                                                id="open-modal-button-tamanio", 
-                                               style={"background-color": color_concentracion_tierra_1, 
+                                               style={"background-color": color_concentracion_tierra_2, 
                                                       "border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": letra}), 
                                                 className="text-center", style={"background-color": "light","border": "none", "color": "light"}),
                             ],
