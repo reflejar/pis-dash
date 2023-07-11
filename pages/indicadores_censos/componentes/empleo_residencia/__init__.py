@@ -23,7 +23,7 @@ Empleo = html.Div([
                     dbc.Row(residencia),
                     html.Br(),
                     html.Br(),
-                    ], md=5),
+                    ], md=4),
                 ]),
         #         html.H6('Cantidad de varones residentes en zonas rurales', style={'font-size': '20px'}, className="text-white"),
         #         html.Br(),

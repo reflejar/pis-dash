@@ -17,6 +17,7 @@ from pages.indicadores_censos.data_censo.base_indicadores import base_censos, VA
 VAR_SUPERFICIE_HA = 'Superficie promedio'
 
 color_concentracion_tierra_1 = '#89370B'
+color_concentracion_tierra_2 = '#DEDE7C'
 letra = 'Arial'
 # Titulos
 graph_title =  'Superficie promedio de EAPs (ha)'
@@ -84,7 +85,7 @@ def update_bar_chart(partidos):
     #df[VAR_SUPERFICIE_HA]= round(df[VAR_SUPERFICIE_HA],2)
 
     fig = px.bar(df, x=VAR_ANIO_CENSO, y=VAR_SUPERFICIE_HA, text_auto=VAR_SUPERFICIE_HA)
-    fig.update_traces(marker_color=color_concentracion_tierra_1)  # Modificar el color de las barras
+    fig.update_traces(marker_color=color_concentracion_tierra_2)  # Modificar el color de las barras
     fig.update_layout(title={"text": graph_title,"font": {"size": 20, "color": "black", "family": "Arial"}}, showlegend=False, plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
     fig.update_layout(yaxis=dict(tickformat=',',ticksuffix='k'))
     fig.update_xaxes( title_text = "Año del censo", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
