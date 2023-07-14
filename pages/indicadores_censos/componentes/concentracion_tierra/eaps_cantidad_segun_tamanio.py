@@ -21,13 +21,15 @@ VAR_TOTAL_EAPS = 'Total EAPS'
 VAR_EAPS_Q = 'Cantidad de EAPs'
 VAR_TAMANIO_EAPS = 'Tamaño EAPs'
 
+letra = 'Arial'
+
 
 color_concentracion_tierra_1 = '#89370B'
 color_concentracion_tierra_2 = '#DEDE7C'
 
 
 # Titulos
-graph_title =  'PARTICIPACIÓN DE EAPs SEGÚN TAMAÑO'
+graph_title =  "Explotaciones Agropecuarias según su tamaño"
 
 # BASE DE DATOS
 df_base_original = base_censos.copy()
@@ -61,8 +63,11 @@ Q_EAPs_tamanio =dbc.Container(
                                     
                                 ),
                                 dbc.CardFooter(
-                                    dbc.Button("Ampliar", id="open-modal-button-tamanio", color="warning",style={"background-color": "#89370B", "border-color": "#DEDE7C"}),
-                                ),
+                                    dbc.Button("AMPLIAR GRÁFICO", 
+                                               id="open-modal-button-tamanio", 
+                                               style={"background-color": color_concentracion_tierra_1, 
+                                                      "border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": letra}), 
+                                                className="text-center", style={"background-color": "light","border": "none", "color": "light"}),
                             ],
                             color="light", 
                             class_name="shadow",
@@ -95,11 +100,43 @@ def update_bar_chart(partidos):
     df = df.groupby(by = [VAR_ANIO_CENSO, VAR_TAMANIO_EAPS])[VAR_EAPS_Q].sum().reset_index()
     df[VAR_EAPS_Q]= round(df[VAR_EAPS_Q],2)
 
-    fig = px.histogram(df, x=VAR_ANIO_CENSO, y=VAR_EAPS_Q, color=VAR_TAMANIO_EAPS, barnorm='percent', text_auto=True, color_discrete_sequence=[color_concentracion_tierra_1, color_concentracion_tierra_2 ])
-    fig.update_layout(title={"text": graph_title,"font": {"size": 20, "color": "black", "family": "Arial"}}, showlegend=False, barmode='stack', plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
+    fig = px.histogram(df, x=VAR_ANIO_CENSO, y=VAR_EAPS_Q, color=VAR_TAMANIO_EAPS, barnorm='percent',  text_auto=True, color_discrete_sequence=[color_concentracion_tierra_1, color_concentracion_tierra_2 ])
+    fig.update_layout(title={"text": graph_title,"font": {"size": 20, "color": "black", "family": "Arial"}},  showlegend=False, barmode='stack', plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
     fig.update_xaxes( title_text = "Año del censo", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
     fig.update_yaxes(title_text = "Distribución de EAPs según tamaño",  title_font=dict(size=12,family='Verdana',color='black'), tickfont=dict(family='Calibri', color='black', size=10))
     
+    # Actualizar el diseño del gráfico
+    fig.update_layout(
+        title={
+        "text": f"<b>Participación de Explotaciones <br>Agropecuarias según tamaño</br></b>",
+        "x": 0.5,
+        "y": 0.95,
+        "xanchor": "center",
+        "yanchor": "top",
+        "font": { 
+            "size": 17,
+            "color": "black",
+            "family": letra
+        },
+        "yref": "container",
+        "yanchor": "top"
+        },
+        showlegend=True,
+        plot_bgcolor='rgba(0,0,0,0)',
+        xaxis_tickangle=-45,
+        hovermode="x",
+        legend=dict(
+            title='',
+            orientation="h",
+            xanchor='center',
+            x=0.5,
+            y=-0.3,
+            bgcolor='rgba(255, 255, 255, 0)',
+            bordercolor='rgba(255, 255, 255, 0)',
+            tracegroupgap=10
+        )
+    )
+
 
     return fig
 

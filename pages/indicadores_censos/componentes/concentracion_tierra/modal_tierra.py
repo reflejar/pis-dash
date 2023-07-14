@@ -3,14 +3,19 @@ from dash import dcc, html, Input, Output, callback, State, no_update
 import dash_bootstrap_components as dbc
 import dash
 
+color_concentracion_tierra_1 = '#89370B'
+
 modal_tierra=dbc.Modal(
                     [
-                        dbc.ModalHeader(id="titulo-modal-tierra"),
+                        
                         dbc.ModalBody(
-                           dcc.Graph(id="modal-graph"),
+                           dcc.Graph(id="modal-graph-tierra"),
                         ),
                         dbc.ModalFooter(
-                            dbc.Button("Cerrar", id="close-modal-button", className="ml-auto", color="warning",style={"background-color": "#89370B", "border-color": "#DEDE7C"}),
+                            dbc.Button("CERRAR GRÁFICO", 
+                                       id="close-modal-button-tierra", 
+                                       color="light",style={"background-color": color_concentracion_tierra_1, "border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": "Arial"},  
+                                       className="mx-auto"), className="text-center", style={"background-color": "none","border": "none", "color": "none"}
                         ),
                     ],
                     id="modal-tierra",
@@ -20,40 +25,47 @@ modal_tierra=dbc.Modal(
 @callback(
     [
         Output("modal-tierra", "is_open"), 
-        Output("modal-graph", "figure" ),
+        Output("modal-graph-tierra", "figure" ),
         Output("open-modal-button-eaps", "n_clicks"), 
         Output("open-modal-button-tamanio", "n_clicks"), 
-        Output("open-modal-button-pequenias", "n_clicks"), 
+        Output("open-modal-button-superficie", "n_clicks"),
+        Output("open-modal-button-superficie-tamanio", "n_clicks"), 
     ],
     [
         Input("open-modal-button-eaps", "n_clicks"), 
         Input("open-modal-button-tamanio", "n_clicks"), 
-        Input("open-modal-button-pequenias", "n_clicks"), 
-        Input("close-modal-button", "n_clicks")
+        Input("open-modal-button-superficie", "n_clicks"),
+        Input("open-modal-button-superficie-tamanio", "n_clicks"), 
+        Input("close-modal-button-tierra", "n_clicks")
     ],
     [
         State("modal-tierra", "is_open"), 
         State("q-eaps-total", "figure"), 
         State("q-eaps-tamanio", "figure"),
-        State("eaps-pequenias", "figure"), 
+        State("eaps-superficie", "figure"),
+        State("superficie-eaps-tamanio", "figure"), 
     ],
 )
 def toggle_modal(
     open_clicks_eaps, 
     open_clicks_tamanio,
-    open_clicks_pequenias, 
+    open_clicks_superficie,
+    open_clicks_superficie_tamanio,
     close_clicks, 
     is_open, 
     figure_eaps, 
     figure_tamanio,
-    figure_pequenias
+    figure_superficie,
+    figure_superficie_tamanio
 ):
     if open_clicks_eaps:
-        return not is_open,figure_eaps,0,0,0
+        return not is_open,figure_eaps,0,0,0,0
     elif open_clicks_tamanio:
-        return not is_open,figure_tamanio,0,0,0
-    elif open_clicks_pequenias:
-        return not is_open,figure_pequenias,0,0,0
+        return not is_open,figure_tamanio,0,0,0,0
+    elif open_clicks_superficie:
+        return not is_open,figure_superficie,0,0,0,0
+    elif open_clicks_superficie_tamanio:
+        return not is_open,figure_superficie_tamanio,0,0,0,0
     elif close_clicks:
-        return False, dash.no_update,0,0,0
-    return is_open, dash.no_update,0,0,0
+        return False, dash.no_update,0,0,0,0
+    return is_open, dash.no_update,0,0,0,0
