@@ -1,8 +1,9 @@
 from dash import html, dcc, Input, Output, callback
 import dash_bootstrap_components as dbc
 from .eaps_cantidad import EAPS_CANTIDAD
-from .eaps_segun_tamanio import Q_EAPs_tamanio, EAPs_tamanio_texto
-from .eaps_superficie_ha import EAPs_SUPERFICIE, EAPs_superficie_texto
+from .eaps_cantidad_segun_tamanio import Q_EAPs_tamanio
+from .eaps_superficie_ha import EAPs_SUPERFICIE
+from .eaps_superficie_segun_tamanio import Superficie_EAPs_tamanio
 
 color_concentracion_tierra_1 = 'rgb(150, 79, 71)'
 
@@ -37,6 +38,13 @@ Concentracion_Tierra = html.Div([
                         html.Br(),
                         html.Br(),
                         ], md=4)             
+                ]),
+                dbc.Row([
+                    dbc.Col([
+                    dbc.Row(Superficie_EAPs_tamanio),
+                        html.Br(),
+                        html.Br(),
+                        ], md=4),                              
                 ])])
                 # html.Br(),
                 # dbc.Col([
