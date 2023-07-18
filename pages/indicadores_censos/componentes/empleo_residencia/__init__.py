@@ -19,7 +19,6 @@ Empleo = html.Div([
                 html.Br(),
                 html.Br(),
                 
-<<<<<<< HEAD
                  dbc.Row([dbc.Col([
                             dbc.Row(residencia)                         
                             ], md=4, className="justify-content-center align-items-center"),
@@ -27,13 +26,6 @@ Empleo = html.Div([
                             dbc.Row(empleo)
                             ], md=4,  className="justify-content-center align-items-center"),
                     ]),
-=======
-                dbc.Col([
-                    dbc.Row(residencia),
-                    html.Br(),
-                    html.Br(),
-                    ], md=4),
->>>>>>> dev
                 ]),
                 
             

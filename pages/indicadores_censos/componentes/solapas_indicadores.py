@@ -15,12 +15,7 @@ SolapasIndicadores = html.Div([
     dbc.Tabs(id="tabs", active_tab='tab-1', children=[
         dbc.Tab(label='CONCENTRACIÓN DE TIERRAS', tab_id='tab-1', label_style={"color":'#FFFFFF' , 'font-size': '18px', 'background-color':color_concentracion_tierra,  'border-top-left-radius': '40px','border-bottom-left-radius': '40px','border-bottom-right-radius': '40px','border-top-right-radius': '40px', 'width': '290px', "text-align": "center"},active_label_style={'border': '4px solid white'}, className='nav-tabs-custom'),
         dbc.Tab(label='EMPLEO Y RESIDENCIA', tab_id='tab-2',label_style={"color":'#FFFFFF' , 'font-size': '18px', 'background-color':color_empleo_residencia ,  'border-top-left-radius': '40px','border-bottom-left-radius': '40px','border-bottom-right-radius': '40px','border-top-right-radius': '40px' ,'width': '290px', "text-align": "center"},active_label_style={'border': '4px solid white'}, className='nav-tabs-custom'),
-<<<<<<< HEAD
         dbc.Tab(label='MODO DE PRODUCCIÓN', tab_id='tab-3', label_style={"color":'#FFFFFF' , 'font-size': '18px', 'background-color':color_modo_produccion  ,  'border-top-left-radius': '40px','border-bottom-left-radius': '40px','border-bottom-right-radius': '40px','border-top-right-radius': '40px' ,'width': '290px', "text-align": "center" }, active_label_style={'border': '4px solid white'},className='nav-tabs-custom'),
-        dbc.Tab(label='RESUMEN', tab_id='tab-4', label_style={"color":'#FFFFFF' , 'font-size': '18px', 'background-color':color_resumen ,  'border-top-left-radius': '40px','border-bottom-left-radius': '40px','border-bottom-right-radius': '40px','border-top-right-radius': '40px' , 'width': '290px', "text-align": "center" }, active_label_style={'border': '4px solid white'},className='nav-tabs-custom'),
-=======
-        dbc.Tab(label='MODO DE PRODUCCIÓN', tab_id='tab-3', label_style={"color":'#FFFFFF' , 'font-size': '18px', 'background-color':color_cultivos  ,  'border-top-left-radius': '40px','border-bottom-left-radius': '40px','border-bottom-right-radius': '40px','border-top-right-radius': '40px' ,'width': '290px', "text-align": "center" }, active_label_style={'border': '4px solid white'},className='nav-tabs-custom'),
->>>>>>> dev
     ],style={'borderBottom': '0px'}),
     html.Div(id='tabs-content'),
   
