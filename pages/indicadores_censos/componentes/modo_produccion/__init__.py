@@ -1,7 +1,8 @@
 from dash import html, dcc, Input, Output, callback
 import dash_bootstrap_components as dbc
-# from .residencia import residencia
-# from .empleo import empleo
+from .cultivos_hectareas_1988 import CULTIVOS_1988
+from .cultivos_hectareas_2002 import CULTIVOS_2002
+from .cultivos_hectareas_2018 import CULTIVOS_2018
 
 
 color_prod= 'rgb(77, 130, 133)'
@@ -19,13 +20,17 @@ Produccion = html.Div([
                 html.Br(),
                 html.Br(),
                 
-                #  dbc.Row([dbc.Col([
-                #             dbc.Row(residencia)                         
-                #             ], md=4, className="justify-content-center align-items-center"),
-                #         dbc.Col([
-                #             dbc.Row(empleo)
-                #             ], md=4,  className="justify-content-center align-items-center"),
-                #     ]),
+                 dbc.Row([dbc.Col([
+                            dbc.Row(CULTIVOS_1988)                         
+                            ], md=4, className="justify-content-center align-items-center"),
+                          dbc.Col([
+                             dbc.Row(CULTIVOS_2002)                         
+                             ], md=4, className="justify-content-center align-items-center"),
+                          dbc.Col([
+                             dbc.Row(CULTIVOS_2018)                         
+                             ], md=4, className="justify-content-center align-items-center"), 
+                         
+                    ]),
                 ]),
                 
             
