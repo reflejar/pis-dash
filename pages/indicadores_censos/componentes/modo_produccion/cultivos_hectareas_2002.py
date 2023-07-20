@@ -87,21 +87,20 @@ def update_bar_chart(partidos):
 
     
 
-    fig = px.pie(df, values=VAR_VALORES, names=VAR_CULTIVOS, color_discrete_sequence=[color_cultivos_1,color_cultivos_2,color_cultivos_3,color_cultivos_4])
-    # fig.update_traces(hovertemplate='Hectáreas implantadas de  <br>Año del censo: %{x}<br>Cantidad de empleados:  %{y:.0f}<br>',
-    #     text=df[VAR_VALORES].astype(str),  # Obtener los valores totales como texto
-    #     textposition='outside',  # Colocar el texto automáticamente encima de las barras
-    #     textfont=dict(color='black', size=12, family=letra)
-    # )                  
-    # Modificar el color de las barras
-    # fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
-    # fig.update_xaxes( title_text = "Año del censo", title_font=dict(size=14, family=letra, color='black'), tickfont=dict(family=letra, color='black', size=11))
-    # fig.update_yaxes( title_text = "Cantidad de empleados", title_font=dict(size=14, family=letra, color='black'), tickfont=dict(family=letra, color='black', size=11))
+    color_cultivos_personalizados = [color_cultivos_1,color_cultivos_2,color_cultivos_3,color_cultivos_4]
 
-    # Actualizar el diseño del gráfico
+    fig = px.pie(df, values=VAR_VALORES, 
+                 names=VAR_CULTIVOS,
+                 color=VAR_CULTIVOS, 
+                 color_discrete_map=dict(zip(df[VAR_CULTIVOS], color_cultivos_personalizados)))
+    fig.update_traces(hovertemplate=f"{'<br>'.join(textwrap.wrap('Cantidad de hectáreas cultivadas de <b>%{label}</b>: %{value:.0f}', width=25))}",
+        text="<b>"+df[VAR_CULTIVOS].astype(str)+"</b>",  # Obtener los valores totales como texto
+        textposition='outside',  # Colocar el texto automáticamente encima de las barras
+        textfont=dict(color='black', size=14, family=letra)
+    )  
     fig.update_layout(
         title={
-        "text": f"<b>{'<br>'.join(textwrap.wrap(graph_title, width=25))}</b>",
+        "text": f"<b>{'<br>'.join(textwrap.wrap(graph_title, width=40))}</b>",
         "x": 0.5,
         "y": 0.95,
         "xanchor": "center",

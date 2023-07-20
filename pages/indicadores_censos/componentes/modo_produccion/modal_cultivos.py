@@ -9,7 +9,7 @@ modal_cultivos=dbc.Modal(
                     [
                         
                         dbc.ModalBody(
-                           dcc.Graph(id="modal-graph-cultivos"),
+                           dcc.Graph(id="modal-graph-cultivos" ),
                         ),
                         dbc.ModalFooter(
                             dbc.Button("CERRAR GRÁFICO", id="close-modal-button-cultivos", color="light",style={"background-color": color_cultivos, "border-color": "#FFFFFF", "color": "#000000", "font-family": "Arial"},  className="mx-auto"), className="text-center", style={"background-color": "none","border": "none", "color": "none"}

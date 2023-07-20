@@ -10,7 +10,7 @@ VAR_ANIO_CENSO_2002 = '2002'
 VAR_CULTIVOS='Cultivo'
 VAR_VALORES='Total'
 
-base_cultivos=pd.read_csv(f'{URL_DATA_CENSO}/cultivos_ha.csv', sep=";")
+base_cultivos=pd.read_csv(f'{URL_DATA_CENSO}/cultivos_ha.csv')
 
 #Limpieza de datos
 base_cultivos[VAR_ANIO_CENSO]=base_cultivos[VAR_ANIO_CENSO].astype(int).astype(str)
@@ -18,3 +18,6 @@ base_cultivos[VAR_ANIO_CENSO]=base_cultivos[VAR_ANIO_CENSO].astype(int).astype(s
 #Listado de opciones de filtros
 anio_censo=base_cultivos[VAR_ANIO_CENSO].sort_values(ascending=True).unique().tolist()
 partidos=base_cultivos[VAR_PARTIDO].sort_values(ascending=True).unique().tolist()
+
+#totales a numeros
+base_cultivos[VAR_VALORES]=base_cultivos[VAR_VALORES].astype(str).apply(lambda x: x.replace("Sin dato", "0")).apply(lambda x: x.replace(".", "")).apply(lambda x: x.replace(",", ".")).astype(float)
