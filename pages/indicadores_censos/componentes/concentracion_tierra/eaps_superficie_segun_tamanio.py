@@ -1,10 +1,8 @@
 from dash import html, dcc, Input, Output, callback
 import dash_bootstrap_components as dbc
 from dash_loading_spinners import Hash
-import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
-import pickle
 from .modal_tierra import modal_tierra
 
 
@@ -13,11 +11,11 @@ from .modal_tierra import modal_tierra
 from pages.indicadores_censos.data_censo.base_indicadores import base_censos, VAR_ANIO_CENSO, VAR_PARTIDO, VAR_ULTIMO_ANIO_CENSO, VAR_ANIO_CENSO_1988, VAR_ANIO_CENSO_2002
 
 ##### VARIABLES ######
-VAR_EAPS_PEQ = 'EAPS pequeñas (<= 500ha)'
-VAR_EAPS_GRANDES = 'EAPS grandes (>500 ha)'
-VAR_TOTAL_EAPS = 'Total EAPS'
+VAR_EAPS_HA_PEQ = 'HA ocupadas por EAPS pequeñas'
+VAR_EAPS_HA_GRANDES = 'HA ocupadas por EAPS grandes'
+VAR_TOTAL_HA_EAPS = 'Total de HA'
 
-VAR_EAPS_Q = 'Cantidad de EAPs'
+VAR_EAPS_HA = 'HA de EAPs'
 VAR_TAMANIO_EAPS = 'Tamaño EAPs'
 
 letra = 'Arial'
@@ -29,20 +27,8 @@ color_concentracion_tierra_2 = '#DEDE7C'
 
 # Titulos
 graph_title =  "Explotaciones Agropecuarias según su tamaño"
-
-# BASE DE DATOS
-df_base_original = base_censos.copy()
-
-pequenias_df_base = df_base_original[[VAR_EAPS_PEQ, VAR_ANIO_CENSO, VAR_PARTIDO]]
-pequenias_df_base = pequenias_df_base.rename(columns = {VAR_EAPS_PEQ: VAR_EAPS_Q})
-pequenias_df_base[VAR_TAMANIO_EAPS] = 'Pequeñas (<=500 ha)'
-
-grandes_df_base = df_base_original[[VAR_EAPS_GRANDES, VAR_ANIO_CENSO, VAR_PARTIDO]]
-grandes_df_base = grandes_df_base.rename(columns = {VAR_EAPS_GRANDES: VAR_EAPS_Q})
-grandes_df_base[VAR_TAMANIO_EAPS] = 'Grandes (>500 ha)'
-
-df_base = pd.concat([pequenias_df_base, grandes_df_base])
-
+df_base_ha = pd.read_csv('pages/indicadores_censos/data_censo/tierra/eaps_ha_por_tamanio.csv', sep=';', decimal=',')
+df_base_ha[VAR_ANIO_CENSO] = df_base_ha[VAR_ANIO_CENSO].astype(int).astype(str) 
 ###### GRAFICO  #####  
  
 Superficie_EAPs_tamanio =dbc.Container(
@@ -86,7 +72,7 @@ Superficie_EAPs_tamanio =dbc.Container(
 
 def update_bar_chart(partidos):
 
-    df = df_base.copy()
+    df = df_base_ha.copy()
     sel_partido = [c for c in partidos if c != ""]
     
     if len(sel_partido) >0:
@@ -96,14 +82,14 @@ def update_bar_chart(partidos):
 #    if len(df) == 0:
 #        return NoHayDatos['linea']
 
-    df = df.groupby(by = [VAR_ANIO_CENSO, VAR_TAMANIO_EAPS])[VAR_EAPS_Q].sum().reset_index()
-    df[VAR_EAPS_Q]= round(df[VAR_EAPS_Q],2)
+    df = df.groupby(by = [VAR_ANIO_CENSO, VAR_TAMANIO_EAPS])[VAR_EAPS_HA].sum().reset_index()
+    #df[VAR_EAPS_HA]= round(df[VAR_EAPS_HA],2)
 
-    fig = px.histogram(df, x=VAR_ANIO_CENSO, y=VAR_EAPS_Q, color=VAR_TAMANIO_EAPS, barnorm='percent',  text_auto=True, color_discrete_sequence=[color_concentracion_tierra_1, color_concentracion_tierra_2 ])
+    fig = px.histogram(df, x=VAR_ANIO_CENSO, y=VAR_EAPS_HA, color=VAR_TAMANIO_EAPS,  text_auto=True, color_discrete_sequence=[color_concentracion_tierra_1, color_concentracion_tierra_2 ])
     fig.update_layout(title={"text": graph_title,"font": {"size": 20, "color": "black", "family": "Arial"}},  showlegend=False, barmode='stack', plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
     fig.update_xaxes( title_text = "Año del censo", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
     fig.update_yaxes(title_text = "Distribución de EAPs según tamaño",  title_font=dict(size=12,family='Verdana',color='black'), tickfont=dict(family='Calibri', color='black', size=10))
-    
+    fig.update_traces(textposition='inside')
     # Actualizar el diseño del gráfico
     fig.update_layout(
         title={

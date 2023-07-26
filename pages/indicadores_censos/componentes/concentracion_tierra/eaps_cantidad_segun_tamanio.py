@@ -1,10 +1,8 @@
 from dash import html, dcc, Input, Output, callback
 import dash_bootstrap_components as dbc
 from dash_loading_spinners import Hash
-import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
-import pickle
 from .modal_tierra import modal_tierra
 
 
@@ -31,18 +29,9 @@ color_concentracion_tierra_2 = '#DEDE7C'
 # Titulos
 graph_title =  "Explotaciones Agropecuarias según su tamaño"
 
-# BASE DE DATOS
-df_base_original = base_censos.copy()
+df_base = pd.read_csv('pages/indicadores_censos/data_censo/tierra/eaps_por_tamanio.csv', sep=';'  )
 
-pequenias_df_base = df_base_original[[VAR_EAPS_PEQ, VAR_ANIO_CENSO, VAR_PARTIDO]]
-pequenias_df_base = pequenias_df_base.rename(columns = {VAR_EAPS_PEQ: VAR_EAPS_Q})
-pequenias_df_base[VAR_TAMANIO_EAPS] = 'Pequeñas (<=500 ha)'
-
-grandes_df_base = df_base_original[[VAR_EAPS_GRANDES, VAR_ANIO_CENSO, VAR_PARTIDO]]
-grandes_df_base = grandes_df_base.rename(columns = {VAR_EAPS_GRANDES: VAR_EAPS_Q})
-grandes_df_base[VAR_TAMANIO_EAPS] = 'Grandes (>500 ha)'
-
-df_base = pd.concat([pequenias_df_base, grandes_df_base])
+df_base[VAR_ANIO_CENSO] = df_base[VAR_ANIO_CENSO].astype(int).astype(str) 
 
 ###### GRAFICO  #####  
  
