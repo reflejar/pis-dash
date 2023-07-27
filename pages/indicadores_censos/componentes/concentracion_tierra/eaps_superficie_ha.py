@@ -19,6 +19,13 @@ VAR_SUPERFICIE_HA = 'Superficie promedio'
 color_concentracion_tierra_1 = '#89370B'
 color_concentracion_tierra_2 = '#DEDE7C'
 letra = 'Arial'
+tamanio_fuente_titulo = 17
+tamanio_fuente = 16
+tamanio_fuente_tick = 11
+color_letra = 'black'
+x_titulo = "Año del censo"
+y_titulo = "Superficie promedio (ha)"
+
 # Titulos
 graph_title =  'Superficie promedio de EAPs (ha)'
 
@@ -86,9 +93,13 @@ def update_bar_chart(partidos):
 
     fig = px.bar(df, x=VAR_ANIO_CENSO, y=VAR_SUPERFICIE_HA, text_auto=VAR_SUPERFICIE_HA)
     fig.update_traces(marker_color=color_concentracion_tierra_2)  # Modificar el color de las barras
-    fig.update_layout(title={"text": graph_title,"font": {"size": 20, "color": "black", "family": "Arial"}}, showlegend=False, plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
-    fig.update_layout(yaxis=dict(tickformat=',',ticksuffix='k'))
-    fig.update_xaxes( title_text = "Año del censo", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
+    fig.update_layout(title={"text": graph_title,"font": {"size": tamanio_fuente_titulo, "color": color_letra, "family": letra}}, showlegend=False, plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
+    fig.update_xaxes( title_text = x_titulo, title_font=dict(size=tamanio_fuente, family=letra, color=color_letra), tickfont=dict(family=letra, color=color_letra, size=tamanio_fuente_tick))
+    fig.update_yaxes(title_text = y_titulo,  title_font=dict(size=tamanio_fuente,family=letra,color=color_letra), tickfont=dict(family=letra, color=color_letra, size=tamanio_fuente_tick))
+    fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
+  #Armar el texto de las etiquetas emergentes
+    fig.update_traces(hovertemplate='Superficie promedio: %{y} hectáreas<br>Año del censo: %{x}')
+ 
         # Actualizar el diseño del gráfico
     fig.update_layout(
         title={

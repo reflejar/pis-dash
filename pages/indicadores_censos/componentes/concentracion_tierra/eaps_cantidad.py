@@ -16,6 +16,14 @@ VAR_EAPS_Q = 'Cantidad de EAPs'
 #COLOR
 color_concentracion_tierra_1 = '#89370B'
 letra = 'Arial'
+tamanio_fuente_titulo = 17
+tamanio_fuente = 16
+tamanio_fuente_tick = 11
+color_letra = 'black'
+x_titulo = "Año del censo"
+y_titulo = "Cantidad de EAPs"
+
+
 
 # Titulos
 graph_title =  'Explotaciones Agropecuarias'
@@ -88,10 +96,14 @@ def update_bar_chart(partidos):
 
     fig = px.bar(df, x=VAR_ANIO_CENSO, y=VAR_EAPS_Q, color_discrete_sequence=[color_concentracion_tierra_1],text=VAR_EAPS_Q)
     fig.update_layout(title=graph_title, barmode='stack', plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
-    fig.update_xaxes( title_text = "Año del censo", title_font=dict(size=12, family='Verdana', color='black'), tickfont=dict(family='Calibri', color='black', size=10))
-    fig.update_yaxes(title_text = "Cantidad de EAPs",  title_font=dict(size=12,family='Verdana',color='black'), tickfont=dict(family='Calibri', color='black', size=10))
-    fig.update_layout(yaxis=dict(tickformat="."))
-
+    fig.update_xaxes( title_text = x_titulo, title_font=dict(size=tamanio_fuente, family=letra, color=color_letra), tickfont=dict(family=letra, color=color_letra, size=tamanio_fuente_tick))
+    fig.update_yaxes(title_text = y_titulo,  title_font=dict(size=tamanio_fuente,family=letra,color=color_letra), tickfont=dict(family=letra, color=color_letra, size=tamanio_fuente_tick))
+    fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
+    
+    #Armar el texto de las etiquetas emergentes
+    fig.update_traces(hovertemplate='Cantidad de EAPs: %{text}<br>Año del censo: %{x}')
+ 
+   
     # Actualizar el diseño del gráfico
     fig.update_layout(
         title={
