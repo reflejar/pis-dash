@@ -1,14 +1,12 @@
-from dash import html, dcc, Input, Output, callback
+from dash import dcc, Input, Output, callback
 import dash_bootstrap_components as dbc
 from dash_loading_spinners import Hash
 import plotly.express as px
 import pandas as pd
 from .modal_tierra import modal_tierra
 
-
-#from tools.componentes import NoHayDatos, Alert
-
-from pages.indicadores_censos.data_censo.base_indicadores import base_censos, VAR_ANIO_CENSO, VAR_PARTIDO, VAR_ULTIMO_ANIO_CENSO, VAR_ANIO_CENSO_1988, VAR_ANIO_CENSO_2002
+from pages.indicadores_censos.data_censo.base_indicadores import VAR_ANIO_CENSO, VAR_PARTIDO, VAR_ULTIMO_ANIO_CENSO, VAR_ANIO_CENSO_1988, VAR_ANIO_CENSO_2002
+from ..formatos import letra, tamanio_fuente_titulo, tamanio_fuente, tamanio_fuente_tick, color_letra, color_concentracion_tierra_1, color_concentracion_tierra_2
 
 ##### VARIABLES ######
 
@@ -19,18 +17,8 @@ VAR_TOTAL_EAPS = 'Total EAPS'
 VAR_EAPS_Q = 'Cantidad de EAPs'
 VAR_TAMANIO_EAPS = 'Tamaño EAPs'
 
-letra = 'Arial'
-
-tamanio_fuente_titulo = 17
-tamanio_fuente = 16
-tamanio_fuente_tick = 11
-color_letra = 'black'
 x_titulo = "Año del censo"
 y_titulo = "Distribución de EAPs según tamaño"
-
-color_concentracion_tierra_1 = '#89370B'
-color_concentracion_tierra_2 = '#DEDE7C'
-
 
 # Titulos
 graph_title =  "Explotaciones Agropecuarias según su tamaño"
@@ -100,6 +88,10 @@ def update_bar_chart(partidos):
     fig.update_xaxes( title_text = x_titulo, title_font=dict(size=tamanio_fuente, family=letra, color=color_letra), tickfont=dict(family=letra, color=color_letra, size=tamanio_fuente_tick))
     fig.update_yaxes(title_text = y_titulo,  title_font=dict(size=tamanio_fuente,family=letra,color=color_letra), tickfont=dict(family=letra, color=color_letra, size=tamanio_fuente_tick))
     fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
+    fig.data[1].customdata = df[VAR_TAMANIO_EAPS]
+
+    #Armar el texto de las etiquetas emergentes
+    fig.update_traces(hovertemplate='Participación: %{y}%<br>Tamaño: %{customdata}<br>Año del censo: %{x}')
 
     # Actualizar el diseño del gráfico
     fig.update_layout(
@@ -135,50 +127,3 @@ def update_bar_chart(partidos):
 
 
     return fig
-
-
-EAPs_tamanio_texto = html.H6(id="texto-eaps-tamanio" , style={'font-size': '20px'}, className="text-white")
-
-
-
-@callback(
-     Output("texto-eaps-tamanio", "children"), 
-     [
-         Input("select-partido", "value"),
-     ]
- )
-
-
-def update_epas_tamanio_text(partidos):
-    df = df_base.copy()
-    sel_partido = [c for c in partidos if c != '']
-    
-    if len(sel_partido) >0:
-        mask = df[VAR_PARTIDO]==partidos
-        df = df[mask]
-
-    df = df.groupby(by = [VAR_ANIO_CENSO, VAR_TAMANIO_EAPS])[VAR_EAPS_Q].sum().reset_index()
-    df[VAR_EAPS_Q]= round(df[VAR_EAPS_Q],2)
-
-    df_2018 = df[df[VAR_ANIO_CENSO]== VAR_ULTIMO_ANIO_CENSO].copy()
-    cantidad_eaps_2018 = int(df_2018[VAR_EAPS_Q].sum())
-    cantidad_peq_eaps_2018 = int(df_2018[df_2018[VAR_TAMANIO_EAPS]== 'Pequeñas (<=500 ha)'][VAR_EAPS_Q].sum())
-    cantidad_grandes_eaps_2018 = int(df_2018[df_2018[VAR_TAMANIO_EAPS]== 'Grandes (>500 ha)'][VAR_EAPS_Q].sum())
-
-    proporcion_grandes_2018 = round((cantidad_grandes_eaps_2018/cantidad_eaps_2018)*100,2)
-    proporcion_peq_2018 = round((cantidad_peq_eaps_2018/cantidad_eaps_2018)*100,2)
-
-    cantidad_eaps_2002 = int(df[df[VAR_ANIO_CENSO]== VAR_ANIO_CENSO_2002][VAR_EAPS_Q].sum())
-    cantidad_eaps_1988 = int(df[df[VAR_ANIO_CENSO]== VAR_ANIO_CENSO_1988][VAR_EAPS_Q].sum())
-
-    var_intercensal = ((cantidad_eaps_2018 - cantidad_eaps_1988)/cantidad_eaps_1988)*100
-
-    partido_seleccionado = partidos
-
-    mensaje = f"""En {partido_seleccionado} se registraron {cantidad_eaps_2018} Explotaciones Agropecuarias según 
-    el CNA de 2018. También podemos observar que {cantidad_peq_eaps_2018} EAPS, es decir, el {proporcion_peq_2018}% son pequeñas. 
-    Mientras que {cantidad_grandes_eaps_2018} EAPS, es decir el {proporcion_grandes_2018}% son grandes."""
-
-
-
-    return mensaje  

@@ -95,6 +95,8 @@ def update_bar_chart(partidos):
     fig.update_xaxes( title_text = x_titulo, title_font=dict(size=tamanio_fuente, family=letra, color=color_letra), tickfont=dict(family=letra, color=color_letra, size=tamanio_fuente_tick))
     fig.update_yaxes(title_text = y_titulo,  title_font=dict(size=tamanio_fuente,family=letra,color=color_letra), tickfont=dict(family=letra, color=color_letra, size=tamanio_fuente_tick))
     fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
+    #Armar el texto de las etiquetas emergentes
+    fig.update_traces(hovertemplate='Superficie ocupada: %{y:.0f} ha<br>Tamaño: %{marker}<br>Año del censo: %{x}')
 
     # Actualizar el diseño del gráfico
     fig.update_layout(
