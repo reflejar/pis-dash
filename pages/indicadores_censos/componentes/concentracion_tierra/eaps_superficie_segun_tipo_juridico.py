@@ -9,6 +9,7 @@ from .modal_tierra import modal_tierra
 #from tools.componentes import NoHayDatos, Alert
 
 from pages.indicadores_censos.data_censo.base_indicadores import VAR_ANIO_CENSO, VAR_PARTIDO
+from ..formatos import letra, tamanio_fuente_titulo, tamanio_fuente, tamanio_fuente_tick, color_letra, color_concentracion_tierra_1, color_concentracion_tierra_2
 
 ##### VARIABLES ######
 VAR_EAPS_HA_EMPRESAS = 'Superficie en manos de Empresas'
@@ -17,19 +18,8 @@ VAR_TOTAL_HA_EAPS = 'Total de HA'
 
 VAR_EAPS_HA = 'HA de EAPs'
 VAR_EAPS_TIPO_JURICIO = 'Tipo jurídico'
-
-letra = 'Arial'
-tamanio_fuente_titulo = 17
-tamanio_fuente = 16
-tamanio_fuente_tick = 11
-color_letra = 'black'
 x_titulo = "Año del censo"
 y_titulo = "Superficie ocupada (ha)"
-
-
-color_concentracion_tierra_1 = '#89370B'
-color_concentracion_tierra_2 = '#DEDE7C'
-
 
 # Titulos
 graph_title =  "Explotaciones Agropecuarias según su tamaño"
@@ -56,7 +46,7 @@ Superficie_EAPs_JURIDICO =dbc.Container(
                                 dbc.CardFooter(
                                     dbc.Button("AMPLIAR GRÁFICO", 
                                                id="open-modal-button-superficie-juridico", 
-                                               style={"background-color": color_concentracion_tierra_1, 
+                                               style={"background-color": color_concentracion_tierra_2, 
                                                       "border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": letra}), 
                                                 className="text-center", style={"background-color": "light","border": "none", "color": "light"}),
                             ],
@@ -96,6 +86,10 @@ def update_bar_chart(partidos):
     fig.update_xaxes( title_text = x_titulo, title_font=dict(size=tamanio_fuente, family=letra, color=color_letra), tickfont=dict(family=letra, color=color_letra, size=tamanio_fuente_tick))
     fig.update_yaxes(title_text = y_titulo,  title_font=dict(size=tamanio_fuente,family=letra,color=color_letra), tickfont=dict(family=letra, color=color_letra, size=tamanio_fuente_tick))
     fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
+
+    #Armar el texto de las etiquetas emergentes
+    fig.update_traces(hovertemplate='Superficie ocupada: %{y:.0f} ha<br>Año del censo: %{x}')
+
 
     # Actualizar el diseño del gráfico
     fig.update_layout(

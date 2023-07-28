@@ -11,18 +11,10 @@ from .modal_tierra import modal_tierra
 #from tools.componentes import NoHayDatos, Alert
 
 from pages.indicadores_censos.data_censo.base_indicadores import base_censos, VAR_ANIO_CENSO, VAR_PARTIDO, VAR_ULTIMO_ANIO_CENSO, VAR_ANIO_CENSO_1988, VAR_ANIO_CENSO_2002
-
+from ..formatos import letra, tamanio_fuente_titulo, tamanio_fuente, tamanio_fuente_tick, color_letra, color_concentracion_tierra_1, color_concentracion_tierra_2
 ##### VARIABLES ######
 
 VAR_SUPERFICIE_HA = 'Superficie promedio'
-
-color_concentracion_tierra_1 = '#89370B'
-color_concentracion_tierra_2 = '#DEDE7C'
-letra = 'Arial'
-tamanio_fuente_titulo = 17
-tamanio_fuente = 16
-tamanio_fuente_tick = 11
-color_letra = 'black'
 x_titulo = "Año del censo"
 y_titulo = "Superficie promedio (ha)"
 
@@ -56,7 +48,7 @@ EAPs_SUPERFICIE =dbc.Container(
                                 dbc.CardFooter(
                                     dbc.Button("AMPLIAR GRÁFICO", 
                                                id="open-modal-button-superficie", 
-                                               style={"background-color": color_concentracion_tierra_1, 
+                                               style={"background-color": color_concentracion_tierra_2, 
                                                       "border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": letra}), 
                                                 className="text-center", style={"background-color": "light","border": "none", "color": "light"}),
                             ],

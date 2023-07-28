@@ -7,9 +7,9 @@ Filtros_censos = html.Div([
     dbc.Container(
         children=[
             dbc.Row([
-                html.Div(className='col-3'),
-                html.Div(className='col-3'),
-                html.Div(className='col-3'),  # Columna vacía con clase de Bootstrap
+                # html.Div(className='col-3'),
+                # html.Div(className='col-3'),
+                # html.Div(className='col-3'),  # Columna vacía con clase de Bootstrap
                         
                 dbc.Col([
                     html.Label(htmlFor="select-partidos", title='partidos'),
@@ -21,6 +21,7 @@ Filtros_censos = html.Div([
                         placeholder = 'Buenos Aires',
                         value='Buenos Aires',
                         clearable=False,
+                        
                         
                         )], 
                         className='col-md-3'),

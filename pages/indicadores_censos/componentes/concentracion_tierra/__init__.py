@@ -6,8 +6,9 @@ from .eaps_superficie_ha import EAPs_SUPERFICIE
 from .eaps_superficie_segun_tamanio import Superficie_EAPs_tamanio
 from .eaps_cantidad_segun_tipo_juridico import Q_EAPs_juridico
 from .eaps_superficie_segun_tipo_juridico import Superficie_EAPs_JURIDICO
+from ..formatos import color_concentracion_tierra_1
 
-color_concentracion_tierra_1 = '#89370B'
+
 
 Concentracion_Tierra = html.Div([
             html.Br(),
