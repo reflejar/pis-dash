@@ -2,55 +2,44 @@ import pandas as pd
 from dash import dcc, html, Input, Output, callback, State, no_update
 import dash_bootstrap_components as dbc
 from dash_loading_spinners import Hash
-from pages.indicadores_censos.data_censo.base_indicadores import base_censos, VAR_ANIO_CENSO, VAR_PARTIDO
+from pages.indicadores_censos.data_censo.cultivos_ha import base_cultivos, VAR_ANIO_CENSO, VAR_PARTIDO,VAR_VALORES, VAR_CULTIVOS,VAR_ANIO_CENSO_1988
 import plotly.graph_objects as go
 import plotly.express as px
 import plotly.colors as colors
-from .modal_tierra import modal_tierra
-from ..formatos import letra, tamanio_fuente_titulo, tamanio_fuente, tamanio_fuente_tick, color_letra, color_concentracion_tierra_1, color_concentracion_tierra_2
-
-
-##### VARIABLES ######
-
-VAR_TOTAL_EAPS = 'Total EAPS'
-VAR_EAPS_Q = 'Cantidad de EAPs'
-x_titulo = "Año del censo"
-y_titulo = "Cantidad de EAPs"
-
-
+from .modal_cultivos import modal_cultivos
+import textwrap
+from ..formatos import letra, tamanio_fuente_titulo, tamanio_fuente, tamanio_fuente_tick, color_letra,color_cultivos_1,color_cultivos_2, color_cultivos_3, color_cultivos_4
 
 # Titulos
-graph_title =  'Explotaciones Agropecuarias'
+graph_title =  'Cantidas de hectáreas según el tipo de cultivo para el censo 1988'
 
 # BASE DE DATOS
-df_base_original = base_censos.copy()
-
-df_eaps_q = df_base_original[[VAR_ANIO_CENSO, VAR_PARTIDO, VAR_TOTAL_EAPS]]
-df_eaps_q = df_eaps_q.rename(columns = {VAR_TOTAL_EAPS: VAR_EAPS_Q})
+df_base_original = base_cultivos.copy()
 
 
-EAPS_CANTIDAD = dbc.Container(
+
+CULTIVOS_1988 = dbc.Container(
     [
         dbc.Card(
             [
                 dbc.CardBody(
                     Hash(dbc.Row(
                         [
-                        dbc.Col(dcc.Graph(id="q-eaps-total"), md=12),
+                        dbc.Col(dcc.Graph(id="grafico_cultivos_1988"), md=12),
                         #dbc.Col("""En los últimos 30 años, en [partido_seleccionado] han [disminuido] en un [XX%] la cantidad de EAPS. 
                         #En 1988 el numero de EAPS era de [XX] y en 2018 ese numero paso a ser de [XX] implicando una caida de [XX] 
                         #explotaciones agropecuarias.""", md=12)                        
                         ]
                     ),
                     size=24,
-                    color=color_concentracion_tierra_1,
+                    #color=color_concentracion_tierra_1,
                     )
                     
                 ),
                 dbc.CardFooter(
                     dbc.Button("AMPLIAR GRÁFICO", 
-                                id="open-modal-button-eaps", 
-                                style={"background-color": color_concentracion_tierra_2, 
+                                id="open-modal-button-cultivos_1988", 
+                                style={"background-color": color_cultivos_1, 
                                         "border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": letra}), 
                                 className="text-center", style={"background-color": "light","border": "none", "color": "light"}),
                 
@@ -58,17 +47,17 @@ EAPS_CANTIDAD = dbc.Container(
             color="light", 
             class_name="shadow",    
             outline=True,
-            id="tarjeta_eaps_cantidad"
+            id="tarjeta_cultivos_1988"
         ),
-        modal_tierra,
+        modal_cultivos,
     ],
-    className="contenedor-eaps-cantidad",
+    className="contenedor-cultivos-1988",
     
 )
 
 
 @callback(
-        Output("q-eaps-total", "figure"),
+        Output("grafico_cultivos_1988", "figure"),
         
         Input("select-partido", "value"),
         
@@ -79,60 +68,54 @@ def update_bar_chart(partidos):
     sel_partido = [c for c in partidos if c != '']
     
 
-    df = df_eaps_q.copy()
+    df = base_cultivos.copy()
+    mask=base_cultivos[VAR_ANIO_CENSO]==VAR_ANIO_CENSO_1988
+    df = base_cultivos[mask]
     
     if len(sel_partido) >0:
         mask = df[VAR_PARTIDO]==partidos
         df = df[mask]
     
 
-    df = df.groupby(by = [VAR_ANIO_CENSO])[VAR_EAPS_Q].sum().reset_index()
+    color_cultivos_personalizados = [color_cultivos_1,color_cultivos_2,color_cultivos_3,color_cultivos_4]
 
-    fig = px.bar(df, x=VAR_ANIO_CENSO, y=VAR_EAPS_Q, color_discrete_sequence=[color_concentracion_tierra_1],text=VAR_EAPS_Q)
-    fig.update_layout(title=graph_title, barmode='stack', plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
-    fig.update_xaxes( title_text = x_titulo, title_font=dict(size=tamanio_fuente, family=letra, color=color_letra), tickfont=dict(family=letra, color=color_letra, size=tamanio_fuente_tick))
-    fig.update_yaxes(title_text = y_titulo,  title_font=dict(size=tamanio_fuente,family=letra,color=color_letra), tickfont=dict(family=letra, color=color_letra, size=tamanio_fuente_tick))
-    fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
+    fig = px.pie(df, values=VAR_VALORES, 
+                 names=VAR_CULTIVOS,
+                 color=VAR_CULTIVOS, 
+                 color_discrete_map=dict(zip(df[VAR_CULTIVOS], color_cultivos_personalizados)))
+    fig.update_traces(hovertemplate=f"{'<br>'.join(textwrap.wrap('Cantidad de hectáreas cultivadas de <b>%{label}</b>: %{value:.0f}', width=25))}",
+        text="<b>"+df[VAR_CULTIVOS].astype(str)+"</b>",  # Obtener los valores totales como texto
+        textposition='outside',  # Colocar el texto automáticamente encima de las barras
+        textfont=dict(color='black', size=14, family=letra)
+    )                  
+    # Modificar el color de las barras
     
-    #Armar el texto de las etiquetas emergentes
-    fig.update_traces(hovertemplate='Cantidad de EAPs: %{text}<br>Año del censo: %{x}')
- 
-   
+    
     # Actualizar el diseño del gráfico
     fig.update_layout(
         title={
-        "text": f"<b>Cantidad de <br> Explotaciones Agropecuarias</br></b>",
+        "text": f"<b>{'<br>'.join(textwrap.wrap(graph_title, width=40))}</b>",
         "x": 0.5,
         "y": 0.95,
         "xanchor": "center",
         "yanchor": "top",
         "font": {
-            "size": tamanio_fuente_titulo,
+            "size": 18,
             "color": "black",
             "family": letra
         },
         "yref": "container",
-        "yanchor": "top"
+        "yanchor": "top",
         },
-        showlegend=True,
+        showlegend=False,
         plot_bgcolor='rgba(0,0,0,0)',
         xaxis_tickangle=-45,
         hovermode="x",
-        legend=dict(
-            title='',
-            orientation="v",
-            xanchor='right',
-            x=1.05,
-            y=1,
-            bgcolor='rgba(255, 255, 255, 0)',
-            bordercolor='rgba(255, 255, 255, 0)',
-            tracegroupgap=10
         )
-    )
 
     return fig
 
-EAPs_cantidad_texto = html.H6(id="texto-eaps-cantidad" , style={'font-size': '20px'}, className="text-white")
+
 
 
 

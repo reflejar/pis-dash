@@ -1,0 +1,823 @@
+;HA de EAPs;Año del censo;Partido;Tipo jurídico
+0;11657123.0;2018;Buenos Aires;Empresas
+1;252875.0;2018;Adolfo Alsina;Empresas
+2;160513.0;2018;Adolfo Gonzales Chaves;Empresas
+3;51718.0;2018;Alberti;Empresas
+4;400.0;2018;Almirante Brown;Empresas
+5;55643.0;2018;Arrecifes;Empresas
+6;0.0;2018;Avellaneda;Empresas
+7;310325.0;2018;Ayacucho;Empresas
+8;246110.0;2018;Azul;Empresas
+9;65206.0;2018;Bahía Blanca;Empresas
+10;186139.0;2018;Balcarce;Empresas
+11;62589.0;2018;Baradero;Empresas
+12;227541.0;2018;Benito Juárez;Empresas
+13;27.0;2018;Berazategui;Empresas
+14;2542.0;2018;Berisso;Empresas
+15;152210.0;2018;Bolívar;Empresas
+16;88111.0;2018;Bragado;Empresas
+17;29734.0;2018;Brandsen;Empresas
+18;27881.0;2018;Campana;Empresas
+19;30543.0;2018;Cañuelas;Empresas
+20;20828.0;2018;Capitán Sarmiento;Empresas
+21;96342.0;2018;Carlos Casares;Empresas
+22;98641.0;2018;Carlos Tejedor;Empresas
+23;46401.0;2018;Carmen de Areco;Empresas
+24;132061.0;2018;Castelli;Empresas
+25;83613.0;2018;Chacabuco;Empresas
+26;121548.0;2018;Chascomús;Empresas
+27;53148.0;2018;Chivilcoy;Empresas
+28;35240.0;2018;Colón;Empresas
+29;37206.0;2018;Coronel de Marina Leonardo Rosales;Empresas
+30;245229.0;2018;Coronel Dorrego;Empresas
+31;205587.0;2018;Coronel Pringles;Empresas
+32;236473.0;2018;Coronel Suárez;Empresas
+33;217247.0;2018;Daireaux;Empresas
+34;35213.0;2018;Dolores;Empresas
+35;0.0;2018;Ensenada;Empresas
+36;978.0;2018;Escobar;Empresas
+37;0.0;2018;Esteban Echeverría;Empresas
+38;25114.0;2018;Exaltación de la Cruz;Empresas
+39;2967.0;2018;Ezeiza;Empresas
+40;72.0;2018;Florencio Varela;Empresas
+41;97459.0;2018;Florentino Ameghino;Empresas
+42;81482.0;2018;General Alvarado;Empresas
+43;180694.0;2018;General Alvear;Empresas
+44;45277.0;2018;General Arenales;Empresas
+45;86680.0;2018;General Belgrano;Empresas
+46;82355.0;2018;General Guido;Empresas
+47;119806.0;2018;General Juan Madariaga;Empresas
+48;213184.0;2018;General La Madrid;Empresas
+49;21276.0;2018;General Las Heras;Empresas
+50;99302.0;2018;General Lavalle;Empresas
+51;29123.0;2018;General Paz;Empresas
+52;99183.0;2018;General Pinto;Empresas
+53;53062.0;2018;General Pueyrredón;Empresas
+54;3702.0;2018;General Rodríguez;Empresas
+55;0.0;2018;General San Martín;Empresas
+56;70778.0;2018;General Viamonte;Empresas
+57;288790.0;2018;General Villegas;Empresas
+58;210179.0;2018;Guaminí;Empresas
+59;70014.0;2018;Hipólito Yrigoyen;Empresas
+60;0.0;2018;Hurlingham;Empresas
+61;0.0;2018;Ituzaingó;Empresas
+62;2.0;2018;José C, Paz;Empresas
+63;63879.0;2018;Junín;Empresas
+64;0.0;2018;La Costa;Empresas
+65;1588.0;2018;La Matanza;Empresas
+66;0.0;2018;Lanús;Empresas
+67;10259.0;2018;La Plata;Empresas
+68;145652.0;2018;Laprida;Empresas
+69;132857.0;2018;Las Flores;Empresas
+70;60558.0;2018;Leandro N, Alem;Empresas
+71;33547.0;2018;Lezama;Empresas
+72;313300.0;2018;Lincoln;Empresas
+73;181909.0;2018;Lobería;Empresas
+74;55055.0;2018;Lobos;Empresas
+75;0.0;2018;Lomas de Zamora;Empresas
+76;26046.0;2018;Luján;Empresas
+77;60489.0;2018;Magdalena;Empresas
+78;95319.0;2018;Maipú;Empresas
+79;1.0;2018;Malvinas Argentinas;Empresas
+80;141297.0;2018;Mar Chiquita;Empresas
+81;5411.0;2018;Marcos Paz;Empresas
+82;45497.0;2018;Mercedes;Empresas
+83;102.0;2018;Merlo;Empresas
+84;72046.0;2018;Monte;Empresas
+85;13490.0;2018;Monte Hermoso;Empresas
+86;54.0;2018;Moreno;Empresas
+87;2.0;2018;Morón;Empresas
+88;59159.0;2018;Navarro;Empresas
+89;154547.0;2018;Necochea;Empresas
+90;163505.0;2018;9 de julio;Empresas
+91;369239.0;2018;Olavarría;Empresas
+92;326544.0;2018;Patagones;Empresas
+93;226912.0;2018;Pehuajó;Empresas
+94;73022.0;2018;Pellegrini;Empresas
+95;110718.0;2018;Pergamino;Empresas
+96;119858.0;2018;Pila;Empresas
+97;641.0;2018;Pilar;Empresas
+98;0.0;2018;Pinamar;Empresas
+99;6.0;2018;Presidente Perón;Empresas
+100;187270.0;2018;Puán;Empresas
+101;33367.0;2018;Punta Indio;Empresas
+102;0.0;2018;Quilmes;Empresas
+103;33599.0;2018;Ramallo;Empresas
+104;158853.0;2018;Rauch;Empresas
+105;183663.0;2018;Rivadavia;Empresas
+106;89746.0;2018;Rojas;Empresas
+107;55921.0;2018;Roque Pérez;Empresas
+108;106178.0;2018;Saavedra;Empresas
+109;65708.0;2018;Saladillo;Empresas
+110;41529.0;2018;Salliqueló;Empresas
+111;59348.0;2018;Salto;Empresas
+112;33319.0;2018;San Andrés de Giles;Empresas
+113;34477.0;2018;San Antonio de Areco;Empresas
+114;104235.0;2018;San Cayetano;Empresas
+115;8805.0;2018;San Fernando;Empresas
+116;0.0;2018;San Isidro;Empresas
+117;0.0;2018;San Miguel;Empresas
+118;12777.0;2018;San Nicolás;Empresas
+119;54950.0;2018;San Pedro;Empresas
+120;13083.0;2018;San Vicente;Empresas
+121;87411.0;2018;Suipacha;Empresas
+122;188923.0;2018;Tandil;Empresas
+123;169140.0;2018;Tapalqué;Empresas
+124;30.0;2018;Tigre;Empresas
+125;61622.0;2018;Tordillo;Empresas
+126;154284.0;2018;Tornquist;Empresas
+127;275574.0;2018;Trenque Lauquen;Empresas
+128;215390.0;2018;Tres Arroyos;Empresas
+129;0.0;2018;Tres de Febrero;Empresas
+130;42102.0;2018;Tres Lomas;Empresas
+131;221812.0;2018;25 de mayo;Empresas
+132;0.0;2018;Vicente López;Empresas
+133;0.0;2018;Villa Gesell;Empresas
+134;381560.0;2018;Villarino;Empresas
+135;23181.0;2018;Zárate;Empresas
+136;13457692.0;2002;Buenos Aires;Empresas
+137;148298.0;2002;Adolfo Alsina;Empresas
+138;165439.0;2002;Adolfo Gonzales Chaves;Empresas
+139;76073.0;2002;Alberti;Empresas
+140;0.0;2002;Almirante Brown;Empresas
+141;52670.0;2002;Arrecifes;Empresas
+142;31.0;2002;Avellaneda;Empresas
+143;313419.0;2002;Ayacucho;Empresas
+144;386232.0;2002;Azul;Empresas
+145;102259.0;2002;Bahía Blanca;Empresas
+146;216221.0;2002;Balcarce;Empresas
+147;48132.0;2002;Baradero;Empresas
+148;187062.0;2002;Benito Juárez;Empresas
+149;0.0;2002;Berazategui;Empresas
+150;0.0;2002;Berisso;Empresas
+151;175202.0;2002;Bolívar;Empresas
+152;81016.0;2002;Bragado;Empresas
+153;53447.0;2002;Brandsen;Empresas
+154;33067.0;2002;Campana;Empresas
+155;28981.0;2002;Cañuelas;Empresas
+156;21268.0;2002;Capitán Sarmiento;Empresas
+157;144009.0;2002;Carlos Casares;Empresas
+158;198048.0;2002;Carlos Tejedor;Empresas
+159;57669.0;2002;Carmen de Areco;Empresas
+160;90639.0;2002;Castelli;Empresas
+161;104405.0;2002;Chacabuco;Empresas
+162;163176.0;2002;Chascomús;Empresas
+163;101522.0;2002;Chivilcoy;Empresas
+164;46850.0;2002;Colón;Empresas
+165;45782.0;2002;Coronel de Marina Leonardo Rosales;Empresas
+166;290142.0;2002;Coronel Dorrego;Empresas
+167;225530.0;2002;Coronel Pringles;Empresas
+168;297548.0;2002;Coronel Suárez;Empresas
+169;186615.0;2002;Daireaux;Empresas
+170;45576.0;2002;Dolores;Empresas
+171;0.0;2002;Ensenada;Empresas
+172;610.0;2002;Escobar;Empresas
+173;0.0;2002;Esteban Echeverría;Empresas
+174;29454.0;2002;Exaltación de la Cruz;Empresas
+175;104.0;2002;Ezeiza;Empresas
+176;692.0;2002;Florencio Varela;Empresas
+177;110130.0;2002;Florentino Ameghino;Empresas
+178;93509.0;2002;General Alvarado;Empresas
+179;151221.0;2002;General Alvear;Empresas
+180;62487.0;2002;General Arenales;Empresas
+181;103458.0;2002;General Belgrano;Empresas
+182;78053.0;2002;General Guido;Empresas
+183;109025.0;2002;General Juan Madariaga;Empresas
+184;162198.0;2002;General La Madrid;Empresas
+185;26331.0;2002;General Las Heras;Empresas
+186;138809.0;2002;General Lavalle;Empresas
+187;37171.0;2002;General Paz;Empresas
+188;147172.0;2002;General Pinto;Empresas
+189;82671.0;2002;General Pueyrredón;Empresas
+190;14158.0;2002;General Rodríguez;Empresas
+191;0.0;2002;General San Martín;Empresas
+192;63269.0;2002;General Viamonte;Empresas
+193;382697.0;2002;General Villegas;Empresas
+194;190313.0;2002;Guaminí;Empresas
+195;81955.0;2002;Hipólito Yrigoyen;Empresas
+196;0.0;2002;Hurlingham;Empresas
+197;0.0;2002;Ituzaingó;Empresas
+198;0.0;2002;José C, Paz;Empresas
+199;90425.0;2002;Junín;Empresas
+200;44.0;2002;La Costa;Empresas
+201;19156.0;2002;La Matanza;Empresas
+202;0.0;2002;Lanús;Empresas
+203;15634.0;2002;La Plata;Empresas
+204;161183.0;2002;Laprida;Empresas
+205;148715.0;2002;Las Flores;Empresas
+206;75504.0;2002;Leandro N, Alem;Empresas
+207;0.0;2002;Lezama;Empresas
+208;359670.0;2002;Lincoln;Empresas
+209;238338.0;2002;Lobería;Empresas
+210;86311.0;2002;Lobos;Empresas
+211;0.0;2002;Lomas de Zamora;Empresas
+212;13683.0;2002;Luján;Empresas
+213;87982.0;2002;Magdalena;Empresas
+214;97367.0;2002;Maipú;Empresas
+215;0.0;2002;Malvinas Argentinas;Empresas
+216;201337.0;2002;Mar Chiquita;Empresas
+217;9942.0;2002;Marcos Paz;Empresas
+218;43886.0;2002;Mercedes;Empresas
+219;170.0;2002;Merlo;Empresas
+220;87748.0;2002;Monte;Empresas
+221;0.0;2002;Monte Hermoso;Empresas
+222;41.0;2002;Moreno;Empresas
+223;0.0;2002;Morón;Empresas
+224;60057.0;2002;Navarro;Empresas
+225;208420.0;2002;Necochea;Empresas
+226;184120.0;2002;9 de julio;Empresas
+227;372115.0;2002;Olavarría;Empresas
+228;394208.0;2002;Patagones;Empresas
+229;322044.0;2002;Pehuajó;Empresas
+230;102701.0;2002;Pellegrini;Empresas
+231;168382.0;2002;Pergamino;Empresas
+232;154822.0;2002;Pila;Empresas
+233;1003.0;2002;Pilar;Empresas
+234;0.0;2002;Pinamar;Empresas
+235;1254.0;2002;Presidente Perón;Empresas
+236;217903.0;2002;Puán;Empresas
+237;61512.0;2002;Punta Indio;Empresas
+238;0.0;2002;Quilmes;Empresas
+239;50122.0;2002;Ramallo;Empresas
+240;169373.0;2002;Rauch;Empresas
+241;228845.0;2002;Rivadavia;Empresas
+242;96601.0;2002;Rojas;Empresas
+243;49325.0;2002;Roque Pérez;Empresas
+244;141513.0;2002;Saavedra;Empresas
+245;164755.0;2002;Saladillo;Empresas
+246;50870.0;2002;Salliqueló;Empresas
+247;79663.0;2002;Salto;Empresas
+248;43418.0;2002;San Andrés de Giles;Empresas
+249;56899.0;2002;San Antonio de Areco;Empresas
+250;95752.0;2002;San Cayetano;Empresas
+251;0.0;2002;San Fernando;Empresas
+252;2.0;2002;San Isidro;Empresas
+253;0.0;2002;San Miguel;Empresas
+254;23300.0;2002;San Nicolás;Empresas
+255;61272.0;2002;San Pedro;Empresas
+256;15231.0;2002;San Vicente;Empresas
+257;46317.0;2002;Suipacha;Empresas
+258;292329.0;2002;Tandil;Empresas
+259;136168.0;2002;Tapalqué;Empresas
+260;0.0;2002;Tigre;Empresas
+261;63413.0;2002;Tordillo;Empresas
+262;194112.0;2002;Tornquist;Empresas
+263;206017.0;2002;Trenque Lauquen;Empresas
+264;282466.0;2002;Tres Arroyos;Empresas
+265;0.0;2002;Tres de Febrero;Empresas
+266;56678.0;2002;Tres Lomas;Empresas
+267;180640.0;2002;25 de mayo;Empresas
+268;0.0;2002;Vicente López;Empresas
+269;0.0;2002;Villa Gesell;Empresas
+270;409701.0;2002;Villarino;Empresas
+271;21228.0;2002;Zárate;Empresas
+272;14540405.0;1988;Buenos Aires;Empresas
+273;202673.0;1988;Adolfo Alsina;Empresas
+274;184858.0;1988;Adolfo Gonzales Chaves;Empresas
+275;72355.0;1988;Alberti;Empresas
+276;435.0;1988;Almirante Brown;Empresas
+277;0.0;1988;Arrecifes;Empresas
+278;109.0;1988;Avellaneda;Empresas
+279;351798.0;1988;Ayacucho;Empresas
+280;346026.0;1988;Azul;Empresas
+281;128364.0;1988;Bahía Blanca;Empresas
+282;244874.0;1988;Balcarce;Empresas
+283;40215.0;1988;Baradero;Empresas
+284;72980.0;1988;Bartolomé Mitre;Empresas
+285;243852.0;1988;Benito Juárez;Empresas
+286;3938.0;1988;Berazategui;Empresas
+287;1542.0;1988;Berisso;Empresas
+288;216275.0;1988;Bolívar;Empresas
+289;108993.0;1988;Bragado;Empresas
+290;52015.0;1988;Brandsen;Empresas
+291;32662.0;1988;Campana;Empresas
+292;55633.0;1988;Cañuelas;Empresas
+293;26807.0;1988;Capitán Sarmiento;Empresas
+294;141699.0;1988;Carlos Casares;Empresas
+295;210828.0;1988;Carlos Tejedor;Empresas
+296;51509.0;1988;Carmen de Areco;Empresas
+297;142779.0;1988;Castelli;Empresas
+298;120281.0;1988;Chacabuco;Empresas
+299;178957.0;1988;Chascomús;Empresas
+300;96945.0;1988;Chivilcoy;Empresas
+301;53284.0;1988;Colón;Empresas
+302;61857.0;1988;Coronel de Marina Leonardo Rosales;Empresas
+303;232647.0;1988;Coronel Dorrego;Empresas
+304;236041.0;1988;Coronel Pringles;Empresas
+305;282570.0;1988;Coronel Suárez;Empresas
+306;191872.0;1988;Daireaux;Empresas
+307;101376.0;1988;Dolores;Empresas
+308;1467.0;1988;Ensenada;Empresas
+309;2017.0;1988;Escobar;Empresas
+310;5441.0;1988;Esteban Echeverría;Empresas
+311;16528.0;1988;Exaltación de la Cruz;Empresas
+312;0.0;1988;Ezeiza;Empresas
+313;3599.0;1988;Florencio Varela;Empresas
+314;0.0;1988;Florentino Ameghino;Empresas
+315;92783.0;1988;General Alvarado;Empresas
+316;144403.0;1988;General Alvear;Empresas
+317;65145.0;1988;General Arenales;Empresas
+318;95690.0;1988;General Belgrano;Empresas
+319;102475.0;1988;General Guido;Empresas
+320;147722.0;1988;General Juan Madariaga;Empresas
+321;187457.0;1988;General La Madrid;Empresas
+322;31039.0;1988;General Las Heras;Empresas
+323;140926.0;1988;General Lavalle;Empresas
+324;45212.0;1988;General Paz;Empresas
+325;283997.0;1988;General Pinto;Empresas
+326;83688.0;1988;General Pueyrredón;Empresas
+327;14838.0;1988;General Rodríguez;Empresas
+328;0.0;1988;General San Martín;Empresas
+329;139.0;1988;General Sarmiento;Empresas
+330;112386.0;1988;General Viamonte;Empresas
+331;375575.0;1988;General Villegas;Empresas
+332;174737.0;1988;Guaminí;Empresas
+333;91253.0;1988;Hipólito Yrigoyen;Empresas
+334;0.0;1988;Hurlingham;Empresas
+335;0.0;1988;Ituzaingó;Empresas
+336;0.0;1988;José C, Paz;Empresas
+337;108568.0;1988;Junín;Empresas
+338;572.0;1988;La Costa;Empresas
+339;1303.0;1988;La Matanza;Empresas
+340;0.0;1988;Lanús;Empresas
+341;15548.0;1988;La Plata;Empresas
+342;135359.0;1988;Laprida;Empresas
+343;193778.0;1988;Las Flores;Empresas
+344;71524.0;1988;Leandro N, Alem;Empresas
+345;0.0;1988;Lezama;Empresas
+346;347001.0;1988;Lincoln;Empresas
+347;222943.0;1988;Lobería;Empresas
+348;79834.0;1988;Lobos;Empresas
+349;0.0;1988;Lomas de Zamora;Empresas
+350;36535.0;1988;Luján;Empresas
+351;157847.0;1988;Magdalena;Empresas
+352;135278.0;1988;Maipú;Empresas
+353;0.0;1988;Malvinas Argentinas;Empresas
+354;222373.0;1988;Mar Chiquita;Empresas
+355;16534.0;1988;Marcos Paz;Empresas
+356;51593.0;1988;Mercedes;Empresas
+357;428.0;1988;Merlo;Empresas
+358;88182.0;1988;Monte;Empresas
+359;15051.0;1988;Monte Hermoso;Empresas
+360;992.0;1988;Moreno;Empresas
+361;2.0;1988;Morón;Empresas
+362;60454.0;1988;Navarro;Empresas
+363;226629.0;1988;Necochea;Empresas
+364;214019.0;1988;9 de julio;Empresas
+365;358677.0;1988;Olavarría;Empresas
+366;573265.0;1988;Patagones;Empresas
+367;245648.0;1988;Pehuajó;Empresas
+368;97612.0;1988;Pellegrini;Empresas
+369;174373.0;1988;Pergamino;Empresas
+370;133955.0;1988;Pila;Empresas
+371;7355.0;1988;Pilar;Empresas
+372;0.0;1988;Pinamar;Empresas
+373;0.0;1988;Presidente Perón;Empresas
+374;243748.0;1988;Puán;Empresas
+375;0.0;1988;Punta Indio;Empresas
+376;0.0;1988;Quilmes;Empresas
+377;54507.0;1988;Ramallo;Empresas
+378;157782.0;1988;Rauch;Empresas
+379;225475.0;1988;Rivadavia;Empresas
+380;96707.0;1988;Rojas;Empresas
+381;69472.0;1988;Roque Pérez;Empresas
+382;140757.0;1988;Saavedra;Empresas
+383;117674.0;1988;Saladillo;Empresas
+384;38281.0;1988;Salliqueló;Empresas
+385;94689.0;1988;Salto;Empresas
+386;39936.0;1988;San Andrés de Giles;Empresas
+387;52452.0;1988;San Antonio de Areco;Empresas
+388;116171.0;1988;San Cayetano;Empresas
+389;14334.0;1988;San Fernando;Empresas
+390;6.0;1988;San Isidro;Empresas
+391;0.0;1988;San Miguel;Empresas
+392;29905.0;1988;San Nicolás;Empresas
+393;62058.0;1988;San Pedro;Empresas
+394;24515.0;1988;San Vicente;Empresas
+395;81569.0;1988;Suipacha;Empresas
+396;294859.0;1988;Tandil;Empresas
+397;235633.0;1988;Tapalqué;Empresas
+398;397.0;1988;Tigre;Empresas
+399;55258.0;1988;Tordillo;Empresas
+400;214031.0;1988;Tornquist;Empresas
+401;248607.0;1988;Trenque Lauquen;Empresas
+402;267574.0;1988;Tres Arroyos;Empresas
+403;3.0;1988;Tres de Febrero;Empresas
+404;61519.0;1988;Tres Lomas;Empresas
+405;213382.0;1988;25 de mayo;Empresas
+406;0.0;1988;Vicente López;Empresas
+407;0.0;1988;Villa Gesell;Empresas
+408;544240.0;1988;Villarino;Empresas
+409;34477.0;1988;Zárate;Empresas
+410;9595.0;1988;Indeterminado;Empresas
+0;9554807.0;2018;Buenos Aires;Personas Humanas
+1;207420.0;2018;Adolfo Alsina;Personas Humanas
+2;136574.0;2018;Adolfo Gonzales Chaves;Personas Humanas
+3;25118.0;2018;Alberti;Personas Humanas
+4;436.0;2018;Almirante Brown;Personas Humanas
+5;32403.0;2018;Arrecifes;Personas Humanas
+6;24.0;2018;Avellaneda;Personas Humanas
+7;193466.0;2018;Ayacucho;Personas Humanas
+8;186907.0;2018;Azul;Personas Humanas
+9;106779.0;2018;Bahía Blanca;Personas Humanas
+10;80701.0;2018;Balcarce;Personas Humanas
+11;26189.0;2018;Baradero;Personas Humanas
+12;187002.0;2018;Benito Juárez;Personas Humanas
+13;760.0;2018;Berazategui;Personas Humanas
+14;1236.0;2018;Berisso;Personas Humanas
+15;182035.0;2018;Bolívar;Personas Humanas
+16;56537.0;2018;Bragado;Personas Humanas
+17;28867.0;2018;Brandsen;Personas Humanas
+18;14917.0;2018;Campana;Personas Humanas
+19;32570.0;2018;Cañuelas;Personas Humanas
+20;12766.0;2018;Capitán Sarmiento;Personas Humanas
+21;41892.0;2018;Carlos Casares;Personas Humanas
+22;92016.0;2018;Carlos Tejedor;Personas Humanas
+23;19014.0;2018;Carmen de Areco;Personas Humanas
+24;42482.0;2018;Castelli;Personas Humanas
+25;53447.0;2018;Chacabuco;Personas Humanas
+26;109883.0;2018;Chascomús;Personas Humanas
+27;57232.0;2018;Chivilcoy;Personas Humanas
+28;28050.0;2018;Colón;Personas Humanas
+29;33201.0;2018;Coronel de Marina Leonardo Rosales;Personas Humanas
+30;231393.0;2018;Coronel Dorrego;Personas Humanas
+31;224949.0;2018;Coronel Pringles;Personas Humanas
+32;224800.0;2018;Coronel Suárez;Personas Humanas
+33;87087.0;2018;Daireaux;Personas Humanas
+34;98607.0;2018;Dolores;Personas Humanas
+35;641.0;2018;Ensenada;Personas Humanas
+36;2543.0;2018;Escobar;Personas Humanas
+37;425.0;2018;Esteban Echeverría;Personas Humanas
+38;18341.0;2018;Exaltación de la Cruz;Personas Humanas
+39;5.0;2018;Ezeiza;Personas Humanas
+40;1311.0;2018;Florencio Varela;Personas Humanas
+41;32176.0;2018;Florentino Ameghino;Personas Humanas
+42;31430.0;2018;General Alvarado;Personas Humanas
+43;63591.0;2018;General Alvear;Personas Humanas
+44;38890.0;2018;General Arenales;Personas Humanas
+45;45235.0;2018;General Belgrano;Personas Humanas
+46;129067.0;2018;General Guido;Personas Humanas
+47;88272.0;2018;General Juan Madariaga;Personas Humanas
+48;163871.0;2018;General La Madrid;Personas Humanas
+49;29036.0;2018;General Las Heras;Personas Humanas
+50;118712.0;2018;General Lavalle;Personas Humanas
+51;39543.0;2018;General Paz;Personas Humanas
+52;50358.0;2018;General Pinto;Personas Humanas
+53;12223.0;2018;General Pueyrredón;Personas Humanas
+54;8181.0;2018;General Rodríguez;Personas Humanas
+55;0.0;2018;General San Martín;Personas Humanas
+56;59264.0;2018;General Viamonte;Personas Humanas
+57;142673.0;2018;General Villegas;Personas Humanas
+58;193257.0;2018;Guaminí;Personas Humanas
+59;41240.0;2018;Hipólito Yrigoyen;Personas Humanas
+60;0.0;2018;Hurlingham;Personas Humanas
+61;0.0;2018;Ituzaingó;Personas Humanas
+62;7.0;2018;José C, Paz;Personas Humanas
+63;55865.0;2018;Junín;Personas Humanas
+64;3214.0;2018;La Costa;Personas Humanas
+65;1071.0;2018;La Matanza;Personas Humanas
+66;0.0;2018;Lanús;Personas Humanas
+67;20758.0;2018;La Plata;Personas Humanas
+68;129435.0;2018;Laprida;Personas Humanas
+69;97612.0;2018;Las Flores;Personas Humanas
+70;49075.0;2018;Leandro N, Alem;Personas Humanas
+71;36578.0;2018;Lezama;Personas Humanas
+72;134891.0;2018;Lincoln;Personas Humanas
+73;99310.0;2018;Lobería;Personas Humanas
+74;49534.0;2018;Lobos;Personas Humanas
+75;322.0;2018;Lomas de Zamora;Personas Humanas
+76;8785.0;2018;Luján;Personas Humanas
+77;63311.0;2018;Magdalena;Personas Humanas
+78;106556.0;2018;Maipú;Personas Humanas
+79;12.0;2018;Malvinas Argentinas;Personas Humanas
+80;77923.0;2018;Mar Chiquita;Personas Humanas
+81;15957.0;2018;Marcos Paz;Personas Humanas
+82;34548.0;2018;Mercedes;Personas Humanas
+83;765.0;2018;Merlo;Personas Humanas
+84;35833.0;2018;Monte;Personas Humanas
+85;688.0;2018;Monte Hermoso;Personas Humanas
+86;211.0;2018;Moreno;Personas Humanas
+87;0.0;2018;Morón;Personas Humanas
+88;54326.0;2018;Navarro;Personas Humanas
+89;132747.0;2018;Necochea;Personas Humanas
+90;129723.0;2018;9 de julio;Personas Humanas
+91;228411.0;2018;Olavarría;Personas Humanas
+92;819043.0;2018;Patagones;Personas Humanas
+93;86445.0;2018;Pehuajó;Personas Humanas
+94;55389.0;2018;Pellegrini;Personas Humanas
+95;87984.0;2018;Pergamino;Personas Humanas
+96;66445.0;2018;Pila;Personas Humanas
+97;1640.0;2018;Pilar;Personas Humanas
+98;0.0;2018;Pinamar;Personas Humanas
+99;979.0;2018;Presidente Perón;Personas Humanas
+100;330563.0;2018;Puán;Personas Humanas
+101;84473.0;2018;Punta Indio;Personas Humanas
+102;92.0;2018;Quilmes;Personas Humanas
+103;26440.0;2018;Ramallo;Personas Humanas
+104;165426.0;2018;Rauch;Personas Humanas
+105;97246.0;2018;Rivadavia;Personas Humanas
+106;65325.0;2018;Rojas;Personas Humanas
+107;42533.0;2018;Roque Pérez;Personas Humanas
+108;156103.0;2018;Saavedra;Personas Humanas
+109;78300.0;2018;Saladillo;Personas Humanas
+110;26586.0;2018;Salliqueló;Personas Humanas
+111;49409.0;2018;Salto;Personas Humanas
+112;14232.0;2018;San Andrés de Giles;Personas Humanas
+113;29944.0;2018;San Antonio de Areco;Personas Humanas
+114;120508.0;2018;San Cayetano;Personas Humanas
+115;9672.0;2018;San Fernando;Personas Humanas
+116;0.0;2018;San Isidro;Personas Humanas
+117;0.0;2018;San Miguel;Personas Humanas
+118;27847.0;2018;San Nicolás;Personas Humanas
+119;30615.0;2018;San Pedro;Personas Humanas
+120;25239.0;2018;San Vicente;Personas Humanas
+121;26725.0;2018;Suipacha;Personas Humanas
+122;97665.0;2018;Tandil;Personas Humanas
+123;142996.0;2018;Tapalqué;Personas Humanas
+124;403.0;2018;Tigre;Personas Humanas
+125;27310.0;2018;Tordillo;Personas Humanas
+126;184361.0;2018;Tornquist;Personas Humanas
+127;94619.0;2018;Trenque Lauquen;Personas Humanas
+128;231877.0;2018;Tres Arroyos;Personas Humanas
+129;353.0;2018;Tres de Febrero;Personas Humanas
+130;28902.0;2018;Tres Lomas;Personas Humanas
+131;109112.0;2018;25 de mayo;Personas Humanas
+132;0.0;2018;Vicente López;Personas Humanas
+133;0.0;2018;Villa Gesell;Personas Humanas
+134;366823.0;2018;Villarino;Personas Humanas
+135;10671.0;2018;Zárate;Personas Humanas
+136;11912495.0;2002;Buenos Aires;Personas Humanas
+137;289727.0;2002;Adolfo Alsina;Personas Humanas
+138;137147.0;2002;Adolfo Gonzales Chaves;Personas Humanas
+139;41078.0;2002;Alberti;Personas Humanas
+140;152.0;2002;Almirante Brown;Personas Humanas
+141;26141.0;2002;Arrecifes;Personas Humanas
+142;58.0;2002;Avellaneda;Personas Humanas
+143;262487.0;2002;Ayacucho;Personas Humanas
+144;281260.0;2002;Azul;Personas Humanas
+145;106468.0;2002;Bahía Blanca;Personas Humanas
+146;89877.0;2002;Balcarce;Personas Humanas
+147;20209.0;2002;Baradero;Personas Humanas
+148;217362.0;2002;Benito Juárez;Personas Humanas
+149;1107.0;2002;Berazategui;Personas Humanas
+150;3797.0;2002;Berisso;Personas Humanas
+151;265071.0;2002;Bolívar;Personas Humanas
+152;107164.0;2002;Bragado;Personas Humanas
+153;42821.0;2002;Brandsen;Personas Humanas
+154;12986.0;2002;Campana;Personas Humanas
+155;31653.0;2002;Cañuelas;Personas Humanas
+156;18299.0;2002;Capitán Sarmiento;Personas Humanas
+157;75888.0;2002;Carlos Casares;Personas Humanas
+158;135683.0;2002;Carlos Tejedor;Personas Humanas
+159;30809.0;2002;Carmen de Areco;Personas Humanas
+160;55525.0;2002;Castelli;Personas Humanas
+161;82624.0;2002;Chacabuco;Personas Humanas
+162;169044.0;2002;Chascomús;Personas Humanas
+163;100047.0;2002;Chivilcoy;Personas Humanas
+164;33723.0;2002;Colón;Personas Humanas
+165;51271.0;2002;Coronel de Marina Leonardo Rosales;Personas Humanas
+166;246060.0;2002;Coronel Dorrego;Personas Humanas
+167;239863.0;2002;Coronel Pringles;Personas Humanas
+168;291439.0;2002;Coronel Suárez;Personas Humanas
+169;111415.0;2002;Daireaux;Personas Humanas
+170;88536.0;2002;Dolores;Personas Humanas
+171;0.0;2002;Ensenada;Personas Humanas
+172;769.0;2002;Escobar;Personas Humanas
+173;91.0;2002;Esteban Echeverría;Personas Humanas
+174;15637.0;2002;Exaltación de la Cruz;Personas Humanas
+175;243.0;2002;Ezeiza;Personas Humanas
+176;1856.0;2002;Florencio Varela;Personas Humanas
+177;49052.0;2002;Florentino Ameghino;Personas Humanas
+178;34961.0;2002;General Alvarado;Personas Humanas
+179;129512.0;2002;General Alvear;Personas Humanas
+180;68517.0;2002;General Arenales;Personas Humanas
+181;61439.0;2002;General Belgrano;Personas Humanas
+182;117023.0;2002;General Guido;Personas Humanas
+183;140303.0;2002;General Juan Madariaga;Personas Humanas
+184;166089.0;2002;General La Madrid;Personas Humanas
+185;20859.0;2002;General Las Heras;Personas Humanas
+186;87733.0;2002;General Lavalle;Personas Humanas
+187;62120.0;2002;General Paz;Personas Humanas
+188;90479.0;2002;General Pinto;Personas Humanas
+189;29249.0;2002;General Pueyrredón;Personas Humanas
+190;4986.0;2002;General Rodríguez;Personas Humanas
+191;0.0;2002;General San Martín;Personas Humanas
+192;87778.0;2002;General Viamonte;Personas Humanas
+193;206374.0;2002;General Villegas;Personas Humanas
+194;185793.0;2002;Guaminí;Personas Humanas
+195;48046.0;2002;Hipólito Yrigoyen;Personas Humanas
+196;0.0;2002;Hurlingham;Personas Humanas
+197;0.0;2002;Ituzaingó;Personas Humanas
+198;75.0;2002;José C, Paz;Personas Humanas
+199;74748.0;2002;Junín;Personas Humanas
+200;1386.0;2002;La Costa;Personas Humanas
+201;1535.0;2002;La Matanza;Personas Humanas
+202;0.0;2002;Lanús;Personas Humanas
+203;26945.0;2002;La Plata;Personas Humanas
+204;152388.0;2002;Laprida;Personas Humanas
+205;142241.0;2002;Las Flores;Personas Humanas
+206;66678.0;2002;Leandro N, Alem;Personas Humanas
+207;0.0;2002;Lezama;Personas Humanas
+208;195111.0;2002;Lincoln;Personas Humanas
+209;116092.0;2002;Lobería;Personas Humanas
+210;54207.0;2002;Lobos;Personas Humanas
+211;0.0;2002;Lomas de Zamora;Personas Humanas
+212;12784.0;2002;Luján;Personas Humanas
+213;88526.0;2002;Magdalena;Personas Humanas
+214;146565.0;2002;Maipú;Personas Humanas
+215;15.0;2002;Malvinas Argentinas;Personas Humanas
+216;91869.0;2002;Mar Chiquita;Personas Humanas
+217;17830.0;2002;Marcos Paz;Personas Humanas
+218;38586.0;2002;Mercedes;Personas Humanas
+219;954.0;2002;Merlo;Personas Humanas
+220;51926.0;2002;Monte;Personas Humanas
+221;1640.0;2002;Monte Hermoso;Personas Humanas
+222;329.0;2002;Moreno;Personas Humanas
+223;0.0;2002;Morón;Personas Humanas
+224;77070.0;2002;Navarro;Personas Humanas
+225;198368.0;2002;Necochea;Personas Humanas
+226;182510.0;2002;9 de julio;Personas Humanas
+227;321293.0;2002;Olavarría;Personas Humanas
+228;861723.0;2002;Patagones;Personas Humanas
+229;172370.0;2002;Pehuajó;Personas Humanas
+230;44996.0;2002;Pellegrini;Personas Humanas
+231;111729.0;2002;Pergamino;Personas Humanas
+232;94599.0;2002;Pila;Personas Humanas
+233;618.0;2002;Pilar;Personas Humanas
+234;0.0;2002;Pinamar;Personas Humanas
+235;883.0;2002;Presidente Perón;Personas Humanas
+236;323478.0;2002;Puán;Personas Humanas
+237;61116.0;2002;Punta Indio;Personas Humanas
+238;10.0;2002;Quilmes;Personas Humanas
+239;37877.0;2002;Ramallo;Personas Humanas
+240;188713.0;2002;Rauch;Personas Humanas
+241;121474.0;2002;Rivadavia;Personas Humanas
+242;81779.0;2002;Rojas;Personas Humanas
+243;86521.0;2002;Roque Pérez;Personas Humanas
+244;203839.0;2002;Saavedra;Personas Humanas
+245;122166.0;2002;Saladillo;Personas Humanas
+246;37173.0;2002;Salliqueló;Personas Humanas
+247;59760.0;2002;Salto;Personas Humanas
+248;45639.0;2002;San Andrés de Giles;Personas Humanas
+249;34980.0;2002;San Antonio de Areco;Personas Humanas
+250;144443.0;2002;San Cayetano;Personas Humanas
+251;2614.0;2002;San Fernando;Personas Humanas
+252;0.0;2002;San Isidro;Personas Humanas
+253;0.0;2002;San Miguel;Personas Humanas
+254;28854.0;2002;San Nicolás;Personas Humanas
+255;43145.0;2002;San Pedro;Personas Humanas
+256;33152.0;2002;San Vicente;Personas Humanas
+257;37449.0;2002;Suipacha;Personas Humanas
+258;141173.0;2002;Tandil;Personas Humanas
+259;126403.0;2002;Tapalqué;Personas Humanas
+260;609.0;2002;Tigre;Personas Humanas
+261;31494.0;2002;Tordillo;Personas Humanas
+262;188617.0;2002;Tornquist;Personas Humanas
+263;180193.0;2002;Trenque Lauquen;Personas Humanas
+264;238338.0;2002;Tres Arroyos;Personas Humanas
+265;117.0;2002;Tres de Febrero;Personas Humanas
+266;51510.0;2002;Tres Lomas;Personas Humanas
+267;170417.0;2002;25 de mayo;Personas Humanas
+268;0.0;2002;Vicente López;Personas Humanas
+269;6.0;2002;Villa Gesell;Personas Humanas
+270;450228.0;2002;Villarino;Personas Humanas
+271;13731.0;2002;Zárate;Personas Humanas
+272;12108104.0;1988;Buenos Aires;Personas Humanas
+273;264887.0;1988;Adolfo Alsina;Personas Humanas
+274;148852.0;1988;Adolfo Gonzales Chaves;Personas Humanas
+275;26993.0;1988;Alberti;Personas Humanas
+276;811.0;1988;Almirante Brown;Personas Humanas
+277;0.0;1988;Arrecifes;Personas Humanas
+278;170.0;1988;Avellaneda;Personas Humanas
+279;264430.0;1988;Ayacucho;Personas Humanas
+280;280986.0;1988;Azul;Personas Humanas
+281;84255.0;1988;Bahía Blanca;Personas Humanas
+282;135040.0;1988;Balcarce;Personas Humanas
+283;41854.0;1988;Baradero;Personas Humanas
+284;30262.0;1988;Bartolomé Mitre;Personas Humanas
+285;248131.0;1988;Benito Juárez;Personas Humanas
+286;3901.0;1988;Berazategui;Personas Humanas
+287;3968.0;1988;Berisso;Personas Humanas
+288;260807.0;1988;Bolívar;Personas Humanas
+289;92251.0;1988;Bragado;Personas Humanas
+290;42608.0;1988;Brandsen;Personas Humanas
+291;19154.0;1988;Campana;Personas Humanas
+292;47175.0;1988;Cañuelas;Personas Humanas
+293;25491.0;1988;Capitán Sarmiento;Personas Humanas
+294;90541.0;1988;Carlos Casares;Personas Humanas
+295;147301.0;1988;Carlos Tejedor;Personas Humanas
+296;22684.0;1988;Carmen de Areco;Personas Humanas
+297;75031.0;1988;Castelli;Personas Humanas
+298;95909.0;1988;Chacabuco;Personas Humanas
+299;184316.0;1988;Chascomús;Personas Humanas
+300;76779.0;1988;Chivilcoy;Personas Humanas
+301;33431.0;1988;Colón;Personas Humanas
+302;33950.0;1988;Coronel de Marina Leonardo Rosales;Personas Humanas
+303;251167.0;1988;Coronel Dorrego;Personas Humanas
+304;255540.0;1988;Coronel Pringles;Personas Humanas
+305;272031.0;1988;Coronel Suárez;Personas Humanas
+306;140544.0;1988;Daireaux;Personas Humanas
+307;66429.0;1988;Dolores;Personas Humanas
+308;1457.0;1988;Ensenada;Personas Humanas
+309;6909.0;1988;Escobar;Personas Humanas
+310;6310.0;1988;Esteban Echeverría;Personas Humanas
+311;28984.0;1988;Exaltación de la Cruz;Personas Humanas
+312;0.0;1988;Ezeiza;Personas Humanas
+313;7308.0;1988;Florencio Varela;Personas Humanas
+314;0.0;1988;Florentino Ameghino;Personas Humanas
+315;55965.0;1988;General Alvarado;Personas Humanas
+316;114698.0;1988;General Alvear;Personas Humanas
+317;68981.0;1988;General Arenales;Personas Humanas
+318;95143.0;1988;General Belgrano;Personas Humanas
+319;114210.0;1988;General Guido;Personas Humanas
+320;128137.0;1988;General Juan Madariaga;Personas Humanas
+321;216637.0;1988;General La Madrid;Personas Humanas
+322;31006.0;1988;General Las Heras;Personas Humanas
+323;83032.0;1988;General Lavalle;Personas Humanas
+324;53539.0;1988;General Paz;Personas Humanas
+325;124140.0;1988;General Pinto;Personas Humanas
+326;43308.0;1988;General Pueyrredón;Personas Humanas
+327;9429.0;1988;General Rodríguez;Personas Humanas
+328;3.0;1988;General San Martín;Personas Humanas
+329;462.0;1988;General Sarmiento;Personas Humanas
+330;91079.0;1988;General Viamonte;Personas Humanas
+331;270410.0;1988;General Villegas;Personas Humanas
+332;170889.0;1988;Guaminí;Personas Humanas
+333;54101.0;1988;Hipólito Yrigoyen;Personas Humanas
+334;0.0;1988;Hurlingham;Personas Humanas
+335;0.0;1988;Ituzaingó;Personas Humanas
+336;0.0;1988;José C, Paz;Personas Humanas
+337;88210.0;1988;Junín;Personas Humanas
+338;4954.0;1988;La Costa;Personas Humanas
+339;3258.0;1988;La Matanza;Personas Humanas
+340;0.0;1988;Lanús;Personas Humanas
+341;26268.0;1988;La Plata;Personas Humanas
+342;139393.0;1988;Laprida;Personas Humanas
+343;125421.0;1988;Las Flores;Personas Humanas
+344;58642.0;1988;Leandro N, Alem;Personas Humanas
+345;0.0;1988;Lezama;Personas Humanas
+346;192550.0;1988;Lincoln;Personas Humanas
+347;161119.0;1988;Lobería;Personas Humanas
+348;75746.0;1988;Lobos;Personas Humanas
+349;0.0;1988;Lomas de Zamora;Personas Humanas
+350;25624.0;1988;Luján;Personas Humanas
+351;151161.0;1988;Magdalena;Personas Humanas
+352;115717.0;1988;Maipú;Personas Humanas
+353;0.0;1988;Malvinas Argentinas;Personas Humanas
+354;98949.0;1988;Mar Chiquita;Personas Humanas
+355;14420.0;1988;Marcos Paz;Personas Humanas
+356;39189.0;1988;Mercedes;Personas Humanas
+357;1816.0;1988;Merlo;Personas Humanas
+358;71394.0;1988;Monte;Personas Humanas
+359;0.0;1988;Monte Hermoso;Personas Humanas
+360;1345.0;1988;Moreno;Personas Humanas
+361;2.0;1988;Morón;Personas Humanas
+362;81411.0;1988;Navarro;Personas Humanas
+363;159814.0;1988;Necochea;Personas Humanas
+364;192018.0;1988;9 de julio;Personas Humanas
+365;324787.0;1988;Olavarría;Personas Humanas
+366;668344.0;1988;Patagones;Personas Humanas
+367;157991.0;1988;Pehuajó;Personas Humanas
+368;67353.0;1988;Pellegrini;Personas Humanas
+369;107930.0;1988;Pergamino;Personas Humanas
+370;137497.0;1988;Pila;Personas Humanas
+371;7976.0;1988;Pilar;Personas Humanas
+372;0.0;1988;Pinamar;Personas Humanas
+373;0.0;1988;Presidente Perón;Personas Humanas
+374;275529.0;1988;Puán;Personas Humanas
+375;0.0;1988;Punta Indio;Personas Humanas
+376;0.0;1988;Quilmes;Personas Humanas
+377;31128.0;1988;Ramallo;Personas Humanas
+378;233414.0;1988;Rauch;Personas Humanas
+379;132650.0;1988;Rivadavia;Personas Humanas
+380;76266.0;1988;Rojas;Personas Humanas
+381;73844.0;1988;Roque Pérez;Personas Humanas
+382;193690.0;1988;Saavedra;Personas Humanas
+383;112049.0;1988;Saladillo;Personas Humanas
+384;43337.0;1988;Salliqueló;Personas Humanas
+385;59674.0;1988;Salto;Personas Humanas
+386;30299.0;1988;San Andrés de Giles;Personas Humanas
+387;36122.0;1988;San Antonio de Areco;Personas Humanas
+388;157568.0;1988;San Cayetano;Personas Humanas
+389;5581.0;1988;San Fernando;Personas Humanas
+390;1.0;1988;San Isidro;Personas Humanas
+391;0.0;1988;San Miguel;Personas Humanas
+392;23808.0;1988;San Nicolás;Personas Humanas
+393;48825.0;1988;San Pedro;Personas Humanas
+394;28164.0;1988;San Vicente;Personas Humanas
+395;30500.0;1988;Suipacha;Personas Humanas
+396;164924.0;1988;Tandil;Personas Humanas
+397;145673.0;1988;Tapalqué;Personas Humanas
+398;2645.0;1988;Tigre;Personas Humanas
+399;23823.0;1988;Tordillo;Personas Humanas
+400;192844.0;1988;Tornquist;Personas Humanas
+401;246352.0;1988;Trenque Lauquen;Personas Humanas
+402;284460.0;1988;Tres Arroyos;Personas Humanas
+403;3.0;1988;Tres de Febrero;Personas Humanas
+404;49301.0;1988;Tres Lomas;Personas Humanas
+405;177636.0;1988;25 de mayo;Personas Humanas
+406;0.0;1988;Vicente López;Personas Humanas
+407;0.0;1988;Villa Gesell;Personas Humanas
+408;355645.0;1988;Villarino;Personas Humanas
+409;24934.0;1988;Zárate;Personas Humanas
+410;3306.0;1988;Indeterminado;Personas Humanas
