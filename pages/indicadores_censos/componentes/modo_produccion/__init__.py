@@ -1,9 +1,5 @@
 from dash import html, dcc, Input, Output, callback
 import dash_bootstrap_components as dbc
-# from .cultivos_hectareas_1988 import CULTIVOS_1988
-# from .cultivos_hectareas_2002 import CULTIVOS_2002
-# from .cultivos_hectareas_2018 import CULTIVOS_2018
-
 from .tipo_cultivo_ha import CULTIVOS_HA
 from ..formatos import color_cultivos_1
 

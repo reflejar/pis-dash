@@ -88,7 +88,7 @@ def update_bar_chart(partidos):
     fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
     
     #Armar el texto de las etiquetas emergentes # Falta agregar tipo juridico
-    fig.update_traces(hovertemplate='Cantidad de EAPs: %{y}<br>Año del censo: %{x}')
+    fig.update_traces(hovertemplate='Cantidad de Hectareas cultivadas: %{y}<br>Año del censo: %{x}')
 
 
     # Actualizar el diseño del gráfico
