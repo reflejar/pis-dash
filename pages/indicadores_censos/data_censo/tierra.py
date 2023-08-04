@@ -20,6 +20,8 @@ VAR_EAPS_HA = 'HA de EAPs'
 VAR_EAPS_Q = 'Cantidad de EAPs'
 VAR_TAMANIO_EAPS = 'Tamaño EAPs'
 VAR_EAPS_TIPO_JURICIO = 'Tipo jurídico'
+
+
 # BASE DE DATOS
 df_base_original = base_censos.copy()
 
@@ -34,7 +36,7 @@ grandes_df_base[VAR_TAMANIO_EAPS] = 'Grandes (>500 ha)'
 
 df_base = pd.concat([pequenias_df_base, grandes_df_base])
 
-#df_base.to_csv('pages/indicadores_censos/data_censo/tierra/eaps_por_tamanio.csv', sep=';')
+df_base.to_csv('pages/indicadores_censos/data_censo/tierra/eaps_por_tamanio.csv', sep=';')
 
 
 ######################### Participacion Superficies de EAPS segun tamaño #############################
@@ -49,7 +51,7 @@ grandes_ha_df_base[VAR_TAMANIO_EAPS] = 'Grandes (>500 ha)'
 df_base_ha = pd.concat([pequenias_ha_df_base, grandes_ha_df_base])
 df_base_ha[VAR_EAPS_HA] = df_base_ha[VAR_EAPS_HA].fillna(0.).astype(float)
 
-#df_base_ha.to_csv('pages/indicadores_censos/data_censo/tierra/eaps_ha_por_tamanio.csv', sep=';')
+df_base_ha.to_csv('pages/indicadores_censos/data_censo/tierra/eaps_ha_por_tamanio.csv', sep=';')
 
 
 ######################### Cantidad de  EAPS segun tipo juridico #############################
@@ -81,3 +83,4 @@ df_base_ha_juridico = pd.concat([empresas_ha_df_base, personas_ha_df_base])
 df_base_ha_juridico[VAR_EAPS_HA] = df_base_ha_juridico[VAR_EAPS_HA].fillna(0.).astype(float)
 
 df_base_ha_juridico.to_csv('pages/indicadores_censos/data_censo/tierra/ha_tipo_juridico.csv', sep=';')
+

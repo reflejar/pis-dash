@@ -1,27 +1,31 @@
 from dash import html, dcc, Input, Output, callback
 import dash_bootstrap_components as dbc
 from dash_loading_spinners import Hash
-import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
-import pickle
 from .modal_empleo import modal_empleo
 import textwrap
 
-
-from pages.indicadores_censos.data_censo.empleo import base_empleo, VAR_ANIO_CENSO, VAR_TOTAL
+from pages.indicadores_censos.data_censo.base_indicadores import VAR_ANIO_CENSO, VAR_PARTIDO
 from ..formatos import letra, tamanio_fuente_titulo, tamanio_fuente, tamanio_fuente_tick, color_letra, color_empleo_1, color_concentracion_tierra_2
 
+#Variables
+VAR_EMPLEO = 'Empleo'
+
+x_titulo = 'Año del censo'
+y_titulo = 'Cantidad de personas empleadas'
 
 # Titulos
 graph_title =  'Evolución del empleo permanente en el campo'
 
 # BASE DE DATOS
-df_base_original = base_empleo.copy()
+df_base = pd.read_csv('pages/indicadores_censos/data_censo/empleo-y-residencia/evolucion_empleo.csv', sep=';' )
+
+df_base[VAR_ANIO_CENSO] = df_base[VAR_ANIO_CENSO].astype(int).astype(str) 
 
 ###### GRAFICO  #####  
  
-empleo =dbc.Container(
+Empleo =dbc.Container(
             [
                 dbc.Card(
                             [  
@@ -58,19 +62,25 @@ empleo =dbc.Container(
 
 def update_bar_chart(partidos):
 
-    df = df_base_original.copy()
+    df = df_base.copy()
+    sel_partido = [c for c in partidos if c != '']
     
-    fig = px.bar(df, x=VAR_ANIO_CENSO, y=VAR_TOTAL, color_discrete_sequence=[color_empleo_1])
-    fig.update_traces(hovertemplate='Empleo permanente en el campo<br>Año del censo: %{x}<br>Cantidad de empleados:  %{y:.0f}<br>',
-        text=df[VAR_TOTAL].astype(str),  # Obtener los valores totales como texto
-        textposition='outside',  # Colocar el texto automáticamente encima de las barras
-        textfont=dict(color='black', size=12, family=letra)
-    )                  
-    # Modificar el color de las barras
-    fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
-    fig.update_xaxes( title_text = "Año del censo", title_font=dict(size=14, family=letra, color='black'), tickfont=dict(family=letra, color='black', size=11))
-    fig.update_yaxes( title_text = "Cantidad de empleados", title_font=dict(size=14, family=letra, color='black'), tickfont=dict(family=letra, color='black', size=11))
+    if len(sel_partido) >0:
+        mask = df[VAR_PARTIDO]==partidos
+        df = df[mask]
+    
 
+    df = df.groupby(by = [VAR_ANIO_CENSO])[VAR_EMPLEO].sum().reset_index()
+
+    fig = px.bar(df, x=VAR_ANIO_CENSO, y=VAR_EMPLEO, color_discrete_sequence=[color_empleo_1],text=VAR_EMPLEO)
+    fig.update_layout(title=graph_title, barmode='stack', plot_bgcolor='rgba(0,0,0,0)', xaxis_tickangle=-45,  hovermode="x", legend=dict(title='Tamaño',orientation="h", xanchor='center'))
+    fig.update_xaxes( title_text = x_titulo, title_font=dict(size=tamanio_fuente, family=letra, color=color_letra), tickfont=dict(family=letra, color=color_letra, size=tamanio_fuente_tick))
+    fig.update_yaxes(title_text = y_titulo,  title_font=dict(size=tamanio_fuente,family=letra,color=color_letra), tickfont=dict(family=letra, color=color_letra, size=tamanio_fuente_tick))
+    fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
+    
+    #Armar el texto de las etiquetas emergentes
+    fig.update_traces(hovertemplate='Cantidad de personas empleadas: %{text}<br>Año del censo: %{x}')
+ 
     # Actualizar el diseño del gráfico
     fig.update_layout(
         title={
@@ -80,7 +90,7 @@ def update_bar_chart(partidos):
         "xanchor": "center",
         "yanchor": "top",
         "font": {
-            "size": 18,
+            "size": tamanio_fuente_titulo,
             "color": "black",
             "family": letra
         },
