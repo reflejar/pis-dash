@@ -1,0 +1,823 @@
+;Cantidad de personas;Año del censo;Partido;Sexo de nacimiento
+0;31535;2018;Provincia de Buenos Aires;Mujeres Residentes del campo
+1;343;2018;Adolfo Alsina;Mujeres Residentes del campo
+2;140;2018;Adolfo Gonzales Chaves;Mujeres Residentes del campo
+3;61;2018;Alberti;Mujeres Residentes del campo
+4;78;2018;Almirante Brown;Mujeres Residentes del campo
+5;314;2018;Arrecifes;Mujeres Residentes del campo
+6;8;2018;Avellaneda;Mujeres Residentes del campo
+7;582;2018;Ayacucho;Mujeres Residentes del campo
+8;505;2018;Azul;Mujeres Residentes del campo
+9;226;2018;Bahía Blanca;Mujeres Residentes del campo
+10;317;2018;Balcarce;Mujeres Residentes del campo
+11;303;2018;Baradero;Mujeres Residentes del campo
+12;347;2018;Benito Juárez;Mujeres Residentes del campo
+13;386;2018;Berazategui;Mujeres Residentes del campo
+14;24;2018;Berisso;Mujeres Residentes del campo
+15;425;2018;Bolívar;Mujeres Residentes del campo
+16;176;2018;Bragado;Mujeres Residentes del campo
+17;277;2018;Brandsen;Mujeres Residentes del campo
+18;289;2018;Campana;Mujeres Residentes del campo
+19;295;2018;Cañuelas;Mujeres Residentes del campo
+20;103;2018;Capitán Sarmiento;Mujeres Residentes del campo
+21;155;2018;Carlos Casares;Mujeres Residentes del campo
+22;149;2018;Carlos Tejedor;Mujeres Residentes del campo
+23;104;2018;Carmen de Areco;Mujeres Residentes del campo
+24;145;2018;Castelli;Mujeres Residentes del campo
+25;150;2018;Chacabuco;Mujeres Residentes del campo
+26;349;2018;Chascomús;Mujeres Residentes del campo
+27;184;2018;Chivilcoy;Mujeres Residentes del campo
+28;81;2018;Colón;Mujeres Residentes del campo
+29;77;2018;Coronel de Marina Leonardo Rosales;Mujeres Residentes del campo
+30;237;2018;Coronel Dorrego;Mujeres Residentes del campo
+31;125;2018;Coronel Pringles;Mujeres Residentes del campo
+32;416;2018;Coronel Suárez;Mujeres Residentes del campo
+33;355;2018;Daireaux;Mujeres Residentes del campo
+34;98;2018;Dolores;Mujeres Residentes del campo
+35;9;2018;Ensenada;Mujeres Residentes del campo
+36;19;2018;Escobar;Mujeres Residentes del campo
+37;40;2018;Esteban Echeverría;Mujeres Residentes del campo
+38;262;2018;Exaltación de la Cruz;Mujeres Residentes del campo
+39;5;2018;Ezeiza;Mujeres Residentes del campo
+40;797;2018;Florencio Varela;Mujeres Residentes del campo
+41;125;2018;Florentino Ameghino;Mujeres Residentes del campo
+42;193;2018;General Alvarado;Mujeres Residentes del campo
+43;348;2018;General Alvear;Mujeres Residentes del campo
+44;34;2018;General Arenales;Mujeres Residentes del campo
+45;213;2018;General Belgrano;Mujeres Residentes del campo
+46;230;2018;General Guido;Mujeres Residentes del campo
+47;203;2018;General Juan Madariaga;Mujeres Residentes del campo
+48;311;2018;General La Madrid;Mujeres Residentes del campo
+49;258;2018;General Las Heras;Mujeres Residentes del campo
+50;200;2018;General Lavalle;Mujeres Residentes del campo
+51;312;2018;General Paz;Mujeres Residentes del campo
+52;129;2018;General Pinto;Mujeres Residentes del campo
+53;780;2018;General Pueyrredón;Mujeres Residentes del campo
+54;131;2018;General Rodríguez;Mujeres Residentes del campo
+55;0;2018;General San Martín;Mujeres Residentes del campo
+56;119;2018;General Viamonte;Mujeres Residentes del campo
+57;329;2018;General Villegas;Mujeres Residentes del campo
+58;402;2018;Guaminí;Mujeres Residentes del campo
+59;108;2018;Hipólito Yrigoyen;Mujeres Residentes del campo
+60;0;2018;Hurlingham;Mujeres Residentes del campo
+61;0;2018;Ituzaingó;Mujeres Residentes del campo
+62;2;2018;José C, Paz;Mujeres Residentes del campo
+63;522;2018;Junín;Mujeres Residentes del campo
+64;3;2018;La Costa;Mujeres Residentes del campo
+65;12;2018;La Matanza;Mujeres Residentes del campo
+66;0;2018;Lanús;Mujeres Residentes del campo
+67;3144;2018;La Plata;Mujeres Residentes del campo
+68;481;2018;Laprida;Mujeres Residentes del campo
+69;324;2018;Las Flores;Mujeres Residentes del campo
+70;148;2018;Leandro N, Alem;Mujeres Residentes del campo
+71;63;2018;Lezama;Mujeres Residentes del campo
+72;512;2018;Lincoln;Mujeres Residentes del campo
+73;271;2018;Lobería;Mujeres Residentes del campo
+74;394;2018;Lobos;Mujeres Residentes del campo
+75;2;2018;Lomas de Zamora;Mujeres Residentes del campo
+76;240;2018;Luján;Mujeres Residentes del campo
+77;264;2018;Magdalena;Mujeres Residentes del campo
+78;230;2018;Maipú;Mujeres Residentes del campo
+79;18;2018;Malvinas Argentinas;Mujeres Residentes del campo
+80;298;2018;Mar Chiquita;Mujeres Residentes del campo
+81;268;2018;Marcos Paz;Mujeres Residentes del campo
+82;239;2018;Mercedes;Mujeres Residentes del campo
+83;37;2018;Merlo;Mujeres Residentes del campo
+84;299;2018;Monte;Mujeres Residentes del campo
+85;14;2018;Monte Hermoso;Mujeres Residentes del campo
+86;56;2018;Moreno;Mujeres Residentes del campo
+87;0;2018;Morón;Mujeres Residentes del campo
+88;402;2018;Navarro;Mujeres Residentes del campo
+89;397;2018;Necochea;Mujeres Residentes del campo
+90;496;2018;9 de julio;Mujeres Residentes del campo
+91;586;2018;Olavarría;Mujeres Residentes del campo
+92;215;2018;Patagones;Mujeres Residentes del campo
+93;274;2018;Pehuajó;Mujeres Residentes del campo
+94;147;2018;Pellegrini;Mujeres Residentes del campo
+95;316;2018;Pergamino;Mujeres Residentes del campo
+96;439;2018;Pila;Mujeres Residentes del campo
+97;97;2018;Pilar;Mujeres Residentes del campo
+98;0;2018;Pinamar;Mujeres Residentes del campo
+99;26;2018;Presidente Perón;Mujeres Residentes del campo
+100;340;2018;Puán;Mujeres Residentes del campo
+101;139;2018;Punta Indio;Mujeres Residentes del campo
+102;7;2018;Quilmes;Mujeres Residentes del campo
+103;39;2018;Ramallo;Mujeres Residentes del campo
+104;382;2018;Rauch;Mujeres Residentes del campo
+105;249;2018;Rivadavia;Mujeres Residentes del campo
+106;219;2018;Rojas;Mujeres Residentes del campo
+107;179;2018;Roque Pérez;Mujeres Residentes del campo
+108;243;2018;Saavedra;Mujeres Residentes del campo
+109;384;2018;Saladillo;Mujeres Residentes del campo
+110;30;2018;Salliqueló;Mujeres Residentes del campo
+111;107;2018;Salto;Mujeres Residentes del campo
+112;91;2018;San Andrés de Giles;Mujeres Residentes del campo
+113;150;2018;San Antonio de Areco;Mujeres Residentes del campo
+114;140;2018;San Cayetano;Mujeres Residentes del campo
+115;14;2018;San Fernando;Mujeres Residentes del campo
+116;0;2018;San Isidro;Mujeres Residentes del campo
+117;1;2018;San Miguel;Mujeres Residentes del campo
+118;61;2018;San Nicolás;Mujeres Residentes del campo
+119;332;2018;San Pedro;Mujeres Residentes del campo
+120;165;2018;San Vicente;Mujeres Residentes del campo
+121;251;2018;Suipacha;Mujeres Residentes del campo
+122;629;2018;Tandil;Mujeres Residentes del campo
+123;231;2018;Tapalqué;Mujeres Residentes del campo
+124;16;2018;Tigre;Mujeres Residentes del campo
+125;99;2018;Tordillo;Mujeres Residentes del campo
+126;365;2018;Tornquist;Mujeres Residentes del campo
+127;642;2018;Trenque Lauquen;Mujeres Residentes del campo
+128;267;2018;Tres Arroyos;Mujeres Residentes del campo
+129;0;2018;Tres de Febrero;Mujeres Residentes del campo
+130;40;2018;Tres Lomas;Mujeres Residentes del campo
+131;590;2018;25 de mayo;Mujeres Residentes del campo
+132;0;2018;Vicente López;Mujeres Residentes del campo
+133;0;2018;Villa Gesell;Mujeres Residentes del campo
+134;429;2018;Villarino;Mujeres Residentes del campo
+135;87;2018;Zárate;Mujeres Residentes del campo
+136;59369;2002;Provincia de Buenos Aires;Mujeres Residentes del campo
+137;862;2002;Adolfo Alsina;Mujeres Residentes del campo
+138;291;2002;Adolfo Gonzales Chaves;Mujeres Residentes del campo
+139;314;2002;Alberti;Mujeres Residentes del campo
+140;42;2002;Almirante Brown;Mujeres Residentes del campo
+141;274;2002;Arrecifes;Mujeres Residentes del campo
+142;37;2002;Avellaneda;Mujeres Residentes del campo
+143;955;2002;Ayacucho;Mujeres Residentes del campo
+144;1119;2002;Azul;Mujeres Residentes del campo
+145;348;2002;Bahía Blanca;Mujeres Residentes del campo
+146;784;2002;Balcarce;Mujeres Residentes del campo
+147;348;2002;Baradero;Mujeres Residentes del campo
+148;571;2002;Benito Juárez;Mujeres Residentes del campo
+149;173;2002;Berazategui;Mujeres Residentes del campo
+150;99;2002;Berisso;Mujeres Residentes del campo
+151;1028;2002;Bolívar;Mujeres Residentes del campo
+152;451;2002;Bragado;Mujeres Residentes del campo
+153;395;2002;Brandsen;Mujeres Residentes del campo
+154;260;2002;Campana;Mujeres Residentes del campo
+155;204;2002;Cañuelas;Mujeres Residentes del campo
+156;155;2002;Capitán Sarmiento;Mujeres Residentes del campo
+157;508;2002;Carlos Casares;Mujeres Residentes del campo
+158;574;2002;Carlos Tejedor;Mujeres Residentes del campo
+159;390;2002;Carmen de Areco;Mujeres Residentes del campo
+160;202;2002;Castelli;Mujeres Residentes del campo
+161;712;2002;Chacabuco;Mujeres Residentes del campo
+162;764;2002;Chascomús;Mujeres Residentes del campo
+163;853;2002;Chivilcoy;Mujeres Residentes del campo
+164;236;2002;Colón;Mujeres Residentes del campo
+165;159;2002;Coronel de Marina Leonardo Rosales;Mujeres Residentes del campo
+166;437;2002;Coronel Dorrego;Mujeres Residentes del campo
+167;499;2002;Coronel Pringles;Mujeres Residentes del campo
+168;894;2002;Coronel Suárez;Mujeres Residentes del campo
+169;416;2002;Daireaux;Mujeres Residentes del campo
+170;128;2002;Dolores;Mujeres Residentes del campo
+171;0;2002;Ensenada;Mujeres Residentes del campo
+172;411;2002;Escobar;Mujeres Residentes del campo
+173;15;2002;Esteban Echeverría;Mujeres Residentes del campo
+174;567;2002;Exaltación de la Cruz;Mujeres Residentes del campo
+175;40;2002;Ezeiza;Mujeres Residentes del campo
+176;440;2002;Florencio Varela;Mujeres Residentes del campo
+177;291;2002;Florentino Ameghino;Mujeres Residentes del campo
+178;367;2002;General Alvarado;Mujeres Residentes del campo
+179;438;2002;General Alvear;Mujeres Residentes del campo
+180;389;2002;General Arenales;Mujeres Residentes del campo
+181;358;2002;General Belgrano;Mujeres Residentes del campo
+182;221;2002;General Guido;Mujeres Residentes del campo
+183;490;2002;General Juan Madariaga;Mujeres Residentes del campo
+184;408;2002;General La Madrid;Mujeres Residentes del campo
+185;276;2002;General Las Heras;Mujeres Residentes del campo
+186;245;2002;General Lavalle;Mujeres Residentes del campo
+187;403;2002;General Paz;Mujeres Residentes del campo
+188;604;2002;General Pinto;Mujeres Residentes del campo
+189;1317;2002;General Pueyrredón;Mujeres Residentes del campo
+190;164;2002;General Rodríguez;Mujeres Residentes del campo
+191;4;2002;General San Martín;Mujeres Residentes del campo
+192;409;2002;General Viamonte;Mujeres Residentes del campo
+193;1281;2002;General Villegas;Mujeres Residentes del campo
+194;535;2002;Guaminí;Mujeres Residentes del campo
+195;218;2002;Hipólito Yrigoyen;Mujeres Residentes del campo
+196;0;2002;Hurlingham;Mujeres Residentes del campo
+197;0;2002;Ituzaingó;Mujeres Residentes del campo
+198;31;2002;José C, Paz;Mujeres Residentes del campo
+199;696;2002;Junín;Mujeres Residentes del campo
+200;20;2002;La Costa;Mujeres Residentes del campo
+201;157;2002;La Matanza;Mujeres Residentes del campo
+202;0;2002;Lanús;Mujeres Residentes del campo
+203;3698;2002;La Plata;Mujeres Residentes del campo
+204;337;2002;Laprida;Mujeres Residentes del campo
+205;548;2002;Las Flores;Mujeres Residentes del campo
+206;361;2002;Leandro N, Alem;Mujeres Residentes del campo
+207;0;2002;Lezama;Mujeres Residentes del campo
+208;1187;2002;Lincoln;Mujeres Residentes del campo
+209;691;2002;Lobería;Mujeres Residentes del campo
+210;941;2002;Lobos;Mujeres Residentes del campo
+211;44;2002;Lomas de Zamora;Mujeres Residentes del campo
+212;170;2002;Luján;Mujeres Residentes del campo
+213;710;2002;Magdalena;Mujeres Residentes del campo
+214;295;2002;Maipú;Mujeres Residentes del campo
+215;12;2002;Malvinas Argentinas;Mujeres Residentes del campo
+216;516;2002;Mar Chiquita;Mujeres Residentes del campo
+217;521;2002;Marcos Paz;Mujeres Residentes del campo
+218;528;2002;Mercedes;Mujeres Residentes del campo
+219;80;2002;Merlo;Mujeres Residentes del campo
+220;510;2002;Monte;Mujeres Residentes del campo
+221;4;2002;Monte Hermoso;Mujeres Residentes del campo
+222;234;2002;Moreno;Mujeres Residentes del campo
+223;0;2002;Morón;Mujeres Residentes del campo
+224;789;2002;Navarro;Mujeres Residentes del campo
+225;648;2002;Necochea;Mujeres Residentes del campo
+226;817;2002;9 de julio;Mujeres Residentes del campo
+227;952;2002;Olavarría;Mujeres Residentes del campo
+228;694;2002;Patagones;Mujeres Residentes del campo
+229;764;2002;Pehuajó;Mujeres Residentes del campo
+230;268;2002;Pellegrini;Mujeres Residentes del campo
+231;938;2002;Pergamino;Mujeres Residentes del campo
+232;268;2002;Pila;Mujeres Residentes del campo
+233;420;2002;Pilar;Mujeres Residentes del campo
+234;0;2002;Pinamar;Mujeres Residentes del campo
+235;42;2002;Presidente Perón;Mujeres Residentes del campo
+236;638;2002;Puán;Mujeres Residentes del campo
+237;259;2002;Punta Indio;Mujeres Residentes del campo
+238;21;2002;Quilmes;Mujeres Residentes del campo
+239;300;2002;Ramallo;Mujeres Residentes del campo
+240;673;2002;Rauch;Mujeres Residentes del campo
+241;660;2002;Rivadavia;Mujeres Residentes del campo
+242;481;2002;Rojas;Mujeres Residentes del campo
+243;496;2002;Roque Pérez;Mujeres Residentes del campo
+244;441;2002;Saavedra;Mujeres Residentes del campo
+245;1153;2002;Saladillo;Mujeres Residentes del campo
+246;161;2002;Salliqueló;Mujeres Residentes del campo
+247;372;2002;Salto;Mujeres Residentes del campo
+248;393;2002;San Andrés de Giles;Mujeres Residentes del campo
+249;389;2002;San Antonio de Areco;Mujeres Residentes del campo
+250;345;2002;San Cayetano;Mujeres Residentes del campo
+251;60;2002;San Fernando;Mujeres Residentes del campo
+252;3;2002;San Isidro;Mujeres Residentes del campo
+253;0;2002;San Miguel;Mujeres Residentes del campo
+254;332;2002;San Nicolás;Mujeres Residentes del campo
+255;888;2002;San Pedro;Mujeres Residentes del campo
+256;262;2002;San Vicente;Mujeres Residentes del campo
+257;386;2002;Suipacha;Mujeres Residentes del campo
+258;1175;2002;Tandil;Mujeres Residentes del campo
+259;202;2002;Tapalqué;Mujeres Residentes del campo
+260;49;2002;Tigre;Mujeres Residentes del campo
+261;152;2002;Tordillo;Mujeres Residentes del campo
+262;582;2002;Tornquist;Mujeres Residentes del campo
+263;1008;2002;Trenque Lauquen;Mujeres Residentes del campo
+264;791;2002;Tres Arroyos;Mujeres Residentes del campo
+265;0;2002;Tres de Febrero;Mujeres Residentes del campo
+266;206;2002;Tres Lomas;Mujeres Residentes del campo
+267;894;2002;25 de mayo;Mujeres Residentes del campo
+268;1;2002;Vicente López;Mujeres Residentes del campo
+269;0;2002;Villa Gesell;Mujeres Residentes del campo
+270;1017;2002;Villarino;Mujeres Residentes del campo
+271;315;2002;Zárate;Mujeres Residentes del campo
+272;0;1988;Provincia de Buenos Aires;Mujeres Residentes del campo
+273;0;1988;Adolfo Alsina;Mujeres Residentes del campo
+274;0;1988;Adolfo Gonzales Chaves;Mujeres Residentes del campo
+275;0;1988;Alberti;Mujeres Residentes del campo
+276;0;1988;Almirante Brown;Mujeres Residentes del campo
+277;0;1988;Arrecifes;Mujeres Residentes del campo
+278;0;1988;Avellaneda;Mujeres Residentes del campo
+279;0;1988;Ayacucho;Mujeres Residentes del campo
+280;0;1988;Azul;Mujeres Residentes del campo
+281;0;1988;Bahía Blanca;Mujeres Residentes del campo
+282;0;1988;Balcarce;Mujeres Residentes del campo
+283;0;1988;Baradero;Mujeres Residentes del campo
+284;0;1988;Bartolomé Mitre;Mujeres Residentes del campo
+285;0;1988;Benito Juárez;Mujeres Residentes del campo
+286;0;1988;Berazategui;Mujeres Residentes del campo
+287;0;1988;Berisso;Mujeres Residentes del campo
+288;0;1988;Bolívar;Mujeres Residentes del campo
+289;0;1988;Bragado;Mujeres Residentes del campo
+290;0;1988;Brandsen;Mujeres Residentes del campo
+291;0;1988;Campana;Mujeres Residentes del campo
+292;0;1988;Cañuelas;Mujeres Residentes del campo
+293;0;1988;Capitán Sarmiento;Mujeres Residentes del campo
+294;0;1988;Carlos Casares;Mujeres Residentes del campo
+295;0;1988;Carlos Tejedor;Mujeres Residentes del campo
+296;0;1988;Carmen de Areco;Mujeres Residentes del campo
+297;0;1988;Castelli;Mujeres Residentes del campo
+298;0;1988;Chacabuco;Mujeres Residentes del campo
+299;0;1988;Chascomús;Mujeres Residentes del campo
+300;0;1988;Chivilcoy;Mujeres Residentes del campo
+301;0;1988;Colón;Mujeres Residentes del campo
+302;0;1988;Coronel de Marina Leonardo Rosales;Mujeres Residentes del campo
+303;0;1988;Coronel Dorrego;Mujeres Residentes del campo
+304;0;1988;Coronel Pringles;Mujeres Residentes del campo
+305;0;1988;Coronel Suárez;Mujeres Residentes del campo
+306;0;1988;Daireaux;Mujeres Residentes del campo
+307;0;1988;Dolores;Mujeres Residentes del campo
+308;0;1988;Ensenada;Mujeres Residentes del campo
+309;0;1988;Escobar;Mujeres Residentes del campo
+310;0;1988;Esteban Echeverría;Mujeres Residentes del campo
+311;0;1988;Exaltación de la Cruz;Mujeres Residentes del campo
+312;0;1988;Ezeiza;Mujeres Residentes del campo
+313;0;1988;Florencio Varela;Mujeres Residentes del campo
+314;0;1988;Florentino Ameghino;Mujeres Residentes del campo
+315;0;1988;General Alvarado;Mujeres Residentes del campo
+316;0;1988;General Alvear;Mujeres Residentes del campo
+317;0;1988;General Arenales;Mujeres Residentes del campo
+318;0;1988;General Belgrano;Mujeres Residentes del campo
+319;0;1988;General Guido;Mujeres Residentes del campo
+320;0;1988;General Juan Madariaga;Mujeres Residentes del campo
+321;0;1988;General La Madrid;Mujeres Residentes del campo
+322;0;1988;General Las Heras;Mujeres Residentes del campo
+323;0;1988;General Lavalle;Mujeres Residentes del campo
+324;0;1988;General Paz;Mujeres Residentes del campo
+325;0;1988;General Pinto;Mujeres Residentes del campo
+326;0;1988;General Pueyrredón;Mujeres Residentes del campo
+327;0;1988;General Rodríguez;Mujeres Residentes del campo
+328;0;1988;General San Martín;Mujeres Residentes del campo
+329;0;1988;General Sarmiento;Mujeres Residentes del campo
+330;0;1988;General Viamonte;Mujeres Residentes del campo
+331;0;1988;General Villegas;Mujeres Residentes del campo
+332;0;1988;Guaminí;Mujeres Residentes del campo
+333;0;1988;Hipólito Yrigoyen;Mujeres Residentes del campo
+334;0;1988;Hurlingham;Mujeres Residentes del campo
+335;0;1988;Ituzaingó;Mujeres Residentes del campo
+336;0;1988;José C, Paz;Mujeres Residentes del campo
+337;0;1988;Junín;Mujeres Residentes del campo
+338;0;1988;La Costa;Mujeres Residentes del campo
+339;0;1988;La Matanza;Mujeres Residentes del campo
+340;0;1988;Lanús;Mujeres Residentes del campo
+341;0;1988;La Plata;Mujeres Residentes del campo
+342;0;1988;Laprida;Mujeres Residentes del campo
+343;0;1988;Las Flores;Mujeres Residentes del campo
+344;0;1988;Leandro N, Alem;Mujeres Residentes del campo
+345;0;1988;Lezama;Mujeres Residentes del campo
+346;0;1988;Lincoln;Mujeres Residentes del campo
+347;0;1988;Lobería;Mujeres Residentes del campo
+348;0;1988;Lobos;Mujeres Residentes del campo
+349;0;1988;Lomas de Zamora;Mujeres Residentes del campo
+350;0;1988;Luján;Mujeres Residentes del campo
+351;0;1988;Magdalena;Mujeres Residentes del campo
+352;0;1988;Maipú;Mujeres Residentes del campo
+353;0;1988;Malvinas Argentinas;Mujeres Residentes del campo
+354;0;1988;Mar Chiquita;Mujeres Residentes del campo
+355;0;1988;Marcos Paz;Mujeres Residentes del campo
+356;0;1988;Mercedes;Mujeres Residentes del campo
+357;0;1988;Merlo;Mujeres Residentes del campo
+358;0;1988;Monte;Mujeres Residentes del campo
+359;0;1988;Monte Hermoso;Mujeres Residentes del campo
+360;0;1988;Moreno;Mujeres Residentes del campo
+361;0;1988;Morón;Mujeres Residentes del campo
+362;0;1988;Navarro;Mujeres Residentes del campo
+363;0;1988;Necochea;Mujeres Residentes del campo
+364;0;1988;9 de julio;Mujeres Residentes del campo
+365;0;1988;Olavarría;Mujeres Residentes del campo
+366;0;1988;Patagones;Mujeres Residentes del campo
+367;0;1988;Pehuajó;Mujeres Residentes del campo
+368;0;1988;Pellegrini;Mujeres Residentes del campo
+369;0;1988;Pergamino;Mujeres Residentes del campo
+370;0;1988;Pila;Mujeres Residentes del campo
+371;0;1988;Pilar;Mujeres Residentes del campo
+372;0;1988;Pinamar;Mujeres Residentes del campo
+373;0;1988;Presidente Perón;Mujeres Residentes del campo
+374;0;1988;Puán;Mujeres Residentes del campo
+375;0;1988;Punta Indio;Mujeres Residentes del campo
+376;0;1988;Quilmes;Mujeres Residentes del campo
+377;0;1988;Ramallo;Mujeres Residentes del campo
+378;0;1988;Rauch;Mujeres Residentes del campo
+379;0;1988;Rivadavia;Mujeres Residentes del campo
+380;0;1988;Rojas;Mujeres Residentes del campo
+381;0;1988;Roque Pérez;Mujeres Residentes del campo
+382;0;1988;Saavedra;Mujeres Residentes del campo
+383;0;1988;Saladillo;Mujeres Residentes del campo
+384;0;1988;Salliqueló;Mujeres Residentes del campo
+385;0;1988;Salto;Mujeres Residentes del campo
+386;0;1988;San Andrés de Giles;Mujeres Residentes del campo
+387;0;1988;San Antonio de Areco;Mujeres Residentes del campo
+388;0;1988;San Cayetano;Mujeres Residentes del campo
+389;0;1988;San Fernando;Mujeres Residentes del campo
+390;0;1988;San Isidro;Mujeres Residentes del campo
+391;0;1988;San Miguel;Mujeres Residentes del campo
+392;0;1988;San Nicolás;Mujeres Residentes del campo
+393;0;1988;San Pedro;Mujeres Residentes del campo
+394;0;1988;San Vicente;Mujeres Residentes del campo
+395;0;1988;Suipacha;Mujeres Residentes del campo
+396;0;1988;Tandil;Mujeres Residentes del campo
+397;0;1988;Tapalqué;Mujeres Residentes del campo
+398;0;1988;Tigre;Mujeres Residentes del campo
+399;0;1988;Tordillo;Mujeres Residentes del campo
+400;0;1988;Tornquist;Mujeres Residentes del campo
+401;0;1988;Trenque Lauquen;Mujeres Residentes del campo
+402;0;1988;Tres Arroyos;Mujeres Residentes del campo
+403;0;1988;Tres de Febrero;Mujeres Residentes del campo
+404;0;1988;Tres Lomas;Mujeres Residentes del campo
+405;0;1988;25 de mayo;Mujeres Residentes del campo
+406;0;1988;Vicente López;Mujeres Residentes del campo
+407;0;1988;Villa Gesell;Mujeres Residentes del campo
+408;0;1988;Villarino;Mujeres Residentes del campo
+409;0;1988;Zárate;Mujeres Residentes del campo
+410;0;1988;Indeterminado;Mujeres Residentes del campo
+0;56867;2018;Provincia de Buenos Aires;Varones Residentes del campo
+1;759;2018;Adolfo Alsina;Varones Residentes del campo
+2;344;2018;Adolfo Gonzales Chaves;Varones Residentes del campo
+3;121;2018;Alberti;Varones Residentes del campo
+4;144;2018;Almirante Brown;Varones Residentes del campo
+5;489;2018;Arrecifes;Varones Residentes del campo
+6;7;2018;Avellaneda;Varones Residentes del campo
+7;938;2018;Ayacucho;Varones Residentes del campo
+8;950;2018;Azul;Varones Residentes del campo
+9;392;2018;Bahía Blanca;Varones Residentes del campo
+10;688;2018;Balcarce;Varones Residentes del campo
+11;352;2018;Baradero;Varones Residentes del campo
+12;710;2018;Benito Juárez;Varones Residentes del campo
+13;520;2018;Berazategui;Varones Residentes del campo
+14;36;2018;Berisso;Varones Residentes del campo
+15;789;2018;Bolívar;Varones Residentes del campo
+16;265;2018;Bragado;Varones Residentes del campo
+17;387;2018;Brandsen;Varones Residentes del campo
+18;417;2018;Campana;Varones Residentes del campo
+19;372;2018;Cañuelas;Varones Residentes del campo
+20;207;2018;Capitán Sarmiento;Varones Residentes del campo
+21;308;2018;Carlos Casares;Varones Residentes del campo
+22;439;2018;Carlos Tejedor;Varones Residentes del campo
+23;214;2018;Carmen de Areco;Varones Residentes del campo
+24;356;2018;Castelli;Varones Residentes del campo
+25;313;2018;Chacabuco;Varones Residentes del campo
+26;697;2018;Chascomús;Varones Residentes del campo
+27;398;2018;Chivilcoy;Varones Residentes del campo
+28;136;2018;Colón;Varones Residentes del campo
+29;164;2018;Coronel de Marina Leonardo Rosales;Varones Residentes del campo
+30;775;2018;Coronel Dorrego;Varones Residentes del campo
+31;590;2018;Coronel Pringles;Varones Residentes del campo
+32;1006;2018;Coronel Suárez;Varones Residentes del campo
+33;664;2018;Daireaux;Varones Residentes del campo
+34;171;2018;Dolores;Varones Residentes del campo
+35;12;2018;Ensenada;Varones Residentes del campo
+36;60;2018;Escobar;Varones Residentes del campo
+37;67;2018;Esteban Echeverría;Varones Residentes del campo
+38;445;2018;Exaltación de la Cruz;Varones Residentes del campo
+39;10;2018;Ezeiza;Varones Residentes del campo
+40;989;2018;Florencio Varela;Varones Residentes del campo
+41;294;2018;Florentino Ameghino;Varones Residentes del campo
+42;283;2018;General Alvarado;Varones Residentes del campo
+43;561;2018;General Alvear;Varones Residentes del campo
+44;81;2018;General Arenales;Varones Residentes del campo
+45;345;2018;General Belgrano;Varones Residentes del campo
+46;404;2018;General Guido;Varones Residentes del campo
+47;394;2018;General Juan Madariaga;Varones Residentes del campo
+48;728;2018;General La Madrid;Varones Residentes del campo
+49;379;2018;General Las Heras;Varones Residentes del campo
+50;323;2018;General Lavalle;Varones Residentes del campo
+51;404;2018;General Paz;Varones Residentes del campo
+52;274;2018;General Pinto;Varones Residentes del campo
+53;1309;2018;General Pueyrredón;Varones Residentes del campo
+54;244;2018;General Rodríguez;Varones Residentes del campo
+55;0;2018;General San Martín;Varones Residentes del campo
+56;198;2018;General Viamonte;Varones Residentes del campo
+57;756;2018;General Villegas;Varones Residentes del campo
+58;720;2018;Guaminí;Varones Residentes del campo
+59;238;2018;Hipólito Yrigoyen;Varones Residentes del campo
+60;1;2018;Hurlingham;Varones Residentes del campo
+61;0;2018;Ituzaingó;Varones Residentes del campo
+62;13;2018;José C, Paz;Varones Residentes del campo
+63;524;2018;Junín;Varones Residentes del campo
+64;4;2018;La Costa;Varones Residentes del campo
+65;26;2018;La Matanza;Varones Residentes del campo
+66;0;2018;Lanús;Varones Residentes del campo
+67;4370;2018;La Plata;Varones Residentes del campo
+68;717;2018;Laprida;Varones Residentes del campo
+69;574;2018;Las Flores;Varones Residentes del campo
+70;314;2018;Leandro N, Alem;Varones Residentes del campo
+71;223;2018;Lezama;Varones Residentes del campo
+72;955;2018;Lincoln;Varones Residentes del campo
+73;639;2018;Lobería;Varones Residentes del campo
+74;720;2018;Lobos;Varones Residentes del campo
+75;12;2018;Lomas de Zamora;Varones Residentes del campo
+76;334;2018;Luján;Varones Residentes del campo
+77;414;2018;Magdalena;Varones Residentes del campo
+78;438;2018;Maipú;Varones Residentes del campo
+79;28;2018;Malvinas Argentinas;Varones Residentes del campo
+80;535;2018;Mar Chiquita;Varones Residentes del campo
+81;392;2018;Marcos Paz;Varones Residentes del campo
+82;434;2018;Mercedes;Varones Residentes del campo
+83;220;2018;Merlo;Varones Residentes del campo
+84;377;2018;Monte;Varones Residentes del campo
+85;12;2018;Monte Hermoso;Varones Residentes del campo
+86;77;2018;Moreno;Varones Residentes del campo
+87;0;2018;Morón;Varones Residentes del campo
+88;536;2018;Navarro;Varones Residentes del campo
+89;719;2018;Necochea;Varones Residentes del campo
+90;1011;2018;9 de julio;Varones Residentes del campo
+91;1015;2018;Olavarría;Varones Residentes del campo
+92;713;2018;Patagones;Varones Residentes del campo
+93;720;2018;Pehuajó;Varones Residentes del campo
+94;289;2018;Pellegrini;Varones Residentes del campo
+95;592;2018;Pergamino;Varones Residentes del campo
+96;817;2018;Pila;Varones Residentes del campo
+97;216;2018;Pilar;Varones Residentes del campo
+98;0;2018;Pinamar;Varones Residentes del campo
+99;40;2018;Presidente Perón;Varones Residentes del campo
+100;615;2018;Puán;Varones Residentes del campo
+101;302;2018;Punta Indio;Varones Residentes del campo
+102;8;2018;Quilmes;Varones Residentes del campo
+103;171;2018;Ramallo;Varones Residentes del campo
+104;745;2018;Rauch;Varones Residentes del campo
+105;571;2018;Rivadavia;Varones Residentes del campo
+106;356;2018;Rojas;Varones Residentes del campo
+107;299;2018;Roque Pérez;Varones Residentes del campo
+108;429;2018;Saavedra;Varones Residentes del campo
+109;608;2018;Saladillo;Varones Residentes del campo
+110;108;2018;Salliqueló;Varones Residentes del campo
+111;249;2018;Salto;Varones Residentes del campo
+112;172;2018;San Andrés de Giles;Varones Residentes del campo
+113;318;2018;San Antonio de Areco;Varones Residentes del campo
+114;384;2018;San Cayetano;Varones Residentes del campo
+115;77;2018;San Fernando;Varones Residentes del campo
+116;0;2018;San Isidro;Varones Residentes del campo
+117;1;2018;San Miguel;Varones Residentes del campo
+118;201;2018;San Nicolás;Varones Residentes del campo
+119;606;2018;San Pedro;Varones Residentes del campo
+120;176;2018;San Vicente;Varones Residentes del campo
+121;399;2018;Suipacha;Varones Residentes del campo
+122;1008;2018;Tandil;Varones Residentes del campo
+123;523;2018;Tapalqué;Varones Residentes del campo
+124;92;2018;Tigre;Varones Residentes del campo
+125;183;2018;Tordillo;Varones Residentes del campo
+126;566;2018;Tornquist;Varones Residentes del campo
+127;1330;2018;Trenque Lauquen;Varones Residentes del campo
+128;546;2018;Tres Arroyos;Varones Residentes del campo
+129;2;2018;Tres de Febrero;Varones Residentes del campo
+130;154;2018;Tres Lomas;Varones Residentes del campo
+131;931;2018;25 de mayo;Varones Residentes del campo
+132;0;2018;Vicente López;Varones Residentes del campo
+133;0;2018;Villa Gesell;Varones Residentes del campo
+134;972;2018;Villarino;Varones Residentes del campo
+135;108;2018;Zárate;Varones Residentes del campo
+136;91584;2002;Provincia de Buenos Aires;Varones Residentes del campo
+137;1219;2002;Adolfo Alsina;Varones Residentes del campo
+138;582;2002;Adolfo Gonzales Chaves;Varones Residentes del campo
+139;470;2002;Alberti;Varones Residentes del campo
+140;69;2002;Almirante Brown;Varones Residentes del campo
+141;374;2002;Arrecifes;Varones Residentes del campo
+142;30;2002;Avellaneda;Varones Residentes del campo
+143;1605;2002;Ayacucho;Varones Residentes del campo
+144;1795;2002;Azul;Varones Residentes del campo
+145;525;2002;Bahía Blanca;Varones Residentes del campo
+146;1256;2002;Balcarce;Varones Residentes del campo
+147;523;2002;Baradero;Varones Residentes del campo
+148;995;2002;Benito Juárez;Varones Residentes del campo
+149;246;2002;Berazategui;Varones Residentes del campo
+150;116;2002;Berisso;Varones Residentes del campo
+151;1591;2002;Bolívar;Varones Residentes del campo
+152;726;2002;Bragado;Varones Residentes del campo
+153;624;2002;Brandsen;Varones Residentes del campo
+154;404;2002;Campana;Varones Residentes del campo
+155;360;2002;Cañuelas;Varones Residentes del campo
+156;296;2002;Capitán Sarmiento;Varones Residentes del campo
+157;770;2002;Carlos Casares;Varones Residentes del campo
+158;880;2002;Carlos Tejedor;Varones Residentes del campo
+159;512;2002;Carmen de Areco;Varones Residentes del campo
+160;329;2002;Castelli;Varones Residentes del campo
+161;1023;2002;Chacabuco;Varones Residentes del campo
+162;1182;2002;Chascomús;Varones Residentes del campo
+163;1121;2002;Chivilcoy;Varones Residentes del campo
+164;309;2002;Colón;Varones Residentes del campo
+165;228;2002;Coronel de Marina Leonardo Rosales;Varones Residentes del campo
+166;879;2002;Coronel Dorrego;Varones Residentes del campo
+167;1026;2002;Coronel Pringles;Varones Residentes del campo
+168;1787;2002;Coronel Suárez;Varones Residentes del campo
+169;740;2002;Daireaux;Varones Residentes del campo
+170;229;2002;Dolores;Varones Residentes del campo
+171;0;2002;Ensenada;Varones Residentes del campo
+172;493;2002;Escobar;Varones Residentes del campo
+173;17;2002;Esteban Echeverría;Varones Residentes del campo
+174;688;2002;Exaltación de la Cruz;Varones Residentes del campo
+175;78;2002;Ezeiza;Varones Residentes del campo
+176;719;2002;Florencio Varela;Varones Residentes del campo
+177;540;2002;Florentino Ameghino;Varones Residentes del campo
+178;610;2002;General Alvarado;Varones Residentes del campo
+179;647;2002;General Alvear;Varones Residentes del campo
+180;691;2002;General Arenales;Varones Residentes del campo
+181;554;2002;General Belgrano;Varones Residentes del campo
+182;426;2002;General Guido;Varones Residentes del campo
+183;739;2002;General Juan Madariaga;Varones Residentes del campo
+184;788;2002;General La Madrid;Varones Residentes del campo
+185;419;2002;General Las Heras;Varones Residentes del campo
+186;378;2002;General Lavalle;Varones Residentes del campo
+187;559;2002;General Paz;Varones Residentes del campo
+188;884;2002;General Pinto;Varones Residentes del campo
+189;1786;2002;General Pueyrredón;Varones Residentes del campo
+190;300;2002;General Rodríguez;Varones Residentes del campo
+191;3;2002;General San Martín;Varones Residentes del campo
+192;623;2002;General Viamonte;Varones Residentes del campo
+193;2032;2002;General Villegas;Varones Residentes del campo
+194;974;2002;Guaminí;Varones Residentes del campo
+195;420;2002;Hipólito Yrigoyen;Varones Residentes del campo
+196;0;2002;Hurlingham;Varones Residentes del campo
+197;0;2002;Ituzaingó;Varones Residentes del campo
+198;64;2002;José C, Paz;Varones Residentes del campo
+199;955;2002;Junín;Varones Residentes del campo
+200;35;2002;La Costa;Varones Residentes del campo
+201;248;2002;La Matanza;Varones Residentes del campo
+202;0;2002;Lanús;Varones Residentes del campo
+203;4636;2002;La Plata;Varones Residentes del campo
+204;669;2002;Laprida;Varones Residentes del campo
+205;922;2002;Las Flores;Varones Residentes del campo
+206;561;2002;Leandro N, Alem;Varones Residentes del campo
+207;0;2002;Lezama;Varones Residentes del campo
+208;1837;2002;Lincoln;Varones Residentes del campo
+209;1307;2002;Lobería;Varones Residentes del campo
+210;1237;2002;Lobos;Varones Residentes del campo
+211;49;2002;Lomas de Zamora;Varones Residentes del campo
+212;254;2002;Luján;Varones Residentes del campo
+213;940;2002;Magdalena;Varones Residentes del campo
+214;481;2002;Maipú;Varones Residentes del campo
+215;21;2002;Malvinas Argentinas;Varones Residentes del campo
+216;866;2002;Mar Chiquita;Varones Residentes del campo
+217;857;2002;Marcos Paz;Varones Residentes del campo
+218;687;2002;Mercedes;Varones Residentes del campo
+219;126;2002;Merlo;Varones Residentes del campo
+220;680;2002;Monte;Varones Residentes del campo
+221;19;2002;Monte Hermoso;Varones Residentes del campo
+222;248;2002;Moreno;Varones Residentes del campo
+223;0;2002;Morón;Varones Residentes del campo
+224;1065;2002;Navarro;Varones Residentes del campo
+225;1049;2002;Necochea;Varones Residentes del campo
+226;1260;2002;9 de julio;Varones Residentes del campo
+227;1626;2002;Olavarría;Varones Residentes del campo
+228;1414;2002;Patagones;Varones Residentes del campo
+229;1280;2002;Pehuajó;Varones Residentes del campo
+230;492;2002;Pellegrini;Varones Residentes del campo
+231;1270;2002;Pergamino;Varones Residentes del campo
+232;435;2002;Pila;Varones Residentes del campo
+233;511;2002;Pilar;Varones Residentes del campo
+234;0;2002;Pinamar;Varones Residentes del campo
+235;60;2002;Presidente Perón;Varones Residentes del campo
+236;1101;2002;Puán;Varones Residentes del campo
+237;408;2002;Punta Indio;Varones Residentes del campo
+238;27;2002;Quilmes;Varones Residentes del campo
+239;394;2002;Ramallo;Varones Residentes del campo
+240;1043;2002;Rauch;Varones Residentes del campo
+241;1023;2002;Rivadavia;Varones Residentes del campo
+242;736;2002;Rojas;Varones Residentes del campo
+243;671;2002;Roque Pérez;Varones Residentes del campo
+244;816;2002;Saavedra;Varones Residentes del campo
+245;1532;2002;Saladillo;Varones Residentes del campo
+246;245;2002;Salliqueló;Varones Residentes del campo
+247;548;2002;Salto;Varones Residentes del campo
+248;553;2002;San Andrés de Giles;Varones Residentes del campo
+249;544;2002;San Antonio de Areco;Varones Residentes del campo
+250;652;2002;San Cayetano;Varones Residentes del campo
+251;72;2002;San Fernando;Varones Residentes del campo
+252;4;2002;San Isidro;Varones Residentes del campo
+253;0;2002;San Miguel;Varones Residentes del campo
+254;464;2002;San Nicolás;Varones Residentes del campo
+255;1193;2002;San Pedro;Varones Residentes del campo
+256;372;2002;San Vicente;Varones Residentes del campo
+257;568;2002;Suipacha;Varones Residentes del campo
+258;1755;2002;Tandil;Varones Residentes del campo
+259;444;2002;Tapalqué;Varones Residentes del campo
+260;46;2002;Tigre;Varones Residentes del campo
+261;194;2002;Tordillo;Varones Residentes del campo
+262;896;2002;Tornquist;Varones Residentes del campo
+263;1613;2002;Trenque Lauquen;Varones Residentes del campo
+264;1405;2002;Tres Arroyos;Varones Residentes del campo
+265;2;2002;Tres de Febrero;Varones Residentes del campo
+266;371;2002;Tres Lomas;Varones Residentes del campo
+267;1378;2002;25 de mayo;Varones Residentes del campo
+268;1;2002;Vicente López;Varones Residentes del campo
+269;2;2002;Villa Gesell;Varones Residentes del campo
+270;1737;2002;Villarino;Varones Residentes del campo
+271;424;2002;Zárate;Varones Residentes del campo
+272;0;1988;Provincia de Buenos Aires;Varones Residentes del campo
+273;0;1988;Adolfo Alsina;Varones Residentes del campo
+274;0;1988;Adolfo Gonzales Chaves;Varones Residentes del campo
+275;0;1988;Alberti;Varones Residentes del campo
+276;0;1988;Almirante Brown;Varones Residentes del campo
+277;0;1988;Arrecifes;Varones Residentes del campo
+278;0;1988;Avellaneda;Varones Residentes del campo
+279;0;1988;Ayacucho;Varones Residentes del campo
+280;0;1988;Azul;Varones Residentes del campo
+281;0;1988;Bahía Blanca;Varones Residentes del campo
+282;0;1988;Balcarce;Varones Residentes del campo
+283;0;1988;Baradero;Varones Residentes del campo
+284;0;1988;Bartolomé Mitre;Varones Residentes del campo
+285;0;1988;Benito Juárez;Varones Residentes del campo
+286;0;1988;Berazategui;Varones Residentes del campo
+287;0;1988;Berisso;Varones Residentes del campo
+288;0;1988;Bolívar;Varones Residentes del campo
+289;0;1988;Bragado;Varones Residentes del campo
+290;0;1988;Brandsen;Varones Residentes del campo
+291;0;1988;Campana;Varones Residentes del campo
+292;0;1988;Cañuelas;Varones Residentes del campo
+293;0;1988;Capitán Sarmiento;Varones Residentes del campo
+294;0;1988;Carlos Casares;Varones Residentes del campo
+295;0;1988;Carlos Tejedor;Varones Residentes del campo
+296;0;1988;Carmen de Areco;Varones Residentes del campo
+297;0;1988;Castelli;Varones Residentes del campo
+298;0;1988;Chacabuco;Varones Residentes del campo
+299;0;1988;Chascomús;Varones Residentes del campo
+300;0;1988;Chivilcoy;Varones Residentes del campo
+301;0;1988;Colón;Varones Residentes del campo
+302;0;1988;Coronel de Marina Leonardo Rosales;Varones Residentes del campo
+303;0;1988;Coronel Dorrego;Varones Residentes del campo
+304;0;1988;Coronel Pringles;Varones Residentes del campo
+305;0;1988;Coronel Suárez;Varones Residentes del campo
+306;0;1988;Daireaux;Varones Residentes del campo
+307;0;1988;Dolores;Varones Residentes del campo
+308;0;1988;Ensenada;Varones Residentes del campo
+309;0;1988;Escobar;Varones Residentes del campo
+310;0;1988;Esteban Echeverría;Varones Residentes del campo
+311;0;1988;Exaltación de la Cruz;Varones Residentes del campo
+312;0;1988;Ezeiza;Varones Residentes del campo
+313;0;1988;Florencio Varela;Varones Residentes del campo
+314;0;1988;Florentino Ameghino;Varones Residentes del campo
+315;0;1988;General Alvarado;Varones Residentes del campo
+316;0;1988;General Alvear;Varones Residentes del campo
+317;0;1988;General Arenales;Varones Residentes del campo
+318;0;1988;General Belgrano;Varones Residentes del campo
+319;0;1988;General Guido;Varones Residentes del campo
+320;0;1988;General Juan Madariaga;Varones Residentes del campo
+321;0;1988;General La Madrid;Varones Residentes del campo
+322;0;1988;General Las Heras;Varones Residentes del campo
+323;0;1988;General Lavalle;Varones Residentes del campo
+324;0;1988;General Paz;Varones Residentes del campo
+325;0;1988;General Pinto;Varones Residentes del campo
+326;0;1988;General Pueyrredón;Varones Residentes del campo
+327;0;1988;General Rodríguez;Varones Residentes del campo
+328;0;1988;General San Martín;Varones Residentes del campo
+329;0;1988;General Sarmiento;Varones Residentes del campo
+330;0;1988;General Viamonte;Varones Residentes del campo
+331;0;1988;General Villegas;Varones Residentes del campo
+332;0;1988;Guaminí;Varones Residentes del campo
+333;0;1988;Hipólito Yrigoyen;Varones Residentes del campo
+334;0;1988;Hurlingham;Varones Residentes del campo
+335;0;1988;Ituzaingó;Varones Residentes del campo
+336;0;1988;José C, Paz;Varones Residentes del campo
+337;0;1988;Junín;Varones Residentes del campo
+338;0;1988;La Costa;Varones Residentes del campo
+339;0;1988;La Matanza;Varones Residentes del campo
+340;0;1988;Lanús;Varones Residentes del campo
+341;0;1988;La Plata;Varones Residentes del campo
+342;0;1988;Laprida;Varones Residentes del campo
+343;0;1988;Las Flores;Varones Residentes del campo
+344;0;1988;Leandro N, Alem;Varones Residentes del campo
+345;0;1988;Lezama;Varones Residentes del campo
+346;0;1988;Lincoln;Varones Residentes del campo
+347;0;1988;Lobería;Varones Residentes del campo
+348;0;1988;Lobos;Varones Residentes del campo
+349;0;1988;Lomas de Zamora;Varones Residentes del campo
+350;0;1988;Luján;Varones Residentes del campo
+351;0;1988;Magdalena;Varones Residentes del campo
+352;0;1988;Maipú;Varones Residentes del campo
+353;0;1988;Malvinas Argentinas;Varones Residentes del campo
+354;0;1988;Mar Chiquita;Varones Residentes del campo
+355;0;1988;Marcos Paz;Varones Residentes del campo
+356;0;1988;Mercedes;Varones Residentes del campo
+357;0;1988;Merlo;Varones Residentes del campo
+358;0;1988;Monte;Varones Residentes del campo
+359;0;1988;Monte Hermoso;Varones Residentes del campo
+360;0;1988;Moreno;Varones Residentes del campo
+361;0;1988;Morón;Varones Residentes del campo
+362;0;1988;Navarro;Varones Residentes del campo
+363;0;1988;Necochea;Varones Residentes del campo
+364;0;1988;9 de julio;Varones Residentes del campo
+365;0;1988;Olavarría;Varones Residentes del campo
+366;0;1988;Patagones;Varones Residentes del campo
+367;0;1988;Pehuajó;Varones Residentes del campo
+368;0;1988;Pellegrini;Varones Residentes del campo
+369;0;1988;Pergamino;Varones Residentes del campo
+370;0;1988;Pila;Varones Residentes del campo
+371;0;1988;Pilar;Varones Residentes del campo
+372;0;1988;Pinamar;Varones Residentes del campo
+373;0;1988;Presidente Perón;Varones Residentes del campo
+374;0;1988;Puán;Varones Residentes del campo
+375;0;1988;Punta Indio;Varones Residentes del campo
+376;0;1988;Quilmes;Varones Residentes del campo
+377;0;1988;Ramallo;Varones Residentes del campo
+378;0;1988;Rauch;Varones Residentes del campo
+379;0;1988;Rivadavia;Varones Residentes del campo
+380;0;1988;Rojas;Varones Residentes del campo
+381;0;1988;Roque Pérez;Varones Residentes del campo
+382;0;1988;Saavedra;Varones Residentes del campo
+383;0;1988;Saladillo;Varones Residentes del campo
+384;0;1988;Salliqueló;Varones Residentes del campo
+385;0;1988;Salto;Varones Residentes del campo
+386;0;1988;San Andrés de Giles;Varones Residentes del campo
+387;0;1988;San Antonio de Areco;Varones Residentes del campo
+388;0;1988;San Cayetano;Varones Residentes del campo
+389;0;1988;San Fernando;Varones Residentes del campo
+390;0;1988;San Isidro;Varones Residentes del campo
+391;0;1988;San Miguel;Varones Residentes del campo
+392;0;1988;San Nicolás;Varones Residentes del campo
+393;0;1988;San Pedro;Varones Residentes del campo
+394;0;1988;San Vicente;Varones Residentes del campo
+395;0;1988;Suipacha;Varones Residentes del campo
+396;0;1988;Tandil;Varones Residentes del campo
+397;0;1988;Tapalqué;Varones Residentes del campo
+398;0;1988;Tigre;Varones Residentes del campo
+399;0;1988;Tordillo;Varones Residentes del campo
+400;0;1988;Tornquist;Varones Residentes del campo
+401;0;1988;Trenque Lauquen;Varones Residentes del campo
+402;0;1988;Tres Arroyos;Varones Residentes del campo
+403;0;1988;Tres de Febrero;Varones Residentes del campo
+404;0;1988;Tres Lomas;Varones Residentes del campo
+405;0;1988;25 de mayo;Varones Residentes del campo
+406;0;1988;Vicente López;Varones Residentes del campo
+407;0;1988;Villa Gesell;Varones Residentes del campo
+408;0;1988;Villarino;Varones Residentes del campo
+409;0;1988;Zárate;Varones Residentes del campo
+410;0;1988;Indeterminado;Varones Residentes del campo

@@ -3,9 +3,7 @@ from dash import dcc, html, Input, Output, callback, State, no_update
 import dash_bootstrap_components as dbc
 from dash_loading_spinners import Hash
 from pages.indicadores_censos.data_censo.base_indicadores import base_censos, VAR_ANIO_CENSO, VAR_PARTIDO
-import plotly.graph_objects as go
 import plotly.express as px
-import plotly.colors as colors
 from .modal_tierra import modal_tierra
 from ..formatos import letra, tamanio_fuente_titulo, tamanio_fuente, tamanio_fuente_tick, color_letra, color_concentracion_tierra_1, color_concentracion_tierra_2
 
@@ -16,8 +14,6 @@ VAR_TOTAL_EAPS = 'Total EAPS'
 VAR_EAPS_Q = 'Cantidad de EAPs'
 x_titulo = "Año del censo"
 y_titulo = "Cantidad de EAPs"
-
-
 
 # Titulos
 graph_title =  'Explotaciones Agropecuarias'

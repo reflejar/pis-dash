@@ -9,24 +9,26 @@ import pickle
 from .modal_empleo import modal_empleo
 import textwrap
 
-#from tools.componentes import NoHayDatos, Alert
-
-from pages.indicadores_censos.data_censo.residencia import base_residencia, base_mujeres, base_varones, VAR_ANIO_CENSO, VAR_TOTAL
+from pages.indicadores_censos.data_censo.base_indicadores import VAR_ANIO_CENSO, VAR_PARTIDO
 from ..formatos import letra, tamanio_fuente_titulo, tamanio_fuente, tamanio_fuente_tick, color_letra, color_empleo_1, color_empleo_2
-
 ##### VARIABLES ######
 
+VAR_SEXO_NACIMIENTO= 'Sexo de nacimiento'
+VAR_CANTIDAD_PERSONAS = 'Cantidad de personas'
+
+x_titulo = "Año del censo"
+y_titulo = "Residentes por sexo"
+
 # Titulos
-graph_title =  'Evolución del número de residentes del campo'
+graph_title =  "Evolución de residentes del campo por sexo"
 
-# BASE DE DATOS
-df_mujeres = base_mujeres.copy()
-df_varones = base_varones.copy()
+df_base = pd.read_csv('pages/indicadores_censos/data_censo/empleo-y-residencia/residentes_por_sexo.csv', sep=';' )
 
+df_base[VAR_ANIO_CENSO] = df_base[VAR_ANIO_CENSO].astype(int).astype(str) 
 
 ###### GRAFICO  #####  
  
-residencia =dbc.Container(
+ResidentesPorSexo =dbc.Container(
             [
                 dbc.Card(
                             [  
@@ -64,41 +66,26 @@ residencia =dbc.Container(
 
 def update_bar_chart(partidos):
 
+    df = df_base.copy()
+    sel_partido = [c for c in partidos if c != ""]
     
-    fig = px.bar(x=df_mujeres[VAR_ANIO_CENSO], y=[df_mujeres[VAR_TOTAL], df_varones[VAR_TOTAL]])
+    if len(sel_partido) >0:
+        mask = df[VAR_PARTIDO]==partidos
+        df = df[mask]
 
-    # Calcular el porcentaje del total, que luego aparecen en las etiquetas emergentes 
-    total = df_mujeres[VAR_TOTAL].to_numpy() + df_varones[VAR_TOTAL].to_numpy()
-    porcentaje_mujeres = df_mujeres[VAR_TOTAL] / total * 100
-    porcentaje_varones = df_varones[VAR_TOTAL] / total * 100    
+#    if len(df) == 0:
+#        return NoHayDatos['linea']
 
-    #se crea variable con los nombres de la categoría 
-    nombres_variables=["Mujeres", "Varones"]
-    
-    for i, (var, nombre) in enumerate(zip([df_mujeres[VAR_TOTAL], df_varones[VAR_TOTAL]], nombres_variables)):
-        fig.data[i].text = [nombre] * len(var)
-        fig.update_traces(textposition='none')
-        fig.data[i].customdata =  [porcentaje_mujeres, porcentaje_varones][i] #se establecen los porcentajes que luego salen en las etiquetas emergentes
+    df = df.groupby(by = [VAR_ANIO_CENSO, VAR_SEXO_NACIMIENTO])[VAR_CANTIDAD_PERSONAS].sum().reset_index()
+    df[VAR_CANTIDAD_PERSONAS]= round(df[VAR_CANTIDAD_PERSONAS],2)
 
-    # Armar el texto de las etiquetas emergentes
-    fig.update_traces(
-        hovertemplate='Residentes %{text}<br>Año del censo: %{x}<br>Cantidad de residentes:  %{y:.0f}<br>Porcentaje del total: %{customdata:.2f}%<extra></extra>'
-    )
-
-
-    fig.update_layout(yaxis=dict(tickformat=',',ticksuffix='k'))
-    fig.update_xaxes( title_text = "Año del censo", title_font=dict(size=14, family=letra, color='black'), tickfont=dict(family=letra, color='black', size=11))
-    fig.update_yaxes( title_text = "Cantidad de residentes", title_font=dict(size=14, family=letra, color='black'), tickfont=dict(family=letra, color='black', size=11))
+    fig = px.histogram(df, x=VAR_ANIO_CENSO, y=VAR_CANTIDAD_PERSONAS, color=VAR_SEXO_NACIMIENTO,  text_auto=True, color_discrete_sequence=[color_empleo_1, color_empleo_2 ])
+    fig.update_xaxes( title_text = x_titulo, title_font=dict(size=tamanio_fuente, family=letra, color=color_letra), tickfont=dict(family=letra, color=color_letra, size=tamanio_fuente_tick))
+    fig.update_yaxes(title_text = y_titulo,  title_font=dict(size=tamanio_fuente,family=letra,color=color_letra), tickfont=dict(family=letra, color=color_letra, size=tamanio_fuente_tick))
     fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
-
-    colors = [color_empleo_1, color_empleo_2]  # Colores personalizados para cada categoría
-    for i, data in enumerate(fig.data):
-        data.marker.color = colors[i]
-        data.name = nombres_variables[i]
-
-    fig.update_traces(marker=dict(line=dict(width=0), )) # Eliminar el borde de las barras
-    # Ajustar el espaciado entre las barras para dar la apariencia de redondez
-    fig.update_layout(bargap=0.2)
+    
+    #Armar el texto de las etiquetas emergentes # Falta agregar sexo
+    fig.update_traces(hovertemplate='Cantidad de Residentes: %{y}<br>Año del censo: %{x}')
     
     # Actualizar el diseño del gráfico
     fig.update_layout(
@@ -108,13 +95,13 @@ def update_bar_chart(partidos):
         "y": 0.95,
         "xanchor": "center",
         "yanchor": "top",
-        "font": {
-            "size": 18,
+        "font": { 
+            "size": 17,
             "color": "black",
             "family": letra
         },
         "yref": "container",
-        "yanchor": "top",
+        "yanchor": "top"
         },
         showlegend=True,
         plot_bgcolor='rgba(0,0,0,0)',
@@ -122,17 +109,16 @@ def update_bar_chart(partidos):
         hovermode="x",
         legend=dict(
             title='',
-            orientation="v",
-            xanchor='right',
-            x=1.05,
-            y=1,
+            orientation="h",
+            xanchor='center',
+            x=0.5,
+            y=-0.3,
             bgcolor='rgba(255, 255, 255, 0)',
             bordercolor='rgba(255, 255, 255, 0)',
             tracegroupgap=10
         )
     )
-        
-    
+
 
     return fig
 

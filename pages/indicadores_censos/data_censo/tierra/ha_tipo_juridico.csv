@@ -1,5 +1,5 @@
 ;HA de EAPs;Año del censo;Partido;Tipo jurídico
-0;11657123.0;2018;Buenos Aires;Empresas
+0;11657123.0;2018;Provincia de Buenos Aires;Empresas
 1;252875.0;2018;Adolfo Alsina;Empresas
 2;160513.0;2018;Adolfo Gonzales Chaves;Empresas
 3;51718.0;2018;Alberti;Empresas
@@ -135,7 +135,7 @@
 133;0.0;2018;Villa Gesell;Empresas
 134;381560.0;2018;Villarino;Empresas
 135;23181.0;2018;Zárate;Empresas
-136;13457692.0;2002;Buenos Aires;Empresas
+136;13457692.0;2002;Provincia de Buenos Aires;Empresas
 137;148298.0;2002;Adolfo Alsina;Empresas
 138;165439.0;2002;Adolfo Gonzales Chaves;Empresas
 139;76073.0;2002;Alberti;Empresas
@@ -271,7 +271,7 @@
 269;0.0;2002;Villa Gesell;Empresas
 270;409701.0;2002;Villarino;Empresas
 271;21228.0;2002;Zárate;Empresas
-272;14540405.0;1988;Buenos Aires;Empresas
+272;14540405.0;1988;Provincia de Buenos Aires;Empresas
 273;202673.0;1988;Adolfo Alsina;Empresas
 274;184858.0;1988;Adolfo Gonzales Chaves;Empresas
 275;72355.0;1988;Alberti;Empresas
@@ -410,7 +410,7 @@
 408;544240.0;1988;Villarino;Empresas
 409;34477.0;1988;Zárate;Empresas
 410;9595.0;1988;Indeterminado;Empresas
-0;9554807.0;2018;Buenos Aires;Personas Humanas
+0;9554807.0;2018;Provincia de Buenos Aires;Personas Humanas
 1;207420.0;2018;Adolfo Alsina;Personas Humanas
 2;136574.0;2018;Adolfo Gonzales Chaves;Personas Humanas
 3;25118.0;2018;Alberti;Personas Humanas
@@ -546,7 +546,7 @@
 133;0.0;2018;Villa Gesell;Personas Humanas
 134;366823.0;2018;Villarino;Personas Humanas
 135;10671.0;2018;Zárate;Personas Humanas
-136;11912495.0;2002;Buenos Aires;Personas Humanas
+136;11912495.0;2002;Provincia de Buenos Aires;Personas Humanas
 137;289727.0;2002;Adolfo Alsina;Personas Humanas
 138;137147.0;2002;Adolfo Gonzales Chaves;Personas Humanas
 139;41078.0;2002;Alberti;Personas Humanas
@@ -682,7 +682,7 @@
 269;6.0;2002;Villa Gesell;Personas Humanas
 270;450228.0;2002;Villarino;Personas Humanas
 271;13731.0;2002;Zárate;Personas Humanas
-272;12108104.0;1988;Buenos Aires;Personas Humanas
+272;12108104.0;1988;Provincia de Buenos Aires;Personas Humanas
 273;264887.0;1988;Adolfo Alsina;Personas Humanas
 274;148852.0;1988;Adolfo Gonzales Chaves;Personas Humanas
 275;26993.0;1988;Alberti;Personas Humanas
