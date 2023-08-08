@@ -1,5 +1,4 @@
-import pandas as pd
-from dash import dcc, html, Input, Output, callback, State, no_update
+from dash import dcc, Input, Output, callback, State
 import dash_bootstrap_components as dbc
 import dash
 
@@ -32,6 +31,7 @@ modal_tierra=dbc.Modal(
         Output("open-modal-button-superficie-tamanio", "n_clicks"), 
         Output("open-modal-button-eaps-juridico", "n_clicks"), 
         Output("open-modal-button-superficie-juridico", "n_clicks"), 
+        Output("open-modal-button-eaps-sexo", "n_clicks"), 
     ],
     [
         Input("open-modal-button-eaps", "n_clicks"), 
@@ -39,7 +39,8 @@ modal_tierra=dbc.Modal(
         Input("open-modal-button-superficie", "n_clicks"),
         Input("open-modal-button-superficie-tamanio", "n_clicks"),
         Input("open-modal-button-eaps-juridico", "n_clicks"),
-        Input("open-modal-button-superficie-juridico", "n_clicks"), 
+        Input("open-modal-button-superficie-juridico", "n_clicks"),
+        Input("open-modal-button-eaps-sexo", "n_clicks"),
         Input("close-modal-button-tierra", "n_clicks")
     ],
     [
@@ -49,7 +50,8 @@ modal_tierra=dbc.Modal(
         State("eaps-superficie", "figure"),
         State("superficie-eaps-tamanio", "figure"), 
         State("q-eaps-juridico", "figure"), 
-        State("superficie-eaps-juridico", "figure"), 
+        State("superficie-eaps-juridico", "figure"),
+        State("eaps-sexo-propiedad", "figure") 
     ],
 )
 def toggle_modal(
@@ -59,6 +61,7 @@ def toggle_modal(
     open_clicks_superficie_tamanio,
     open_clicks_eaps_juridico,
     open_clicks_ha_juridico,
+    open_clicks_eaps_sexo,
     close_clicks, 
     is_open, 
     figure_eaps, 
@@ -66,20 +69,23 @@ def toggle_modal(
     figure_superficie,
     figure_superficie_tamanio,
     figure_eaps_juridico,
-    figure_ha_juridico
+    figure_ha_juridico,
+    figure_eaps_sexo,
 ):
     if open_clicks_eaps:
-        return not is_open,figure_eaps,0,0,0,0,0,0
+        return not is_open,figure_eaps,0,0,0,0,0,0,0
     elif open_clicks_tamanio:
-        return not is_open,figure_tamanio,0,0,0,0,0,0
+        return not is_open,figure_tamanio,0,0,0,0,0,0,0
     elif open_clicks_superficie:
-        return not is_open,figure_superficie,0,0,0,0,0,0
+        return not is_open,figure_superficie,0,0,0,0,0,0,0
     elif open_clicks_superficie_tamanio:
-        return not is_open,figure_superficie_tamanio,0,0,0,0,0,0
+        return not is_open,figure_superficie_tamanio,0,0,0,0,0,0,0
     elif open_clicks_eaps_juridico:
-        return not is_open,figure_eaps_juridico,0,0,0,0,0,0
+        return not is_open,figure_eaps_juridico,0,0,0,0,0,0,0
     elif open_clicks_ha_juridico:
-        return not is_open,figure_ha_juridico,0,0,0,0,0,0
+        return not is_open,figure_ha_juridico,0,0,0,0,0,0,0
+    elif open_clicks_eaps_sexo:
+        return not is_open,figure_eaps_sexo,0,0,0,0,0,0,0
     elif close_clicks:
-        return False, dash.no_update,0,0,0,0,0,0
-    return is_open, dash.no_update,0,0,0,0,0,0
+        return False, dash.no_update,0,0,0,0,0,0,0
+    return is_open, dash.no_update,0,0,0,0,0,0,0

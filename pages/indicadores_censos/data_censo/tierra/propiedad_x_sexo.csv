@@ -1,0 +1,823 @@
+;Cantidad de EAPs;Año del censo;Partido;Sexo
+0;5280.0;2018;Provincia de Buenos Aires;Mujeres propietarias
+1;70.0;2018;Adolfo Alsina;Mujeres propietarias
+2;54.0;2018;Adolfo Gonzales Chaves;Mujeres propietarias
+3;25.0;2018;Alberti;Mujeres propietarias
+4;10.0;2018;Almirante Brown;Mujeres propietarias
+5;19.0;2018;Arrecifes;Mujeres propietarias
+6;2.0;2018;Avellaneda;Mujeres propietarias
+7;151.0;2018;Ayacucho;Mujeres propietarias
+8;103.0;2018;Azul;Mujeres propietarias
+9;31.0;2018;Bahía Blanca;Mujeres propietarias
+10;45.0;2018;Balcarce;Mujeres propietarias
+11;17.0;2018;Baradero;Mujeres propietarias
+12;76.0;2018;Benito Juárez;Mujeres propietarias
+13;63.0;2018;Berazategui;Mujeres propietarias
+14;7.0;2018;Berisso;Mujeres propietarias
+15;147.0;2018;Bolívar;Mujeres propietarias
+16;34.0;2018;Bragado;Mujeres propietarias
+17;32.0;2018;Brandsen;Mujeres propietarias
+18;19.0;2018;Campana;Mujeres propietarias
+19;28.0;2018;Cañuelas;Mujeres propietarias
+20;25.0;2018;Capitán Sarmiento;Mujeres propietarias
+21;37.0;2018;Carlos Casares;Mujeres propietarias
+22;67.0;2018;Carlos Tejedor;Mujeres propietarias
+23;10.0;2018;Carmen de Areco;Mujeres propietarias
+24;18.0;2018;Castelli;Mujeres propietarias
+25;45.0;2018;Chacabuco;Mujeres propietarias
+26;93.0;2018;Chascomús;Mujeres propietarias
+27;39.0;2018;Chivilcoy;Mujeres propietarias
+28;26.0;2018;Colón;Mujeres propietarias
+29;11.0;2018;Coronel de Marina Leonardo Rosales;Mujeres propietarias
+30;29.0;2018;Coronel Dorrego;Mujeres propietarias
+31;63.0;2018;Coronel Pringles;Mujeres propietarias
+32;94.0;2018;Coronel Suárez;Mujeres propietarias
+33;39.0;2018;Daireaux;Mujeres propietarias
+34;32.0;2018;Dolores;Mujeres propietarias
+35;2.0;2018;Ensenada;Mujeres propietarias
+36;1.0;2018;Escobar;Mujeres propietarias
+37;1.0;2018;Esteban Echeverría;Mujeres propietarias
+38;19.0;2018;Exaltación de la Cruz;Mujeres propietarias
+39;0.0;2018;Ezeiza;Mujeres propietarias
+40;115.0;2018;Florencio Varela;Mujeres propietarias
+41;16.0;2018;Florentino Ameghino;Mujeres propietarias
+42;10.0;2018;General Alvarado;Mujeres propietarias
+43;43.0;2018;General Alvear;Mujeres propietarias
+44;28.0;2018;General Arenales;Mujeres propietarias
+45;27.0;2018;General Belgrano;Mujeres propietarias
+46;80.0;2018;General Guido;Mujeres propietarias
+47;57.0;2018;General Juan Madariaga;Mujeres propietarias
+48;62.0;2018;General La Madrid;Mujeres propietarias
+49;25.0;2018;General Las Heras;Mujeres propietarias
+50;37.0;2018;General Lavalle;Mujeres propietarias
+51;44.0;2018;General Paz;Mujeres propietarias
+52;22.0;2018;General Pinto;Mujeres propietarias
+53;26.0;2018;General Pueyrredón;Mujeres propietarias
+54;10.0;2018;General Rodríguez;Mujeres propietarias
+55;0.0;2018;General San Martín;Mujeres propietarias
+56;25.0;2018;General Viamonte;Mujeres propietarias
+57;64.0;2018;General Villegas;Mujeres propietarias
+58;54.0;2018;Guaminí;Mujeres propietarias
+59;17.0;2018;Hipólito Yrigoyen;Mujeres propietarias
+60;0.0;2018;Hurlingham;Mujeres propietarias
+61;0.0;2018;Ituzaingó;Mujeres propietarias
+62;0.0;2018;José C, Paz;Mujeres propietarias
+63;59.0;2018;Junín;Mujeres propietarias
+64;1.0;2018;La Costa;Mujeres propietarias
+65;0.0;2018;La Matanza;Mujeres propietarias
+66;0.0;2018;Lanús;Mujeres propietarias
+67;518.0;2018;La Plata;Mujeres propietarias
+68;49.0;2018;Laprida;Mujeres propietarias
+69;71.0;2018;Las Flores;Mujeres propietarias
+70;36.0;2018;Leandro N, Alem;Mujeres propietarias
+71;36.0;2018;Lezama;Mujeres propietarias
+72;116.0;2018;Lincoln;Mujeres propietarias
+73;36.0;2018;Lobería;Mujeres propietarias
+74;46.0;2018;Lobos;Mujeres propietarias
+75;0.0;2018;Lomas de Zamora;Mujeres propietarias
+76;19.0;2018;Luján;Mujeres propietarias
+77;55.0;2018;Magdalena;Mujeres propietarias
+78;55.0;2018;Maipú;Mujeres propietarias
+79;2.0;2018;Malvinas Argentinas;Mujeres propietarias
+80;45.0;2018;Mar Chiquita;Mujeres propietarias
+81;17.0;2018;Marcos Paz;Mujeres propietarias
+82;31.0;2018;Mercedes;Mujeres propietarias
+83;2.0;2018;Merlo;Mujeres propietarias
+84;34.0;2018;Monte;Mujeres propietarias
+85;0.0;2018;Monte Hermoso;Mujeres propietarias
+86;5.0;2018;Moreno;Mujeres propietarias
+87;0.0;2018;Morón;Mujeres propietarias
+88;48.0;2018;Navarro;Mujeres propietarias
+89;46.0;2018;Necochea;Mujeres propietarias
+90;105.0;2018;9 de julio;Mujeres propietarias
+91;95.0;2018;Olavarría;Mujeres propietarias
+92;76.0;2018;Patagones;Mujeres propietarias
+93;61.0;2018;Pehuajó;Mujeres propietarias
+94;31.0;2018;Pellegrini;Mujeres propietarias
+95;64.0;2018;Pergamino;Mujeres propietarias
+96;36.0;2018;Pila;Mujeres propietarias
+97;8.0;2018;Pilar;Mujeres propietarias
+98;0.0;2018;Pinamar;Mujeres propietarias
+99;4.0;2018;Presidente Perón;Mujeres propietarias
+100;94.0;2018;Puán;Mujeres propietarias
+101;37.0;2018;Punta Indio;Mujeres propietarias
+102;1.0;2018;Quilmes;Mujeres propietarias
+103;10.0;2018;Ramallo;Mujeres propietarias
+104;118.0;2018;Rauch;Mujeres propietarias
+105;25.0;2018;Rivadavia;Mujeres propietarias
+106;41.0;2018;Rojas;Mujeres propietarias
+107;33.0;2018;Roque Pérez;Mujeres propietarias
+108;50.0;2018;Saavedra;Mujeres propietarias
+109;88.0;2018;Saladillo;Mujeres propietarias
+110;17.0;2018;Salliqueló;Mujeres propietarias
+111;37.0;2018;Salto;Mujeres propietarias
+112;11.0;2018;San Andrés de Giles;Mujeres propietarias
+113;14.0;2018;San Antonio de Areco;Mujeres propietarias
+114;29.0;2018;San Cayetano;Mujeres propietarias
+115;6.0;2018;San Fernando;Mujeres propietarias
+116;0.0;2018;San Isidro;Mujeres propietarias
+117;0.0;2018;San Miguel;Mujeres propietarias
+118;22.0;2018;San Nicolás;Mujeres propietarias
+119;26.0;2018;San Pedro;Mujeres propietarias
+120;40.0;2018;San Vicente;Mujeres propietarias
+121;16.0;2018;Suipacha;Mujeres propietarias
+122;48.0;2018;Tandil;Mujeres propietarias
+123;57.0;2018;Tapalqué;Mujeres propietarias
+124;1.0;2018;Tigre;Mujeres propietarias
+125;20.0;2018;Tordillo;Mujeres propietarias
+126;46.0;2018;Tornquist;Mujeres propietarias
+127;41.0;2018;Trenque Lauquen;Mujeres propietarias
+128;46.0;2018;Tres Arroyos;Mujeres propietarias
+129;0.0;2018;Tres de Febrero;Mujeres propietarias
+130;13.0;2018;Tres Lomas;Mujeres propietarias
+131;74.0;2018;25 de mayo;Mujeres propietarias
+132;0.0;2018;Vicente López;Mujeres propietarias
+133;0.0;2018;Villa Gesell;Mujeres propietarias
+134;62.0;2018;Villarino;Mujeres propietarias
+135;4.0;2018;Zárate;Mujeres propietarias
+136;0.0;2002;Provincia de Buenos Aires;Mujeres propietarias
+137;0.0;2002;Adolfo Alsina;Mujeres propietarias
+138;0.0;2002;Adolfo Gonzales Chaves;Mujeres propietarias
+139;0.0;2002;Alberti;Mujeres propietarias
+140;0.0;2002;Almirante Brown;Mujeres propietarias
+141;0.0;2002;Arrecifes;Mujeres propietarias
+142;0.0;2002;Avellaneda;Mujeres propietarias
+143;0.0;2002;Ayacucho;Mujeres propietarias
+144;0.0;2002;Azul;Mujeres propietarias
+145;0.0;2002;Bahía Blanca;Mujeres propietarias
+146;0.0;2002;Balcarce;Mujeres propietarias
+147;0.0;2002;Baradero;Mujeres propietarias
+148;0.0;2002;Benito Juárez;Mujeres propietarias
+149;0.0;2002;Berazategui;Mujeres propietarias
+150;0.0;2002;Berisso;Mujeres propietarias
+151;0.0;2002;Bolívar;Mujeres propietarias
+152;0.0;2002;Bragado;Mujeres propietarias
+153;0.0;2002;Brandsen;Mujeres propietarias
+154;0.0;2002;Campana;Mujeres propietarias
+155;0.0;2002;Cañuelas;Mujeres propietarias
+156;0.0;2002;Capitán Sarmiento;Mujeres propietarias
+157;0.0;2002;Carlos Casares;Mujeres propietarias
+158;0.0;2002;Carlos Tejedor;Mujeres propietarias
+159;0.0;2002;Carmen de Areco;Mujeres propietarias
+160;0.0;2002;Castelli;Mujeres propietarias
+161;0.0;2002;Chacabuco;Mujeres propietarias
+162;0.0;2002;Chascomús;Mujeres propietarias
+163;0.0;2002;Chivilcoy;Mujeres propietarias
+164;0.0;2002;Colón;Mujeres propietarias
+165;0.0;2002;Coronel de Marina Leonardo Rosales;Mujeres propietarias
+166;0.0;2002;Coronel Dorrego;Mujeres propietarias
+167;0.0;2002;Coronel Pringles;Mujeres propietarias
+168;0.0;2002;Coronel Suárez;Mujeres propietarias
+169;0.0;2002;Daireaux;Mujeres propietarias
+170;0.0;2002;Dolores;Mujeres propietarias
+171;0.0;2002;Ensenada;Mujeres propietarias
+172;0.0;2002;Escobar;Mujeres propietarias
+173;0.0;2002;Esteban Echeverría;Mujeres propietarias
+174;0.0;2002;Exaltación de la Cruz;Mujeres propietarias
+175;0.0;2002;Ezeiza;Mujeres propietarias
+176;0.0;2002;Florencio Varela;Mujeres propietarias
+177;0.0;2002;Florentino Ameghino;Mujeres propietarias
+178;0.0;2002;General Alvarado;Mujeres propietarias
+179;0.0;2002;General Alvear;Mujeres propietarias
+180;0.0;2002;General Arenales;Mujeres propietarias
+181;0.0;2002;General Belgrano;Mujeres propietarias
+182;0.0;2002;General Guido;Mujeres propietarias
+183;0.0;2002;General Juan Madariaga;Mujeres propietarias
+184;0.0;2002;General La Madrid;Mujeres propietarias
+185;0.0;2002;General Las Heras;Mujeres propietarias
+186;0.0;2002;General Lavalle;Mujeres propietarias
+187;0.0;2002;General Paz;Mujeres propietarias
+188;0.0;2002;General Pinto;Mujeres propietarias
+189;0.0;2002;General Pueyrredón;Mujeres propietarias
+190;0.0;2002;General Rodríguez;Mujeres propietarias
+191;0.0;2002;General San Martín;Mujeres propietarias
+192;0.0;2002;General Viamonte;Mujeres propietarias
+193;0.0;2002;General Villegas;Mujeres propietarias
+194;0.0;2002;Guaminí;Mujeres propietarias
+195;0.0;2002;Hipólito Yrigoyen;Mujeres propietarias
+196;0.0;2002;Hurlingham;Mujeres propietarias
+197;0.0;2002;Ituzaingó;Mujeres propietarias
+198;0.0;2002;José C, Paz;Mujeres propietarias
+199;0.0;2002;Junín;Mujeres propietarias
+200;0.0;2002;La Costa;Mujeres propietarias
+201;0.0;2002;La Matanza;Mujeres propietarias
+202;0.0;2002;Lanús;Mujeres propietarias
+203;0.0;2002;La Plata;Mujeres propietarias
+204;0.0;2002;Laprida;Mujeres propietarias
+205;0.0;2002;Las Flores;Mujeres propietarias
+206;0.0;2002;Leandro N, Alem;Mujeres propietarias
+207;0.0;2002;Lezama;Mujeres propietarias
+208;0.0;2002;Lincoln;Mujeres propietarias
+209;0.0;2002;Lobería;Mujeres propietarias
+210;0.0;2002;Lobos;Mujeres propietarias
+211;0.0;2002;Lomas de Zamora;Mujeres propietarias
+212;0.0;2002;Luján;Mujeres propietarias
+213;0.0;2002;Magdalena;Mujeres propietarias
+214;0.0;2002;Maipú;Mujeres propietarias
+215;0.0;2002;Malvinas Argentinas;Mujeres propietarias
+216;0.0;2002;Mar Chiquita;Mujeres propietarias
+217;0.0;2002;Marcos Paz;Mujeres propietarias
+218;0.0;2002;Mercedes;Mujeres propietarias
+219;0.0;2002;Merlo;Mujeres propietarias
+220;0.0;2002;Monte;Mujeres propietarias
+221;0.0;2002;Monte Hermoso;Mujeres propietarias
+222;0.0;2002;Moreno;Mujeres propietarias
+223;0.0;2002;Morón;Mujeres propietarias
+224;0.0;2002;Navarro;Mujeres propietarias
+225;0.0;2002;Necochea;Mujeres propietarias
+226;0.0;2002;9 de julio;Mujeres propietarias
+227;0.0;2002;Olavarría;Mujeres propietarias
+228;0.0;2002;Patagones;Mujeres propietarias
+229;0.0;2002;Pehuajó;Mujeres propietarias
+230;0.0;2002;Pellegrini;Mujeres propietarias
+231;0.0;2002;Pergamino;Mujeres propietarias
+232;0.0;2002;Pila;Mujeres propietarias
+233;0.0;2002;Pilar;Mujeres propietarias
+234;0.0;2002;Pinamar;Mujeres propietarias
+235;0.0;2002;Presidente Perón;Mujeres propietarias
+236;0.0;2002;Puán;Mujeres propietarias
+237;0.0;2002;Punta Indio;Mujeres propietarias
+238;0.0;2002;Quilmes;Mujeres propietarias
+239;0.0;2002;Ramallo;Mujeres propietarias
+240;0.0;2002;Rauch;Mujeres propietarias
+241;0.0;2002;Rivadavia;Mujeres propietarias
+242;0.0;2002;Rojas;Mujeres propietarias
+243;0.0;2002;Roque Pérez;Mujeres propietarias
+244;0.0;2002;Saavedra;Mujeres propietarias
+245;0.0;2002;Saladillo;Mujeres propietarias
+246;0.0;2002;Salliqueló;Mujeres propietarias
+247;0.0;2002;Salto;Mujeres propietarias
+248;0.0;2002;San Andrés de Giles;Mujeres propietarias
+249;0.0;2002;San Antonio de Areco;Mujeres propietarias
+250;0.0;2002;San Cayetano;Mujeres propietarias
+251;0.0;2002;San Fernando;Mujeres propietarias
+252;0.0;2002;San Isidro;Mujeres propietarias
+253;0.0;2002;San Miguel;Mujeres propietarias
+254;0.0;2002;San Nicolás;Mujeres propietarias
+255;0.0;2002;San Pedro;Mujeres propietarias
+256;0.0;2002;San Vicente;Mujeres propietarias
+257;0.0;2002;Suipacha;Mujeres propietarias
+258;0.0;2002;Tandil;Mujeres propietarias
+259;0.0;2002;Tapalqué;Mujeres propietarias
+260;0.0;2002;Tigre;Mujeres propietarias
+261;0.0;2002;Tordillo;Mujeres propietarias
+262;0.0;2002;Tornquist;Mujeres propietarias
+263;0.0;2002;Trenque Lauquen;Mujeres propietarias
+264;0.0;2002;Tres Arroyos;Mujeres propietarias
+265;0.0;2002;Tres de Febrero;Mujeres propietarias
+266;0.0;2002;Tres Lomas;Mujeres propietarias
+267;0.0;2002;25 de mayo;Mujeres propietarias
+268;0.0;2002;Vicente López;Mujeres propietarias
+269;0.0;2002;Villa Gesell;Mujeres propietarias
+270;0.0;2002;Villarino;Mujeres propietarias
+271;0.0;2002;Zárate;Mujeres propietarias
+272;0.0;1988;Provincia de Buenos Aires;Mujeres propietarias
+273;0.0;1988;Adolfo Alsina;Mujeres propietarias
+274;0.0;1988;Adolfo Gonzales Chaves;Mujeres propietarias
+275;0.0;1988;Alberti;Mujeres propietarias
+276;0.0;1988;Almirante Brown;Mujeres propietarias
+277;0.0;1988;Arrecifes;Mujeres propietarias
+278;0.0;1988;Avellaneda;Mujeres propietarias
+279;0.0;1988;Ayacucho;Mujeres propietarias
+280;0.0;1988;Azul;Mujeres propietarias
+281;0.0;1988;Bahía Blanca;Mujeres propietarias
+282;0.0;1988;Balcarce;Mujeres propietarias
+283;0.0;1988;Baradero;Mujeres propietarias
+284;0.0;1988;Bartolomé Mitre;Mujeres propietarias
+285;0.0;1988;Benito Juárez;Mujeres propietarias
+286;0.0;1988;Berazategui;Mujeres propietarias
+287;0.0;1988;Berisso;Mujeres propietarias
+288;0.0;1988;Bolívar;Mujeres propietarias
+289;0.0;1988;Bragado;Mujeres propietarias
+290;0.0;1988;Brandsen;Mujeres propietarias
+291;0.0;1988;Campana;Mujeres propietarias
+292;0.0;1988;Cañuelas;Mujeres propietarias
+293;0.0;1988;Capitán Sarmiento;Mujeres propietarias
+294;0.0;1988;Carlos Casares;Mujeres propietarias
+295;0.0;1988;Carlos Tejedor;Mujeres propietarias
+296;0.0;1988;Carmen de Areco;Mujeres propietarias
+297;0.0;1988;Castelli;Mujeres propietarias
+298;0.0;1988;Chacabuco;Mujeres propietarias
+299;0.0;1988;Chascomús;Mujeres propietarias
+300;0.0;1988;Chivilcoy;Mujeres propietarias
+301;0.0;1988;Colón;Mujeres propietarias
+302;0.0;1988;Coronel de Marina Leonardo Rosales;Mujeres propietarias
+303;0.0;1988;Coronel Dorrego;Mujeres propietarias
+304;0.0;1988;Coronel Pringles;Mujeres propietarias
+305;0.0;1988;Coronel Suárez;Mujeres propietarias
+306;0.0;1988;Daireaux;Mujeres propietarias
+307;0.0;1988;Dolores;Mujeres propietarias
+308;0.0;1988;Ensenada;Mujeres propietarias
+309;0.0;1988;Escobar;Mujeres propietarias
+310;0.0;1988;Esteban Echeverría;Mujeres propietarias
+311;0.0;1988;Exaltación de la Cruz;Mujeres propietarias
+312;0.0;1988;Ezeiza;Mujeres propietarias
+313;0.0;1988;Florencio Varela;Mujeres propietarias
+314;0.0;1988;Florentino Ameghino;Mujeres propietarias
+315;0.0;1988;General Alvarado;Mujeres propietarias
+316;0.0;1988;General Alvear;Mujeres propietarias
+317;0.0;1988;General Arenales;Mujeres propietarias
+318;0.0;1988;General Belgrano;Mujeres propietarias
+319;0.0;1988;General Guido;Mujeres propietarias
+320;0.0;1988;General Juan Madariaga;Mujeres propietarias
+321;0.0;1988;General La Madrid;Mujeres propietarias
+322;0.0;1988;General Las Heras;Mujeres propietarias
+323;0.0;1988;General Lavalle;Mujeres propietarias
+324;0.0;1988;General Paz;Mujeres propietarias
+325;0.0;1988;General Pinto;Mujeres propietarias
+326;0.0;1988;General Pueyrredón;Mujeres propietarias
+327;0.0;1988;General Rodríguez;Mujeres propietarias
+328;0.0;1988;General San Martín;Mujeres propietarias
+329;0.0;1988;General Sarmiento;Mujeres propietarias
+330;0.0;1988;General Viamonte;Mujeres propietarias
+331;0.0;1988;General Villegas;Mujeres propietarias
+332;0.0;1988;Guaminí;Mujeres propietarias
+333;0.0;1988;Hipólito Yrigoyen;Mujeres propietarias
+334;0.0;1988;Hurlingham;Mujeres propietarias
+335;0.0;1988;Ituzaingó;Mujeres propietarias
+336;0.0;1988;José C, Paz;Mujeres propietarias
+337;0.0;1988;Junín;Mujeres propietarias
+338;0.0;1988;La Costa;Mujeres propietarias
+339;0.0;1988;La Matanza;Mujeres propietarias
+340;0.0;1988;Lanús;Mujeres propietarias
+341;0.0;1988;La Plata;Mujeres propietarias
+342;0.0;1988;Laprida;Mujeres propietarias
+343;0.0;1988;Las Flores;Mujeres propietarias
+344;0.0;1988;Leandro N, Alem;Mujeres propietarias
+345;0.0;1988;Lezama;Mujeres propietarias
+346;0.0;1988;Lincoln;Mujeres propietarias
+347;0.0;1988;Lobería;Mujeres propietarias
+348;0.0;1988;Lobos;Mujeres propietarias
+349;0.0;1988;Lomas de Zamora;Mujeres propietarias
+350;0.0;1988;Luján;Mujeres propietarias
+351;0.0;1988;Magdalena;Mujeres propietarias
+352;0.0;1988;Maipú;Mujeres propietarias
+353;0.0;1988;Malvinas Argentinas;Mujeres propietarias
+354;0.0;1988;Mar Chiquita;Mujeres propietarias
+355;0.0;1988;Marcos Paz;Mujeres propietarias
+356;0.0;1988;Mercedes;Mujeres propietarias
+357;0.0;1988;Merlo;Mujeres propietarias
+358;0.0;1988;Monte;Mujeres propietarias
+359;0.0;1988;Monte Hermoso;Mujeres propietarias
+360;0.0;1988;Moreno;Mujeres propietarias
+361;0.0;1988;Morón;Mujeres propietarias
+362;0.0;1988;Navarro;Mujeres propietarias
+363;0.0;1988;Necochea;Mujeres propietarias
+364;0.0;1988;9 de julio;Mujeres propietarias
+365;0.0;1988;Olavarría;Mujeres propietarias
+366;0.0;1988;Patagones;Mujeres propietarias
+367;0.0;1988;Pehuajó;Mujeres propietarias
+368;0.0;1988;Pellegrini;Mujeres propietarias
+369;0.0;1988;Pergamino;Mujeres propietarias
+370;0.0;1988;Pila;Mujeres propietarias
+371;0.0;1988;Pilar;Mujeres propietarias
+372;0.0;1988;Pinamar;Mujeres propietarias
+373;0.0;1988;Presidente Perón;Mujeres propietarias
+374;0.0;1988;Puán;Mujeres propietarias
+375;0.0;1988;Punta Indio;Mujeres propietarias
+376;0.0;1988;Quilmes;Mujeres propietarias
+377;0.0;1988;Ramallo;Mujeres propietarias
+378;0.0;1988;Rauch;Mujeres propietarias
+379;0.0;1988;Rivadavia;Mujeres propietarias
+380;0.0;1988;Rojas;Mujeres propietarias
+381;0.0;1988;Roque Pérez;Mujeres propietarias
+382;0.0;1988;Saavedra;Mujeres propietarias
+383;0.0;1988;Saladillo;Mujeres propietarias
+384;0.0;1988;Salliqueló;Mujeres propietarias
+385;0.0;1988;Salto;Mujeres propietarias
+386;0.0;1988;San Andrés de Giles;Mujeres propietarias
+387;0.0;1988;San Antonio de Areco;Mujeres propietarias
+388;0.0;1988;San Cayetano;Mujeres propietarias
+389;0.0;1988;San Fernando;Mujeres propietarias
+390;0.0;1988;San Isidro;Mujeres propietarias
+391;0.0;1988;San Miguel;Mujeres propietarias
+392;0.0;1988;San Nicolás;Mujeres propietarias
+393;0.0;1988;San Pedro;Mujeres propietarias
+394;0.0;1988;San Vicente;Mujeres propietarias
+395;0.0;1988;Suipacha;Mujeres propietarias
+396;0.0;1988;Tandil;Mujeres propietarias
+397;0.0;1988;Tapalqué;Mujeres propietarias
+398;0.0;1988;Tigre;Mujeres propietarias
+399;0.0;1988;Tordillo;Mujeres propietarias
+400;0.0;1988;Tornquist;Mujeres propietarias
+401;0.0;1988;Trenque Lauquen;Mujeres propietarias
+402;0.0;1988;Tres Arroyos;Mujeres propietarias
+403;0.0;1988;Tres de Febrero;Mujeres propietarias
+404;0.0;1988;Tres Lomas;Mujeres propietarias
+405;0.0;1988;25 de mayo;Mujeres propietarias
+406;0.0;1988;Vicente López;Mujeres propietarias
+407;0.0;1988;Villa Gesell;Mujeres propietarias
+408;0.0;1988;Villarino;Mujeres propietarias
+409;0.0;1988;Zárate;Mujeres propietarias
+410;0.0;1988;Indeterminado;Mujeres propietarias
+0;19671.0;2018;Provincia de Buenos Aires;Hombres propietarios
+1;349.0;2018;Adolfo Alsina;Hombres propietarios
+2;148.0;2018;Adolfo Gonzales Chaves;Hombres propietarios
+3;107.0;2018;Alberti;Hombres propietarios
+4;33.0;2018;Almirante Brown;Hombres propietarios
+5;114.0;2018;Arrecifes;Hombres propietarios
+6;1.0;2018;Avellaneda;Hombres propietarios
+7;336.0;2018;Ayacucho;Hombres propietarios
+8;312.0;2018;Azul;Hombres propietarios
+9;172.0;2018;Bahía Blanca;Hombres propietarios
+10;174.0;2018;Balcarce;Hombres propietarios
+11;96.0;2018;Baradero;Hombres propietarios
+12;249.0;2018;Benito Juárez;Hombres propietarios
+13;208.0;2018;Berazategui;Hombres propietarios
+14;35.0;2018;Berisso;Hombres propietarios
+15;517.0;2018;Bolívar;Hombres propietarios
+16;137.0;2018;Bragado;Hombres propietarios
+17;98.0;2018;Brandsen;Hombres propietarios
+18;87.0;2018;Campana;Hombres propietarios
+19;92.0;2018;Cañuelas;Hombres propietarios
+20;60.0;2018;Capitán Sarmiento;Hombres propietarios
+21;128.0;2018;Carlos Casares;Hombres propietarios
+22;205.0;2018;Carlos Tejedor;Hombres propietarios
+23;40.0;2018;Carmen de Areco;Hombres propietarios
+24;58.0;2018;Castelli;Hombres propietarios
+25;196.0;2018;Chacabuco;Hombres propietarios
+26;237.0;2018;Chascomús;Hombres propietarios
+27;227.0;2018;Chivilcoy;Hombres propietarios
+28;131.0;2018;Colón;Hombres propietarios
+29;72.0;2018;Coronel de Marina Leonardo Rosales;Hombres propietarios
+30;203.0;2018;Coronel Dorrego;Hombres propietarios
+31;299.0;2018;Coronel Pringles;Hombres propietarios
+32;385.0;2018;Coronel Suárez;Hombres propietarios
+33;191.0;2018;Daireaux;Hombres propietarios
+34;91.0;2018;Dolores;Hombres propietarios
+35;11.0;2018;Ensenada;Hombres propietarios
+36;34.0;2018;Escobar;Hombres propietarios
+37;26.0;2018;Esteban Echeverría;Hombres propietarios
+38;69.0;2018;Exaltación de la Cruz;Hombres propietarios
+39;1.0;2018;Ezeiza;Hombres propietarios
+40;285.0;2018;Florencio Varela;Hombres propietarios
+41;55.0;2018;Florentino Ameghino;Hombres propietarios
+42;42.0;2018;General Alvarado;Hombres propietarios
+43;119.0;2018;General Alvear;Hombres propietarios
+44;169.0;2018;General Arenales;Hombres propietarios
+45;77.0;2018;General Belgrano;Hombres propietarios
+46;165.0;2018;General Guido;Hombres propietarios
+47;114.0;2018;General Juan Madariaga;Hombres propietarios
+48;176.0;2018;General La Madrid;Hombres propietarios
+49;122.0;2018;General Las Heras;Hombres propietarios
+50;138.0;2018;General Lavalle;Hombres propietarios
+51;176.0;2018;General Paz;Hombres propietarios
+52;78.0;2018;General Pinto;Hombres propietarios
+53;186.0;2018;General Pueyrredón;Hombres propietarios
+54;49.0;2018;General Rodríguez;Hombres propietarios
+55;0.0;2018;General San Martín;Hombres propietarios
+56;123.0;2018;General Viamonte;Hombres propietarios
+57;253.0;2018;General Villegas;Hombres propietarios
+58;332.0;2018;Guaminí;Hombres propietarios
+59;97.0;2018;Hipólito Yrigoyen;Hombres propietarios
+60;0.0;2018;Hurlingham;Hombres propietarios
+61;1.0;2018;Ituzaingó;Hombres propietarios
+62;5.0;2018;José C, Paz;Hombres propietarios
+63;272.0;2018;Junín;Hombres propietarios
+64;10.0;2018;La Costa;Hombres propietarios
+65;9.0;2018;La Matanza;Hombres propietarios
+66;0.0;2018;Lanús;Hombres propietarios
+67;1029.0;2018;La Plata;Hombres propietarios
+68;143.0;2018;Laprida;Hombres propietarios
+69;205.0;2018;Las Flores;Hombres propietarios
+70;85.0;2018;Leandro N, Alem;Hombres propietarios
+71;138.0;2018;Lezama;Hombres propietarios
+72;293.0;2018;Lincoln;Hombres propietarios
+73;178.0;2018;Lobería;Hombres propietarios
+74;196.0;2018;Lobos;Hombres propietarios
+75;2.0;2018;Lomas de Zamora;Hombres propietarios
+76;71.0;2018;Luján;Hombres propietarios
+77;181.0;2018;Magdalena;Hombres propietarios
+78;114.0;2018;Maipú;Hombres propietarios
+79;10.0;2018;Malvinas Argentinas;Hombres propietarios
+80;135.0;2018;Mar Chiquita;Hombres propietarios
+81;96.0;2018;Marcos Paz;Hombres propietarios
+82;134.0;2018;Mercedes;Hombres propietarios
+83;35.0;2018;Merlo;Hombres propietarios
+84;95.0;2018;Monte;Hombres propietarios
+85;1.0;2018;Monte Hermoso;Hombres propietarios
+86;39.0;2018;Moreno;Hombres propietarios
+87;0.0;2018;Morón;Hombres propietarios
+88;137.0;2018;Navarro;Hombres propietarios
+89;183.0;2018;Necochea;Hombres propietarios
+90;309.0;2018;9 de julio;Hombres propietarios
+91;325.0;2018;Olavarría;Hombres propietarios
+92;560.0;2018;Patagones;Hombres propietarios
+93;209.0;2018;Pehuajó;Hombres propietarios
+94;96.0;2018;Pellegrini;Hombres propietarios
+95;329.0;2018;Pergamino;Hombres propietarios
+96;103.0;2018;Pila;Hombres propietarios
+97;60.0;2018;Pilar;Hombres propietarios
+98;0.0;2018;Pinamar;Hombres propietarios
+99;14.0;2018;Presidente Perón;Hombres propietarios
+100;464.0;2018;Puán;Hombres propietarios
+101;101.0;2018;Punta Indio;Hombres propietarios
+102;2.0;2018;Quilmes;Hombres propietarios
+103;113.0;2018;Ramallo;Hombres propietarios
+104;331.0;2018;Rauch;Hombres propietarios
+105;139.0;2018;Rivadavia;Hombres propietarios
+106;256.0;2018;Rojas;Hombres propietarios
+107;142.0;2018;Roque Pérez;Hombres propietarios
+108;298.0;2018;Saavedra;Hombres propietarios
+109;351.0;2018;Saladillo;Hombres propietarios
+110;87.0;2018;Salliqueló;Hombres propietarios
+111;193.0;2018;Salto;Hombres propietarios
+112;65.0;2018;San Andrés de Giles;Hombres propietarios
+113;53.0;2018;San Antonio de Areco;Hombres propietarios
+114;161.0;2018;San Cayetano;Hombres propietarios
+115;43.0;2018;San Fernando;Hombres propietarios
+116;0.0;2018;San Isidro;Hombres propietarios
+117;1.0;2018;San Miguel;Hombres propietarios
+118;114.0;2018;San Nicolás;Hombres propietarios
+119;226.0;2018;San Pedro;Hombres propietarios
+120;123.0;2018;San Vicente;Hombres propietarios
+121;75.0;2018;Suipacha;Hombres propietarios
+122;197.0;2018;Tandil;Hombres propietarios
+123;130.0;2018;Tapalqué;Hombres propietarios
+124;17.0;2018;Tigre;Hombres propietarios
+125;56.0;2018;Tordillo;Hombres propietarios
+126;248.0;2018;Tornquist;Hombres propietarios
+127;121.0;2018;Trenque Lauquen;Hombres propietarios
+128;292.0;2018;Tres Arroyos;Hombres propietarios
+129;1.0;2018;Tres de Febrero;Hombres propietarios
+130;81.0;2018;Tres Lomas;Hombres propietarios
+131;282.0;2018;25 de mayo;Hombres propietarios
+132;0.0;2018;Vicente López;Hombres propietarios
+133;0.0;2018;Villa Gesell;Hombres propietarios
+134;388.0;2018;Villarino;Hombres propietarios
+135;33.0;2018;Zárate;Hombres propietarios
+136;0.0;2002;Provincia de Buenos Aires;Hombres propietarios
+137;0.0;2002;Adolfo Alsina;Hombres propietarios
+138;0.0;2002;Adolfo Gonzales Chaves;Hombres propietarios
+139;0.0;2002;Alberti;Hombres propietarios
+140;0.0;2002;Almirante Brown;Hombres propietarios
+141;0.0;2002;Arrecifes;Hombres propietarios
+142;0.0;2002;Avellaneda;Hombres propietarios
+143;0.0;2002;Ayacucho;Hombres propietarios
+144;0.0;2002;Azul;Hombres propietarios
+145;0.0;2002;Bahía Blanca;Hombres propietarios
+146;0.0;2002;Balcarce;Hombres propietarios
+147;0.0;2002;Baradero;Hombres propietarios
+148;0.0;2002;Benito Juárez;Hombres propietarios
+149;0.0;2002;Berazategui;Hombres propietarios
+150;0.0;2002;Berisso;Hombres propietarios
+151;0.0;2002;Bolívar;Hombres propietarios
+152;0.0;2002;Bragado;Hombres propietarios
+153;0.0;2002;Brandsen;Hombres propietarios
+154;0.0;2002;Campana;Hombres propietarios
+155;0.0;2002;Cañuelas;Hombres propietarios
+156;0.0;2002;Capitán Sarmiento;Hombres propietarios
+157;0.0;2002;Carlos Casares;Hombres propietarios
+158;0.0;2002;Carlos Tejedor;Hombres propietarios
+159;0.0;2002;Carmen de Areco;Hombres propietarios
+160;0.0;2002;Castelli;Hombres propietarios
+161;0.0;2002;Chacabuco;Hombres propietarios
+162;0.0;2002;Chascomús;Hombres propietarios
+163;0.0;2002;Chivilcoy;Hombres propietarios
+164;0.0;2002;Colón;Hombres propietarios
+165;0.0;2002;Coronel de Marina Leonardo Rosales;Hombres propietarios
+166;0.0;2002;Coronel Dorrego;Hombres propietarios
+167;0.0;2002;Coronel Pringles;Hombres propietarios
+168;0.0;2002;Coronel Suárez;Hombres propietarios
+169;0.0;2002;Daireaux;Hombres propietarios
+170;0.0;2002;Dolores;Hombres propietarios
+171;0.0;2002;Ensenada;Hombres propietarios
+172;0.0;2002;Escobar;Hombres propietarios
+173;0.0;2002;Esteban Echeverría;Hombres propietarios
+174;0.0;2002;Exaltación de la Cruz;Hombres propietarios
+175;0.0;2002;Ezeiza;Hombres propietarios
+176;0.0;2002;Florencio Varela;Hombres propietarios
+177;0.0;2002;Florentino Ameghino;Hombres propietarios
+178;0.0;2002;General Alvarado;Hombres propietarios
+179;0.0;2002;General Alvear;Hombres propietarios
+180;0.0;2002;General Arenales;Hombres propietarios
+181;0.0;2002;General Belgrano;Hombres propietarios
+182;0.0;2002;General Guido;Hombres propietarios
+183;0.0;2002;General Juan Madariaga;Hombres propietarios
+184;0.0;2002;General La Madrid;Hombres propietarios
+185;0.0;2002;General Las Heras;Hombres propietarios
+186;0.0;2002;General Lavalle;Hombres propietarios
+187;0.0;2002;General Paz;Hombres propietarios
+188;0.0;2002;General Pinto;Hombres propietarios
+189;0.0;2002;General Pueyrredón;Hombres propietarios
+190;0.0;2002;General Rodríguez;Hombres propietarios
+191;0.0;2002;General San Martín;Hombres propietarios
+192;0.0;2002;General Viamonte;Hombres propietarios
+193;0.0;2002;General Villegas;Hombres propietarios
+194;0.0;2002;Guaminí;Hombres propietarios
+195;0.0;2002;Hipólito Yrigoyen;Hombres propietarios
+196;0.0;2002;Hurlingham;Hombres propietarios
+197;0.0;2002;Ituzaingó;Hombres propietarios
+198;0.0;2002;José C, Paz;Hombres propietarios
+199;0.0;2002;Junín;Hombres propietarios
+200;0.0;2002;La Costa;Hombres propietarios
+201;0.0;2002;La Matanza;Hombres propietarios
+202;0.0;2002;Lanús;Hombres propietarios
+203;0.0;2002;La Plata;Hombres propietarios
+204;0.0;2002;Laprida;Hombres propietarios
+205;0.0;2002;Las Flores;Hombres propietarios
+206;0.0;2002;Leandro N, Alem;Hombres propietarios
+207;0.0;2002;Lezama;Hombres propietarios
+208;0.0;2002;Lincoln;Hombres propietarios
+209;0.0;2002;Lobería;Hombres propietarios
+210;0.0;2002;Lobos;Hombres propietarios
+211;0.0;2002;Lomas de Zamora;Hombres propietarios
+212;0.0;2002;Luján;Hombres propietarios
+213;0.0;2002;Magdalena;Hombres propietarios
+214;0.0;2002;Maipú;Hombres propietarios
+215;0.0;2002;Malvinas Argentinas;Hombres propietarios
+216;0.0;2002;Mar Chiquita;Hombres propietarios
+217;0.0;2002;Marcos Paz;Hombres propietarios
+218;0.0;2002;Mercedes;Hombres propietarios
+219;0.0;2002;Merlo;Hombres propietarios
+220;0.0;2002;Monte;Hombres propietarios
+221;0.0;2002;Monte Hermoso;Hombres propietarios
+222;0.0;2002;Moreno;Hombres propietarios
+223;0.0;2002;Morón;Hombres propietarios
+224;0.0;2002;Navarro;Hombres propietarios
+225;0.0;2002;Necochea;Hombres propietarios
+226;0.0;2002;9 de julio;Hombres propietarios
+227;0.0;2002;Olavarría;Hombres propietarios
+228;0.0;2002;Patagones;Hombres propietarios
+229;0.0;2002;Pehuajó;Hombres propietarios
+230;0.0;2002;Pellegrini;Hombres propietarios
+231;0.0;2002;Pergamino;Hombres propietarios
+232;0.0;2002;Pila;Hombres propietarios
+233;0.0;2002;Pilar;Hombres propietarios
+234;0.0;2002;Pinamar;Hombres propietarios
+235;0.0;2002;Presidente Perón;Hombres propietarios
+236;0.0;2002;Puán;Hombres propietarios
+237;0.0;2002;Punta Indio;Hombres propietarios
+238;0.0;2002;Quilmes;Hombres propietarios
+239;0.0;2002;Ramallo;Hombres propietarios
+240;0.0;2002;Rauch;Hombres propietarios
+241;0.0;2002;Rivadavia;Hombres propietarios
+242;0.0;2002;Rojas;Hombres propietarios
+243;0.0;2002;Roque Pérez;Hombres propietarios
+244;0.0;2002;Saavedra;Hombres propietarios
+245;0.0;2002;Saladillo;Hombres propietarios
+246;0.0;2002;Salliqueló;Hombres propietarios
+247;0.0;2002;Salto;Hombres propietarios
+248;0.0;2002;San Andrés de Giles;Hombres propietarios
+249;0.0;2002;San Antonio de Areco;Hombres propietarios
+250;0.0;2002;San Cayetano;Hombres propietarios
+251;0.0;2002;San Fernando;Hombres propietarios
+252;0.0;2002;San Isidro;Hombres propietarios
+253;0.0;2002;San Miguel;Hombres propietarios
+254;0.0;2002;San Nicolás;Hombres propietarios
+255;0.0;2002;San Pedro;Hombres propietarios
+256;0.0;2002;San Vicente;Hombres propietarios
+257;0.0;2002;Suipacha;Hombres propietarios
+258;0.0;2002;Tandil;Hombres propietarios
+259;0.0;2002;Tapalqué;Hombres propietarios
+260;0.0;2002;Tigre;Hombres propietarios
+261;0.0;2002;Tordillo;Hombres propietarios
+262;0.0;2002;Tornquist;Hombres propietarios
+263;0.0;2002;Trenque Lauquen;Hombres propietarios
+264;0.0;2002;Tres Arroyos;Hombres propietarios
+265;0.0;2002;Tres de Febrero;Hombres propietarios
+266;0.0;2002;Tres Lomas;Hombres propietarios
+267;0.0;2002;25 de mayo;Hombres propietarios
+268;0.0;2002;Vicente López;Hombres propietarios
+269;0.0;2002;Villa Gesell;Hombres propietarios
+270;0.0;2002;Villarino;Hombres propietarios
+271;0.0;2002;Zárate;Hombres propietarios
+272;0.0;1988;Provincia de Buenos Aires;Hombres propietarios
+273;0.0;1988;Adolfo Alsina;Hombres propietarios
+274;0.0;1988;Adolfo Gonzales Chaves;Hombres propietarios
+275;0.0;1988;Alberti;Hombres propietarios
+276;0.0;1988;Almirante Brown;Hombres propietarios
+277;0.0;1988;Arrecifes;Hombres propietarios
+278;0.0;1988;Avellaneda;Hombres propietarios
+279;0.0;1988;Ayacucho;Hombres propietarios
+280;0.0;1988;Azul;Hombres propietarios
+281;0.0;1988;Bahía Blanca;Hombres propietarios
+282;0.0;1988;Balcarce;Hombres propietarios
+283;0.0;1988;Baradero;Hombres propietarios
+284;0.0;1988;Bartolomé Mitre;Hombres propietarios
+285;0.0;1988;Benito Juárez;Hombres propietarios
+286;0.0;1988;Berazategui;Hombres propietarios
+287;0.0;1988;Berisso;Hombres propietarios
+288;0.0;1988;Bolívar;Hombres propietarios
+289;0.0;1988;Bragado;Hombres propietarios
+290;0.0;1988;Brandsen;Hombres propietarios
+291;0.0;1988;Campana;Hombres propietarios
+292;0.0;1988;Cañuelas;Hombres propietarios
+293;0.0;1988;Capitán Sarmiento;Hombres propietarios
+294;0.0;1988;Carlos Casares;Hombres propietarios
+295;0.0;1988;Carlos Tejedor;Hombres propietarios
+296;0.0;1988;Carmen de Areco;Hombres propietarios
+297;0.0;1988;Castelli;Hombres propietarios
+298;0.0;1988;Chacabuco;Hombres propietarios
+299;0.0;1988;Chascomús;Hombres propietarios
+300;0.0;1988;Chivilcoy;Hombres propietarios
+301;0.0;1988;Colón;Hombres propietarios
+302;0.0;1988;Coronel de Marina Leonardo Rosales;Hombres propietarios
+303;0.0;1988;Coronel Dorrego;Hombres propietarios
+304;0.0;1988;Coronel Pringles;Hombres propietarios
+305;0.0;1988;Coronel Suárez;Hombres propietarios
+306;0.0;1988;Daireaux;Hombres propietarios
+307;0.0;1988;Dolores;Hombres propietarios
+308;0.0;1988;Ensenada;Hombres propietarios
+309;0.0;1988;Escobar;Hombres propietarios
+310;0.0;1988;Esteban Echeverría;Hombres propietarios
+311;0.0;1988;Exaltación de la Cruz;Hombres propietarios
+312;0.0;1988;Ezeiza;Hombres propietarios
+313;0.0;1988;Florencio Varela;Hombres propietarios
+314;0.0;1988;Florentino Ameghino;Hombres propietarios
+315;0.0;1988;General Alvarado;Hombres propietarios
+316;0.0;1988;General Alvear;Hombres propietarios
+317;0.0;1988;General Arenales;Hombres propietarios
+318;0.0;1988;General Belgrano;Hombres propietarios
+319;0.0;1988;General Guido;Hombres propietarios
+320;0.0;1988;General Juan Madariaga;Hombres propietarios
+321;0.0;1988;General La Madrid;Hombres propietarios
+322;0.0;1988;General Las Heras;Hombres propietarios
+323;0.0;1988;General Lavalle;Hombres propietarios
+324;0.0;1988;General Paz;Hombres propietarios
+325;0.0;1988;General Pinto;Hombres propietarios
+326;0.0;1988;General Pueyrredón;Hombres propietarios
+327;0.0;1988;General Rodríguez;Hombres propietarios
+328;0.0;1988;General San Martín;Hombres propietarios
+329;0.0;1988;General Sarmiento;Hombres propietarios
+330;0.0;1988;General Viamonte;Hombres propietarios
+331;0.0;1988;General Villegas;Hombres propietarios
+332;0.0;1988;Guaminí;Hombres propietarios
+333;0.0;1988;Hipólito Yrigoyen;Hombres propietarios
+334;0.0;1988;Hurlingham;Hombres propietarios
+335;0.0;1988;Ituzaingó;Hombres propietarios
+336;0.0;1988;José C, Paz;Hombres propietarios
+337;0.0;1988;Junín;Hombres propietarios
+338;0.0;1988;La Costa;Hombres propietarios
+339;0.0;1988;La Matanza;Hombres propietarios
+340;0.0;1988;Lanús;Hombres propietarios
+341;0.0;1988;La Plata;Hombres propietarios
+342;0.0;1988;Laprida;Hombres propietarios
+343;0.0;1988;Las Flores;Hombres propietarios
+344;0.0;1988;Leandro N, Alem;Hombres propietarios
+345;0.0;1988;Lezama;Hombres propietarios
+346;0.0;1988;Lincoln;Hombres propietarios
+347;0.0;1988;Lobería;Hombres propietarios
+348;0.0;1988;Lobos;Hombres propietarios
+349;0.0;1988;Lomas de Zamora;Hombres propietarios
+350;0.0;1988;Luján;Hombres propietarios
+351;0.0;1988;Magdalena;Hombres propietarios
+352;0.0;1988;Maipú;Hombres propietarios
+353;0.0;1988;Malvinas Argentinas;Hombres propietarios
+354;0.0;1988;Mar Chiquita;Hombres propietarios
+355;0.0;1988;Marcos Paz;Hombres propietarios
+356;0.0;1988;Mercedes;Hombres propietarios
+357;0.0;1988;Merlo;Hombres propietarios
+358;0.0;1988;Monte;Hombres propietarios
+359;0.0;1988;Monte Hermoso;Hombres propietarios
+360;0.0;1988;Moreno;Hombres propietarios
+361;0.0;1988;Morón;Hombres propietarios
+362;0.0;1988;Navarro;Hombres propietarios
+363;0.0;1988;Necochea;Hombres propietarios
+364;0.0;1988;9 de julio;Hombres propietarios
+365;0.0;1988;Olavarría;Hombres propietarios
+366;0.0;1988;Patagones;Hombres propietarios
+367;0.0;1988;Pehuajó;Hombres propietarios
+368;0.0;1988;Pellegrini;Hombres propietarios
+369;0.0;1988;Pergamino;Hombres propietarios
+370;0.0;1988;Pila;Hombres propietarios
+371;0.0;1988;Pilar;Hombres propietarios
+372;0.0;1988;Pinamar;Hombres propietarios
+373;0.0;1988;Presidente Perón;Hombres propietarios
+374;0.0;1988;Puán;Hombres propietarios
+375;0.0;1988;Punta Indio;Hombres propietarios
+376;0.0;1988;Quilmes;Hombres propietarios
+377;0.0;1988;Ramallo;Hombres propietarios
+378;0.0;1988;Rauch;Hombres propietarios
+379;0.0;1988;Rivadavia;Hombres propietarios
+380;0.0;1988;Rojas;Hombres propietarios
+381;0.0;1988;Roque Pérez;Hombres propietarios
+382;0.0;1988;Saavedra;Hombres propietarios
+383;0.0;1988;Saladillo;Hombres propietarios
+384;0.0;1988;Salliqueló;Hombres propietarios
+385;0.0;1988;Salto;Hombres propietarios
+386;0.0;1988;San Andrés de Giles;Hombres propietarios
+387;0.0;1988;San Antonio de Areco;Hombres propietarios
+388;0.0;1988;San Cayetano;Hombres propietarios
+389;0.0;1988;San Fernando;Hombres propietarios
+390;0.0;1988;San Isidro;Hombres propietarios
+391;0.0;1988;San Miguel;Hombres propietarios
+392;0.0;1988;San Nicolás;Hombres propietarios
+393;0.0;1988;San Pedro;Hombres propietarios
+394;0.0;1988;San Vicente;Hombres propietarios
+395;0.0;1988;Suipacha;Hombres propietarios
+396;0.0;1988;Tandil;Hombres propietarios
+397;0.0;1988;Tapalqué;Hombres propietarios
+398;0.0;1988;Tigre;Hombres propietarios
+399;0.0;1988;Tordillo;Hombres propietarios
+400;0.0;1988;Tornquist;Hombres propietarios
+401;0.0;1988;Trenque Lauquen;Hombres propietarios
+402;0.0;1988;Tres Arroyos;Hombres propietarios
+403;0.0;1988;Tres de Febrero;Hombres propietarios
+404;0.0;1988;Tres Lomas;Hombres propietarios
+405;0.0;1988;25 de mayo;Hombres propietarios
+406;0.0;1988;Vicente López;Hombres propietarios
+407;0.0;1988;Villa Gesell;Hombres propietarios
+408;0.0;1988;Villarino;Hombres propietarios
+409;0.0;1988;Zárate;Hombres propietarios
+410;0.0;1988;Indeterminado;Hombres propietarios
