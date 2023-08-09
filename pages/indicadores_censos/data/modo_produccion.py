@@ -25,7 +25,7 @@ forrajeras_df_base[VAR_TIPO_CULTIVO] = 'Forrajeras'
 
 df_base = pd.concat([oleginosas_df_base, cereales_df_base, forrajeras_df_base])
 
-df_base.to_csv('pages/indicadores_censos/data_censo/modo_produccion/hectareas_tipo_cultivo.csv', sep=';')
+df_base.to_csv('pages/indicadores_censos/data/modo_produccion/hectareas_tipo_cultivo.csv', sep=';')
 
 
 

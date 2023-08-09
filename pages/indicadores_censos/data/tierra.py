@@ -17,7 +17,7 @@ VAR_EAPS_HA_EMPRESAS = 'Superficie en manos de Empresas'
 VAR_EAPS_HA_PERSONAS = 'Superficie en mano de Personas Humanas'
 VAR_MUJERES_PROPIETARIAS = 'Cantidad de Mujeres propietarias de EAPs'
 VAR_VARONES_PROPIETARIOS = 'Cantidad de Hombres propietarios de EAPs'
-
+VAR_SUPERFICIE_HA = 'Superficie promedio'
 
 VAR_EAPS_HA = 'HA de EAPs'
 VAR_EAPS_Q = 'Cantidad de EAPs'
@@ -28,6 +28,19 @@ VAR_SEXO_PROPIETARIE = 'Sexo'
 
 # BASE DE DATOS
 df_base_original = base_censos.copy()
+
+
+######################### Cantidad de EAPS #############################
+
+df_eaps_q = df_base_original[[VAR_ANIO_CENSO, VAR_PARTIDO, VAR_TOTAL_EAPS]]
+df_eaps_q = df_eaps_q.rename(columns = {VAR_TOTAL_EAPS: VAR_EAPS_Q})
+
+df_eaps_q.to_csv('pages/indicadores_censos/data/tierra/q_eaps.csv', sep=';')
+
+############ SUperficie promedio ########################
+
+df_superficie_promedio = df_base_original[[VAR_SUPERFICIE_HA, VAR_ANIO_CENSO, VAR_PARTIDO]]
+df_superficie_promedio.to_csv('pages/indicadores_censos/data/tierra/superficie_promedio.csv', sep=';')
 
 ######################### Participacion Cantidad de EAPS segun tamaño #############################
 pequenias_df_base = df_base_original[[VAR_EAPS_PEQ, VAR_ANIO_CENSO, VAR_PARTIDO]]
@@ -40,7 +53,7 @@ grandes_df_base[VAR_TAMANIO_EAPS] = 'Grandes (>500 ha)'
 
 df_base = pd.concat([pequenias_df_base, grandes_df_base])
 
-#df_base.to_csv('pages/indicadores_censos/data_censo/tierra/eaps_por_tamanio.csv', sep=';')
+#df_base.to_csv('pages/indicadores_censos/data/tierra/eaps_por_tamanio.csv', sep=';')
 
 
 ######################### Participacion Superficies de EAPS segun tamaño #############################
@@ -55,7 +68,7 @@ grandes_ha_df_base[VAR_TAMANIO_EAPS] = 'Grandes (>500 ha)'
 df_base_ha = pd.concat([pequenias_ha_df_base, grandes_ha_df_base])
 df_base_ha[VAR_EAPS_HA] = df_base_ha[VAR_EAPS_HA].fillna(0.).astype(float)
 
-#df_base_ha.to_csv('pages/indicadores_censos/data_censo/tierra/eaps_ha_por_tamanio.csv', sep=';')
+#df_base_ha.to_csv('pages/indicadores_censos/data/tierra/eaps_ha_por_tamanio.csv', sep=';')
 
 
 ######################### Cantidad de  EAPS segun tipo juridico #############################
@@ -70,7 +83,7 @@ personas_eaps_df_base[VAR_EAPS_TIPO_JURICIO] = 'Personas Humanas'
 
 df_base_eaps_juridico = pd.concat([empresas_eaps_df_base, personas_eaps_df_base])
 
-#df_base_eaps_juridico.to_csv('pages/indicadores_censos/data_censo/tierra/eaps_tipo_juridico.csv', sep=';')
+#df_base_eaps_juridico.to_csv('pages/indicadores_censos/data/tierra/eaps_tipo_juridico.csv', sep=';')
 
 
 ######################### Superficie de EAPS segun tipo juridico #############################
@@ -86,7 +99,7 @@ personas_ha_df_base[VAR_EAPS_TIPO_JURICIO] = 'Personas Humanas'
 df_base_ha_juridico = pd.concat([empresas_ha_df_base, personas_ha_df_base])
 df_base_ha_juridico[VAR_EAPS_HA] = df_base_ha_juridico[VAR_EAPS_HA].fillna(0.).astype(float)
 
-#df_base_ha_juridico.to_csv('pages/indicadores_censos/data_censo/tierra/ha_tipo_juridico.csv', sep=';')
+#df_base_ha_juridico.to_csv('pages/indicadores_censos/data/tierra/ha_tipo_juridico.csv', sep=';')
 
 
 
@@ -103,5 +116,6 @@ varones_propietarios_df_base[VAR_SEXO_PROPIETARIE] = 'Hombres propietarios'
 df_base_propiedad_por_sexo = pd.concat([mujeres_propietarias_df_base, varones_propietarios_df_base])
 df_base_propiedad_por_sexo[VAR_EAPS_Q] = df_base_propiedad_por_sexo[VAR_EAPS_Q].fillna(0.).astype(float)
 
-df_base_propiedad_por_sexo.to_csv('pages/indicadores_censos/data_censo/tierra/propiedad_x_sexo.csv', sep=';')
+df_base_propiedad_por_sexo.to_csv('pages/indicadores_censos/data/tierra/propiedad_x_sexo.csv', sep=';')
+
 

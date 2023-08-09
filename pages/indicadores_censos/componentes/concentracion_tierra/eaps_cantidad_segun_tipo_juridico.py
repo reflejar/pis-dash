@@ -8,7 +8,7 @@ from .modal_tierra import modal_tierra
 
 #from tools.componentes import NoHayDatos, Alert
 
-from pages.indicadores_censos.data_censo.base_indicadores import VAR_ANIO_CENSO, VAR_PARTIDO
+from pages.indicadores_censos.data.base_indicadores import VAR_ANIO_CENSO, VAR_PARTIDO
 from ..formatos import letra, tamanio_fuente_titulo, tamanio_fuente, tamanio_fuente_tick, color_letra, color_concentracion_tierra_1, color_concentracion_tierra_2
 
 ##### VARIABLES ######
@@ -26,7 +26,7 @@ y_titulo = "Cantidad de EAPs"
 # Titulos
 graph_title =  "Explotaciones Agropecuarias según su tamaño"
 
-df_base = pd.read_csv('pages/indicadores_censos/data_censo/tierra/eaps_tipo_juridico.csv', sep=';'  )
+df_base = pd.read_csv('pages/indicadores_censos/data/tierra/eaps_tipo_juridico.csv', sep=';'  )
 
 df_base[VAR_ANIO_CENSO] = df_base[VAR_ANIO_CENSO].astype(int).astype(str) 
 

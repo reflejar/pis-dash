@@ -1,7 +1,7 @@
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 
-from pages.indicadores_censos.data_censo.base_indicadores import partidos
+from pages.indicadores_censos.data.base_indicadores import partidos
 
 Filtros_censos = html.Div([
     dbc.Container(

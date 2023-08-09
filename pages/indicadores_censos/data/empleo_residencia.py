@@ -24,7 +24,7 @@ varones_residentes_df_base[VAR_SEXO_NACIMIENTO] = VAR_VARONES_RESIDENTES
 
 df_base_residentes = pd.concat([mujeres_residentes_df_base, varones_residentes_df_base])
 
-df_base_residentes.to_csv('pages/indicadores_censos/data_censo/empleo-y-residencia/residentes_por_sexo.csv', sep=';')
+df_base_residentes.to_csv('pages/indicadores_censos/data/empleo-y-residencia/residentes_por_sexo.csv', sep=';')
 
 
 'Mujeres Residentes (Personas Humanas)'
@@ -40,4 +40,4 @@ df_base_residentes.to_csv('pages/indicadores_censos/data_censo/empleo-y-residenc
 VAR_EMPLEO = 'Empleo'
 
 empleo_df_base = df_base_original[[VAR_EMPLEO, VAR_ANIO_CENSO, VAR_PARTIDO]]
-empleo_df_base.to_csv('pages/indicadores_censos/data_censo/empleo-y-residencia/evolucion_empleo.csv', sep=';')
+empleo_df_base.to_csv('pages/indicadores_censos/data/empleo-y-residencia/evolucion_empleo.csv', sep=';')

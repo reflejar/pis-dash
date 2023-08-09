@@ -24,11 +24,8 @@ SolapasIndicadores = html.Div([
 
 @callback(Output('tabs-content', 'children'), Input('tabs', 'active_tab'))
 def render_content(tab):
-    if tab == 'tab-1':
-        return Concentracion_Tierra
-    
-    elif tab == 'tab-2':
-        return Produccion
-    
-    elif tab == 'tab-3':
-        return Empleo
+    return {
+        'tab-1':Concentracion_Tierra,
+        'tab-2':Produccion,
+        'tab-3':Empleo,
+    }[tab]

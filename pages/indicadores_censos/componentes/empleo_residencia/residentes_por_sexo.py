@@ -9,7 +9,7 @@ import pickle
 from .modal_empleo import modal_empleo
 import textwrap
 
-from pages.indicadores_censos.data_censo.base_indicadores import VAR_ANIO_CENSO, VAR_PARTIDO
+from pages.indicadores_censos.data.base_indicadores import VAR_ANIO_CENSO, VAR_PARTIDO
 from ..formatos import letra, tamanio_fuente_titulo, tamanio_fuente, tamanio_fuente_tick, color_letra, color_empleo_1, color_empleo_2
 ##### VARIABLES ######
 
@@ -22,7 +22,7 @@ y_titulo = "Residentes por sexo"
 # Titulos
 graph_title =  "Evolución de residentes del campo por sexo"
 
-df_base = pd.read_csv('pages/indicadores_censos/data_censo/empleo-y-residencia/residentes_por_sexo.csv', sep=';' )
+df_base = pd.read_csv('pages/indicadores_censos/data/empleo-y-residencia/residentes_por_sexo.csv', sep=';' )
 
 df_base[VAR_ANIO_CENSO] = df_base[VAR_ANIO_CENSO].astype(int).astype(str) 
 

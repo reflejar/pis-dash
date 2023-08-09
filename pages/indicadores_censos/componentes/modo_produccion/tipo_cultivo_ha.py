@@ -2,7 +2,7 @@ import pandas as pd
 from dash import dcc, html, Input, Output, callback, State, no_update
 import dash_bootstrap_components as dbc
 from dash_loading_spinners import Hash
-from pages.indicadores_censos.data_censo.modo_produccion import VAR_ANIO_CENSO, VAR_PARTIDO
+from pages.indicadores_censos.data.modo_produccion import VAR_ANIO_CENSO, VAR_PARTIDO
 import plotly.graph_objects as go
 import plotly.express as px
 import plotly.colors as colors
@@ -21,7 +21,7 @@ y_titulo = "Tipo de cultivo"
 # Titulos
 graph_title =  "Héctareas implantadas según tipo de cultivo"
 
-df_base = pd.read_csv('pages/indicadores_censos/data_censo/modo_produccion/hectareas_tipo_cultivo.csv', sep=';' )
+df_base = pd.read_csv('pages/indicadores_censos/data/modo_produccion/hectareas_tipo_cultivo.csv', sep=';' )
 
 df_base[VAR_ANIO_CENSO] = df_base[VAR_ANIO_CENSO].astype(int).astype(str)
 

@@ -15,15 +15,10 @@ layout = html.Div([
         html.Br(),
         html.Br(),
         dbc.Container(
-        children=[
-        dbc.Row([
-            dbc.Col(SolapasIndicadores, md=12)
-            # dbc.Col("", md=1),            
-            # dbc.Col(Q_EAPs_tamanio, md=5),                                      
-                            ]),
-        # dbc.Row(dbc.Col(EAPS_HA, md=6),)
-                            
-                            ]),
+            dbc.Row(
+                dbc.Col(SolapasIndicadores, md=12)
+            ),
+        ),
         ],
         className="my-5 mx-5 min-vh-100",
     ) 

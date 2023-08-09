@@ -6,7 +6,7 @@ import pandas as pd
 from .modal_empleo import modal_empleo
 import textwrap
 
-from pages.indicadores_censos.data_censo.base_indicadores import VAR_ANIO_CENSO, VAR_PARTIDO
+from pages.indicadores_censos.data.base_indicadores import VAR_ANIO_CENSO, VAR_PARTIDO
 from ..formatos import letra, tamanio_fuente_titulo, tamanio_fuente, tamanio_fuente_tick, color_letra, color_empleo_1, color_concentracion_tierra_2
 
 #Variables
@@ -19,7 +19,7 @@ y_titulo = 'Cantidad de personas empleadas'
 graph_title =  'Evolución del empleo permanente en el campo'
 
 # BASE DE DATOS
-df_base = pd.read_csv('pages/indicadores_censos/data_censo/empleo-y-residencia/evolucion_empleo.csv', sep=';' )
+df_base = pd.read_csv('pages/indicadores_censos/data/empleo-y-residencia/evolucion_empleo.csv', sep=';' )
 
 df_base[VAR_ANIO_CENSO] = df_base[VAR_ANIO_CENSO].astype(int).astype(str) 
 
