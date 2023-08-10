@@ -1,7 +1,7 @@
 from dash import dash, html, dcc, Input, State, Output, callback
 import dash_bootstrap_components as dbc
 # from .tipo_cultivo_ha import CULTIVOS_HA
-from ..formatos import COLOR_VERDE, COLOR_MARRON, COLOR_NARANJA
+from ..colores import VERDE, MARRON, NARANJA
 
 from ..indicadores import Indicador
 from ...data import df_ha_tipo_cultivo
@@ -15,7 +15,7 @@ indicadores = [
         x="Año del censo",
         y='Cantidad HA',
         z='Tipo de cultivo',
-        colores=[COLOR_VERDE, COLOR_MARRON, COLOR_NARANJA ],
+        colores=[VERDE, MARRON, NARANJA ],
         hover='Cantidad de Hectareas cultivadas: %{y}<br>Año del censo: %{x}'
     ),      
 ]
@@ -23,7 +23,7 @@ indicadores = [
 
 Produccion = html.Div([
             dbc.Row([
-                html.H6('Modo de producción', style={'font-size': '25px', 'color': COLOR_VERDE}),
+                html.H6('Modo de producción', style={'font-size': '25px', 'color': VERDE}),
                 html.P("""En esta sección se muestra.....Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. """, className="text-white"),

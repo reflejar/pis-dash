@@ -5,7 +5,7 @@ import plotly.express as px
 import textwrap
 
 
-from .formatos import *
+from .colores import *
 from ..data import VAR_ANIO_CENSO, VAR_PARTIDO, VAR_EAPS_Q, VAR_TAMANIO_EAPS
 
 class Indicador:
@@ -92,7 +92,7 @@ class Indicador:
                         dbc.ModalFooter(
                             dbc.Button("CERRAR GRÁFICO", 
                                         id=f"modal-close-{self.id}", 
-                                        color="light",style={"background-color": COLOR_NARANJA, "border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": "Arial"},  
+                                        color="light",style={"background-color": NARANJA, "border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": "Arial"},  
                                         className="mx-auto"), className="text-center", style={"background-color": "none","border": "none", "color": "none"}
                         ),
                     ],
@@ -136,14 +136,17 @@ class Indicador:
         """
             Esto va para el callback
         """
+
+        # Limpieza de datos
         if VAR_ANIO_CENSO in self.df.columns:
             self.df[VAR_ANIO_CENSO] = self.df[VAR_ANIO_CENSO].astype(int).astype(str)
 
         if VAR_EAPS_Q in self.df.columns:
             self.df[VAR_EAPS_Q]= round(self.df[VAR_EAPS_Q],2)
         
+        # Captura del filtro
         sel_partido = [c for c in partidos if c != '']
-        
+
         if len(sel_partido) >0:
             mask = self.df[VAR_PARTIDO]==partidos
             self.df = self.df[mask]
@@ -153,7 +156,8 @@ class Indicador:
             gruposs.append(self.z_var)
 
         self.df = self.df.groupby(by = gruposs)[self.y_var].sum().reset_index()
-        
+
+
         fig = getattr(self, self.tipo_grafico)()
         fig.update_xaxes( title_text = self.x_titulo, title_font=dict(size=self.TAMANIO_FUENTE, family=self.LETRA_DEFAULT, color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))
         fig.update_yaxes(title_text = self.y_titulo,  title_font=dict(size=self.TAMANIO_FUENTE,family=self.LETRA_DEFAULT,color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))

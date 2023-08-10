@@ -1,5 +1,0 @@
-COLOR_NARANJA = 'rgb(225, 134, 95)'
-COLOR_MARRON = 'rgb(150, 79, 71)'
-COLOR_VERDE= 'rgb(77, 130, 133)'
-COLOR_GRIS = 'rgb(170, 166, 163)'
-

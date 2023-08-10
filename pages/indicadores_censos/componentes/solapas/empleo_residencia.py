@@ -1,7 +1,7 @@
 
 from dash import dash, html, dcc, Input, Output, State, callback
 import dash_bootstrap_components as dbc
-from ..formatos import COLOR_NARANJA, COLOR_VERDE
+from ..colores import NARANJA, VERDE
 from ..indicadores import Indicador
 
 from ...data import *
@@ -16,7 +16,7 @@ indicadores = [
         x="Año del censo",
         y='Cantidad de personas',
         z='Sexo de nacimiento',
-        colores=[COLOR_NARANJA, COLOR_VERDE],
+        colores=[NARANJA, VERDE],
         hover='Cantidad de Residentes: %{y}<br>Año del censo: %{x}'
     ),      
     Indicador(
@@ -26,7 +26,7 @@ indicadores = [
         titulo_grafico='Evolución del empleo permanente en el campo',
         x="Año del censo",
         y='Empleo',
-        colores=[COLOR_NARANJA],
+        colores=[NARANJA],
         hover='Cantidad de personas empleadas: %{text}<br>Año del censo: %{x}'
     ),          
           
@@ -37,7 +37,7 @@ indicadores = [
 
 Empleo = html.Div([
             dbc.Row([
-                html.H6('Empleo y Residencia', style={'font-size': '25px', 'color': COLOR_NARANJA}),
+                html.H6('Empleo y Residencia', style={'font-size': '25px', 'color': NARANJA}),
                 html.P("""En esta sección se muestra.....Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. """, className="text-white"),
