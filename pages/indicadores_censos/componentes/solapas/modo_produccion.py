@@ -33,33 +33,4 @@ Produccion = html.Div([
 
 
 
-for i in range(len(indicadores)):
-    id_indicador = indicadores[i].id
-    @callback(
-        Output(id_indicador, "figure"),
-        Input("select-partido", "value"),
-    )
-    def update_graph(selected_value, i=i):
-        return indicadores[i].actualizar(selected_value)
-    
-    @callback(
-        [
-            Output(f"modal-{id_indicador}", "is_open"),
-            Output(f"modal-graph-{id_indicador}", "figure"),
-            Output(f"modal-open-{id_indicador}", "n_clicks"),
-        ],
-        [
-            Input(f"modal-open-{id_indicador}", 'n_clicks'),
-            Input(f"modal-close-{id_indicador}", "n_clicks"),
-        ],
-        [
-            State(f"modal-{id_indicador}", "is_open"),
-            State(f"{id_indicador}", "figure")
-        ]
-    )
-    def toggle_modal(open_modal, close_modal, is_open_modal, figure, i=i):
-        if is_open_modal:
-            return False, dash.no_update, 0
-        if open_modal:
-            return True, figure, 1
-        return is_open_modal, dash.no_update,0
+Indicador.generar_callbacks(indicadores)

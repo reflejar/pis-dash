@@ -11,7 +11,7 @@ color_modo_produccion = 'rgb(77, 130, 133)'
 color_resumen = 'rgb(170, 166, 163)'
 
 
-SolapasIndicadores = dbc.Container([
+Solapas = dbc.Container([
     dbc.Tabs(id="tabs", active_tab='tab-1', children=[
         dbc.Tab(label='CONCENTRACIÓN DE TIERRAS', tab_id='tab-1', label_style={"color":'#FFFFFF' , 'font-size': '20px', 'background-color':color_concentracion_tierra,  'border-top-left-radius': '40px','border-bottom-left-radius': '40px','border-bottom-right-radius': '40px','border-top-right-radius': '40px', 'width': '400px', "text-align": "center"},active_label_style={'border': '4px solid white'}, className='nav-tabs-custom'),
         dbc.Tab(label='MODO DE PRODUCCIÓN', tab_id='tab-2', label_style={"color":'#FFFFFF' , 'font-size': '20px', 'background-color':color_modo_produccion  ,  'border-top-left-radius': '40px','border-bottom-left-radius': '40px','border-bottom-right-radius': '40px','border-top-right-radius': '40px' ,'width': '400px', "text-align": "center" }, active_label_style={'border': '4px solid white'},className='nav-tabs-custom'),

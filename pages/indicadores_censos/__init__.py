@@ -2,7 +2,7 @@ from dash import html
 import dash_bootstrap_components as dbc
 
 from .componentes.filtros import Filtros_censos
-from .componentes.solapas import SolapasIndicadores
+from .componentes.solapas import Solapas
 
 
 layout = html.Div([
@@ -21,7 +21,7 @@ layout = html.Div([
             class_name="mb-5"
         ),
         dbc.Row(
-            dbc.Col(SolapasIndicadores, md=12)
+            dbc.Col(Solapas, md=12)
         ),
         ],
         className="my-5 mx-5 min-vh-100",

@@ -1,5 +1,5 @@
 import dash_bootstrap_components as dbc
-from dash import dcc, html
+from dash import dash, html, dcc, Input, Output, State, callback
 from dash_loading_spinners import Hash
 import plotly.express as px
 import textwrap
@@ -34,7 +34,7 @@ class Indicador:
 
     ) -> None:
         self.id = id_indicador
-        self.df = df 
+        self.df = df.copy()
         self.colores = colores
         self.tipo_grafico = tipo_grafico
         self.titulo_grafico = titulo_grafico
@@ -102,18 +102,18 @@ class Indicador:
                 )
         ])
 
-    def bar(self):
+    def bar(self, df):
         return px.bar(
-            self.df, 
+            df, 
             x=self.x_var, 
             y=self.y_var, 
             color_discrete_sequence=[self.colores[0]], 
             text=self.y_var
         )
 
-    def histogram(self):
+    def histogram(self, df):
         return px.histogram(
-            self.df, 
+            df, 
             x=self.x_var, 
             y=self.y_var, 
             color=self.z_var, 
@@ -123,42 +123,40 @@ class Indicador:
             color_discrete_sequence=self.colores            
         )
         
-    def area(self):
+    def area(self, df):
         return px.area(
-            self.df, 
+            df, 
             x=self.x_var, 
             y=self.y_var, 
             color=self.z_var,  
             color_discrete_sequence=self.colores
         )
 
-    def actualizar(self, partidos):
+    def actualizar(self, partido):
         """
             Esto va para el callback
         """
-
+        df = self.df.copy()
         # Limpieza de datos
-        if VAR_ANIO_CENSO in self.df.columns:
-            self.df[VAR_ANIO_CENSO] = self.df[VAR_ANIO_CENSO].astype(int).astype(str)
+        if VAR_ANIO_CENSO in df.columns:
+            df[VAR_ANIO_CENSO] = df[VAR_ANIO_CENSO].astype(int).astype(str)
 
-        if VAR_EAPS_Q in self.df.columns:
-            self.df[VAR_EAPS_Q]= round(self.df[VAR_EAPS_Q],2)
+        if VAR_EAPS_Q in df.columns:
+            df[VAR_EAPS_Q]= round(df[VAR_EAPS_Q],2)
         
         # Captura del filtro
-        sel_partido = [c for c in partidos if c != '']
-
-        if len(sel_partido) >0:
-            mask = self.df[VAR_PARTIDO]==partidos
-            self.df = self.df[mask]
         
-        gruposs = [self.x_var, VAR_PARTIDO]
+        if partido:
+            mask = df[VAR_PARTIDO]==partido
+            df = df[mask]
+        
+        grupos = [self.x_var, VAR_PARTIDO]
         if self.z_var:
-            gruposs.append(self.z_var)
+            grupos.append(self.z_var)
 
-        self.df = self.df.groupby(by = gruposs)[self.y_var].sum().reset_index()
+        df = df.groupby(by = grupos)[self.y_var].sum().reset_index()
 
-
-        fig = getattr(self, self.tipo_grafico)()
+        fig = getattr(self, self.tipo_grafico)(df)
         fig.update_xaxes( title_text = self.x_titulo, title_font=dict(size=self.TAMANIO_FUENTE, family=self.LETRA_DEFAULT, color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))
         fig.update_yaxes(title_text = self.y_titulo,  title_font=dict(size=self.TAMANIO_FUENTE,family=self.LETRA_DEFAULT,color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))
         fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
@@ -198,5 +196,37 @@ class Indicador:
                 tracegroupgap=10
             )
         )
-
         return fig
+    
+    @staticmethod
+    def generar_callbacks(indicadores):
+        for i in range(len(indicadores)):
+            id_indicador = indicadores[i].id
+            @callback(
+                Output(id_indicador, "figure"),
+                Input("select-partido", "value"),
+            )
+            def update_graph(selected_value, i=i):
+                return indicadores[i].actualizar(selected_value)
+            
+            @callback(
+                [
+                    Output(f"modal-{id_indicador}", "is_open"),
+                    Output(f"modal-graph-{id_indicador}", "figure"),
+                    Output(f"modal-open-{id_indicador}", "n_clicks"),
+                ],
+                [
+                    Input(f"modal-open-{id_indicador}", 'n_clicks'),
+                    Input(f"modal-close-{id_indicador}", "n_clicks"),
+                ],
+                [
+                    State(f"modal-{id_indicador}", "is_open"),
+                    State(f"{id_indicador}", "figure")
+                ]
+            )
+            def toggle_modal(open_modal, close_modal, is_open_modal, figure, i=i):
+                if is_open_modal:
+                    return False, dash.no_update, 0
+                if open_modal:
+                    return True, figure, 1
+                return is_open_modal, dash.no_update,0
