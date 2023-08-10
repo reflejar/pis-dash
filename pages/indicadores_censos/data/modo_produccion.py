@@ -1,5 +1,5 @@
 import pandas as pd
-from .base_indicadores import base_censos, VAR_ANIO_CENSO, VAR_PARTIDO
+from . import base_censos, VAR_ANIO_CENSO, VAR_PARTIDO
 
 VAR_EAPS_HA = 'Cantidad HA'
 VAR_CEREALES_HA = 'Cantidad de hectáreas implantadas de Cereales'

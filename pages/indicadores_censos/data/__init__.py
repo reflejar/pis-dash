@@ -9,6 +9,8 @@ VAR_PARTIDO = 'Partido'
 VAR_ULTIMO_ANIO_CENSO = '2018'
 VAR_ANIO_CENSO_1988 = '1988'
 VAR_ANIO_CENSO_2002 = '2002'
+VAR_EAPS_Q = 'Cantidad de EAPs'
+VAR_TAMANIO_EAPS = 'Tamaño EAPs'
 
 base_censos=pd.read_csv(f'{FOLDER}/base_censo.csv', sep=";", encoding='latin1')
 
@@ -27,3 +29,9 @@ df_superficie_promedio = pd.read_csv(f'{FOLDER}/tierra/superficie_promedio.csv',
 df_eaps_ha_por_tamanio = pd.read_csv(f'{FOLDER}/tierra/eaps_ha_por_tamanio.csv', sep=';', decimal=',')
 df_propiedad_x_sexo = pd.read_csv(f'{FOLDER}/tierra/propiedad_x_sexo.csv', sep=';'  )
 df_ha_tipo_juridico = pd.read_csv(f'{FOLDER}/tierra/ha_tipo_juridico.csv', sep=';', decimal=',')
+
+
+df_ha_tipo_cultivo = pd.read_csv(f'{FOLDER}/modo_produccion/hectareas_tipo_cultivo.csv', sep=';' )
+
+df_residentes_por_sexo = pd.read_csv(f'{FOLDER}/empleo-y-residencia/residentes_por_sexo.csv', sep=';' )
+df_evolucion_empleo = pd.read_csv(f'{FOLDER}/empleo-y-residencia/evolucion_empleo.csv', sep=';' )
