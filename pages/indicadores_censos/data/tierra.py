@@ -1,6 +1,6 @@
 
 import pandas as pd
-from base_indicadores import base_censos, VAR_ANIO_CENSO, VAR_PARTIDO
+from . import base_censos, VAR_ANIO_CENSO, VAR_PARTIDO
 
 ##### VARIABLES ######
 

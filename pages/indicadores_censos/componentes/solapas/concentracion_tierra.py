@@ -76,6 +76,16 @@ indicadores = [
         z='Tipo jurídico',
         colores=[NARANJA, MARRON],
         hover='Superficie ocupada: %{y:.0f} ha<br>Año del censo: %{x}'
+    ),
+    Indicador(
+        id_indicador="eaps-sexo-propiedad",
+        df=df_propiedad_x_sexo,
+        tipo_grafico="pie",
+        titulo_grafico='Propiedad de EAPs según sexo Año 2018',
+        x='Sexo',
+        y='Cantidad de EAPs',
+        colores=[NARANJA, MARRON],
+        hover='Cantidad de Hectareas: %{y:.0f} ha<br>Sexo: %{x}'
     ),                
 ]
 

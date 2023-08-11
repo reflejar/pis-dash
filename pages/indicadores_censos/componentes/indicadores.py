@@ -132,6 +132,14 @@ class Indicador:
             color_discrete_sequence=self.colores
         )
 
+    def pie(self, df):
+        return px.pie(
+            df, 
+            values=self.y_var, 
+            names=self.x_var, 
+            color_discrete_sequence=self.colores
+        )
+
     def actualizar(self, partido):
         """
             Esto va para el callback
@@ -168,7 +176,7 @@ class Indicador:
         # Actualizar el diseño del gráfico
         fig.update_layout(
             title={
-            "text": f"<b>{'<br>'.join(textwrap.wrap(self.titulo_grafico, width=35))}</b>",
+            "text": f"<b>{'<br>'.join(textwrap.wrap(self.titulo_grafico, width=30))}</b>",
             "x": 0.5,
             "y": 0.95,
             "xanchor": "center",
