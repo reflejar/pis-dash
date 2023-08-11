@@ -65,7 +65,7 @@ class Indicador:
                         
                     ),
                     dbc.CardFooter(
-                        dbc.Button("AMPLIAR GRÁFICO", 
+                        dbc.Button("Ver más", 
                                     id=f"modal-open-{self.id}", 
                                     style={
                                         "background-color": 'rgb(150, 79, 71)', 
@@ -90,7 +90,7 @@ class Indicador:
                             dcc.Graph(id=f"modal-graph-{self.id}"),
                         ),
                         dbc.ModalFooter(
-                            dbc.Button("CERRAR GRÁFICO", 
+                            dbc.Button("Volver atrás", 
                                         id=f"modal-close-{self.id}", 
                                         color="light",style={"background-color": NARANJA, "border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": "Arial"},  
                                         className="mx-auto"), className="text-center", style={"background-color": "none","border": "none", "color": "none"}
@@ -128,7 +128,7 @@ class Indicador:
             df, 
             x=self.x_var, 
             y=self.y_var, 
-            color=self.z_var,  
+            color=self.z_var or None,  
             color_discrete_sequence=self.colores
         )
 

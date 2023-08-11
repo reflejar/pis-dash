@@ -1,7 +1,7 @@
 from dash import dash, html, dcc, Input, State, Output, callback
 import dash_bootstrap_components as dbc
 # from .tipo_cultivo_ha import CULTIVOS_HA
-from ..colores import VERDE, MARRON, NARANJA
+from ..colores import VERDE, MARRON, NARANJA, GRIS
 
 from ..indicadores import Indicador
 from ...data import df_ha_tipo_cultivo
@@ -11,12 +11,13 @@ indicadores = [
         id_indicador="ha-tipo-cultivo",
         df=df_ha_tipo_cultivo,
         tipo_grafico="area",
-        titulo_grafico="Héctareas implantadas según tipo de cultivo" ,
+        titulo_grafico="Héctareas implantadas según tipo de cultivo (en miles)" ,
         x="Año del censo",
-        y='Cantidad HA',
+        y='HA de EAPs',
+        y_titulo = 'Héctáreas implantadas (en miles)',
         z='Tipo de cultivo',
-        colores=[VERDE, MARRON, NARANJA ],
-        hover='Cantidad de Hectareas cultivadas: %{y}<br>Año del censo: %{x}'
+        colores=[VERDE, MARRON, NARANJA, GRIS ],
+        hover='Hectareas cultivadas: %{y} mil<br>Año del censo: %{x}'
     ),      
 ]
 

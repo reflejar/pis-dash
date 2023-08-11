@@ -1,16 +1,5 @@
-import os
 import pandas as pd
-
-FOLDER = os.path.dirname(os.path.abspath(__file__))
-
-#Variables
-VAR_ANIO_CENSO = 'Año del censo'
-VAR_PARTIDO = 'Partido'
-VAR_ULTIMO_ANIO_CENSO = '2018'
-VAR_ANIO_CENSO_1988 = '1988'
-VAR_ANIO_CENSO_2002 = '2002'
-VAR_EAPS_Q = 'Cantidad de EAPs'
-VAR_TAMANIO_EAPS = 'Tamaño EAPs'
+from .constantes import *
 
 base_censos=pd.read_csv(f'{FOLDER}/base_censo.csv', sep=";", encoding='latin1')
 

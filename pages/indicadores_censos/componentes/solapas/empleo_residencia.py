@@ -22,12 +22,12 @@ indicadores = [
     Indicador(
         id_indicador="evolucion-empleo",
         df=df_evolucion_empleo,
-        tipo_grafico="bar",
+        tipo_grafico="area",
         titulo_grafico='Evolución del empleo permanente en el campo',
         x="Año del censo",
         y='Empleo',
         colores=[NARANJA],
-        hover='Cantidad de personas empleadas: %{text}<br>Año del censo: %{x}'
+        hover='Cantidad de personas empleadas: %{y}<br>Año del censo: %{x}'
     ),          
           
 ]

@@ -46,13 +46,13 @@ indicadores = [
         id_indicador="superficie-eaps-tamanio",
         df=df_eaps_ha_por_tamanio,
         tipo_grafico="histogram",
-        titulo_grafico='Superficie ocupada por EAPs según tamaño',
+        titulo_grafico='Superficie ocupada por EAPs según tamaño (en miles)',
         x="Año del censo",
         y='HA de EAPs',
-        y_titulo="Superficie ocupada (ha) según tamaño",
+        y_titulo="Superficie ocupada (miles de ha) ",
         z='Tamaño EAPs',
         colores=[NARANJA, MARRON],
-        hover='Superficie ocupada: %{y:.0f} ha<br>Año del censo: %{x}'
+        hover='Superficie ocupada: %{y:.0f} mil<br>Año del censo: %{x}'
     ),        
     Indicador(
         id_indicador="q-eaps-juridico",
@@ -69,13 +69,13 @@ indicadores = [
         id_indicador="superficie-eaps-juridico",
         df=df_ha_tipo_juridico,
         tipo_grafico="histogram",
-        titulo_grafico='Superficie ocupada por EAPs según tipo jurídico',
+        titulo_grafico='Superficie ocupada por EAPs según tipo jurídico (en miles)',
         x="Año del censo",
         y='HA de EAPs',
-        y_titulo="Superficie ocupada (ha)",
+        y_titulo="Superficie ocupada (en miles de ha)",
         z='Tipo jurídico',
         colores=[NARANJA, MARRON],
-        hover='Superficie ocupada: %{y:.0f} ha<br>Año del censo: %{x}'
+        hover='Superficie ocupada: %{y:.0f} mil<br>Año del censo: %{x}'
     ),
     Indicador(
         id_indicador="eaps-sexo-propiedad",

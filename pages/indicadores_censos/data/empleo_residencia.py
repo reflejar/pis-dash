@@ -1,15 +1,7 @@
 import pandas as pd
-from base_indicadores import base_censos, VAR_ANIO_CENSO, VAR_PARTIDO
+from constantes import *
 
-# BASE DE DATOS
-df_base_original = base_censos.copy()
-
-#############################################Variables de RESIDENCIA ####################
-
-VAR_SEXO_NACIMIENTO= 'Sexo de nacimiento'
-VAR_MUJERES_RESIDENTES= 'Mujeres Residentes del campo'
-VAR_VARONES_RESIDENTES= 'Varones Residentes del campo'
-VAR_CANTIDAD_PERSONAS = 'Cantidad de personas'
+df_base_original=pd.read_csv(f'{FOLDER}/base_censo.csv', sep=";", encoding='latin1')
 
 ######### RESIDENCIA TOTAL POR SEXO
 
