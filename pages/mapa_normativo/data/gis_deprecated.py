@@ -127,8 +127,8 @@ class MapHandler:
     }
 
     MUNICIPIOS = ['Mar Chiquita']
-    # COLOR_SCALE = [[0, 'rgb(17, 56, 173)'], [1,'rgb(199, 30, 30)' ]]
-    COLOR_SCALE=[[0, 'rgb(17, 56, 173)'], [0.5,'rgb(199, 30, 30)' ],[1,'rgb(35, 161, 31)' ]]
+    # SCALE = [[0, 'rgb(17, 56, 173)'], [1,'rgb(199, 30, 30)' ]]
+    SCALE=[[0, 'rgb(17, 56, 173)'], [0.5,'rgb(199, 30, 30)' ],[1,'rgb(35, 161, 31)' ]]
 # colorscale=[[0, 'rgb(17, 56, 173)'], [1,'rgb(199, 30, 30)' ]]
 
     def __init__(
@@ -204,7 +204,7 @@ class MapHandler:
             featureidkey="properties.index",
             locations=df['index'], 
             z=df['color'],
-            colorscale=self.COLOR_SCALE,
+            colorscale=self.SCALE,
             zmax=1,
             zmin=0,
             marker_opacity=recurso['opacity'],

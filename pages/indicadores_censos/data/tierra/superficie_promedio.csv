@@ -1,0 +1,412 @@
+;Superficie promedio;Año del censo;Partido
+0;642;2018;Provincia de Buenos Aires
+1;896;2018;Adolfo Alsina
+2;1168;2018;Adolfo Gonzales Chaves
+3;415;2018;Alberti
+4;19;2018;Almirante Brown
+5;423;2018;Arrecifes
+6;0;2018;Avellaneda
+7;741;2018;Ayacucho
+8;746;2018;Azul
+9;736;2018;Bahía Blanca
+10;675;2018;Balcarce
+11;478;2018;Baradero
+12;882;2018;Benito Juárez
+13;3;2018;Berazategui
+14;86;2018;Berisso
+15;426;2018;Bolívar
+16;527;2018;Bragado
+17;362;2018;Brandsen
+18;317;2018;Campana
+19;396;2018;Cañuelas
+20;253;2018;Capitán Sarmiento
+21;619;2018;Carlos Casares
+22;552;2018;Carlos Tejedor
+23;684;2018;Carmen de Areco
+24;1420;2018;Castelli
+25;360;2018;Chacabuco
+26;513;2018;Chascomús
+27;307;2018;Chivilcoy
+28;281;2018;Colón
+29;750;2018;Coronel de Marina Leonardo Rosales
+30;1428;2018;Coronel Dorrego
+31;908;2018;Coronel Pringles
+32;727;2018;Coronel Suárez
+33;843;2018;Daireaux
+34;880;2018;Dolores
+35;107;2018;Ensenada
+36;110;2018;Escobar
+37;19;2018;Esteban Echeverría
+38;326;2018;Exaltación de la Cruz
+39;1020;2018;Ezeiza
+40;3;2018;Florencio Varela
+41;1169;2018;Florentino Ameghino
+42;1041;2018;General Alvarado
+43;975;2018;General Alvear
+44;323;2018;General Arenales
+45;875;2018;General Belgrano
+46;697;2018;General Guido
+47;1022;2018;General Juan Madariaga
+48;1140;2018;General La Madrid
+49;249;2018;General Las Heras
+50;1035;2018;General Lavalle
+51;254;2018;General Paz
+52;931;2018;General Pinto
+53;232;2018;General Pueyrredón
+54;173;2018;General Rodríguez
+55;0;2018;General San Martín
+56;568;2018;General Viamonte
+57;930;2018;General Villegas
+58;783;2018;Guaminí
+59;706;2018;Hipólito Yrigoyen
+60;0;2018;Hurlingham
+61;0;2018;Ituzaingó
+62;1;2018;José C, Paz
+63;310;2018;Junín
+64;401;2018;La Costa
+65;324;2018;La Matanza
+66;0;2018;Lanús
+67;19;2018;La Plata
+68;992;2018;Laprida
+69;636;2018;Las Flores
+70;653;2018;Leandro N, Alem
+71;320;2018;Lezama
+72;787;2018;Lincoln
+73;823;2018;Lobería
+74;325;2018;Lobos
+75;0;2018;Lomas de Zamora
+76;269;2018;Luján
+77;412;2018;Magdalena
+78;910;2018;Maipú
+79;1;2018;Malvinas Argentinas
+80;783;2018;Mar Chiquita
+81;155;2018;Marcos Paz
+82;334;2018;Mercedes
+83;42;2018;Merlo
+84;676;2018;Monte
+85;0;2018;Monte Hermoso
+86;21;2018;Moreno
+87;0;2018;Morón
+88;439;2018;Navarro
+89;955;2018;Necochea
+90;475;2018;9 de julio
+91;1029;2018;Olavarría
+92;1555;2018;Patagones
+93;908;2018;Pehuajó
+94;778;2018;Pellegrini
+95;337;2018;Pergamino
+96;1149;2018;Pila
+97;27;2018;Pilar
+98;0;2018;Pinamar
+99;49;2018;Presidente Perón
+100;785;2018;Puán
+101;696;2018;Punta Indio
+102;0;2018;Quilmes
+103;364;2018;Ramallo
+104;586;2018;Rauch
+105;1066;2018;Rivadavia
+106;427;2018;Rojas
+107;464;2018;Roque Pérez
+108;641;2018;Saavedra
+109;303;2018;Saladillo
+110;521;2018;Salliqueló
+111;335;2018;Salto
+112;357;2018;San Andrés de Giles
+113;581;2018;San Antonio de Areco
+114;887;2018;San Cayetano
+115;380;2018;San Fernando
+116;0;2018;San Isidro
+117;0;2018;San Miguel
+118;250;2018;San Nicolás
+119;250;2018;San Pedro
+120;191;2018;San Vicente
+121;810;2018;Suipacha
+122;672;2018;Tandil
+123;1220;2018;Tapalqué
+124;46;2018;Tigre
+125;1058;2018;Tordillo
+126;914;2018;Tornquist
+127;1265;2018;Trenque Lauquen
+128;866;2018;Tres Arroyos
+129;0;2018;Tres de Febrero
+130;674;2018;Tres Lomas
+131;632;2018;25 de mayo
+132;0;2018;Vicente López
+133;0;2018;Villa Gesell
+134;1344;2018;Villarino
+135;1144;2018;Zárate
+136;505;2002;Provincia de Buenos Aires
+137;559;2002;Adolfo Alsina
+138;875;2002;Adolfo Gonzales Chaves
+139;409;2002;Alberti
+140;10;2002;Almirante Brown
+141;434;2002;Arrecifes
+142;5;2002;Avellaneda
+143;626;2002;Ayacucho
+144;772;2002;Azul
+145;807;2002;Bahía Blanca
+146;595;2002;Balcarce
+147;331;2002;Baradero
+148;825;2002;Benito Juárez
+149;29;2002;Berazategui
+150;68;2002;Berisso
+151;298;2002;Bolívar
+152;321;2002;Bragado
+153;308;2002;Brandsen
+154;362;2002;Campana
+155;285;2002;Cañuelas
+156;255;2002;Capitán Sarmiento
+157;334;2002;Carlos Casares
+158;476;2002;Carlos Tejedor
+159;419;2002;Carmen de Areco
+160;869;2002;Castelli
+161;247;2002;Chacabuco
+162;455;2002;Chascomús
+163;291;2002;Chivilcoy
+164;201;2002;Colón
+165;769;2002;Coronel de Marina Leonardo Rosales
+166;995;2002;Coronel Dorrego
+167;762;2002;Coronel Pringles
+168;617;2002;Coronel Suárez
+169;551;2002;Daireaux
+170;823;2002;Dolores
+171;337;2002;Ensenada
+172;19;2002;Escobar
+173;58;2002;Esteban Echeverría
+174;194;2002;Exaltación de la Cruz
+175;115;2002;Ezeiza
+176;16;2002;Florencio Varela
+177;890;2002;Florentino Ameghino
+178;635;2002;General Alvarado
+179;724;2002;General Alvear
+180;213;2002;General Arenales
+181;561;2002;General Belgrano
+182;661;2002;General Guido
+183;714;2002;General Juan Madariaga
+184;848;2002;General La Madrid
+185;199;2002;General Las Heras
+186;1118;2002;General Lavalle
+187;250;2002;General Paz
+188;660;2002;General Pinto
+189;248;2002;General Pueyrredón
+190;315;2002;General Rodríguez
+191;13;2002;General San Martín
+192;356;2002;General Viamonte
+193;756;2002;General Villegas
+194;650;2002;Guaminí
+195;383;2002;Hipólito Yrigoyen
+196;0;2002;Hurlingham
+197;0;2002;Ituzaingó
+198;3;2002;José C, Paz
+199;289;2002;Junín
+200;69;2002;La Costa
+201;290;2002;La Matanza
+202;0;2002;Lanús
+203;37;2002;La Plata
+204;886;2002;Laprida
+205;455;2002;Las Flores
+206;463;2002;Leandro N, Alem
+207;0;2002;Lezama
+208;461;2002;Lincoln
+209;655;2002;Lobería
+210;232;2002;Lobos
+211;258;2002;Lomas de Zamora
+212;298;2002;Luján
+213;340;2002;Magdalena
+214;1070;2002;Maipú
+215;1;2002;Malvinas Argentinas
+216;777;2002;Mar Chiquita
+217;99;2002;Marcos Paz
+218;267;2002;Mercedes
+219;20;2002;Merlo
+220;486;2002;Monte
+221;4924;2002;Monte Hermoso
+222;4;2002;Moreno
+223;0;2002;Morón
+224;290;2002;Navarro
+225;723;2002;Necochea
+226;350;2002;9 de julio
+227;738;2002;Olavarría
+228;1336;2002;Patagones
+229;495;2002;Pehuajó
+230;775;2002;Pellegrini
+231;255;2002;Pergamino
+232;910;2002;Pila
+233;16;2002;Pilar
+234;0;2002;Pinamar
+235;100;2002;Presidente Perón
+236;619;2002;Puán
+237;561;2002;Punta Indio
+238;6;2002;Quilmes
+239;284;2002;Ramallo
+240;425;2002;Rauch
+241;622;2002;Rivadavia
+242;314;2002;Rojas
+243;299;2002;Roque Pérez
+244;612;2002;Saavedra
+245;234;2002;Saladillo
+246;667;2002;Salliqueló
+247;175;2002;Salto
+248;357;2002;San Andrés de Giles
+249;575;2002;San Antonio de Areco
+250;667;2002;San Cayetano
+251;613;2002;San Fernando
+252;0;2002;San Isidro
+253;0;2002;San Miguel
+254;181;2002;San Nicolás
+255;166;2002;San Pedro
+256;285;2002;San Vicente
+257;344;2002;Suipacha
+258;671;2002;Tandil
+259;730;2002;Tapalqué
+260;20;2002;Tigre
+261;844;2002;Tordillo
+262;814;2002;Tornquist
+263;902;2002;Trenque Lauquen
+264;761;2002;Tres Arroyos
+265;23;2002;Tres de Febrero
+266;385;2002;Tres Lomas
+267;419;2002;25 de mayo
+268;0;2002;Vicente López
+269;2;2002;Villa Gesell
+270;937;2002;Villarino
+271;209;2002;Zárate
+272;361;1988;Provincia de Buenos Aires
+273;467;1988;Adolfo Alsina
+274;634;1988;Adolfo Gonzales Chaves
+275;225;1988;Alberti
+276;15;1988;Almirante Brown
+277;0;1988;Arrecifes
+278;5;1988;Avellaneda
+279;536;1988;Ayacucho
+280;615;1988;Azul
+281;659;1988;Bahía Blanca
+282;293;1988;Balcarce
+283;230;1988;Baradero
+284;2;1988;Bartolomé Mitre
+285;137;1988;Benito Juárez
+286;2360;1988;Berazategui
+287;99;1988;Berisso
+288;3;1988;Bolívar
+289;498;1988;Bragado
+290;503;1988;Brandsen
+291;356;1988;Campana
+292;108;1988;Cañuelas
+293;429;1988;Capitán Sarmiento
+294;53;1988;Carlos Casares
+295;282;1988;Carlos Tejedor
+296;1545;1988;Carmen de Areco
+297;205;1988;Castelli
+298;166;1988;Chacabuco
+299;216;1988;Chascomús
+300;360;1988;Chivilcoy
+301;327;1988;Colón
+302;578;1988;Coronel de Marina Leonardo Rosales
+303;122;1988;Coronel Dorrego
+304;623;1988;Coronel Pringles
+305;413;1988;Coronel Suárez
+306;776;1988;Daireaux
+307;869;1988;Dolores
+308;12240;1988;Ensenada
+309;7;1988;Escobar
+310;66;1988;Esteban Echeverría
+311;21;1988;Exaltación de la Cruz
+312;0;1988;Ezeiza
+313;0;1988;Florencio Varela
+314;0;1988;Florentino Ameghino
+315;0;1988;General Alvarado
+316;340;1988;General Alvear
+317;297;1988;General Arenales
+318;342;1988;General Belgrano
+319;501;1988;General Guido
+320;438;1988;General Juan Madariaga
+321;450;1988;General La Madrid
+322;1121;1988;General Las Heras
+323;293;1988;General Lavalle
+324;429;1988;General Paz
+325;124;1988;General Pinto
+326;590;1988;General Pueyrredón
+327;604;1988;General Rodríguez
+328;0;1988;General San Martín
+329;0;1988;General Sarmiento
+330;220;1988;General Viamonte
+331;545;1988;General Villegas
+332;529;1988;Guaminí
+333;354;1988;Hipólito Yrigoyen
+334;0;1988;Hurlingham
+335;0;1988;Ituzaingó
+336;0;1988;José C, Paz
+337;185;1988;Junín
+338;614;1988;La Costa
+339;27;1988;La Matanza
+340;0;1988;Lanús
+341;35;1988;La Plata
+342;703;1988;Laprida
+343;437;1988;Las Flores
+344;271;1988;Leandro N, Alem
+345;0;1988;Lezama
+346;360;1988;Lincoln
+347;398;1988;Lobería
+348;161;1988;Lobos
+349;0;1988;Lomas de Zamora
+350;146;1988;Luján
+351;302;1988;Magdalena
+352;826;1988;Maipú
+353;0;1988;Malvinas Argentinas
+354;644;1988;Mar Chiquita
+355;90;1988;Marcos Paz
+356;136;1988;Mercedes
+357;14;1988;Merlo
+358;391;1988;Monte
+359;0;1988;Monte Hermoso
+360;14;1988;Moreno
+361;0;1988;Morón
+362;231;1988;Navarro
+363;554;1988;Necochea
+364;285;1988;9 de julio
+365;620;1988;Olavarría
+366;1159;1988;Patagones
+367;335;1988;Pehuajó
+368;627;1988;Pellegrini
+369;178;1988;Pergamino
+370;738;1988;Pila
+371;30;1988;Pilar
+372;0;1988;Pinamar
+373;0;1988;Presidente Perón
+374;464;1988;Puán
+375;0;1988;Punta Indio
+376;0;1988;Quilmes
+377;176;1988;Ramallo
+378;404;1988;Rauch
+379;537;1988;Rivadavia
+380;186;1988;Rojas
+381;220;1988;Roque Pérez
+382;494;1988;Saavedra
+383;182;1988;Saladillo
+384;310;1988;Salliqueló
+385;210;1988;Salto
+386;173;1988;San Andrés de Giles
+387;312;1988;San Antonio de Areco
+388;488;1988;San Cayetano
+389;141;1988;San Fernando
+390;1;1988;San Isidro
+391;0;1988;San Miguel
+392;120;1988;San Nicolás
+393;103;1988;San Pedro
+394;193;1988;San Vicente
+395;319;1988;Suipacha
+396;436;1988;Tandil
+397;702;1988;Tapalqué
+398;23;1988;Tigre
+399;733;1988;Tordillo
+400;691;1988;Tornquist
+401;619;1988;Trenque Lauquen
+402;534;1988;Tres Arroyos
+403;1;1988;Tres de Febrero
+404;313;1988;Tres Lomas
+405;348;1988;25 de mayo
+406;0;1988;Vicente López
+407;0;1988;Villa Gesell
+408;676;1988;Villarino
+409;125;1988;Zárate
+410;2150;1988;Indeterminado

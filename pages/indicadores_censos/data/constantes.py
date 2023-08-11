@@ -1,0 +1,43 @@
+import os
+FOLDER = os.path.dirname(os.path.abspath(__file__))
+
+VAR_EAPS_HA = 'Cantidad HA'
+VAR_CEREALES_HA = 'Cantidad de hectáreas implantadas de Cereales'
+VAR_OLEAGINOSAS_HA = 'Cantidad de hectáreas implantadas de Oleaginosas'
+VAR_FORRAJERAS_HA = 'Cantidad de hectáreas implantadas de Forrajeras'
+VAR_OTRAS_PLANTACIONES_HA = 'Cantidad de ha para otras plantaciones'
+VAR_TIPO_CULTIVO = 'Tipo de cultivo'
+VAR_ANIO_CENSO = 'Año del censo'
+VAR_PARTIDO = 'Partido'
+VAR_ULTIMO_ANIO_CENSO = '2018'
+VAR_ANIO_CENSO_1988 = '1988'
+VAR_ANIO_CENSO_2002 = '2002'
+VAR_EAPS_Q = 'Cantidad de EAPs'
+VAR_TAMANIO_EAPS = 'Tamaño EAPs'
+VAR_SEXO_NACIMIENTO= 'Sexo de nacimiento'
+VAR_MUJERES_RESIDENTES= 'Mujeres Residentes del campo'
+VAR_VARONES_RESIDENTES= 'Varones Residentes del campo'
+VAR_CANTIDAD_PERSONAS = 'Cantidad de personas'
+##### VARIABLES ######
+
+VAR_EAPS_PEQ = 'EAPS pequeñas (<= 500ha)'
+VAR_EAPS_GRANDES = 'EAPS grandes (>500 ha)'
+VAR_TOTAL_EAPS = 'Total EAPS'
+VAR_EAPS_HA_PEQ = 'HA ocupadas por EAPS pequeñas'
+VAR_EAPS_HA_GRANDES = 'HA ocupadas por EAPS grandes'
+VAR_TOTAL_HA_EAPS = 'Total de HA'
+VAR_EAPS_HA = 'HA de EAPs'
+VAR_EAPS_EMPRESAS= 'EAPS en manos de Empresas'
+VAR_EAPS_PERSONAS = 'EAPS en manos de Personas Humanas'
+VAR_EAPS_HA_EMPRESAS = 'Superficie en manos de Empresas'
+VAR_EAPS_HA_PERSONAS = 'Superficie en mano de Personas Humanas'
+VAR_MUJERES_PROPIETARIAS = 'Cantidad de Mujeres propietarias de EAPs'
+VAR_VARONES_PROPIETARIOS = 'Cantidad de Hombres propietarios de EAPs'
+VAR_SUPERFICIE_HA = 'Superficie promedio'
+VAR_EAPS_HA = 'HA de EAPs'
+VAR_EAPS_Q = 'Cantidad de EAPs'
+VAR_TAMANIO_EAPS = 'Tamaño EAPs'
+VAR_EAPS_TIPO_JURICIO = 'Tipo jurídico'
+VAR_SEXO_PROPIETARIE = 'Sexo'
+
+

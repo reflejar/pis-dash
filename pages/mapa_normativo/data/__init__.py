@@ -1,3 +1,4 @@
+import os
 import geopandas as gpd
 import json
 import pandas as pd
@@ -5,22 +6,26 @@ from itertools import combinations
 
 MUNICIPIOS = ['Mar Chiquita']
 
+
+
+FOLDER = os.path.dirname(os.path.abspath(__file__))
+
 ###### Se importan las bases de los objetos representados en el mapa ##############
-cuerpos=gpd.read_parquet("./data/cuerpos.parquet")
-localidades_parajes=gpd.read_parquet("./data/localidades_parajes.parquet")
-escuelas_parcelas=gpd.read_parquet("./data/escuelas_parcelas.parquet")
-reservas=gpd.read_parquet("./data/reservas.parquet")
-cursos=gpd.read_parquet("./data/cursos_agua.parquet")
+cuerpos=gpd.read_parquet(f"{FOLDER}/cuerpos.parquet")
+localidades_parajes=gpd.read_parquet(f"{FOLDER}/localidades_parajes.parquet")
+escuelas_parcelas=gpd.read_parquet(f"{FOLDER}/escuelas_parcelas.parquet")
+reservas=gpd.read_parquet(f"{FOLDER}/reservas.parquet")
+cursos=gpd.read_parquet(f"{FOLDER}/cursos_agua.parquet")
 
 ###### Se importan las bases de las zonas de exclusion y amortiguamiento de cada objeto ############
-cuerpos_excl=gpd.read_parquet("./data/cuerpos_excl.parquet")
-cursos_excl=gpd.read_parquet("./data/cursos_excl.parquet")
-localidades_excl=gpd.read_parquet("./data/localidades_excl.parquet")
-parajes_excl=gpd.read_parquet("./data/parajes_excl.parquet")
-escuelas_parcelas_excl=gpd.read_parquet("./data/escuelas_parcelas_excl.parquet")
-localidades_amort=gpd.read_parquet("./data/localidades_amort.parquet")
-parajes_amort=gpd.read_parquet("./data/parajes_amort.parquet")
-escuelas_parcelas_amort=gpd.read_parquet("./data/escuelas_parcelas_amort.parquet")
+cuerpos_excl=gpd.read_parquet(f"{FOLDER}/cuerpos_excl.parquet")
+cursos_excl=gpd.read_parquet(f"{FOLDER}/cursos_excl.parquet")
+localidades_excl=gpd.read_parquet(f"{FOLDER}/localidades_excl.parquet")
+parajes_excl=gpd.read_parquet(f"{FOLDER}/parajes_excl.parquet")
+escuelas_parcelas_excl=gpd.read_parquet(f"{FOLDER}/escuelas_parcelas_excl.parquet")
+localidades_amort=gpd.read_parquet(f"{FOLDER}/localidades_amort.parquet")
+parajes_amort=gpd.read_parquet(f"{FOLDER}/parajes_amort.parquet")
+escuelas_parcelas_amort=gpd.read_parquet(f"{FOLDER}/escuelas_parcelas_amort.parquet")
 
 ################ Se crea una columna llamada "tooltip" que luego sirve como etiqueta en el mapa #############
 cursos["tooltip"]="<b>Nombre</b>: "+cursos["NOMBRE"]+'<extra></extra>'
@@ -53,5 +58,5 @@ localidades_parajes_geojson=json.loads(localidades_parajes.to_json(na="keep"))
 escuelas_parcelas_geojson = json.loads(escuelas_parcelas.to_json(na="keep"))
 reservas_geojson = json.loads(reservas.to_json(na="keep"))
 
-amortiguacion=gpd.read_parquet("./data/amortiguacion.parquet")
-exclusion=gpd.read_parquet("./data/exclusion.parquet")
+amortiguacion=gpd.read_parquet(f"{FOLDER}/amortiguacion.parquet")
+exclusion=gpd.read_parquet(f"{FOLDER}/exclusion.parquet")
