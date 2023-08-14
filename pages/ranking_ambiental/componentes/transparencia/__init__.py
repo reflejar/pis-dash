@@ -1,15 +1,13 @@
 from dash import html
 import dash_bootstrap_components as dbc
-from .mapa_resumen import Mapa_resumen
+from .mapa_transparencia import mapa_card
+color_transparencia = '#EF7286'
 
-color_resumen = 'rgb(170, 166, 163)'
-
-Resumen = html.Div([
+Transparencia = html.Div([
             html.Br(),
             dbc.Row([
                 html.Br(),
                 html.Br(),
-                html.H6('Mapa resumen', style={'font-size': '25px', 'color': color_resumen}),
                 html.P("""En esta sección se muestra.....Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. """, className="text-white"),
@@ -18,7 +16,7 @@ Resumen = html.Div([
                 html.Br(),
                 
                  dbc.Row([dbc.Col([
-                            dbc.Row(Mapa_resumen)                         
+                            dbc.Row(mapa_card)                         
                             ], 
                             md=12,
                             xs=12,
