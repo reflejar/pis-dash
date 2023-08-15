@@ -5,7 +5,7 @@ import plotly.express as px
 import textwrap
 
 
-from .colores import *
+from .constantes import *
 from ..data import VAR_ANIO_CENSO, VAR_PARTIDO, VAR_EAPS_Q, VAR_TAMANIO_EAPS
 
 class Indicador:
@@ -31,6 +31,7 @@ class Indicador:
         z="",
         hover="",
         porcentaje=False,
+        texto_descriptivo = ''
 
     ) -> None:
         self.id = id_indicador
@@ -45,6 +46,7 @@ class Indicador:
         self.z_var = z
         self.hover = hover
         self.porcentaje = porcentaje
+        self.texto_descriptivo = texto_descriptivo
 
     def inicializar(self):
         """
@@ -68,7 +70,7 @@ class Indicador:
                         dbc.Button("Ver más", 
                                     id=f"modal-open-{self.id}", 
                                     style={
-                                        "background-color": 'rgb(150, 79, 71)', 
+                                        "background-color": NEGRO, 
                                         "border-color": "#FFFFFF", 
                                         "color": "#FFFFFF", 
                                         "font-family": self.LETRA_DEFAULT
@@ -85,15 +87,20 @@ class Indicador:
             ),
             dbc.Modal(
                     [
-                        
-                        dbc.ModalBody(
-                            dcc.Graph(id=f"modal-graph-{self.id}"),
-                        ),
+                        dbc.ModalHeader(html.H4(html.Strong(self.titulo_grafico), style = {"font-family": self.LETRA_DEFAULT}, className="text-dark text-center"), ),
+                        dbc.ModalBody([
+                            dbc.Row(dbc.Col(html.P(self.texto_descriptivo,className="text-dark" ))),
+                            dcc.Graph(id=f"modal-graph-{self.id}")                            
+                    ]),
                         dbc.ModalFooter(
                             dbc.Button("Volver atrás", 
                                         id=f"modal-close-{self.id}", 
-                                        color="light",style={"background-color": NARANJA, "border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": "Arial"},  
-                                        className="mx-auto"), className="text-center", style={"background-color": "none","border": "none", "color": "none"}
+                                        color="light",style={"background-color": NEGRO, "border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": self.LETRA_DEFAULT},  
+                                        className="mx-auto"), className="text-center", 
+                                        style={
+                                            "background-color": "#FFFFFF" ,
+                                            "border": "none", 
+                                            "color": "none"}
                         ),
                     ],
                     id=f"modal-{self.id}",

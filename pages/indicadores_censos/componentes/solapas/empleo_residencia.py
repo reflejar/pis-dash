@@ -1,7 +1,7 @@
 
-from dash import dash, html, dcc, Input, Output, State, callback
+from dash import html
 import dash_bootstrap_components as dbc
-from ..colores import NARANJA, VERDE
+from ..constantes import *
 from ..indicadores import Indicador
 
 from ...data import *
@@ -16,8 +16,9 @@ indicadores = [
         x="Año del censo",
         y='Cantidad de personas',
         z='Sexo de nacimiento',
-        colores=[NARANJA, VERDE],
-        hover='Cantidad de Residentes: %{y}<br>Año del censo: %{x}'
+        colores=[NARANJA, VERDE_AGUA],
+        hover='Cantidad de Residentes: %{y}<br>Año del censo: %{x}',
+        texto_descriptivo=TEXTO_RESIDENTES_SEXO
     ),      
     Indicador(
         id_indicador="evolucion-empleo",
@@ -27,7 +28,8 @@ indicadores = [
         x="Año del censo",
         y='Empleo',
         colores=[NARANJA],
-        hover='Cantidad de personas empleadas: %{y}<br>Año del censo: %{x}'
+        hover='Cantidad de personas empleadas: %{y}<br>Año del censo: %{x}',
+        texto_descriptivo=TEXTO_VARIACION_EMPLEO
     ),          
           
 ]
@@ -38,9 +40,10 @@ indicadores = [
 Empleo = html.Div([
             dbc.Row([
                 html.H6('Empleo y Residencia', style={'font-size': '25px', 'color': NARANJA}),
-                html.P("""En esta sección se muestra.....Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. """, className="text-white"),
+                html.P("""
+                       ¿Qué sucedió con la residencia y los puestos de trabajo de los y 
+                       las trabajadoras del campo en estos años de fuerte industrialización de la agricultura y concentración de la tierra? 
+                       """, className="text-white"),
                 ]),
             dbc.Row([dbc.Col(i.inicializar(), sm=12, md=6, xl=4) for i in indicadores], class_name="mt-5"),    
         ], className="mt-5")         

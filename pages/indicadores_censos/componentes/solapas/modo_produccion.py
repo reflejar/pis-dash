@@ -1,7 +1,7 @@
-from dash import dash, html, dcc, Input, State, Output, callback
+from dash import html
 import dash_bootstrap_components as dbc
 # from .tipo_cultivo_ha import CULTIVOS_HA
-from ..colores import VERDE, MARRON, NARANJA, GRIS
+from ..constantes import *
 
 from ..indicadores import Indicador
 from ...data import df_ha_tipo_cultivo
@@ -16,18 +16,23 @@ indicadores = [
         y='HA de EAPs',
         y_titulo = 'Héctáreas implantadas (en miles)',
         z='Tipo de cultivo',
-        colores=[VERDE, MARRON, NARANJA, GRIS ],
-        hover='Hectareas cultivadas: %{y} mil<br>Año del censo: %{x}'
+        colores=[CELESTE, LIMA, NARANJA, LILA ],
+        hover='Hectareas cultivadas: %{y} mil<br>Año del censo: %{x}',
+        texto_descriptivo = TEXTO_HA_TIPO_CULTIVO
     ),      
 ]
 
 
 Produccion = html.Div([
             dbc.Row([
-                html.H6('Modo de producción', style={'font-size': '25px', 'color': VERDE}),
-                html.P("""En esta sección se muestra.....Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. """, className="text-white"),
+                html.H6('Modo de producción', style={'font-size': '25px', 'color': LIMA}),
+                html.P("""
+                       Según el CNA2018 los cultivos en Argentina estan categorizados de la siguiente manera: 
+                       cereales, oleaginosas, legumbres, cultivos industriales, forrajeras anuales y perennes, frutales, y 
+                       bosques y montes implantados. La razón por la cual se analizaran sólo cereales (maíz y trigo pan), 
+                       oleaginosas (soja) y forrajeras es debido a la gran cantidad de superficie que ocupan ya que son cultivos 
+                       destinados a exportación y a ganadería.
+                        """, className="text-white"),
                 ]),
             dbc.Row([dbc.Col(i.inicializar(), sm=12, md=6, xl=4) for i in indicadores], class_name="mt-5"),    
         ], className="mt-5")         
