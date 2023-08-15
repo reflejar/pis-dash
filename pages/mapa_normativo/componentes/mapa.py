@@ -9,6 +9,7 @@ import geopandas as gpd
 import json
 import pandas as pd
 
+from .colores import *
 
 from ..data import (
     cursos_geojson,
@@ -66,7 +67,7 @@ MapaNormativo = html.Div(
                         zoomToBoundsOnClick=True,                       
                         hoverStyle=arrow_function(HOVER_STYLE),
                         options=dict(onEachFeature=ns("on_each_feature"),
-                        style={"color":"#8c0d22","weight":2,"fillOpacity":0.3}))
+                        style={"color": ZONA_AMORTIGUAMIENTO ,"weight":2,"fillOpacity":0.3}))
                 ]), 
                 id="pane_amort"
             ),
@@ -80,7 +81,7 @@ MapaNormativo = html.Div(
                         zoomToBoundsOnClick=True,                       
                         hoverStyle=arrow_function(HOVER_STYLE),
                         options=dict(onEachFeature=ns("on_each_feature"),
-                        style={"color":"#8c0d22","weight":2,"fillOpacity":0.3}))
+                        style={"color": ZONA_EXCLUSIÓN ,"weight":2,"fillOpacity":0.3}))
                 ]), 
                 id="pane_excl"
             ),
@@ -197,7 +198,7 @@ MapaNormativo = html.Div(
                         zoomToBoundsOnClick=True,
                         hoverStyle=arrow_function(HOVER_STYLE),
                         options=dict(onEachFeature=ns("on_each_feature"),
-                        style={"color":"#134dab","weight":2,"fillOpacity":0.3}))
+                        style={"color": CURSOS_CUERPOS_AGUA ,"weight":2,"fillOpacity":0.3}))
                 ]), 
                 id="pane_cursos"
             ),
@@ -210,7 +211,7 @@ MapaNormativo = html.Div(
                         zoomToBoundsOnClick=True,
                         hoverStyle=arrow_function(HOVER_STYLE),
                         options=dict(onEachFeature=ns("on_each_feature"),
-                        style={"color":"#134dab","weight":2,"fillOpacity":0.3}))
+                        style={"color": CURSOS_CUERPOS_AGUA ,"weight":2,"fillOpacity":0.3}))
                 ]),
                 id="pane_cuerpos"
             ),            
@@ -223,7 +224,7 @@ MapaNormativo = html.Div(
                         zoomToBoundsOnClick=True,
                         hoverStyle=arrow_function(HOVER_STYLE),
                         options=dict(onEachFeature=ns("on_each_feature"),
-                        style={"color":"purple","weight":2,"fillOpacity":0.4}))
+                        style={"color": LOCALIDADES ,"weight":2,"fillOpacity":0.4}))
                 ]), 
                 id="pane_localidades"
             ),
@@ -235,7 +236,7 @@ MapaNormativo = html.Div(
                         zoomToBoundsOnClick=True,
                         hoverStyle=arrow_function(HOVER_STYLE),
                         options=dict(onEachFeature=ns("on_each_feature"),
-                        style={"color":"#06660b","weight":2,"fillOpacity":0.3}))
+                        style={"color":RESERVAS ,"weight":2,"fillOpacity":0.3}))
                 ]), 
                 id="pane_reservas"),
             dl.Pane(
@@ -247,7 +248,7 @@ MapaNormativo = html.Div(
                         zoomToBoundsOnClick=True,
                         hoverStyle=arrow_function(HOVER_STYLE),
                         options=dict(onEachFeature=ns("on_each_feature"),
-                        style={"color":"#cfc817","weight":3,"fillOpacity":0.4}))
+                        style={"color":ESCUELAS,"weight":3,"fillOpacity":0.4}))
                 ]), 
                 id="pane_escuelas"
             ),            
