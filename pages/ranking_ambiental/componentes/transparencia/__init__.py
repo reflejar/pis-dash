@@ -8,9 +8,6 @@ Transparencia = html.Div([
             dbc.Row([
                 html.Br(),
                 html.Br(),
-                html.P("""En esta sección se muestra.....Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. """, className="text-white"),
                 html.Br(),
                 html.Br(),
                 html.Br(),
