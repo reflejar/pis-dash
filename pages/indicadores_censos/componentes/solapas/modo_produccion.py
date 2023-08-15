@@ -16,7 +16,7 @@ indicadores = [
         y='HA de EAPs',
         y_titulo = 'Héctáreas implantadas (en miles)',
         z='Tipo de cultivo',
-        colores=[CELESTE, LIMA, NARANJA, LILA ],
+        colores=[LILA, LIMA, NARANJA, CELESTE ],
         hover='Hectareas cultivadas: %{y} mil<br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_TIPO_CULTIVO
     ),      
@@ -27,7 +27,7 @@ Produccion = html.Div([
             dbc.Row([
                 html.H6('Modo de producción', style={'font-size': '25px', 'color': LIMA}),
                 html.P("""
-                       Según el CNA2018 los cultivos en Argentina estan categorizados de la siguiente manera: 
+                       Según el CNA 2018 los cultivos en Argentina estan categorizados de la siguiente manera: 
                        cereales, oleaginosas, legumbres, cultivos industriales, forrajeras anuales y perennes, frutales, y 
                        bosques y montes implantados. La razón por la cual se analizaran sólo cereales (maíz y trigo pan), 
                        oleaginosas (soja) y forrajeras es debido a la gran cantidad de superficie que ocupan ya que son cultivos 

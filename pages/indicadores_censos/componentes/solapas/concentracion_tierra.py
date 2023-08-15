@@ -92,7 +92,7 @@ indicadores = [
         x='Sexo',
         y='Cantidad de EAPs',
         colores=[LILA, LIMA],
-        hover='Cantidad de Hectareas: %{y:.0f} ha<br>Sexo: %{x}',
+        #hover='Cantidad de Hectareas: %{y} ha<br>Sexo: %{x}',
         texto_descriptivo= TEXTO_EAPS_SEXO
     ),                
 ]

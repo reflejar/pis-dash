@@ -24,5 +24,5 @@ TEXTO_HA_TIPO_CULTIVO = 'falta textooooooo'
 
 # TEXTOS DESCRIPTIVOS EMPLEO Y RESIDENCIA
 
-TEXTO_RESIDENTES_SEXO= 'Muestra la cantidad de mujeres y de varones que residen en el campo según el año en que se realizó el Censo Nacional Agropecuario.'
+TEXTO_RESIDENTES_SEXO= 'Muestra la cantidad de Mujeres y de Varones que residen en el campo según el año en que se realizó el Censo Nacional Agropecuario.'
 TEXTO_VARIACION_EMPLEO = 'Muestra la variación del empleo permanente en el campo entre cada año en que se realizó el Censo Nacional Agropecuario.'
