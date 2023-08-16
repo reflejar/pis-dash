@@ -1,21 +1,30 @@
 ############################
 ### Se inicia Flask
 ############################
-from flask import Flask
+from flask import Flask, request, redirect
 server = Flask(__name__)
+import dash
 
 # Se incorporan endpoints necesarios para k8s
 @server.route('/')
-def readiness(): return """
-    <h1><a href="/mapa-normativo">Mapa normativo</a></h1>
-    <h1><a href="/indicadores-censo">Indicadores censo</a></h1>
-    <h1><a href="/ranking-ambiental">Ranking</a></h1>
-""", 200 
+def index(): 
+    host = request.headers['Host']
+    if not 'localhost' in host:
+        return redirect({
+             'normativo': '/mapa-normativo',
+             'censo': '/indicadores-censo',
+             'ranking': '/ranking-ambiental'
+        }[host.split(".")[0]])
+    return """
+            <h1><a href="/mapa-normativo">Mapa normativo</a></h1>
+            <h1><a href="/indicadores-censo">Indicadores censo</a></h1>
+            <h1><a href="/ranking-ambiental">Ranking</a></h1>
+        """, 200 
 
 ############################
 ### Se inicia Dash
 ############################
-import dash
+
 import dash_bootstrap_components as dbc
 from dash import html
 
@@ -42,31 +51,40 @@ dash.register_page(mapa_normativo.__name__, title="PIS | Mapa Normativo", path='
 dash.register_page(ranking_ambiental.__name__, title="PIS | Ranking Ambiental", path='/ranking-ambiental', layout=ranking_ambiental.layout)
 dash.register_page(indicadores_censos.__name__, title="PIS | Censo Nacional Agropecuario", path='/indicadores-censo', layout=indicadores_censos.layout)
 
+ISOLOGOTIPO = html.Img(src="assets/img/PIS_isologo_negro.png", alt="Isotipo de PIS", height="70px")
 
 # Se agregan los componentes de la web
 app.layout = html.Div(children=[
+    dbc.Navbar(
+        dbc.Container(
+            [
+                html.A(ISOLOGOTIPO),
+                dbc.Nav([html.A("Volver a PIS", href="https://pis.org.ar", className="btn text-uppercase")]),
+            ],
+        ),
+        fixed="top",
+        className="text-primary",
+    ),
 	dash.page_container,
 	html.Footer([
-    dbc.Container([
-        dbc.Row([
-            dbc.Col([
-                html.Div(
+        dbc.Container([
+            dbc.Row([
+                dbc.Col(dbc.Row(
                     [
-                        html.A(html.I(className="bi bi-twitter"), href="https://twitter.com/fundacionDER",target="_blank", className="btn mx-3 btn-lg btn-floating"),
-                        html.A(html.I(className="bi bi-instagram"), href="https://www.instagram.com/democraciaenred/",target="_blank", className="btn mx-3 btn-lg btn-floating"),
-                        html.A(html.I(className="bi bi-facebook"), href="https://www.facebook.com/democraciaenred",target="_blank", className="btn mx-3 btn-lg btn-floating"),
-                        html.A(html.I(className="bi bi-linkedin"), href="https://www.linkedin.com/company/democracia-en-red/",target="_blank", className="btn mx-3 btn-lg btn-floating"),
-                    ],
-                    className="text-center"
-                )
-            ],
-            md=12),
-        ]),
-    ])
-    ],
-    className="text-white position-relative pb-5",
-    id="footer"
-)
+                    dbc.Col(ISOLOGOTIPO, lg=2), 
+                    dbc.Col([
+                        "PIS es un proyecto de ", html.A("Democracia en Red", target="_blank", href="https://democraciaenred.org"), ",", html.Br(),
+                        "una ONG con base en Buenos Aires, Argentina."
+                    ], lg=10)
+                ]
+                ),lg=6),
+                dbc.Col(html.A("Explorá las demás herramientas", href="https://pis.org.ar", className="btn btn-outline-light text-uppercase"), class_name="text-end", lg=6),
+            ]),
+        ])
+        ],
+        className="text-white position-relative py-4",
+        id="footer"
+    )
 
 
 ])
