@@ -32,7 +32,15 @@ indicadores = [
         colores=[LILA, LIMA],
         hover='Hectareas cultivadas: %{y} <br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_BOSQUES
-    ),  
+    ), 
+    # Indicador(
+    #     id_indicador="eaps-practicas-organicas",
+    #     df=df_cultivado_bosques,
+    #     tipo_grafico="gauge",
+    #     titulo_grafico="Bosques y Montes Naturales (ha)" ,
+    #     y='HA de EAPs',
+    #     texto_descriptivo = TEXTO_HA_BOSQUES
+    # ),  
 ]
 
 

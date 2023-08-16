@@ -2,6 +2,7 @@ import dash_bootstrap_components as dbc
 from dash import dash, html, dcc, Input, Output, State, callback
 from dash_loading_spinners import Hash
 import plotly.express as px
+import plotly.graph_objects as go
 import textwrap
 
 
@@ -145,6 +146,13 @@ class Indicador:
             values=self.y_var, 
             names=self.x_var, 
             color_discrete_sequence=self.colores
+        )
+    
+    def gauge(self):
+        return go.Indicator(
+            mode = "gauge+number",
+            value=self.y_var, 
+            title = self.titulo_grafico
         )
 
     def actualizar(self, partido):
