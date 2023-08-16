@@ -1,0 +1,823 @@
+;HA de EAPs;Año del censo;Partido;Tipo de suelo
+0;603.345;2018;Provincia de Buenos Aires;Bosques y Montes Naturales
+1;0.98;2018;Adolfo Alsina;Bosques y Montes Naturales
+2;0.284;2018;Adolfo Gonzales Chaves;Bosques y Montes Naturales
+3;0.165;2018;Alberti;Bosques y Montes Naturales
+4;0.0;2018;Almirante Brown;Bosques y Montes Naturales
+5;0.053;2018;Arrecifes;Bosques y Montes Naturales
+6;0.0;2018;Avellaneda;Bosques y Montes Naturales
+7;0.065;2018;Ayacucho;Bosques y Montes Naturales
+8;0.229;2018;Azul;Bosques y Montes Naturales
+9;3.569;2018;Bahía Blanca;Bosques y Montes Naturales
+10;1.086;2018;Balcarce;Bosques y Montes Naturales
+11;0.378;2018;Baradero;Bosques y Montes Naturales
+12;1.665;2018;Benito Juárez;Bosques y Montes Naturales
+13;0.005;2018;Berazategui;Bosques y Montes Naturales
+14;0.043;2018;Berisso;Bosques y Montes Naturales
+15;6.529;2018;Bolívar;Bosques y Montes Naturales
+16;0.324;2018;Bragado;Bosques y Montes Naturales
+17;0.118;2018;Brandsen;Bosques y Montes Naturales
+18;0.077;2018;Campana;Bosques y Montes Naturales
+19;0.208;2018;Cañuelas;Bosques y Montes Naturales
+20;0.207;2018;Capitán Sarmiento;Bosques y Montes Naturales
+21;0.614;2018;Carlos Casares;Bosques y Montes Naturales
+22;0.037;2018;Carlos Tejedor;Bosques y Montes Naturales
+23;5.333;2018;Carmen de Areco;Bosques y Montes Naturales
+24;0.057;2018;Castelli;Bosques y Montes Naturales
+25;0.345;2018;Chacabuco;Bosques y Montes Naturales
+26;0.501;2018;Chascomús;Bosques y Montes Naturales
+27;0.819;2018;Chivilcoy;Bosques y Montes Naturales
+28;0.111;2018;Colón;Bosques y Montes Naturales
+29;0.306;2018;Coronel de Marina Leonardo Rosales;Bosques y Montes Naturales
+30;0.122;2018;Coronel Dorrego;Bosques y Montes Naturales
+31;0.106;2018;Coronel Pringles;Bosques y Montes Naturales
+32;0.4;2018;Coronel Suárez;Bosques y Montes Naturales
+33;1.141;2018;Daireaux;Bosques y Montes Naturales
+34;0.6;2018;Dolores;Bosques y Montes Naturales
+35;0.0;2018;Ensenada;Bosques y Montes Naturales
+36;0.463;2018;Escobar;Bosques y Montes Naturales
+37;0.037;2018;Esteban Echeverría;Bosques y Montes Naturales
+38;0.316;2018;Exaltación de la Cruz;Bosques y Montes Naturales
+39;0.492;2018;Ezeiza;Bosques y Montes Naturales
+40;0.001;2018;Florencio Varela;Bosques y Montes Naturales
+41;0.118;2018;Florentino Ameghino;Bosques y Montes Naturales
+42;0.374;2018;General Alvarado;Bosques y Montes Naturales
+43;0.614;2018;General Alvear;Bosques y Montes Naturales
+44;0.01;2018;General Arenales;Bosques y Montes Naturales
+45;0.067;2018;General Belgrano;Bosques y Montes Naturales
+46;0.067;2018;General Guido;Bosques y Montes Naturales
+47;0.46;2018;General Juan Madariaga;Bosques y Montes Naturales
+48;0.046;2018;General La Madrid;Bosques y Montes Naturales
+49;0.149;2018;General Las Heras;Bosques y Montes Naturales
+50;0.646;2018;General Lavalle;Bosques y Montes Naturales
+51;0.054;2018;General Paz;Bosques y Montes Naturales
+52;0.2;2018;General Pinto;Bosques y Montes Naturales
+53;0.529;2018;General Pueyrredón;Bosques y Montes Naturales
+54;0.0;2018;General Rodríguez;Bosques y Montes Naturales
+55;0.0;2018;General San Martín;Bosques y Montes Naturales
+56;1.032;2018;General Viamonte;Bosques y Montes Naturales
+57;0.576;2018;General Villegas;Bosques y Montes Naturales
+58;0.281;2018;Guaminí;Bosques y Montes Naturales
+59;0.439;2018;Hipólito Yrigoyen;Bosques y Montes Naturales
+60;0.003;2018;Hurlingham;Bosques y Montes Naturales
+61;0.0;2018;Ituzaingó;Bosques y Montes Naturales
+62;0.001;2018;José C, Paz;Bosques y Montes Naturales
+63;0.441;2018;Junín;Bosques y Montes Naturales
+64;0.0;2018;La Costa;Bosques y Montes Naturales
+65;0.008;2018;La Matanza;Bosques y Montes Naturales
+66;0.0;2018;Lanús;Bosques y Montes Naturales
+67;0.124;2018;La Plata;Bosques y Montes Naturales
+68;0.253;2018;Laprida;Bosques y Montes Naturales
+69;0.94;2018;Las Flores;Bosques y Montes Naturales
+70;0.162;2018;Leandro N, Alem;Bosques y Montes Naturales
+71;0.2;2018;Lezama;Bosques y Montes Naturales
+72;2.053;2018;Lincoln;Bosques y Montes Naturales
+73;1.11;2018;Lobería;Bosques y Montes Naturales
+74;0.444;2018;Lobos;Bosques y Montes Naturales
+75;0.09;2018;Lomas de Zamora;Bosques y Montes Naturales
+76;0.609;2018;Luján;Bosques y Montes Naturales
+77;1.125;2018;Magdalena;Bosques y Montes Naturales
+78;0.213;2018;Maipú;Bosques y Montes Naturales
+79;0.0;2018;Malvinas Argentinas;Bosques y Montes Naturales
+80;0.631;2018;Mar Chiquita;Bosques y Montes Naturales
+81;0.042;2018;Marcos Paz;Bosques y Montes Naturales
+82;0.544;2018;Mercedes;Bosques y Montes Naturales
+83;0.005;2018;Merlo;Bosques y Montes Naturales
+84;0.209;2018;Monte;Bosques y Montes Naturales
+85;0.012;2018;Monte Hermoso;Bosques y Montes Naturales
+86;0.0;2018;Moreno;Bosques y Montes Naturales
+87;0.0;2018;Morón;Bosques y Montes Naturales
+88;0.224;2018;Navarro;Bosques y Montes Naturales
+89;0.344;2018;Necochea;Bosques y Montes Naturales
+90;0.806;2018;9 de julio;Bosques y Montes Naturales
+91;0.472;2018;Olavarría;Bosques y Montes Naturales
+92;312.39;2018;Patagones;Bosques y Montes Naturales
+93;0.298;2018;Pehuajó;Bosques y Montes Naturales
+94;0.379;2018;Pellegrini;Bosques y Montes Naturales
+95;0.437;2018;Pergamino;Bosques y Montes Naturales
+96;0.079;2018;Pila;Bosques y Montes Naturales
+97;0.048;2018;Pilar;Bosques y Montes Naturales
+98;0.0;2018;Pinamar;Bosques y Montes Naturales
+99;0.0;2018;Presidente Perón;Bosques y Montes Naturales
+100;43.387;2018;Puán;Bosques y Montes Naturales
+101;1.451;2018;Punta Indio;Bosques y Montes Naturales
+102;0.005;2018;Quilmes;Bosques y Montes Naturales
+103;0.007;2018;Ramallo;Bosques y Montes Naturales
+104;0.603;2018;Rauch;Bosques y Montes Naturales
+105;0.086;2018;Rivadavia;Bosques y Montes Naturales
+106;0.245;2018;Rojas;Bosques y Montes Naturales
+107;0.54;2018;Roque Pérez;Bosques y Montes Naturales
+108;0.664;2018;Saavedra;Bosques y Montes Naturales
+109;1.38;2018;Saladillo;Bosques y Montes Naturales
+110;0.137;2018;Salliqueló;Bosques y Montes Naturales
+111;0.087;2018;Salto;Bosques y Montes Naturales
+112;0.18;2018;San Andrés de Giles;Bosques y Montes Naturales
+113;0.034;2018;San Antonio de Areco;Bosques y Montes Naturales
+114;0.34;2018;San Cayetano;Bosques y Montes Naturales
+115;1.663;2018;San Fernando;Bosques y Montes Naturales
+116;0.0;2018;San Isidro;Bosques y Montes Naturales
+117;0.0;2018;San Miguel;Bosques y Montes Naturales
+118;0.028;2018;San Nicolás;Bosques y Montes Naturales
+119;0.191;2018;San Pedro;Bosques y Montes Naturales
+120;0.0;2018;San Vicente;Bosques y Montes Naturales
+121;0.068;2018;Suipacha;Bosques y Montes Naturales
+122;1.259;2018;Tandil;Bosques y Montes Naturales
+123;0.381;2018;Tapalqué;Bosques y Montes Naturales
+124;0.048;2018;Tigre;Bosques y Montes Naturales
+125;0.0;2018;Tordillo;Bosques y Montes Naturales
+126;1.676;2018;Tornquist;Bosques y Montes Naturales
+127;0.167;2018;Trenque Lauquen;Bosques y Montes Naturales
+128;1.989;2018;Tres Arroyos;Bosques y Montes Naturales
+129;0.0;2018;Tres de Febrero;Bosques y Montes Naturales
+130;0.619;2018;Tres Lomas;Bosques y Montes Naturales
+131;5.662;2018;25 de mayo;Bosques y Montes Naturales
+132;0.0;2018;Vicente López;Bosques y Montes Naturales
+133;0.0;2018;Villa Gesell;Bosques y Montes Naturales
+134;181.847;2018;Villarino;Bosques y Montes Naturales
+135;0.467;2018;Zárate;Bosques y Montes Naturales
+136;793.111;2002;Provincia de Buenos Aires;Bosques y Montes Naturales
+137;0.152;2002;Adolfo Alsina;Bosques y Montes Naturales
+138;0.0;2002;Adolfo Gonzales Chaves;Bosques y Montes Naturales
+139;0.717;2002;Alberti;Bosques y Montes Naturales
+140;0.0;2002;Almirante Brown;Bosques y Montes Naturales
+141;0.541;2002;Arrecifes;Bosques y Montes Naturales
+142;0.011;2002;Avellaneda;Bosques y Montes Naturales
+143;0.03;2002;Ayacucho;Bosques y Montes Naturales
+144;0.024;2002;Azul;Bosques y Montes Naturales
+145;7.666;2002;Bahía Blanca;Bosques y Montes Naturales
+146;1.171;2002;Balcarce;Bosques y Montes Naturales
+147;0.245;2002;Baradero;Bosques y Montes Naturales
+148;0.02;2002;Benito Juárez;Bosques y Montes Naturales
+149;0.007;2002;Berazategui;Bosques y Montes Naturales
+150;0.14;2002;Berisso;Bosques y Montes Naturales
+151;0.959;2002;Bolívar;Bosques y Montes Naturales
+152;0.731;2002;Bragado;Bosques y Montes Naturales
+153;0.115;2002;Brandsen;Bosques y Montes Naturales
+154;0.27;2002;Campana;Bosques y Montes Naturales
+155;0.366;2002;Cañuelas;Bosques y Montes Naturales
+156;0.108;2002;Capitán Sarmiento;Bosques y Montes Naturales
+157;0.424;2002;Carlos Casares;Bosques y Montes Naturales
+158;0.018;2002;Carlos Tejedor;Bosques y Montes Naturales
+159;0.286;2002;Carmen de Areco;Bosques y Montes Naturales
+160;1.353;2002;Castelli;Bosques y Montes Naturales
+161;0.76;2002;Chacabuco;Bosques y Montes Naturales
+162;1.968;2002;Chascomús;Bosques y Montes Naturales
+163;0.996;2002;Chivilcoy;Bosques y Montes Naturales
+164;0.113;2002;Colón;Bosques y Montes Naturales
+165;0.05;2002;Coronel de Marina Leonardo Rosales;Bosques y Montes Naturales
+166;0.627;2002;Coronel Dorrego;Bosques y Montes Naturales
+167;0.037;2002;Coronel Pringles;Bosques y Montes Naturales
+168;0.142;2002;Coronel Suárez;Bosques y Montes Naturales
+169;0.126;2002;Daireaux;Bosques y Montes Naturales
+170;1.345;2002;Dolores;Bosques y Montes Naturales
+171;0.01;2002;Ensenada;Bosques y Montes Naturales
+172;0.003;2002;Escobar;Bosques y Montes Naturales
+173;0.002;2002;Esteban Echeverría;Bosques y Montes Naturales
+174;0.243;2002;Exaltación de la Cruz;Bosques y Montes Naturales
+175;0.0;2002;Ezeiza;Bosques y Montes Naturales
+176;0.002;2002;Florencio Varela;Bosques y Montes Naturales
+177;0.659;2002;Florentino Ameghino;Bosques y Montes Naturales
+178;0.015;2002;General Alvarado;Bosques y Montes Naturales
+179;2.245;2002;General Alvear;Bosques y Montes Naturales
+180;0.413;2002;General Arenales;Bosques y Montes Naturales
+181;0.094;2002;General Belgrano;Bosques y Montes Naturales
+182;0.213;2002;General Guido;Bosques y Montes Naturales
+183;4.83;2002;General Juan Madariaga;Bosques y Montes Naturales
+184;0.02;2002;General La Madrid;Bosques y Montes Naturales
+185;0.039;2002;General Las Heras;Bosques y Montes Naturales
+186;2.754;2002;General Lavalle;Bosques y Montes Naturales
+187;0.03;2002;General Paz;Bosques y Montes Naturales
+188;0.583;2002;General Pinto;Bosques y Montes Naturales
+189;0.473;2002;General Pueyrredón;Bosques y Montes Naturales
+190;0.437;2002;General Rodríguez;Bosques y Montes Naturales
+191;0.0;2002;General San Martín;Bosques y Montes Naturales
+192;0.819;2002;General Viamonte;Bosques y Montes Naturales
+193;0.129;2002;General Villegas;Bosques y Montes Naturales
+194;0.814;2002;Guaminí;Bosques y Montes Naturales
+195;0.488;2002;Hipólito Yrigoyen;Bosques y Montes Naturales
+196;0.0;2002;Hurlingham;Bosques y Montes Naturales
+197;0.0;2002;Ituzaingó;Bosques y Montes Naturales
+198;0.001;2002;José C, Paz;Bosques y Montes Naturales
+199;0.695;2002;Junín;Bosques y Montes Naturales
+200;0.06;2002;La Costa;Bosques y Montes Naturales
+201;0.086;2002;La Matanza;Bosques y Montes Naturales
+202;0.0;2002;Lanús;Bosques y Montes Naturales
+203;0.119;2002;La Plata;Bosques y Montes Naturales
+204;0.216;2002;Laprida;Bosques y Montes Naturales
+205;0.061;2002;Las Flores;Bosques y Montes Naturales
+206;0.021;2002;Leandro N, Alem;Bosques y Montes Naturales
+207;0.0;2002;Lezama;Bosques y Montes Naturales
+208;0.126;2002;Lincoln;Bosques y Montes Naturales
+209;0.194;2002;Lobería;Bosques y Montes Naturales
+210;0.727;2002;Lobos;Bosques y Montes Naturales
+211;0.025;2002;Lomas de Zamora;Bosques y Montes Naturales
+212;0.071;2002;Luján;Bosques y Montes Naturales
+213;2.338;2002;Magdalena;Bosques y Montes Naturales
+214;0.911;2002;Maipú;Bosques y Montes Naturales
+215;0.0;2002;Malvinas Argentinas;Bosques y Montes Naturales
+216;0.249;2002;Mar Chiquita;Bosques y Montes Naturales
+217;0.12;2002;Marcos Paz;Bosques y Montes Naturales
+218;0.262;2002;Mercedes;Bosques y Montes Naturales
+219;0.004;2002;Merlo;Bosques y Montes Naturales
+220;1.084;2002;Monte;Bosques y Montes Naturales
+221;0.0;2002;Monte Hermoso;Bosques y Montes Naturales
+222;0.0;2002;Moreno;Bosques y Montes Naturales
+223;0.0;2002;Morón;Bosques y Montes Naturales
+224;0.348;2002;Navarro;Bosques y Montes Naturales
+225;0.093;2002;Necochea;Bosques y Montes Naturales
+226;0.73;2002;9 de julio;Bosques y Montes Naturales
+227;0.616;2002;Olavarría;Bosques y Montes Naturales
+228;504.685;2002;Patagones;Bosques y Montes Naturales
+229;4.243;2002;Pehuajó;Bosques y Montes Naturales
+230;0.553;2002;Pellegrini;Bosques y Montes Naturales
+231;0.885;2002;Pergamino;Bosques y Montes Naturales
+232;0.318;2002;Pila;Bosques y Montes Naturales
+233;0.0;2002;Pilar;Bosques y Montes Naturales
+234;0.0;2002;Pinamar;Bosques y Montes Naturales
+235;0.0;2002;Presidente Perón;Bosques y Montes Naturales
+236;34.553;2002;Puán;Bosques y Montes Naturales
+237;1.931;2002;Punta Indio;Bosques y Montes Naturales
+238;0.0;2002;Quilmes;Bosques y Montes Naturales
+239;0.219;2002;Ramallo;Bosques y Montes Naturales
+240;0.269;2002;Rauch;Bosques y Montes Naturales
+241;0.053;2002;Rivadavia;Bosques y Montes Naturales
+242;0.441;2002;Rojas;Bosques y Montes Naturales
+243;1.473;2002;Roque Pérez;Bosques y Montes Naturales
+244;0.022;2002;Saavedra;Bosques y Montes Naturales
+245;0.704;2002;Saladillo;Bosques y Montes Naturales
+246;0.015;2002;Salliqueló;Bosques y Montes Naturales
+247;0.135;2002;Salto;Bosques y Montes Naturales
+248;0.203;2002;San Andrés de Giles;Bosques y Montes Naturales
+249;0.151;2002;San Antonio de Areco;Bosques y Montes Naturales
+250;0.03;2002;San Cayetano;Bosques y Montes Naturales
+251;0.014;2002;San Fernando;Bosques y Montes Naturales
+252;0.0;2002;San Isidro;Bosques y Montes Naturales
+253;0.0;2002;San Miguel;Bosques y Montes Naturales
+254;0.015;2002;San Nicolás;Bosques y Montes Naturales
+255;0.37;2002;San Pedro;Bosques y Montes Naturales
+256;0.305;2002;San Vicente;Bosques y Montes Naturales
+257;0.334;2002;Suipacha;Bosques y Montes Naturales
+258;0.222;2002;Tandil;Bosques y Montes Naturales
+259;0.25;2002;Tapalqué;Bosques y Montes Naturales
+260;0.016;2002;Tigre;Bosques y Montes Naturales
+261;0.04;2002;Tordillo;Bosques y Montes Naturales
+262;8.327;2002;Tornquist;Bosques y Montes Naturales
+263;0.607;2002;Trenque Lauquen;Bosques y Montes Naturales
+264;0.0;2002;Tres Arroyos;Bosques y Montes Naturales
+265;0.0;2002;Tres de Febrero;Bosques y Montes Naturales
+266;0.125;2002;Tres Lomas;Bosques y Montes Naturales
+267;1.325;2002;25 de mayo;Bosques y Montes Naturales
+268;0.0;2002;Vicente López;Bosques y Montes Naturales
+269;0.0;2002;Villa Gesell;Bosques y Montes Naturales
+270;183.76;2002;Villarino;Bosques y Montes Naturales
+271;0.544;2002;Zárate;Bosques y Montes Naturales
+272;0.0;1988;Provincia de Buenos Aires;Bosques y Montes Naturales
+273;0.0;1988;Adolfo Alsina;Bosques y Montes Naturales
+274;0.0;1988;Adolfo Gonzales Chaves;Bosques y Montes Naturales
+275;0.0;1988;Alberti;Bosques y Montes Naturales
+276;0.0;1988;Almirante Brown;Bosques y Montes Naturales
+277;0.0;1988;Arrecifes;Bosques y Montes Naturales
+278;0.0;1988;Avellaneda;Bosques y Montes Naturales
+279;0.0;1988;Ayacucho;Bosques y Montes Naturales
+280;0.0;1988;Azul;Bosques y Montes Naturales
+281;0.0;1988;Bahía Blanca;Bosques y Montes Naturales
+282;0.0;1988;Balcarce;Bosques y Montes Naturales
+283;0.0;1988;Baradero;Bosques y Montes Naturales
+284;0.0;1988;Bartolomé Mitre;Bosques y Montes Naturales
+285;0.0;1988;Benito Juárez;Bosques y Montes Naturales
+286;0.0;1988;Berazategui;Bosques y Montes Naturales
+287;0.0;1988;Berisso;Bosques y Montes Naturales
+288;0.0;1988;Bolívar;Bosques y Montes Naturales
+289;0.0;1988;Bragado;Bosques y Montes Naturales
+290;0.0;1988;Brandsen;Bosques y Montes Naturales
+291;0.0;1988;Campana;Bosques y Montes Naturales
+292;0.0;1988;Cañuelas;Bosques y Montes Naturales
+293;0.0;1988;Capitán Sarmiento;Bosques y Montes Naturales
+294;0.0;1988;Carlos Casares;Bosques y Montes Naturales
+295;0.0;1988;Carlos Tejedor;Bosques y Montes Naturales
+296;0.0;1988;Carmen de Areco;Bosques y Montes Naturales
+297;0.0;1988;Castelli;Bosques y Montes Naturales
+298;0.0;1988;Chacabuco;Bosques y Montes Naturales
+299;0.0;1988;Chascomús;Bosques y Montes Naturales
+300;0.0;1988;Chivilcoy;Bosques y Montes Naturales
+301;0.0;1988;Colón;Bosques y Montes Naturales
+302;0.0;1988;Coronel de Marina Leonardo Rosales;Bosques y Montes Naturales
+303;0.0;1988;Coronel Dorrego;Bosques y Montes Naturales
+304;0.0;1988;Coronel Pringles;Bosques y Montes Naturales
+305;0.0;1988;Coronel Suárez;Bosques y Montes Naturales
+306;0.0;1988;Daireaux;Bosques y Montes Naturales
+307;0.0;1988;Dolores;Bosques y Montes Naturales
+308;0.0;1988;Ensenada;Bosques y Montes Naturales
+309;0.0;1988;Escobar;Bosques y Montes Naturales
+310;0.0;1988;Esteban Echeverría;Bosques y Montes Naturales
+311;0.0;1988;Exaltación de la Cruz;Bosques y Montes Naturales
+312;0.0;1988;Ezeiza;Bosques y Montes Naturales
+313;0.0;1988;Florencio Varela;Bosques y Montes Naturales
+314;0.0;1988;Florentino Ameghino;Bosques y Montes Naturales
+315;0.0;1988;General Alvarado;Bosques y Montes Naturales
+316;0.0;1988;General Alvear;Bosques y Montes Naturales
+317;0.0;1988;General Arenales;Bosques y Montes Naturales
+318;0.0;1988;General Belgrano;Bosques y Montes Naturales
+319;0.0;1988;General Guido;Bosques y Montes Naturales
+320;0.0;1988;General Juan Madariaga;Bosques y Montes Naturales
+321;0.0;1988;General La Madrid;Bosques y Montes Naturales
+322;0.0;1988;General Las Heras;Bosques y Montes Naturales
+323;0.0;1988;General Lavalle;Bosques y Montes Naturales
+324;0.0;1988;General Paz;Bosques y Montes Naturales
+325;0.0;1988;General Pinto;Bosques y Montes Naturales
+326;0.0;1988;General Pueyrredón;Bosques y Montes Naturales
+327;0.0;1988;General Rodríguez;Bosques y Montes Naturales
+328;0.0;1988;General San Martín;Bosques y Montes Naturales
+329;0.0;1988;General Sarmiento;Bosques y Montes Naturales
+330;0.0;1988;General Viamonte;Bosques y Montes Naturales
+331;0.0;1988;General Villegas;Bosques y Montes Naturales
+332;0.0;1988;Guaminí;Bosques y Montes Naturales
+333;0.0;1988;Hipólito Yrigoyen;Bosques y Montes Naturales
+334;0.0;1988;Hurlingham;Bosques y Montes Naturales
+335;0.0;1988;Ituzaingó;Bosques y Montes Naturales
+336;0.0;1988;José C, Paz;Bosques y Montes Naturales
+337;0.0;1988;Junín;Bosques y Montes Naturales
+338;0.0;1988;La Costa;Bosques y Montes Naturales
+339;0.0;1988;La Matanza;Bosques y Montes Naturales
+340;0.0;1988;Lanús;Bosques y Montes Naturales
+341;0.0;1988;La Plata;Bosques y Montes Naturales
+342;0.0;1988;Laprida;Bosques y Montes Naturales
+343;0.0;1988;Las Flores;Bosques y Montes Naturales
+344;0.0;1988;Leandro N, Alem;Bosques y Montes Naturales
+345;0.0;1988;Lezama;Bosques y Montes Naturales
+346;0.0;1988;Lincoln;Bosques y Montes Naturales
+347;0.0;1988;Lobería;Bosques y Montes Naturales
+348;0.0;1988;Lobos;Bosques y Montes Naturales
+349;0.0;1988;Lomas de Zamora;Bosques y Montes Naturales
+350;0.0;1988;Luján;Bosques y Montes Naturales
+351;0.0;1988;Magdalena;Bosques y Montes Naturales
+352;0.0;1988;Maipú;Bosques y Montes Naturales
+353;0.0;1988;Malvinas Argentinas;Bosques y Montes Naturales
+354;0.0;1988;Mar Chiquita;Bosques y Montes Naturales
+355;0.0;1988;Marcos Paz;Bosques y Montes Naturales
+356;0.0;1988;Mercedes;Bosques y Montes Naturales
+357;0.0;1988;Merlo;Bosques y Montes Naturales
+358;0.0;1988;Monte;Bosques y Montes Naturales
+359;0.0;1988;Monte Hermoso;Bosques y Montes Naturales
+360;0.0;1988;Moreno;Bosques y Montes Naturales
+361;0.0;1988;Morón;Bosques y Montes Naturales
+362;0.0;1988;Navarro;Bosques y Montes Naturales
+363;0.0;1988;Necochea;Bosques y Montes Naturales
+364;0.0;1988;9 de julio;Bosques y Montes Naturales
+365;0.0;1988;Olavarría;Bosques y Montes Naturales
+366;0.0;1988;Patagones;Bosques y Montes Naturales
+367;0.0;1988;Pehuajó;Bosques y Montes Naturales
+368;0.0;1988;Pellegrini;Bosques y Montes Naturales
+369;0.0;1988;Pergamino;Bosques y Montes Naturales
+370;0.0;1988;Pila;Bosques y Montes Naturales
+371;0.0;1988;Pilar;Bosques y Montes Naturales
+372;0.0;1988;Pinamar;Bosques y Montes Naturales
+373;0.0;1988;Presidente Perón;Bosques y Montes Naturales
+374;0.0;1988;Puán;Bosques y Montes Naturales
+375;0.0;1988;Punta Indio;Bosques y Montes Naturales
+376;0.0;1988;Quilmes;Bosques y Montes Naturales
+377;0.0;1988;Ramallo;Bosques y Montes Naturales
+378;0.0;1988;Rauch;Bosques y Montes Naturales
+379;0.0;1988;Rivadavia;Bosques y Montes Naturales
+380;0.0;1988;Rojas;Bosques y Montes Naturales
+381;0.0;1988;Roque Pérez;Bosques y Montes Naturales
+382;0.0;1988;Saavedra;Bosques y Montes Naturales
+383;0.0;1988;Saladillo;Bosques y Montes Naturales
+384;0.0;1988;Salliqueló;Bosques y Montes Naturales
+385;0.0;1988;Salto;Bosques y Montes Naturales
+386;0.0;1988;San Andrés de Giles;Bosques y Montes Naturales
+387;0.0;1988;San Antonio de Areco;Bosques y Montes Naturales
+388;0.0;1988;San Cayetano;Bosques y Montes Naturales
+389;0.0;1988;San Fernando;Bosques y Montes Naturales
+390;0.0;1988;San Isidro;Bosques y Montes Naturales
+391;0.0;1988;San Miguel;Bosques y Montes Naturales
+392;0.0;1988;San Nicolás;Bosques y Montes Naturales
+393;0.0;1988;San Pedro;Bosques y Montes Naturales
+394;0.0;1988;San Vicente;Bosques y Montes Naturales
+395;0.0;1988;Suipacha;Bosques y Montes Naturales
+396;0.0;1988;Tandil;Bosques y Montes Naturales
+397;0.0;1988;Tapalqué;Bosques y Montes Naturales
+398;0.0;1988;Tigre;Bosques y Montes Naturales
+399;0.0;1988;Tordillo;Bosques y Montes Naturales
+400;0.0;1988;Tornquist;Bosques y Montes Naturales
+401;0.0;1988;Trenque Lauquen;Bosques y Montes Naturales
+402;0.0;1988;Tres Arroyos;Bosques y Montes Naturales
+403;0.0;1988;Tres de Febrero;Bosques y Montes Naturales
+404;0.0;1988;Tres Lomas;Bosques y Montes Naturales
+405;0.0;1988;25 de mayo;Bosques y Montes Naturales
+406;0.0;1988;Vicente López;Bosques y Montes Naturales
+407;0.0;1988;Villa Gesell;Bosques y Montes Naturales
+408;0.0;1988;Villarino;Bosques y Montes Naturales
+409;0.0;1988;Zárate;Bosques y Montes Naturales
+410;0.0;1988;Indeterminado;Bosques y Montes Naturales
+0;22996.321;2018;Provincia de Buenos Aires;Área cultivada
+1;495.623;2018;Adolfo Alsina;Área cultivada
+2;333.883;2018;Adolfo Gonzales Chaves;Área cultivada
+3;85.654;2018;Alberti;Área cultivada
+4;0.845;2018;Almirante Brown;Área cultivada
+5;98.437;2018;Arrecifes;Área cultivada
+6;0.038;2018;Avellaneda;Área cultivada
+7;544.364;2018;Ayacucho;Área cultivada
+8;498.161;2018;Azul;Área cultivada
+9;191.377;2018;Bahía Blanca;Área cultivada
+10;281.84;2018;Balcarce;Área cultivada
+11;92.317;2018;Baradero;Área cultivada
+12;442.981;2018;Benito Juárez;Área cultivada
+13;0.792;2018;Berazategui;Área cultivada
+14;3.741;2018;Berisso;Área cultivada
+15;364.75;2018;Bolívar;Área cultivada
+16;152.533;2018;Bragado;Área cultivada
+17;66.404;2018;Brandsen;Área cultivada
+18;44.236;2018;Campana;Área cultivada
+19;76.569;2018;Cañuelas;Área cultivada
+20;35.916;2018;Capitán Sarmiento;Área cultivada
+21;148.506;2018;Carlos Casares;Área cultivada
+22;225.55;2018;Carlos Tejedor;Área cultivada
+23;65.786;2018;Carmen de Areco;Área cultivada
+24;187.431;2018;Castelli;Área cultivada
+25;149.489;2018;Chacabuco;Área cultivada
+26;249.92;2018;Chascomús;Área cultivada
+27;118.711;2018;Chivilcoy;Área cultivada
+28;68.638;2018;Colón;Área cultivada
+29;85.188;2018;Coronel de Marina Leonardo Rosales;Área cultivada
+30;512.466;2018;Coronel Dorrego;Área cultivada
+31;458.415;2018;Coronel Pringles;Área cultivada
+32;516.511;2018;Coronel Suárez;Área cultivada
+33;336.97;2018;Daireaux;Área cultivada
+34;137.553;2018;Dolores;Área cultivada
+35;0.641;2018;Ensenada;Área cultivada
+36;3.058;2018;Escobar;Área cultivada
+37;0.392;2018;Esteban Echeverría;Área cultivada
+38;45.002;2018;Exaltación de la Cruz;Área cultivada
+39;2.568;2018;Ezeiza;Área cultivada
+40;1.396;2018;Florencio Varela;Área cultivada
+41;154.204;2018;Florentino Ameghino;Área cultivada
+42;139.158;2018;General Alvarado;Área cultivada
+43;272.404;2018;General Alvear;Área cultivada
+44;92.358;2018;General Arenales;Área cultivada
+45;140.843;2018;General Belgrano;Área cultivada
+46;215.368;2018;General Guido;Área cultivada
+47;256.977;2018;General Juan Madariaga;Área cultivada
+48;410.374;2018;General La Madrid;Área cultivada
+49;53.07;2018;General Las Heras;Área cultivada
+50;232.309;2018;General Lavalle;Área cultivada
+51;74.237;2018;General Paz;Área cultivada
+52;190.58;2018;General Pinto;Área cultivada
+53;71.393;2018;General Pueyrredón;Área cultivada
+54;12.825;2018;General Rodríguez;Área cultivada
+55;0.0;2018;General San Martín;Área cultivada
+56;140.928;2018;General Viamonte;Área cultivada
+57;506.359;2018;General Villegas;Área cultivada
+58;443.103;2018;Guaminí;Área cultivada
+59;116.751;2018;Hipólito Yrigoyen;Área cultivada
+60;0.002;2018;Hurlingham;Área cultivada
+61;0.001;2018;Ituzaingó;Área cultivada
+62;0.008;2018;José C, Paz;Área cultivada
+63;147.639;2018;Junín;Área cultivada
+64;3.613;2018;La Costa;Área cultivada
+65;2.905;2018;La Matanza;Área cultivada
+66;0.0;2018;Lanús;Área cultivada
+67;32.117;2018;La Plata;Área cultivada
+68;327.987;2018;Laprida;Área cultivada
+69;244.647;2018;Las Flores;Área cultivada
+70;116.043;2018;Leandro N, Alem;Área cultivada
+71;74.34;2018;Lezama;Área cultivada
+72;508.714;2018;Lincoln;Área cultivada
+73;341.064;2018;Lobería;Área cultivada
+74;119.429;2018;Lobos;Área cultivada
+75;1.192;2018;Lomas de Zamora;Área cultivada
+76;42.996;2018;Luján;Área cultivada
+77;131.264;2018;Magdalena;Área cultivada
+78;218.073;2018;Maipú;Área cultivada
+79;0.014;2018;Malvinas Argentinas;Área cultivada
+80;246.796;2018;Mar Chiquita;Área cultivada
+81;25.093;2018;Marcos Paz;Área cultivada
+82;81.572;2018;Mercedes;Área cultivada
+83;1.891;2018;Merlo;Área cultivada
+84;130.22;2018;Monte;Área cultivada
+85;14.166;2018;Monte Hermoso;Área cultivada
+86;1.085;2018;Moreno;Área cultivada
+87;0.002;2018;Morón;Área cultivada
+88;120.167;2018;Navarro;Área cultivada
+89;342.556;2018;Necochea;Área cultivada
+90;319.423;2018;9 de julio;Área cultivada
+91;662.286;2018;Olavarría;Área cultivada
+92;861.449;2018;Patagones;Área cultivada
+93;392.776;2018;Pehuajó;Área cultivada
+94;142.7;2018;Pellegrini;Área cultivada
+95;205.663;2018;Pergamino;Área cultivada
+96;242.362;2018;Pila;Área cultivada
+97;2.234;2018;Pilar;Área cultivada
+98;0.0;2018;Pinamar;Área cultivada
+99;0.985;2018;Presidente Perón;Área cultivada
+100;495.703;2018;Puán;Área cultivada
+101;145.492;2018;Punta Indio;Área cultivada
+102;0.092;2018;Quilmes;Área cultivada
+103;64.702;2018;Ramallo;Área cultivada
+104;363.425;2018;Rauch;Área cultivada
+105;313.297;2018;Rivadavia;Área cultivada
+106;176.388;2018;Rojas;Área cultivada
+107;107.92;2018;Roque Pérez;Área cultivada
+108;291.576;2018;Saavedra;Área cultivada
+109;169.603;2018;Saladillo;Área cultivada
+110;73.852;2018;Salliqueló;Área cultivada
+111;115.266;2018;Salto;Área cultivada
+112;47.721;2018;San Andrés de Giles;Área cultivada
+113;77.265;2018;San Antonio de Areco;Área cultivada
+114;246.325;2018;San Cayetano;Área cultivada
+115;23.791;2018;San Fernando;Área cultivada
+116;0.0;2018;San Isidro;Área cultivada
+117;0.0;2018;San Miguel;Área cultivada
+118;44.161;2018;San Nicolás;Área cultivada
+119;92.375;2018;San Pedro;Área cultivada
+120;40.966;2018;San Vicente;Área cultivada
+121;118.222;2018;Suipacha;Área cultivada
+122;320.671;2018;Tandil;Área cultivada
+123;353.333;2018;Tapalqué;Área cultivada
+124;2.039;2018;Tigre;Área cultivada
+125;100.541;2018;Tordillo;Área cultivada
+126;373.004;2018;Tornquist;Área cultivada
+127;430.06;2018;Trenque Lauquen;Área cultivada
+128;475.305;2018;Tres Arroyos;Área cultivada
+129;0.353;2018;Tres de Febrero;Área cultivada
+130;85.689;2018;Tres Lomas;Área cultivada
+131;375.423;2018;25 de mayo;Área cultivada
+132;0.0;2018;Vicente López;Área cultivada
+133;0.0;2018;Villa Gesell;Área cultivada
+134;667.385;2018;Villarino;Área cultivada
+135;51.005;2018;Zárate;Área cultivada
+136;24995.559;2002;Provincia de Buenos Aires;Área cultivada
+137;449.957;2002;Adolfo Alsina;Área cultivada
+138;302.586;2002;Adolfo Gonzales Chaves;Área cultivada
+139;116.58;2002;Alberti;Área cultivada
+140;0.388;2002;Almirante Brown;Área cultivada
+141;82.871;2002;Arrecifes;Área cultivada
+142;0.078;2002;Avellaneda;Área cultivada
+143;585.119;2002;Ayacucho;Área cultivada
+144;685.424;2002;Azul;Área cultivada
+145;206.991;2002;Bahía Blanca;Área cultivada
+146;323.518;2002;Balcarce;Área cultivada
+147;68.611;2002;Baradero;Área cultivada
+148;424.043;2002;Benito Juárez;Área cultivada
+149;2.664;2002;Berazategui;Área cultivada
+150;7.186;2002;Berisso;Área cultivada
+151;441.184;2002;Bolívar;Área cultivada
+152;198.186;2002;Bragado;Área cultivada
+153;97.251;2002;Brandsen;Área cultivada
+154;46.467;2002;Campana;Área cultivada
+155;61.798;2002;Cañuelas;Área cultivada
+156;39.459;2002;Capitán Sarmiento;Área cultivada
+157;222.858;2002;Carlos Casares;Área cultivada
+158;345.363;2002;Carlos Tejedor;Área cultivada
+159;88.192;2002;Carmen de Areco;Área cultivada
+160;147.161;2002;Castelli;Área cultivada
+161;186.778;2002;Chacabuco;Área cultivada
+162;331.801;2002;Chascomús;Área cultivada
+163;202.489;2002;Chivilcoy;Área cultivada
+164;81.109;2002;Colón;Área cultivada
+165;104.562;2002;Coronel de Marina Leonardo Rosales;Área cultivada
+166;543.6;2002;Coronel Dorrego;Área cultivada
+167;473.784;2002;Coronel Pringles;Área cultivada
+168;608.456;2002;Coronel Suárez;Área cultivada
+169;303.854;2002;Daireaux;Área cultivada
+170;132.812;2002;Dolores;Área cultivada
+171;1.674;2002;Ensenada;Área cultivada
+172;2.87;2002;Escobar;Área cultivada
+173;0.465;2002;Esteban Echeverría;Área cultivada
+174;44.848;2002;Exaltación de la Cruz;Área cultivada
+175;2.54;2002;Ezeiza;Área cultivada
+176;3.003;2002;Florencio Varela;Área cultivada
+177;161.292;2002;Florentino Ameghino;Área cultivada
+178;132.793;2002;General Alvarado;Área cultivada
+179;278.618;2002;General Alvear;Área cultivada
+180;133.914;2002;General Arenales;Área cultivada
+181;164.803;2002;General Belgrano;Área cultivada
+182;196.826;2002;General Guido;Área cultivada
+183;244.498;2002;General Juan Madariaga;Área cultivada
+184;329.832;2002;General La Madrid;Área cultivada
+185;47.417;2002;General Las Heras;Área cultivada
+186;224.293;2002;General Lavalle;Área cultivada
+187;99.359;2002;General Paz;Área cultivada
+188;238.514;2002;General Pinto;Área cultivada
+189;112.665;2002;General Pueyrredón;Área cultivada
+190;20.338;2002;General Rodríguez;Área cultivada
+191;0.076;2002;General San Martín;Área cultivada
+192;162.713;2002;General Viamonte;Área cultivada
+193;595.017;2002;General Villegas;Área cultivada
+194;391.8;2002;Guaminí;Área cultivada
+195;129.63;2002;Hipólito Yrigoyen;Área cultivada
+196;0.0;2002;Hurlingham;Área cultivada
+197;0.0;2002;Ituzaingó;Área cultivada
+198;0.074;2002;José C, Paz;Área cultivada
+199;167.038;2002;Junín;Área cultivada
+200;1.379;2002;La Costa;Área cultivada
+201;20.813;2002;La Matanza;Área cultivada
+202;0.0;2002;Lanús;Área cultivada
+203;43.128;2002;La Plata;Área cultivada
+204;336.564;2002;Laprida;Área cultivada
+205;291.174;2002;Las Flores;Área cultivada
+206;145.876;2002;Leandro N, Alem;Área cultivada
+207;0.0;2002;Lezama;Área cultivada
+208;561.238;2002;Lincoln;Área cultivada
+209;356.11;2002;Lobería;Área cultivada
+210;139.911;2002;Lobos;Área cultivada
+211;0.49;2002;Lomas de Zamora;Área cultivada
+212;26.79;2002;Luján;Área cultivada
+213;177.417;2002;Magdalena;Área cultivada
+214;243.021;2002;Maipú;Área cultivada
+215;0.018;2002;Malvinas Argentinas;Área cultivada
+216;301.924;2002;Mar Chiquita;Área cultivada
+217;27.855;2002;Marcos Paz;Área cultivada
+218;82.21;2002;Mercedes;Área cultivada
+219;1.12;2002;Merlo;Área cultivada
+220;139.757;2002;Monte;Área cultivada
+221;19.695;2002;Monte Hermoso;Área cultivada
+222;0.397;2002;Moreno;Área cultivada
+223;0.0;2002;Morón;Área cultivada
+224;138.354;2002;Navarro;Área cultivada
+225;411.099;2002;Necochea;Área cultivada
+226;373.016;2002;9 de julio;Área cultivada
+227;707.337;2002;Olavarría;Área cultivada
+228;766.758;2002;Patagones;Área cultivada
+229;492.7;2002;Pehuajó;Área cultivada
+230;149.046;2002;Pellegrini;Área cultivada
+231;283.502;2002;Pergamino;Área cultivada
+232;249.102;2002;Pila;Área cultivada
+233;1.622;2002;Pilar;Área cultivada
+234;0.0;2002;Pinamar;Área cultivada
+235;3.1;2002;Presidente Perón;Área cultivada
+236;511.201;2002;Puán;Área cultivada
+237;123.697;2002;Punta Indio;Área cultivada
+238;0.037;2002;Quilmes;Área cultivada
+239;87.78;2002;Ramallo;Área cultivada
+240;358.213;2002;Rauch;Área cultivada
+241;364.894;2002;Rivadavia;Área cultivada
+242;182.776;2002;Rojas;Área cultivada
+243;134.474;2002;Roque Pérez;Área cultivada
+244;346.134;2002;Saavedra;Área cultivada
+245;290.732;2002;Saladillo;Área cultivada
+246;139.408;2002;Salliqueló;Área cultivada
+247;89.999;2002;Salto;Área cultivada
+248;89.106;2002;San Andrés de Giles;Área cultivada
+249;92.453;2002;San Antonio de Areco;Área cultivada
+250;240.165;2002;San Cayetano;Área cultivada
+251;12.255;2002;San Fernando;Área cultivada
+252;0.003;2002;San Isidro;Área cultivada
+253;0.0;2002;San Miguel;Área cultivada
+254;53.09;2002;San Nicolás;Área cultivada
+255;104.775;2002;San Pedro;Área cultivada
+256;48.078;2002;San Vicente;Área cultivada
+257;87.139;2002;Suipacha;Área cultivada
+258;442.168;2002;Tandil;Área cultivada
+259;270.645;2002;Tapalqué;Área cultivada
+260;0.68;2002;Tigre;Área cultivada
+261;105.506;2002;Tordillo;Área cultivada
+262;392.06;2002;Tornquist;Área cultivada
+263;407.205;2002;Trenque Lauquen;Área cultivada
+264;526.636;2002;Tres Arroyos;Área cultivada
+265;0.117;2002;Tres de Febrero;Área cultivada
+266;109.55;2002;Tres Lomas;Área cultivada
+267;362.043;2002;25 de mayo;Área cultivada
+268;0.001;2002;Vicente López;Área cultivada
+269;0.006;2002;Villa Gesell;Área cultivada
+270;695.498;2002;Villarino;Área cultivada
+271;34.415;2002;Zárate;Área cultivada
+272;27282.51;1988;Provincia de Buenos Aires;Área cultivada
+273;476.78;1988;Adolfo Alsina;Área cultivada
+274;334.132;1988;Adolfo Gonzales Chaves;Área cultivada
+275;99.429;1988;Alberti;Área cultivada
+276;1.245;1988;Almirante Brown;Área cultivada
+277;0.0;1988;Arrecifes;Área cultivada
+278;0.278;1988;Avellaneda;Área cultivada
+279;627.694;1988;Ayacucho;Área cultivada
+280;649.413;1988;Azul;Área cultivada
+281;229.382;1988;Bahía Blanca;Área cultivada
+282;394.978;1988;Balcarce;Área cultivada
+283;85.88;1988;Baradero;Área cultivada
+284;0.639;1988;Bartolomé Mitre;Área cultivada
+285;103.396;1988;Benito Juárez;Área cultivada
+286;505.076;1988;Berazategui;Área cultivada
+287;8.349;1988;Berisso;Área cultivada
+288;5.567;1988;Bolívar;Área cultivada
+289;478.219;1988;Bragado;Área cultivada
+290;201.314;1988;Brandsen;Área cultivada
+291;94.623;1988;Campana;Área cultivada
+292;56.387;1988;Cañuelas;Área cultivada
+293;104.287;1988;Capitán Sarmiento;Área cultivada
+294;52.913;1988;Carlos Casares;Área cultivada
+295;237.499;1988;Carlos Tejedor;Área cultivada
+296;372.281;1988;Carmen de Areco;Área cultivada
+297;75.763;1988;Castelli;Área cultivada
+298;232.381;1988;Chacabuco;Área cultivada
+299;217.495;1988;Chascomús;Área cultivada
+300;384.707;1988;Chivilcoy;Área cultivada
+301;175.47;1988;Colón;Área cultivada
+302;86.734;1988;Coronel de Marina Leonardo Rosales;Área cultivada
+303;98.471;1988;Coronel Dorrego;Área cultivada
+304;502.302;1988;Coronel Pringles;Área cultivada
+305;513.035;1988;Coronel Suárez;Área cultivada
+306;587.661;1988;Daireaux;Área cultivada
+307;343.138;1988;Dolores;Área cultivada
+308;171.365;1988;Ensenada;Área cultivada
+309;2.933;1988;Escobar;Área cultivada
+310;9.868;1988;Esteban Echeverría;Área cultivada
+311;12.671;1988;Exaltación de la Cruz;Área cultivada
+312;45.517;1988;Ezeiza;Área cultivada
+313;0.0;1988;Florencio Varela;Área cultivada
+314;10.908;1988;Florentino Ameghino;Área cultivada
+315;0.0;1988;General Alvarado;Área cultivada
+316;153.057;1988;General Alvear;Área cultivada
+317;259.594;1988;General Arenales;Área cultivada
+318;137.262;1988;General Belgrano;Área cultivada
+319;192.741;1988;General Guido;Área cultivada
+320;218.965;1988;General Juan Madariaga;Área cultivada
+321;280.497;1988;General La Madrid;Área cultivada
+322;421.592;1988;General Las Heras;Área cultivada
+323;62.045;1988;General Lavalle;Área cultivada
+324;224.615;1988;General Paz;Área cultivada
+325;99.673;1988;General Pinto;Área cultivada
+326;412.387;1988;General Pueyrredón;Área cultivada
+327;128.736;1988;General Rodríguez;Área cultivada
+328;30.71;1988;General San Martín;Área cultivada
+329;0.003;1988;General Sarmiento;Área cultivada
+330;208.676;1988;General Viamonte;Área cultivada
+331;656.74;1988;General Villegas;Área cultivada
+332;348.305;1988;Guaminí;Área cultivada
+333;153.185;1988;Hipólito Yrigoyen;Área cultivada
+334;0.0;1988;Hurlingham;Área cultivada
+335;0.0;1988;Ituzaingó;Área cultivada
+336;0.0;1988;José C, Paz;Área cultivada
+337;201.352;1988;Junín;Área cultivada
+338;5.526;1988;La Costa;Área cultivada
+339;4.561;1988;La Matanza;Área cultivada
+340;0.0;1988;Lanús;Área cultivada
+341;42.135;1988;La Plata;Área cultivada
+342;298.612;1988;Laprida;Área cultivada
+343;321.344;1988;Las Flores;Área cultivada
+344;130.261;1988;Leandro N, Alem;Área cultivada
+345;0.0;1988;Lezama;Área cultivada
+346;555.547;1988;Lincoln;Área cultivada
+347;392.338;1988;Lobería;Área cultivada
+348;155.982;1988;Lobos;Área cultivada
+349;0.656;1988;Lomas de Zamora;Área cultivada
+350;62.844;1988;Luján;Área cultivada
+351;311.754;1988;Magdalena;Área cultivada
+352;261.111;1988;Maipú;Área cultivada
+353;0.0;1988;Malvinas Argentinas;Área cultivada
+354;323.737;1988;Mar Chiquita;Área cultivada
+355;30.954;1988;Marcos Paz;Área cultivada
+356;91.578;1988;Mercedes;Área cultivada
+357;2.245;1988;Merlo;Área cultivada
+358;163.623;1988;Monte;Área cultivada
+359;15.051;1988;Monte Hermoso;Área cultivada
+360;2.421;1988;Moreno;Área cultivada
+361;0.004;1988;Morón;Área cultivada
+362;143.287;1988;Navarro;Área cultivada
+363;388.691;1988;Necochea;Área cultivada
+364;408.614;1988;9 de julio;Área cultivada
+365;712.42;1988;Olavarría;Área cultivada
+366;1243.315;1988;Patagones;Área cultivada
+367;426.622;1988;Pehuajó;Área cultivada
+368;171.699;1988;Pellegrini;Área cultivada
+369;285.549;1988;Pergamino;Área cultivada
+370;271.482;1988;Pila;Área cultivada
+371;15.754;1988;Pilar;Área cultivada
+372;0.0;1988;Pinamar;Área cultivada
+373;0.0;1988;Presidente Perón;Área cultivada
+374;528.145;1988;Puán;Área cultivada
+375;0.0;1988;Punta Indio;Área cultivada
+376;0.0;1988;Quilmes;Área cultivada
+377;87.459;1988;Ramallo;Área cultivada
+378;392.035;1988;Rauch;Área cultivada
+379;367.566;1988;Rivadavia;Área cultivada
+380;173.376;1988;Rojas;Área cultivada
+381;143.341;1988;Roque Pérez;Área cultivada
+382;335.188;1988;Saavedra;Área cultivada
+383;233.531;1988;Saladillo;Área cultivada
+384;87.011;1988;Salliqueló;Área cultivada
+385;154.94;1988;Salto;Área cultivada
+386;72.017;1988;San Andrés de Giles;Área cultivada
+387;89.987;1988;San Antonio de Areco;Área cultivada
+388;273.819;1988;San Cayetano;Área cultivada
+389;20.814;1988;San Fernando;Área cultivada
+390;0.006;1988;San Isidro;Área cultivada
+391;0.0;1988;San Miguel;Área cultivada
+392;53.721;1988;San Nicolás;Área cultivada
+393;113.356;1988;San Pedro;Área cultivada
+394;53.193;1988;San Vicente;Área cultivada
+395;113.731;1988;Suipacha;Área cultivada
+396;477.024;1988;Tandil;Área cultivada
+397;403.599;1988;Tapalqué;Área cultivada
+398;3.043;1988;Tigre;Área cultivada
+399;83.563;1988;Tordillo;Área cultivada
+400;430.354;1988;Tornquist;Área cultivada
+401;509.01;1988;Trenque Lauquen;Área cultivada
+402;556.837;1988;Tres Arroyos;Área cultivada
+403;0.006;1988;Tres de Febrero;Área cultivada
+404;120.426;1988;Tres Lomas;Área cultivada
+405;398.667;1988;25 de mayo;Área cultivada
+406;0.0;1988;Vicente López;Área cultivada
+407;0.0;1988;Villa Gesell;Área cultivada
+408;911.067;1988;Villarino;Área cultivada
+409;62.749;1988;Zárate;Área cultivada
+410;12.901;1988;Indeterminado;Área cultivada

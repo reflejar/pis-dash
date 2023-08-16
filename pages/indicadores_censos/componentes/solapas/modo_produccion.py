@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 from ..constantes import *
 
 from ..indicadores import Indicador
-from ...data import df_ha_tipo_cultivo
+from ...data import df_ha_tipo_cultivo, df_cultivado_bosques
 
 indicadores = [
     Indicador(
@@ -19,7 +19,20 @@ indicadores = [
         colores=[LILA, LIMA, NARANJA, CELESTE ],
         hover='Hectareas cultivadas: %{y} mil<br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_TIPO_CULTIVO
-    ),      
+    ),
+    Indicador(
+        id_indicador="ha-bosques-cultivos",
+        df=df_cultivado_bosques,
+        tipo_grafico="histogram",
+        titulo_grafico="Bosques y Montes Naturales (ha)" ,
+        x="Año del censo",
+        y='HA de EAPs',
+        y_titulo = 'Héctáreas',
+        z='Tipo de suelo',
+        colores=[LILA, LIMA],
+        hover='Hectareas cultivadas: %{y} <br>Año del censo: %{x}',
+        texto_descriptivo = TEXTO_HA_BOSQUES
+    ),  
 ]
 
 

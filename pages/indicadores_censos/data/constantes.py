@@ -18,6 +18,8 @@ VAR_SEXO_NACIMIENTO= 'Sexo de nacimiento'
 VAR_MUJERES_RESIDENTES= 'Mujeres Residentes del campo'
 VAR_VARONES_RESIDENTES= 'Varones Residentes del campo'
 VAR_CANTIDAD_PERSONAS = 'Cantidad de personas'
+VAR_BOSQUES_MONTES = 'Cantidad de hectareas dedicadas a Bosques y montes naturales'
+
 ##### VARIABLES ######
 
 VAR_EAPS_PEQ = 'EAPS pequeñas (<= 500ha)'
@@ -34,10 +36,11 @@ VAR_EAPS_HA_PERSONAS = 'Superficie en mano de Personas Humanas'
 VAR_MUJERES_PROPIETARIAS = 'Cantidad de Mujeres propietarias de EAPs'
 VAR_VARONES_PROPIETARIOS = 'Cantidad de Hombres propietarios de EAPs'
 VAR_SUPERFICIE_HA = 'Superficie promedio'
-VAR_EAPS_HA = 'HA de EAPs'
 VAR_EAPS_Q = 'Cantidad de EAPs'
 VAR_TAMANIO_EAPS = 'Tamaño EAPs'
 VAR_EAPS_TIPO_JURICIO = 'Tipo jurídico'
 VAR_SEXO_PROPIETARIE = 'Sexo'
+VAR_TIPO_SUELO = 'Tipo de suelo'
+VAR_AREA_CULTIVADA = 'Área cultivada'
 
 

@@ -20,6 +20,7 @@ TEXTO_EAPS_SEXO = 'Muestra el porcentaje de EAP que está en propiedad de Mujere
 # TEXTOS DESCRIPTIVOS MODO DE PRODUCCION
 
 TEXTO_HA_TIPO_CULTIVO = 'falta textooooooo'
+TEXTO_HA_BOSQUES = 'Muestra la cantidad de hectáreas dedicadas a bosques implantados y bosques naturales.'
 
 
 # TEXTOS DESCRIPTIVOS EMPLEO Y RESIDENCIA
