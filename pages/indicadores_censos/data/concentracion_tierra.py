@@ -88,7 +88,7 @@ mujeres_propietarias_df_base[VAR_SEXO_PROPIETARIE] = 'Mujeres propietarias'
 
 varones_propietarios_df_base = df_base_original[[VAR_VARONES_PROPIETARIOS, VAR_ANIO_CENSO, VAR_PARTIDO]]
 varones_propietarios_df_base = varones_propietarios_df_base.rename(columns = {VAR_VARONES_PROPIETARIOS: VAR_EAPS_Q})
-varones_propietarios_df_base[VAR_SEXO_PROPIETARIE] = 'Hombres propietarios'
+varones_propietarios_df_base[VAR_SEXO_PROPIETARIE] = 'Varones propietarios'
 
 df_base_propiedad_por_sexo = pd.concat([mujeres_propietarias_df_base, varones_propietarios_df_base])
 df_base_propiedad_por_sexo[VAR_EAPS_Q] = df_base_propiedad_por_sexo[VAR_EAPS_Q].fillna(0.).astype(float)
