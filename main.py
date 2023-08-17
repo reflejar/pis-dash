@@ -9,17 +9,18 @@ import dash
 @server.route('/')
 def index(): 
     host = request.headers['Host']
-    if not 'localhost' in host:
-        return redirect({
+    sections = {
              'normativo': '/mapa-normativo',
-             'censo': '/indicadores-censo',
+             'censos': '/indicadores-censo',
              'ranking': '/ranking-ambiental'
-        }[host.split(".")[0]])
-    return """
-            <h1><a href="/mapa-normativo">Mapa normativo</a></h1>
-            <h1><a href="/indicadores-censo">Indicadores censo</a></h1>
-            <h1><a href="/ranking-ambiental">Ranking</a></h1>
-        """, 200 
+        }
+    try:
+        return redirect(sections[host.split(".")[0]])
+    except:
+        links = ""
+        for section, path in sections.items():
+            links += f"<h1><a href='{path}'>{section}</a></h1>" 
+        return links, 200 
 
 ############################
 ### Se inicia Dash
