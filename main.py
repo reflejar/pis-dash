@@ -1,40 +1,25 @@
+import sys
+
 ############################
 ### Se inicia Flask
 ############################
-from flask import Flask, request, redirect
+
+from flask import Flask, request
 server = Flask(__name__)
 import dash
-
-# Se incorporan endpoints necesarios para k8s
-@server.route('/')
-def index(): 
-    host = request.headers['Host']
-    sections = {
-             'normativo': '/mapa-normativo',
-             'censos': '/indicadores-censo',
-             'ranking': '/ranking-ambiental'
-        }
-    try:
-        return redirect(sections[host.split(".")[0]])
-    except:
-        links = ""
-        for section, path in sections.items():
-            links += f"<h1><a href='{path}'>{section}</a></h1>" 
-        return links, 200 
 
 ############################
 ### Se inicia Dash
 ############################
 
 import dash_bootstrap_components as dbc
-from dash import html
+from dash import html, Output, Input, dcc
 
 from pages import (
 	mapa_normativo,
 	ranking_ambiental,
 	indicadores_censos
 )
-
 
 # Se crea Dash y elegimos el tema
 app = dash.Dash(
@@ -48,14 +33,11 @@ app = dash.Dash(
 	suppress_callback_exceptions=True,
 )
 
-dash.register_page(mapa_normativo.__name__, title="PIS | Mapa Normativo", path='/mapa-normativo', layout=mapa_normativo.layout)
-dash.register_page(ranking_ambiental.__name__, title="PIS | Ranking Ambiental", path='/ranking-ambiental', layout=ranking_ambiental.layout)
-dash.register_page(indicadores_censos.__name__, title="PIS | Censo Nacional Agropecuario", path='/indicadores-censo', layout=indicadores_censos.layout)
-
+# Se agregan los componentes de la web
 ISOLOGOTIPO = html.Img(src="assets/img/PIS_isologo_negro.png", alt="Isotipo de PIS", height="70px")
 
-# Se agregan los componentes de la web
 app.layout = html.Div(children=[
+    dcc.Location(id='url', refresh=False),
     dbc.Navbar(
         dbc.Container(
             [
@@ -66,7 +48,7 @@ app.layout = html.Div(children=[
         fixed="top",
         className="text-primary",
     ),
-	dash.page_container,
+	html.Div(id='page-content'),
 	html.Footer([
         dbc.Container([
             dbc.Row([
@@ -86,9 +68,22 @@ app.layout = html.Div(children=[
         className="text-white position-relative py-4",
         id="footer"
     )
-
-
 ])
+
+
+
+@app.callback(Output('page-content', 'children'),Input('url', 'pathname'))
+def display_page(_):
+    sections = {
+            'zonificacion': mapa_normativo.layout,
+            'censos': indicadores_censos.layout,
+            'ranking': ranking_ambiental.layout
+    }
+    try:
+        return sections[request.host.split(".")[0]]
+    except:
+        tool = sys.argv[1]
+        return sections[tool]
 
 
 # Se corre la aplicación
