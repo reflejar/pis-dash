@@ -20,6 +20,15 @@ VAR_VARONES_RESIDENTES= 'Varones Residentes del campo'
 VAR_CANTIDAD_PERSONAS = 'Cantidad de personas'
 VAR_BOSQUES_MONTES = 'Cantidad de hectareas dedicadas a Bosques y montes naturales'
 VAR_PRACTICAS_ORGANICAS = 'Prácticas orgánicasbiodinámicas/agroecológicas_EAPs'
+VAR_SOJA = 'Soja por hectárea'
+VAR_OTRAS_OLEAGINOSAS = 'Otras oleaginosas por hectareas'
+VAR_MAIZ = 'Maiz para grano por hectárea'
+VAR_TRIGO = 'Trigo pan por hectárea'
+VAR_OTROS_CEREALES = 'Otros Cereales por hectareas'
+VAR_FORRAJES_ANUALES = 'Forrajeras anuales por hectáreas'
+VAR_FORRAJES_PERENNES = 'Forrajeras perennes por hectáreas'
+
+
 
 ##### VARIABLES ######
 
@@ -43,5 +52,8 @@ VAR_EAPS_TIPO_JURICIO = 'Tipo jurídico'
 VAR_SEXO_PROPIETARIE = 'Sexo'
 VAR_TIPO_SUELO = 'Tipo de suelo'
 VAR_AREA_CULTIVADA = 'Área cultivada'
+VAR_TIPO_OLEAGINOSA = 'Tipo de Oleaginosa'
+VAR_TIPO_CEREAL = 'Tipo de cereal'
+VAR_TIPO_FORRAJERA = 'Tipo forrajera'
 
 

@@ -148,7 +148,6 @@ class Indicador:
             color_discrete_sequence=self.colores
         )
     
-    
     def number(self, df):
         _valor = df[self.y_var].values
         _valor = _valor[0]
@@ -186,7 +185,7 @@ class Indicador:
             fig.update_xaxes( title_text = self.x_titulo, title_font=dict(size=self.TAMANIO_FUENTE, family=self.LETRA_DEFAULT, color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))
             fig.update_yaxes(title_text = self.y_titulo,  title_font=dict(size=self.TAMANIO_FUENTE,family=self.LETRA_DEFAULT,color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))
             fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
-            
+
             #Armar el texto de las etiquetas emergentes
             fig.update_traces(hovertemplate=self.hover)
 

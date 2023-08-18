@@ -4,7 +4,7 @@ from dash import dcc
 from ..constantes import *
 
 from ..indicadores import Indicador
-from ...data import df_ha_tipo_cultivo, df_cultivado_bosques, df_practicas_organicas
+from ...data import df_ha_tipo_cultivo, df_cultivado_bosques, df_practicas_organicas, df_oleaginosas, df_cereales, df_forrajeras
 
 indicadores = [
     Indicador(
@@ -21,15 +21,54 @@ indicadores = [
         texto_descriptivo = TEXTO_HA_TIPO_CULTIVO
     ),
     Indicador(
+        id_indicador="oleaginosas",
+        df=df_oleaginosas,
+        tipo_grafico="histogram",
+        titulo_grafico="Oleaginosas sembradas (miles de hectáreas)" ,
+        x="Año del censo",
+        y='HA de EAPs',
+        y_titulo = 'Héctáreas sembradas (miles)',
+        z='Tipo de Oleaginosa',
+        colores=[LIMA, NARANJA],
+        hover='Hectáreas sembradas: %{y} mil<br>Año del censo: %{x}',
+        texto_descriptivo = TEXTO_HA_OLEAGINOSAS
+    ),
+    Indicador(
+        id_indicador="cereales",
+        df= df_cereales,
+        tipo_grafico="histogram",
+        titulo_grafico="Cereales sembrados (miles de hectáreas)" ,
+        x="Año del censo",
+        y='HA de EAPs',
+        y_titulo = 'Héctáreas sembradas (miles)',
+        z='Tipo de cereal',
+        colores=[LIMA, NARANJA, LILA],
+        hover='Hectáreas sembradas: %{y} mil<br>Año del censo: %{x}',
+        texto_descriptivo = TEXTO_HA_CEREALES
+    ),
+    Indicador(
+        id_indicador="forrajeras",
+        df= df_forrajeras,
+        tipo_grafico="histogram",
+        titulo_grafico="Forrajeras sembradas (miles de hectáreas)" ,
+        x="Año del censo",
+        y='HA de EAPs',
+        y_titulo = 'Héctáreas sembradas (miles)',
+        z='Tipo forrajera',
+        colores=[LIMA, NARANJA],
+        hover='Hectáreas sembradas: %{y} mil <br>Año del censo: %{x}',
+        texto_descriptivo = TEXTO_HA_FORRAJERAS
+    ),
+    Indicador(
         id_indicador="ha-bosques-cultivos",
         df=df_cultivado_bosques,
         tipo_grafico="histogram",
-        titulo_grafico="Bosques y Montes Naturales (ha)" ,
+        titulo_grafico="Bosques y Montes Naturales (hectáreas)" ,
         x="Año del censo",
         y='HA de EAPs',
         y_titulo = 'Héctáreas',
         z='Tipo de suelo',
-        colores=[LILA, LIMA],
+        colores=[NARANJA, LIMA],
         hover='Hectareas cultivadas: %{y} <br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_BOSQUES
     ),

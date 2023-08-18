@@ -59,6 +59,76 @@ practicas_organicas_df_base = practicas_organicas_df_base[practicas_organicas_df
 practicas_organicas_df_base.to_csv('pages/indicadores_censos/data/modo_produccion/practicas_organicas.csv', sep=';')
 
 
+######################## OLEAGINOSAS ##########################
+
+soja_df_base = df_base_original[[VAR_SOJA, VAR_ANIO_CENSO, VAR_PARTIDO]]
+soja_df_base = soja_df_base.rename(columns = {VAR_SOJA: VAR_EAPS_HA})
+soja_df_base[VAR_TIPO_OLEAGINOSA] = 'Soja'
+
+otras_oleaginosas_df_base = df_base_original[[VAR_OTRAS_OLEAGINOSAS, VAR_ANIO_CENSO, VAR_PARTIDO]]
+otras_oleaginosas_df_base = otras_oleaginosas_df_base.rename(columns = {VAR_OTRAS_OLEAGINOSAS: VAR_EAPS_HA})
+otras_oleaginosas_df_base[VAR_TIPO_OLEAGINOSA] = 'Otras oleaginosas'
+
+df_oleaginosas = pd.concat([soja_df_base, otras_oleaginosas_df_base])
+
+df_oleaginosas[VAR_EAPS_HA] = df_oleaginosas[VAR_EAPS_HA].fillna(0.).astype(float)
+df_oleaginosas[VAR_EAPS_HA] = df_oleaginosas[VAR_EAPS_HA]/1000
+
+df_oleaginosas.to_csv('pages/indicadores_censos/data/modo_produccion/oleaginosas.csv', sep=';')
+
+
+
+######################## CEREALES ##########################
+
+maiz_df_base = df_base_original[[VAR_MAIZ, VAR_ANIO_CENSO, VAR_PARTIDO]]
+maiz_df_base = maiz_df_base.rename(columns = {VAR_MAIZ: VAR_EAPS_HA})
+maiz_df_base[VAR_TIPO_CEREAL] = 'Maíz'
+
+trigo_pan_df_base = df_base_original[[VAR_TRIGO, VAR_ANIO_CENSO, VAR_PARTIDO]]
+trigo_pan_df_base = trigo_pan_df_base.rename(columns = {VAR_TRIGO: VAR_EAPS_HA})
+trigo_pan_df_base[VAR_TIPO_CEREAL] = 'Trigo pan'
+
+otros_cereales_df_base = df_base_original[[VAR_OTROS_CEREALES, VAR_ANIO_CENSO, VAR_PARTIDO]]
+otros_cereales_df_base = otros_cereales_df_base.rename(columns = {VAR_OTROS_CEREALES: VAR_EAPS_HA})
+otros_cereales_df_base[VAR_TIPO_CEREAL] = 'Otros cereales'
+
+df_cereales = pd.concat([maiz_df_base, trigo_pan_df_base ,otros_cereales_df_base])
+
+df_cereales[VAR_EAPS_HA] = df_cereales[VAR_EAPS_HA].fillna(0.).astype(float)
+df_cereales[VAR_EAPS_HA] = df_cereales[VAR_EAPS_HA]/1000
+
+df_cereales.to_csv('pages/indicadores_censos/data/modo_produccion/cereales.csv', sep=';')
+
+
+######################## FORRAJERAS ##########################
+
+anuales_df_base = df_base_original[[VAR_FORRAJES_ANUALES, VAR_ANIO_CENSO, VAR_PARTIDO]]
+anuales_df_base = anuales_df_base.rename(columns = {VAR_FORRAJES_ANUALES: VAR_EAPS_HA})
+anuales_df_base[VAR_TIPO_FORRAJERA] = 'Forrajeras anuales'
+
+perennes_df_base = df_base_original[[VAR_FORRAJES_PERENNES, VAR_ANIO_CENSO, VAR_PARTIDO]]
+perennes_df_base = perennes_df_base.rename(columns = {VAR_FORRAJES_PERENNES: VAR_EAPS_HA})
+perennes_df_base[VAR_TIPO_FORRAJERA] = 'Forrajeras perennes'
+
+df_forrajeras = pd.concat([anuales_df_base, perennes_df_base])
+
+df_forrajeras[VAR_EAPS_HA] = df_forrajeras[VAR_EAPS_HA].fillna(0.).astype(float)
+df_forrajeras[VAR_EAPS_HA] = df_forrajeras[VAR_EAPS_HA]/1000
+
+df_forrajeras.to_csv('pages/indicadores_censos/data/modo_produccion/forrajeras.csv', sep=';')
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
