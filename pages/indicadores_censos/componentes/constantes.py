@@ -19,8 +19,9 @@ TEXTO_EAPS_SEXO = 'Muestra el porcentaje de EAP que está en propiedad de Mujere
 
 # TEXTOS DESCRIPTIVOS MODO DE PRODUCCION
 
-TEXTO_HA_TIPO_CULTIVO = 'falta textooooooo'
+TEXTO_HA_TIPO_CULTIVO = 'Muestra la cantidad de hectáreas sembradas por grupo de cultivo: cereales, oleaginosas, forrajeras y otros cultivos según cada año en que se realizó el Censo Nacional Agropecuario.'
 TEXTO_HA_BOSQUES = 'Muestra la cantidad de hectáreas dedicadas a bosques implantados y bosques naturales.'
+TEXTO_PRACTICAS_AGROECOLOGICAS = 'Muestra la cantidad de explotaciones agropecuarias que declararon trabajar con prácticas orgánicas, biodinámicas y/o agroecológicas.'
 
 
 # TEXTOS DESCRIPTIVOS EMPLEO Y RESIDENCIA

@@ -1,12 +1,22 @@
 from dash import html
 import dash_bootstrap_components as dbc
-# from .tipo_cultivo_ha import CULTIVOS_HA
+from dash import dcc
 from ..constantes import *
 
 from ..indicadores import Indicador
-from ...data import df_ha_tipo_cultivo, df_cultivado_bosques
+from ...data import df_ha_tipo_cultivo, df_cultivado_bosques, df_practicas_organicas
 
 indicadores = [
+    Indicador(
+    id_indicador="practicas-organicas",
+    df=df_practicas_organicas,
+    tipo_grafico="number",
+    titulo_grafico="EAPs con prácticas orgánicas y agroecológicas (Año 2018)" ,
+    y='Prácticas orgánicasbiodinámicas/agroecológicas_EAPs',
+    colores=[LILA],
+    # hover='Hectareas cultivadas: %{y}',
+    texto_descriptivo = TEXTO_PRACTICAS_AGROECOLOGICAS
+    ),
     Indicador(
         id_indicador="ha-tipo-cultivo",
         df=df_ha_tipo_cultivo,
@@ -32,15 +42,7 @@ indicadores = [
         colores=[LILA, LIMA],
         hover='Hectareas cultivadas: %{y} <br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_BOSQUES
-    ), 
-    # Indicador(
-    #     id_indicador="eaps-practicas-organicas",
-    #     df=df_cultivado_bosques,
-    #     tipo_grafico="gauge",
-    #     titulo_grafico="Bosques y Montes Naturales (ha)" ,
-    #     y='HA de EAPs',
-    #     texto_descriptivo = TEXTO_HA_BOSQUES
-    # ),  
+    )   
 ]
 
 
@@ -55,7 +57,7 @@ Produccion = html.Div([
                        destinados a exportación y a ganadería.
                         """, className="text-white"),
                 ]),
-            dbc.Row([dbc.Col(i.inicializar(), sm=12, md=6, xl=4) for i in indicadores], class_name="mt-5"),    
+            dbc.Row([dbc.Col(i.inicializar(), sm=12, md=6, xl=4) for i in indicadores], class_name="mt-5")
         ], className="mt-5")         
 
 

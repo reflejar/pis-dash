@@ -19,6 +19,7 @@ VAR_MUJERES_RESIDENTES= 'Mujeres Residentes del campo'
 VAR_VARONES_RESIDENTES= 'Varones Residentes del campo'
 VAR_CANTIDAD_PERSONAS = 'Cantidad de personas'
 VAR_BOSQUES_MONTES = 'Cantidad de hectareas dedicadas a Bosques y montes naturales'
+VAR_PRACTICAS_ORGANICAS = 'Prácticas orgánicasbiodinámicas/agroecológicas_EAPs'
 
 ##### VARIABLES ######
 
