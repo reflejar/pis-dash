@@ -1,0 +1,823 @@
+;HA de EAPs;Año del censo;Partido;Tipo de Oleaginosa
+0;3899.005;2018;Provincia de Buenos Aires;Soja
+1;31.023;2018;Adolfo Alsina;Soja
+2;60.965;2018;Adolfo Gonzales Chaves;Soja
+3;34.435;2018;Alberti;Soja
+4;0.028;2018;Almirante Brown;Soja
+5;64.864;2018;Arrecifes;Soja
+6;0.0;2018;Avellaneda;Soja
+7;15.056;2018;Ayacucho;Soja
+8;67.878;2018;Azul;Soja
+9;0.03;2018;Bahía Blanca;Soja
+10;45.014;2018;Balcarce;Soja
+11;43.484;2018;Baradero;Soja
+12;48.096;2018;Benito Juárez;Soja
+13;0.06;2018;Berazategui;Soja
+14;0.0;2018;Berisso;Soja
+15;62.164;2018;Bolívar;Soja
+16;59.096;2018;Bragado;Soja
+17;0.19;2018;Brandsen;Soja
+18;3.533;2018;Campana;Soja
+19;3.857;2018;Cañuelas;Soja
+20;23.42;2018;Capitán Sarmiento;Soja
+21;42.56;2018;Carlos Casares;Soja
+22;64.024;2018;Carlos Tejedor;Soja
+23;26.554;2018;Carmen de Areco;Soja
+24;4.264;2018;Castelli;Soja
+25;75.274;2018;Chacabuco;Soja
+26;12.884;2018;Chascomús;Soja
+27;60.009;2018;Chivilcoy;Soja
+28;37.396;2018;Colón;Soja
+29;0.0;2018;Coronel de Marina Leonardo Rosales;Soja
+30;48.597;2018;Coronel Dorrego;Soja
+31;33.753;2018;Coronel Pringles;Soja
+32;79.795;2018;Coronel Suárez;Soja
+33;65.06;2018;Daireaux;Soja
+34;0.006;2018;Dolores;Soja
+35;0.0;2018;Ensenada;Soja
+36;0.175;2018;Escobar;Soja
+37;0.0;2018;Esteban Echeverría;Soja
+38;17.735;2018;Exaltación de la Cruz;Soja
+39;0.352;2018;Ezeiza;Soja
+40;0.2;2018;Florencio Varela;Soja
+41;36.851;2018;Florentino Ameghino;Soja
+42;32.459;2018;General Alvarado;Soja
+43;11.338;2018;General Alvear;Soja
+44;51.105;2018;General Arenales;Soja
+45;18.675;2018;General Belgrano;Soja
+46;2.937;2018;General Guido;Soja
+47;8.882;2018;General Juan Madariaga;Soja
+48;25.646;2018;General La Madrid;Soja
+49;1.668;2018;General Las Heras;Soja
+50;0.12;2018;General Lavalle;Soja
+51;2.925;2018;General Paz;Soja
+52;55.565;2018;General Pinto;Soja
+53;18.602;2018;General Pueyrredón;Soja
+54;2.622;2018;General Rodríguez;Soja
+55;0.0;2018;General San Martín;Soja
+56;54.52;2018;General Viamonte;Soja
+57;189.413;2018;General Villegas;Soja
+58;65.98;2018;Guaminí;Soja
+59;43.634;2018;Hipólito Yrigoyen;Soja
+60;0.0;2018;Hurlingham;Soja
+61;0.0;2018;Ituzaingó;Soja
+62;0.0;2018;José C, Paz;Soja
+63;74.998;2018;Junín;Soja
+64;0.0;2018;La Costa;Soja
+65;1.23;2018;La Matanza;Soja
+66;0.0;2018;Lanús;Soja
+67;0.448;2018;La Plata;Soja
+68;8.042;2018;Laprida;Soja
+69;11.051;2018;Las Flores;Soja
+70;48.651;2018;Leandro N, Alem;Soja
+71;5.675;2018;Lezama;Soja
+72;112.506;2018;Lincoln;Soja
+73;88.199;2018;Lobería;Soja
+74;27.431;2018;Lobos;Soja
+75;0.0;2018;Lomas de Zamora;Soja
+76;14.652;2018;Luján;Soja
+77;1.299;2018;Magdalena;Soja
+78;4.038;2018;Maipú;Soja
+79;0.0;2018;Malvinas Argentinas;Soja
+80;9.113;2018;Mar Chiquita;Soja
+81;3.937;2018;Marcos Paz;Soja
+82;14.586;2018;Mercedes;Soja
+83;0.885;2018;Merlo;Soja
+84;23.343;2018;Monte;Soja
+85;0.0;2018;Monte Hermoso;Soja
+86;0.083;2018;Moreno;Soja
+87;0.0;2018;Morón;Soja
+88;30.743;2018;Navarro;Soja
+89;93.747;2018;Necochea;Soja
+90;105.414;2018;9 de julio;Soja
+91;39.638;2018;Olavarría;Soja
+92;0.03;2018;Patagones;Soja
+93;111.042;2018;Pehuajó;Soja
+94;40.818;2018;Pellegrini;Soja
+95;131.512;2018;Pergamino;Soja
+96;3.932;2018;Pila;Soja
+97;0.443;2018;Pilar;Soja
+98;0.0;2018;Pinamar;Soja
+99;0.0;2018;Presidente Perón;Soja
+100;2.279;2018;Puán;Soja
+101;0.0;2018;Punta Indio;Soja
+102;0.0;2018;Quilmes;Soja
+103;50.212;2018;Ramallo;Soja
+104;4.472;2018;Rauch;Soja
+105;119.427;2018;Rivadavia;Soja
+106;88.86;2018;Rojas;Soja
+107;23.585;2018;Roque Pérez;Soja
+108;17.715;2018;Saavedra;Soja
+109;30.752;2018;Saladillo;Soja
+110;18.54;2018;Salliqueló;Soja
+111;76.108;2018;Salto;Soja
+112;39.011;2018;San Andrés de Giles;Soja
+113;38.312;2018;San Antonio de Areco;Soja
+114;51.185;2018;San Cayetano;Soja
+115;0.0;2018;San Fernando;Soja
+116;0.0;2018;San Isidro;Soja
+117;0.0;2018;San Miguel;Soja
+118;30.616;2018;San Nicolás;Soja
+119;49.246;2018;San Pedro;Soja
+120;0.335;2018;San Vicente;Soja
+121;19.043;2018;Suipacha;Soja
+122;90.16;2018;Tandil;Soja
+123;7.59;2018;Tapalqué;Soja
+124;0.0;2018;Tigre;Soja
+125;0.0;2018;Tordillo;Soja
+126;1.808;2018;Tornquist;Soja
+127;103.981;2018;Trenque Lauquen;Soja
+128;128.1;2018;Tres Arroyos;Soja
+129;0.0;2018;Tres de Febrero;Soja
+130;25.533;2018;Tres Lomas;Soja
+131;104.746;2018;25 de mayo;Soja
+132;0.0;2018;Vicente López;Soja
+133;0.0;2018;Villa Gesell;Soja
+134;0.0;2018;Villarino;Soja
+135;15.132;2018;Zárate;Soja
+136;2573.963;2002;Provincia de Buenos Aires;Soja
+137;12.462;2002;Adolfo Alsina;Soja
+138;10.074;2002;Adolfo Gonzales Chaves;Soja
+139;47.502;2002;Alberti;Soja
+140;0.0;2002;Almirante Brown;Soja
+141;48.987;2002;Arrecifes;Soja
+142;0.0;2002;Avellaneda;Soja
+143;1.314;2002;Ayacucho;Soja
+144;69.937;2002;Azul;Soja
+145;0.07;2002;Bahía Blanca;Soja
+146;16.471;2002;Balcarce;Soja
+147;32.932;2002;Baradero;Soja
+148;11.908;2002;Benito Juárez;Soja
+149;0.0;2002;Berazategui;Soja
+150;0.0;2002;Berisso;Soja
+151;15.324;2002;Bolívar;Soja
+152;71.521;2002;Bragado;Soja
+153;0.04;2002;Brandsen;Soja
+154;5.634;2002;Campana;Soja
+155;3.221;2002;Cañuelas;Soja
+156;15.705;2002;Capitán Sarmiento;Soja
+157;24.302;2002;Carlos Casares;Soja
+158;22.671;2002;Carlos Tejedor;Soja
+159;27.953;2002;Carmen de Areco;Soja
+160;2.116;2002;Castelli;Soja
+161;78.413;2002;Chacabuco;Soja
+162;6.499;2002;Chascomús;Soja
+163;86.281;2002;Chivilcoy;Soja
+164;41.92;2002;Colón;Soja
+165;0.0;2002;Coronel de Marina Leonardo Rosales;Soja
+166;4.54;2002;Coronel Dorrego;Soja
+167;7.87;2002;Coronel Pringles;Soja
+168;49.553;2002;Coronel Suárez;Soja
+169;32.135;2002;Daireaux;Soja
+170;0.06;2002;Dolores;Soja
+171;0.0;2002;Ensenada;Soja
+172;0.085;2002;Escobar;Soja
+173;0.0;2002;Esteban Echeverría;Soja
+174;17.388;2002;Exaltación de la Cruz;Soja
+175;0.0;2002;Ezeiza;Soja
+176;0.09;2002;Florencio Varela;Soja
+177;19.364;2002;Florentino Ameghino;Soja
+178;3.572;2002;General Alvarado;Soja
+179;3.937;2002;General Alvear;Soja
+180;71.959;2002;General Arenales;Soja
+181;6.191;2002;General Belgrano;Soja
+182;0.0;2002;General Guido;Soja
+183;1.38;2002;General Juan Madariaga;Soja
+184;12.931;2002;General La Madrid;Soja
+185;1.039;2002;General Las Heras;Soja
+186;0.06;2002;General Lavalle;Soja
+187;0.934;2002;General Paz;Soja
+188;56.943;2002;General Pinto;Soja
+189;3.427;2002;General Pueyrredón;Soja
+190;1.196;2002;General Rodríguez;Soja
+191;0.0;2002;General San Martín;Soja
+192;46.205;2002;General Viamonte;Soja
+193;134.52;2002;General Villegas;Soja
+194;27.98;2002;Guaminí;Soja
+195;16.302;2002;Hipólito Yrigoyen;Soja
+196;0.0;2002;Hurlingham;Soja
+197;0.0;2002;Ituzaingó;Soja
+198;0.0;2002;José C, Paz;Soja
+199;66.892;2002;Junín;Soja
+200;0.0;2002;La Costa;Soja
+201;0.209;2002;La Matanza;Soja
+202;0.0;2002;Lanús;Soja
+203;0.505;2002;La Plata;Soja
+204;2.896;2002;Laprida;Soja
+205;5.031;2002;Las Flores;Soja
+206;45.673;2002;Leandro N, Alem;Soja
+207;0.0;2002;Lezama;Soja
+208;98.159;2002;Lincoln;Soja
+209;9.365;2002;Lobería;Soja
+210;16.422;2002;Lobos;Soja
+211;0.0;2002;Lomas de Zamora;Soja
+212;4.282;2002;Luján;Soja
+213;0.354;2002;Magdalena;Soja
+214;0.556;2002;Maipú;Soja
+215;0.0;2002;Malvinas Argentinas;Soja
+216;0.083;2002;Mar Chiquita;Soja
+217;2.269;2002;Marcos Paz;Soja
+218;10.485;2002;Mercedes;Soja
+219;0.221;2002;Merlo;Soja
+220;7.407;2002;Monte;Soja
+221;0.0;2002;Monte Hermoso;Soja
+222;0.0;2002;Moreno;Soja
+223;0.0;2002;Morón;Soja
+224;16.714;2002;Navarro;Soja
+225;10.284;2002;Necochea;Soja
+226;60.942;2002;9 de julio;Soja
+227;31.683;2002;Olavarría;Soja
+228;0.05;2002;Patagones;Soja
+229;84.316;2002;Pehuajó;Soja
+230;9.365;2002;Pellegrini;Soja
+231;173.81;2002;Pergamino;Soja
+232;1.446;2002;Pila;Soja
+233;0.095;2002;Pilar;Soja
+234;0.0;2002;Pinamar;Soja
+235;0.675;2002;Presidente Perón;Soja
+236;1.941;2002;Puán;Soja
+237;0.0;2002;Punta Indio;Soja
+238;0.0;2002;Quilmes;Soja
+239;59.387;2002;Ramallo;Soja
+240;0.394;2002;Rauch;Soja
+241;58.316;2002;Rivadavia;Soja
+242;92.846;2002;Rojas;Soja
+243;13.72;2002;Roque Pérez;Soja
+244;8.638;2002;Saavedra;Soja
+245;49.259;2002;Saladillo;Soja
+246;1.28;2002;Salliqueló;Soja
+247;81.508;2002;Salto;Soja
+248;37.593;2002;San Andrés de Giles;Soja
+249;38.808;2002;San Antonio de Areco;Soja
+250;5.969;2002;San Cayetano;Soja
+251;0.0;2002;San Fernando;Soja
+252;0.0;2002;San Isidro;Soja
+253;0.0;2002;San Miguel;Soja
+254;33.622;2002;San Nicolás;Soja
+255;52.497;2002;San Pedro;Soja
+256;0.0;2002;San Vicente;Soja
+257;11.597;2002;Suipacha;Soja
+258;53.234;2002;Tandil;Soja
+259;1.184;2002;Tapalqué;Soja
+260;0.0;2002;Tigre;Soja
+261;0.055;2002;Tordillo;Soja
+262;1.669;2002;Tornquist;Soja
+263;50.462;2002;Trenque Lauquen;Soja
+264;7.342;2002;Tres Arroyos;Soja
+265;0.0;2002;Tres de Febrero;Soja
+266;2.888;2002;Tres Lomas;Soja
+267;63.835;2002;25 de mayo;Soja
+268;0.0;2002;Vicente López;Soja
+269;0.0;2002;Villa Gesell;Soja
+270;0.205;2002;Villarino;Soja
+271;12.617;2002;Zárate;Soja
+272;1041.463;1988;Provincia de Buenos Aires;Soja
+273;0.102;1988;Adolfo Alsina;Soja
+274;0.177;1988;Adolfo Gonzales Chaves;Soja
+275;17.466;1988;Alberti;Soja
+276;0.0;1988;Almirante Brown;Soja
+277;0.0;1988;Arrecifes;Soja
+278;0.0;1988;Avellaneda;Soja
+279;0.12;1988;Ayacucho;Soja
+280;4.991;1988;Azul;Soja
+281;0.0;1988;Bahía Blanca;Soja
+282;0.094;1988;Balcarce;Soja
+283;20.413;1988;Baradero;Soja
+284;51.335;1988;Bartolomé Mitre;Soja
+285;0.854;1988;Benito Juárez;Soja
+286;0.0;1988;Berazategui;Soja
+287;0.0;1988;Berisso;Soja
+288;0.0;1988;Bolívar;Soja
+289;33.786;1988;Bragado;Soja
+290;0.0;1988;Brandsen;Soja
+291;1.046;1988;Campana;Soja
+292;0.025;1988;Cañuelas;Soja
+293;13.575;1988;Capitán Sarmiento;Soja
+294;3.686;1988;Carlos Casares;Soja
+295;1.487;1988;Carlos Tejedor;Soja
+296;12.109;1988;Carmen de Areco;Soja
+297;0.0;1988;Castelli;Soja
+298;51.46;1988;Chacabuco;Soja
+299;0.276;1988;Chascomús;Soja
+300;32.799;1988;Chivilcoy;Soja
+301;32.823;1988;Colón;Soja
+302;0.0;1988;Coronel de Marina Leonardo Rosales;Soja
+303;0.415;1988;Coronel Dorrego;Soja
+304;0.116;1988;Coronel Pringles;Soja
+305;0.785;1988;Coronel Suárez;Soja
+306;0.09;1988;Daireaux;Soja
+307;0.1;1988;Dolores;Soja
+308;0.0;1988;Ensenada;Soja
+309;0.16;1988;Escobar;Soja
+310;0.0;1988;Esteban Echeverría;Soja
+311;4.444;1988;Exaltación de la Cruz;Soja
+312;0.0;1988;Ezeiza;Soja
+313;0.0;1988;Florencio Varela;Soja
+314;0.0;1988;Florentino Ameghino;Soja
+315;0.062;1988;General Alvarado;Soja
+316;0.172;1988;General Alvear;Soja
+317;53.584;1988;General Arenales;Soja
+318;0.704;1988;General Belgrano;Soja
+319;0.0;1988;General Guido;Soja
+320;0.0;1988;General Juan Madariaga;Soja
+321;0.04;1988;General La Madrid;Soja
+322;0.34;1988;General Las Heras;Soja
+323;0.0;1988;General Lavalle;Soja
+324;0.085;1988;General Paz;Soja
+325;24.166;1988;General Pinto;Soja
+326;0.04;1988;General Pueyrredón;Soja
+327;0.245;1988;General Rodríguez;Soja
+328;0.0;1988;General San Martín;Soja
+329;0.0;1988;General Sarmiento;Soja
+330;27.888;1988;General Viamonte;Soja
+331;39.091;1988;General Villegas;Soja
+332;0.025;1988;Guaminí;Soja
+333;0.01;1988;Hipólito Yrigoyen;Soja
+334;0.0;1988;Hurlingham;Soja
+335;0.0;1988;Ituzaingó;Soja
+336;0.0;1988;José C, Paz;Soja
+337;61.461;1988;Junín;Soja
+338;0.0;1988;La Costa;Soja
+339;0.05;1988;La Matanza;Soja
+340;0.0;1988;Lanús;Soja
+341;0.185;1988;La Plata;Soja
+342;0.025;1988;Laprida;Soja
+343;0.22;1988;Las Flores;Soja
+344;14.281;1988;Leandro N, Alem;Soja
+345;0.0;1988;Lezama;Soja
+346;31.599;1988;Lincoln;Soja
+347;0.664;1988;Lobería;Soja
+348;1.543;1988;Lobos;Soja
+349;0.0;1988;Lomas de Zamora;Soja
+350;2.476;1988;Luján;Soja
+351;0.257;1988;Magdalena;Soja
+352;0.0;1988;Maipú;Soja
+353;0.0;1988;Malvinas Argentinas;Soja
+354;0.0;1988;Mar Chiquita;Soja
+355;0.045;1988;Marcos Paz;Soja
+356;3.511;1988;Mercedes;Soja
+357;0.0;1988;Merlo;Soja
+358;0.563;1988;Monte;Soja
+359;0.0;1988;Monte Hermoso;Soja
+360;0.0;1988;Moreno;Soja
+361;0.0;1988;Morón;Soja
+362;5.626;1988;Navarro;Soja
+363;0.842;1988;Necochea;Soja
+364;23.305;1988;9 de julio;Soja
+365;0.59;1988;Olavarría;Soja
+366;0.0;1988;Patagones;Soja
+367;1.181;1988;Pehuajó;Soja
+368;0.193;1988;Pellegrini;Soja
+369;127.416;1988;Pergamino;Soja
+370;0.0;1988;Pila;Soja
+371;0.419;1988;Pilar;Soja
+372;0.0;1988;Pinamar;Soja
+373;0.0;1988;Presidente Perón;Soja
+374;0.027;1988;Puán;Soja
+375;0.0;1988;Punta Indio;Soja
+376;0.0;1988;Quilmes;Soja
+377;51.93;1988;Ramallo;Soja
+378;0.0;1988;Rauch;Soja
+379;5.68;1988;Rivadavia;Soja
+380;62.421;1988;Rojas;Soja
+381;1.013;1988;Roque Pérez;Soja
+382;0.328;1988;Saavedra;Soja
+383;2.81;1988;Saladillo;Soja
+384;0.0;1988;Salliqueló;Soja
+385;72.586;1988;Salto;Soja
+386;14.033;1988;San Andrés de Giles;Soja
+387;18.15;1988;San Antonio de Areco;Soja
+388;0.412;1988;San Cayetano;Soja
+389;0.0;1988;San Fernando;Soja
+390;0.0;1988;San Isidro;Soja
+391;0.0;1988;San Miguel;Soja
+392;31.529;1988;San Nicolás;Soja
+393;42.713;1988;San Pedro;Soja
+394;0.11;1988;San Vicente;Soja
+395;6.111;1988;Suipacha;Soja
+396;4.45;1988;Tandil;Soja
+397;0.0;1988;Tapalqué;Soja
+398;0.0;1988;Tigre;Soja
+399;0.0;1988;Tordillo;Soja
+400;0.264;1988;Tornquist;Soja
+401;0.82;1988;Trenque Lauquen;Soja
+402;0.225;1988;Tres Arroyos;Soja
+403;0.0;1988;Tres de Febrero;Soja
+404;0.061;1988;Tres Lomas;Soja
+405;10.066;1988;25 de mayo;Soja
+406;0.0;1988;Vicente López;Soja
+407;0.0;1988;Villa Gesell;Soja
+408;0.004;1988;Villarino;Soja
+409;8.086;1988;Zárate;Soja
+410;0.0;1988;Indeterminado;Soja
+0;611.437;2018;Provincia de Buenos Aires;Otras oleaginosas
+1;23.813;2018;Adolfo Alsina;Otras oleaginosas
+2;3.61;2018;Adolfo Gonzales Chaves;Otras oleaginosas
+3;0.0;2018;Alberti;Otras oleaginosas
+4;0.0;2018;Almirante Brown;Otras oleaginosas
+5;0.439;2018;Arrecifes;Otras oleaginosas
+6;0.0;2018;Avellaneda;Otras oleaginosas
+7;14.734;2018;Ayacucho;Otras oleaginosas
+8;11.01;2018;Azul;Otras oleaginosas
+9;0.0;2018;Bahía Blanca;Otras oleaginosas
+10;26.973;2018;Balcarce;Otras oleaginosas
+11;1.941;2018;Baradero;Otras oleaginosas
+12;10.943;2018;Benito Juárez;Otras oleaginosas
+13;0.0;2018;Berazategui;Otras oleaginosas
+14;0.0;2018;Berisso;Otras oleaginosas
+15;12.345;2018;Bolívar;Otras oleaginosas
+16;0.0;2018;Bragado;Otras oleaginosas
+17;0.0;2018;Brandsen;Otras oleaginosas
+18;0.0;2018;Campana;Otras oleaginosas
+19;0.0;2018;Cañuelas;Otras oleaginosas
+20;0.0;2018;Capitán Sarmiento;Otras oleaginosas
+21;1.996;2018;Carlos Casares;Otras oleaginosas
+22;3.735;2018;Carlos Tejedor;Otras oleaginosas
+23;0.0;2018;Carmen de Areco;Otras oleaginosas
+24;1.477;2018;Castelli;Otras oleaginosas
+25;0.097;2018;Chacabuco;Otras oleaginosas
+26;1.559;2018;Chascomús;Otras oleaginosas
+27;0.025;2018;Chivilcoy;Otras oleaginosas
+28;0.0;2018;Colón;Otras oleaginosas
+29;0.0;2018;Coronel de Marina Leonardo Rosales;Otras oleaginosas
+30;18.114;2018;Coronel Dorrego;Otras oleaginosas
+31;15.029;2018;Coronel Pringles;Otras oleaginosas
+32;26.092;2018;Coronel Suárez;Otras oleaginosas
+33;6.705;2018;Daireaux;Otras oleaginosas
+34;0.0;2018;Dolores;Otras oleaginosas
+35;0.0;2018;Ensenada;Otras oleaginosas
+36;0.0;2018;Escobar;Otras oleaginosas
+37;0.0;2018;Esteban Echeverría;Otras oleaginosas
+38;0.427;2018;Exaltación de la Cruz;Otras oleaginosas
+39;0.0;2018;Ezeiza;Otras oleaginosas
+40;0.0;2018;Florencio Varela;Otras oleaginosas
+41;3.759;2018;Florentino Ameghino;Otras oleaginosas
+42;21.148;2018;General Alvarado;Otras oleaginosas
+43;3.298;2018;General Alvear;Otras oleaginosas
+44;0.0;2018;General Arenales;Otras oleaginosas
+45;1.672;2018;General Belgrano;Otras oleaginosas
+46;0.76;2018;General Guido;Otras oleaginosas
+47;5.929;2018;General Juan Madariaga;Otras oleaginosas
+48;19.041;2018;General La Madrid;Otras oleaginosas
+49;0.0;2018;General Las Heras;Otras oleaginosas
+50;0.68;2018;General Lavalle;Otras oleaginosas
+51;0.062;2018;General Paz;Otras oleaginosas
+52;1.926;2018;General Pinto;Otras oleaginosas
+53;8.356;2018;General Pueyrredón;Otras oleaginosas
+54;0.0;2018;General Rodríguez;Otras oleaginosas
+55;0.0;2018;General San Martín;Otras oleaginosas
+56;0.0;2018;General Viamonte;Otras oleaginosas
+57;2.439;2018;General Villegas;Otras oleaginosas
+58;21.544;2018;Guaminí;Otras oleaginosas
+59;3.582;2018;Hipólito Yrigoyen;Otras oleaginosas
+60;0.0;2018;Hurlingham;Otras oleaginosas
+61;0.0;2018;Ituzaingó;Otras oleaginosas
+62;0.0;2018;José C, Paz;Otras oleaginosas
+63;0.0;2018;Junín;Otras oleaginosas
+64;0.0;2018;La Costa;Otras oleaginosas
+65;0.0;2018;La Matanza;Otras oleaginosas
+66;0.0;2018;Lanús;Otras oleaginosas
+67;0.0;2018;La Plata;Otras oleaginosas
+68;1.281;2018;Laprida;Otras oleaginosas
+69;5.234;2018;Las Flores;Otras oleaginosas
+70;0.0;2018;Leandro N, Alem;Otras oleaginosas
+71;1.602;2018;Lezama;Otras oleaginosas
+72;2.918;2018;Lincoln;Otras oleaginosas
+73;44.398;2018;Lobería;Otras oleaginosas
+74;1.28;2018;Lobos;Otras oleaginosas
+75;0.0;2018;Lomas de Zamora;Otras oleaginosas
+76;0.071;2018;Luján;Otras oleaginosas
+77;0.0;2018;Magdalena;Otras oleaginosas
+78;2.596;2018;Maipú;Otras oleaginosas
+79;0.0;2018;Malvinas Argentinas;Otras oleaginosas
+80;8.327;2018;Mar Chiquita;Otras oleaginosas
+81;0.007;2018;Marcos Paz;Otras oleaginosas
+82;0.0;2018;Mercedes;Otras oleaginosas
+83;0.0;2018;Merlo;Otras oleaginosas
+84;1.831;2018;Monte;Otras oleaginosas
+85;0.0;2018;Monte Hermoso;Otras oleaginosas
+86;0.0;2018;Moreno;Otras oleaginosas
+87;0.0;2018;Morón;Otras oleaginosas
+88;0.0;2018;Navarro;Otras oleaginosas
+89;44.665;2018;Necochea;Otras oleaginosas
+90;1.312;2018;9 de julio;Otras oleaginosas
+91;8.764;2018;Olavarría;Otras oleaginosas
+92;4.555;2018;Patagones;Otras oleaginosas
+93;6.897;2018;Pehuajó;Otras oleaginosas
+94;19.028;2018;Pellegrini;Otras oleaginosas
+95;0.0;2018;Pergamino;Otras oleaginosas
+96;0.929;2018;Pila;Otras oleaginosas
+97;0.0;2018;Pilar;Otras oleaginosas
+98;0.0;2018;Pinamar;Otras oleaginosas
+99;0.0;2018;Presidente Perón;Otras oleaginosas
+100;2.342;2018;Puán;Otras oleaginosas
+101;0.0;2018;Punta Indio;Otras oleaginosas
+102;0.0;2018;Quilmes;Otras oleaginosas
+103;0.108;2018;Ramallo;Otras oleaginosas
+104;3.772;2018;Rauch;Otras oleaginosas
+105;10.204;2018;Rivadavia;Otras oleaginosas
+106;0.329;2018;Rojas;Otras oleaginosas
+107;1.24;2018;Roque Pérez;Otras oleaginosas
+108;6.737;2018;Saavedra;Otras oleaginosas
+109;1.003;2018;Saladillo;Otras oleaginosas
+110;8.313;2018;Salliqueló;Otras oleaginosas
+111;0.112;2018;Salto;Otras oleaginosas
+112;0.233;2018;San Andrés de Giles;Otras oleaginosas
+113;0.484;2018;San Antonio de Areco;Otras oleaginosas
+114;23.618;2018;San Cayetano;Otras oleaginosas
+115;0.0;2018;San Fernando;Otras oleaginosas
+116;0.0;2018;San Isidro;Otras oleaginosas
+117;0.0;2018;San Miguel;Otras oleaginosas
+118;0.015;2018;San Nicolás;Otras oleaginosas
+119;0.509;2018;San Pedro;Otras oleaginosas
+120;0.0;2018;San Vicente;Otras oleaginosas
+121;0.0;2018;Suipacha;Otras oleaginosas
+122;31.033;2018;Tandil;Otras oleaginosas
+123;3.202;2018;Tapalqué;Otras oleaginosas
+124;0.0;2018;Tigre;Otras oleaginosas
+125;0.0;2018;Tordillo;Otras oleaginosas
+126;2.715;2018;Tornquist;Otras oleaginosas
+127;24.42;2018;Trenque Lauquen;Otras oleaginosas
+128;42.191;2018;Tres Arroyos;Otras oleaginosas
+129;0.0;2018;Tres de Febrero;Otras oleaginosas
+130;12.378;2018;Tres Lomas;Otras oleaginosas
+131;2.8;2018;25 de mayo;Otras oleaginosas
+132;0.0;2018;Vicente López;Otras oleaginosas
+133;0.0;2018;Villa Gesell;Otras oleaginosas
+134;0.0;2018;Villarino;Otras oleaginosas
+135;0.308;2018;Zárate;Otras oleaginosas
+136;919.059;2002;Provincia de Buenos Aires;Otras oleaginosas
+137;32.454;2002;Adolfo Alsina;Otras oleaginosas
+138;41.274;2002;Adolfo Gonzales Chaves;Otras oleaginosas
+139;0.131;2002;Alberti;Otras oleaginosas
+140;0.0;2002;Almirante Brown;Otras oleaginosas
+141;0.642;2002;Arrecifes;Otras oleaginosas
+142;0.0;2002;Avellaneda;Otras oleaginosas
+143;6.976;2002;Ayacucho;Otras oleaginosas
+144;13.81;2002;Azul;Otras oleaginosas
+145;0.07;2002;Bahía Blanca;Otras oleaginosas
+146;25.734;2002;Balcarce;Otras oleaginosas
+147;0.459;2002;Baradero;Otras oleaginosas
+148;19.105;2002;Benito Juárez;Otras oleaginosas
+149;0.0;2002;Berazategui;Otras oleaginosas
+150;0.0;2002;Berisso;Otras oleaginosas
+151;2.809;2002;Bolívar;Otras oleaginosas
+152;0.105;2002;Bragado;Otras oleaginosas
+153;0.315;2002;Brandsen;Otras oleaginosas
+154;0.1;2002;Campana;Otras oleaginosas
+155;0.185;2002;Cañuelas;Otras oleaginosas
+156;0.0;2002;Capitán Sarmiento;Otras oleaginosas
+157;2.647;2002;Carlos Casares;Otras oleaginosas
+158;3.351;2002;Carlos Tejedor;Otras oleaginosas
+159;0.099;2002;Carmen de Areco;Otras oleaginosas
+160;0.58;2002;Castelli;Otras oleaginosas
+161;0.074;2002;Chacabuco;Otras oleaginosas
+162;2.272;2002;Chascomús;Otras oleaginosas
+163;1.009;2002;Chivilcoy;Otras oleaginosas
+164;0.017;2002;Colón;Otras oleaginosas
+165;0.0;2002;Coronel de Marina Leonardo Rosales;Otras oleaginosas
+166;46.046;2002;Coronel Dorrego;Otras oleaginosas
+167;33.644;2002;Coronel Pringles;Otras oleaginosas
+168;47.032;2002;Coronel Suárez;Otras oleaginosas
+169;11.665;2002;Daireaux;Otras oleaginosas
+170;0.067;2002;Dolores;Otras oleaginosas
+171;0.0;2002;Ensenada;Otras oleaginosas
+172;0.0;2002;Escobar;Otras oleaginosas
+173;0.0;2002;Esteban Echeverría;Otras oleaginosas
+174;1.038;2002;Exaltación de la Cruz;Otras oleaginosas
+175;0.0;2002;Ezeiza;Otras oleaginosas
+176;0.0;2002;Florencio Varela;Otras oleaginosas
+177;1.32;2002;Florentino Ameghino;Otras oleaginosas
+178;18.559;2002;General Alvarado;Otras oleaginosas
+179;1.311;2002;General Alvear;Otras oleaginosas
+180;0.0;2002;General Arenales;Otras oleaginosas
+181;1.341;2002;General Belgrano;Otras oleaginosas
+182;0.162;2002;General Guido;Otras oleaginosas
+183;3.347;2002;General Juan Madariaga;Otras oleaginosas
+184;19.148;2002;General La Madrid;Otras oleaginosas
+185;0.08;2002;General Las Heras;Otras oleaginosas
+186;0.07;2002;General Lavalle;Otras oleaginosas
+187;0.307;2002;General Paz;Otras oleaginosas
+188;0.161;2002;General Pinto;Otras oleaginosas
+189;10.437;2002;General Pueyrredón;Otras oleaginosas
+190;0.11;2002;General Rodríguez;Otras oleaginosas
+191;0.0;2002;General San Martín;Otras oleaginosas
+192;0.62;2002;General Viamonte;Otras oleaginosas
+193;11.564;2002;General Villegas;Otras oleaginosas
+194;27.019;2002;Guaminí;Otras oleaginosas
+195;2.254;2002;Hipólito Yrigoyen;Otras oleaginosas
+196;0.0;2002;Hurlingham;Otras oleaginosas
+197;0.0;2002;Ituzaingó;Otras oleaginosas
+198;0.0;2002;José C, Paz;Otras oleaginosas
+199;1.057;2002;Junín;Otras oleaginosas
+200;0.0;2002;La Costa;Otras oleaginosas
+201;0.3;2002;La Matanza;Otras oleaginosas
+202;0.0;2002;Lanús;Otras oleaginosas
+203;0.531;2002;La Plata;Otras oleaginosas
+204;4.482;2002;Laprida;Otras oleaginosas
+205;2.208;2002;Las Flores;Otras oleaginosas
+206;0.0;2002;Leandro N, Alem;Otras oleaginosas
+207;0.0;2002;Lezama;Otras oleaginosas
+208;6.005;2002;Lincoln;Otras oleaginosas
+209;63.953;2002;Lobería;Otras oleaginosas
+210;1.195;2002;Lobos;Otras oleaginosas
+211;0.0;2002;Lomas de Zamora;Otras oleaginosas
+212;0.783;2002;Luján;Otras oleaginosas
+213;1.272;2002;Magdalena;Otras oleaginosas
+214;2.47;2002;Maipú;Otras oleaginosas
+215;0.0;2002;Malvinas Argentinas;Otras oleaginosas
+216;4.237;2002;Mar Chiquita;Otras oleaginosas
+217;0.26;2002;Marcos Paz;Otras oleaginosas
+218;1.355;2002;Mercedes;Otras oleaginosas
+219;0.0;2002;Merlo;Otras oleaginosas
+220;0.336;2002;Monte;Otras oleaginosas
+221;0.0;2002;Monte Hermoso;Otras oleaginosas
+222;0.0;2002;Moreno;Otras oleaginosas
+223;0.0;2002;Morón;Otras oleaginosas
+224;0.295;2002;Navarro;Otras oleaginosas
+225;93.702;2002;Necochea;Otras oleaginosas
+226;2.052;2002;9 de julio;Otras oleaginosas
+227;10.21;2002;Olavarría;Otras oleaginosas
+228;2.683;2002;Patagones;Otras oleaginosas
+229;7.369;2002;Pehuajó;Otras oleaginosas
+230;20.339;2002;Pellegrini;Otras oleaginosas
+231;0.328;2002;Pergamino;Otras oleaginosas
+232;0.13;2002;Pila;Otras oleaginosas
+233;0.0;2002;Pilar;Otras oleaginosas
+234;0.0;2002;Pinamar;Otras oleaginosas
+235;0.0;2002;Presidente Perón;Otras oleaginosas
+236;6.233;2002;Puán;Otras oleaginosas
+237;0.035;2002;Punta Indio;Otras oleaginosas
+238;0.0;2002;Quilmes;Otras oleaginosas
+239;0.249;2002;Ramallo;Otras oleaginosas
+240;1.568;2002;Rauch;Otras oleaginosas
+241;23.699;2002;Rivadavia;Otras oleaginosas
+242;0.01;2002;Rojas;Otras oleaginosas
+243;0.323;2002;Roque Pérez;Otras oleaginosas
+244;22.0;2002;Saavedra;Otras oleaginosas
+245;5.086;2002;Saladillo;Otras oleaginosas
+246;3.893;2002;Salliqueló;Otras oleaginosas
+247;0.023;2002;Salto;Otras oleaginosas
+248;1.431;2002;San Andrés de Giles;Otras oleaginosas
+249;0.888;2002;San Antonio de Areco;Otras oleaginosas
+250;42.976;2002;San Cayetano;Otras oleaginosas
+251;0.0;2002;San Fernando;Otras oleaginosas
+252;0.0;2002;San Isidro;Otras oleaginosas
+253;0.0;2002;San Miguel;Otras oleaginosas
+254;0.064;2002;San Nicolás;Otras oleaginosas
+255;0.371;2002;San Pedro;Otras oleaginosas
+256;0.0;2002;San Vicente;Otras oleaginosas
+257;0.417;2002;Suipacha;Otras oleaginosas
+258;27.004;2002;Tandil;Otras oleaginosas
+259;0.694;2002;Tapalqué;Otras oleaginosas
+260;0.0;2002;Tigre;Otras oleaginosas
+261;0.0;2002;Tordillo;Otras oleaginosas
+262;9.125;2002;Tornquist;Otras oleaginosas
+263;27.234;2002;Trenque Lauquen;Otras oleaginosas
+264;111.737;2002;Tres Arroyos;Otras oleaginosas
+265;0.0;2002;Tres de Febrero;Otras oleaginosas
+266;8.008;2002;Tres Lomas;Otras oleaginosas
+267;3.217;2002;25 de mayo;Otras oleaginosas
+268;0.0;2002;Vicente López;Otras oleaginosas
+269;0.0;2002;Villa Gesell;Otras oleaginosas
+270;3.534;2002;Villarino;Otras oleaginosas
+271;0.172;2002;Zárate;Otras oleaginosas
+272;1242.183;1988;Provincia de Buenos Aires;Otras oleaginosas
+273;37.804;1988;Adolfo Alsina;Otras oleaginosas
+274;31.693;1988;Adolfo Gonzales Chaves;Otras oleaginosas
+275;4.658;1988;Alberti;Otras oleaginosas
+276;0.0;1988;Almirante Brown;Otras oleaginosas
+277;0.0;1988;Arrecifes;Otras oleaginosas
+278;0.0;1988;Avellaneda;Otras oleaginosas
+279;19.128;1988;Ayacucho;Otras oleaginosas
+280;29.941;1988;Azul;Otras oleaginosas
+281;0.17;1988;Bahía Blanca;Otras oleaginosas
+282;24.552;1988;Balcarce;Otras oleaginosas
+283;6.255;1988;Baradero;Otras oleaginosas
+284;2.931;1988;Bartolomé Mitre;Otras oleaginosas
+285;24.634;1988;Benito Juárez;Otras oleaginosas
+286;0.206;1988;Berazategui;Otras oleaginosas
+287;0.12;1988;Berisso;Otras oleaginosas
+288;11.376;1988;Bolívar;Otras oleaginosas
+289;11.397;1988;Bragado;Otras oleaginosas
+290;0.335;1988;Brandsen;Otras oleaginosas
+291;1.382;1988;Campana;Otras oleaginosas
+292;2.365;1988;Cañuelas;Otras oleaginosas
+293;2.671;1988;Capitán Sarmiento;Otras oleaginosas
+294;6.861;1988;Carlos Casares;Otras oleaginosas
+295;6.513;1988;Carlos Tejedor;Otras oleaginosas
+296;1.486;1988;Carmen de Areco;Otras oleaginosas
+297;9.215;1988;Castelli;Otras oleaginosas
+298;2.521;1988;Chacabuco;Otras oleaginosas
+299;6.871;1988;Chascomús;Otras oleaginosas
+300;7.944;1988;Chivilcoy;Otras oleaginosas
+301;0.378;1988;Colón;Otras oleaginosas
+302;0.0;1988;Coronel de Marina Leonardo Rosales;Otras oleaginosas
+303;39.624;1988;Coronel Dorrego;Otras oleaginosas
+304;30.029;1988;Coronel Pringles;Otras oleaginosas
+305;62.913;1988;Coronel Suárez;Otras oleaginosas
+306;13.85;1988;Daireaux;Otras oleaginosas
+307;0.367;1988;Dolores;Otras oleaginosas
+308;0.0;1988;Ensenada;Otras oleaginosas
+309;0.0;1988;Escobar;Otras oleaginosas
+310;0.291;1988;Esteban Echeverría;Otras oleaginosas
+311;3.912;1988;Exaltación de la Cruz;Otras oleaginosas
+312;0.0;1988;Ezeiza;Otras oleaginosas
+313;0.083;1988;Florencio Varela;Otras oleaginosas
+314;0.0;1988;Florentino Ameghino;Otras oleaginosas
+315;13.02;1988;General Alvarado;Otras oleaginosas
+316;1.93;1988;General Alvear;Otras oleaginosas
+317;1.738;1988;General Arenales;Otras oleaginosas
+318;6.343;1988;General Belgrano;Otras oleaginosas
+319;1.584;1988;General Guido;Otras oleaginosas
+320;1.271;1988;General Juan Madariaga;Otras oleaginosas
+321;19.826;1988;General La Madrid;Otras oleaginosas
+322;0.809;1988;General Las Heras;Otras oleaginosas
+323;0.37;1988;General Lavalle;Otras oleaginosas
+324;1.831;1988;General Paz;Otras oleaginosas
+325;25.128;1988;General Pinto;Otras oleaginosas
+326;6.582;1988;General Pueyrredón;Otras oleaginosas
+327;0.423;1988;General Rodríguez;Otras oleaginosas
+328;0.0;1988;General San Martín;Otras oleaginosas
+329;0.0;1988;General Sarmiento;Otras oleaginosas
+330;9.3;1988;General Viamonte;Otras oleaginosas
+331;45.181;1988;General Villegas;Otras oleaginosas
+332;22.752;1988;Guaminí;Otras oleaginosas
+333;3.362;1988;Hipólito Yrigoyen;Otras oleaginosas
+334;0.0;1988;Hurlingham;Otras oleaginosas
+335;0.0;1988;Ituzaingó;Otras oleaginosas
+336;0.0;1988;José C, Paz;Otras oleaginosas
+337;3.672;1988;Junín;Otras oleaginosas
+338;0.0;1988;La Costa;Otras oleaginosas
+339;0.069;1988;La Matanza;Otras oleaginosas
+340;0.0;1988;Lanús;Otras oleaginosas
+341;0.325;1988;La Plata;Otras oleaginosas
+342;6.331;1988;Laprida;Otras oleaginosas
+343;4.665;1988;Las Flores;Otras oleaginosas
+344;4.731;1988;Leandro N, Alem;Otras oleaginosas
+345;0.0;1988;Lezama;Otras oleaginosas
+346;32.151;1988;Lincoln;Otras oleaginosas
+347;70.112;1988;Lobería;Otras oleaginosas
+348;8.843;1988;Lobos;Otras oleaginosas
+349;0.0;1988;Lomas de Zamora;Otras oleaginosas
+350;3.91;1988;Luján;Otras oleaginosas
+351;4.848;1988;Magdalena;Otras oleaginosas
+352;1.35;1988;Maipú;Otras oleaginosas
+353;0.0;1988;Malvinas Argentinas;Otras oleaginosas
+354;9.841;1988;Mar Chiquita;Otras oleaginosas
+355;0.636;1988;Marcos Paz;Otras oleaginosas
+356;5.051;1988;Mercedes;Otras oleaginosas
+357;0.0;1988;Merlo;Otras oleaginosas
+358;6.531;1988;Monte;Otras oleaginosas
+359;0.0;1988;Monte Hermoso;Otras oleaginosas
+360;0.065;1988;Moreno;Otras oleaginosas
+361;0.0;1988;Morón;Otras oleaginosas
+362;7.511;1988;Navarro;Otras oleaginosas
+363;78.392;1988;Necochea;Otras oleaginosas
+364;16.574;1988;9 de julio;Otras oleaginosas
+365;15.352;1988;Olavarría;Otras oleaginosas
+366;0.0;1988;Patagones;Otras oleaginosas
+367;6.225;1988;Pehuajó;Otras oleaginosas
+368;12.111;1988;Pellegrini;Otras oleaginosas
+369;7.278;1988;Pergamino;Otras oleaginosas
+370;1.315;1988;Pila;Otras oleaginosas
+371;0.249;1988;Pilar;Otras oleaginosas
+372;0.0;1988;Pinamar;Otras oleaginosas
+373;0.0;1988;Presidente Perón;Otras oleaginosas
+374;11.206;1988;Puán;Otras oleaginosas
+375;0.0;1988;Punta Indio;Otras oleaginosas
+376;0.0;1988;Quilmes;Otras oleaginosas
+377;0.966;1988;Ramallo;Otras oleaginosas
+378;5.778;1988;Rauch;Otras oleaginosas
+379;28.625;1988;Rivadavia;Otras oleaginosas
+380;1.309;1988;Rojas;Otras oleaginosas
+381;5.411;1988;Roque Pérez;Otras oleaginosas
+382;29.688;1988;Saavedra;Otras oleaginosas
+383;8.8;1988;Saladillo;Otras oleaginosas
+384;6.628;1988;Salliqueló;Otras oleaginosas
+385;4.896;1988;Salto;Otras oleaginosas
+386;6.434;1988;San Andrés de Giles;Otras oleaginosas
+387;5.577;1988;San Antonio de Areco;Otras oleaginosas
+388;53.451;1988;San Cayetano;Otras oleaginosas
+389;0.0;1988;San Fernando;Otras oleaginosas
+390;0.0;1988;San Isidro;Otras oleaginosas
+391;0.0;1988;San Miguel;Otras oleaginosas
+392;0.6;1988;San Nicolás;Otras oleaginosas
+393;2.87;1988;San Pedro;Otras oleaginosas
+394;0.305;1988;San Vicente;Otras oleaginosas
+395;3.928;1988;Suipacha;Otras oleaginosas
+396;49.494;1988;Tandil;Otras oleaginosas
+397;2.622;1988;Tapalqué;Otras oleaginosas
+398;0.0;1988;Tigre;Otras oleaginosas
+399;0.0;1988;Tordillo;Otras oleaginosas
+400;8.067;1988;Tornquist;Otras oleaginosas
+401;8.447;1988;Trenque Lauquen;Otras oleaginosas
+402;95.679;1988;Tres Arroyos;Otras oleaginosas
+403;0.0;1988;Tres de Febrero;Otras oleaginosas
+404;6.001;1988;Tres Lomas;Otras oleaginosas
+405;16.718;1988;25 de mayo;Otras oleaginosas
+406;0.0;1988;Vicente López;Otras oleaginosas
+407;0.0;1988;Villa Gesell;Otras oleaginosas
+408;0.0;1988;Villarino;Otras oleaginosas
+409;4.077;1988;Zárate;Otras oleaginosas
+410;0.555;1988;Indeterminado;Otras oleaginosas

@@ -7,6 +7,7 @@ from dash import Dash
 from ..constantes import *
 
 
+
 Solapas = dbc.Container([
     dbc.Tabs(id="tabs", active_tab='tab-1', children=[
         dbc.Tab(label='Concentración de tierras', tab_id='tab-1', label_style={"color": NEGRO , "font-weight": "bold", 'font-size': '20px', 'background-color':LILA,  'border-top-left-radius': '40px','border-bottom-left-radius': '40px','border-bottom-right-radius': '40px','border-top-right-radius': '40px', "text-align": "center"},active_label_style={'border': '4px solid white'}, className='nav-tabs-custom'),
