@@ -8,16 +8,6 @@ from ...data import df_ha_tipo_cultivo, df_cultivado_bosques, df_practicas_organ
 
 indicadores = [
     Indicador(
-    id_indicador="practicas-organicas",
-    df=df_practicas_organicas,
-    tipo_grafico="number",
-    titulo_grafico="EAPs con prácticas orgánicas y agroecológicas (Año 2018)" ,
-    y='Prácticas orgánicasbiodinámicas/agroecológicas_EAPs',
-    colores=[LILA],
-    # hover='Hectareas cultivadas: %{y}',
-    texto_descriptivo = TEXTO_PRACTICAS_AGROECOLOGICAS
-    ),
-    Indicador(
         id_indicador="ha-tipo-cultivo",
         df=df_ha_tipo_cultivo,
         tipo_grafico="area",
@@ -42,7 +32,17 @@ indicadores = [
         colores=[LILA, LIMA],
         hover='Hectareas cultivadas: %{y} <br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_BOSQUES
-    )   
+    ),
+    Indicador(
+        id_indicador="practicas-organicas",
+        df=df_practicas_organicas,
+        tipo_grafico="number",
+        titulo_grafico="EAPs con prácticas orgánicas y agroecológicas (Año 2018)" ,
+        y='Prácticas orgánicasbiodinámicas/agroecológicas_EAPs',
+        colores=[LILA],
+        # hover='Hectareas cultivadas: %{y}',
+        texto_descriptivo = TEXTO_PRACTICAS_AGROECOLOGICAS
+        ),   
 ]
 
 
