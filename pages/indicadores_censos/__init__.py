@@ -9,7 +9,7 @@ from .componentes.solapas.resumen_general import PERDIDA_EMPLEO_X_MES, PERDIDA_E
 layout = html.Div([
         dbc.Row([
                 dbc.Col(dbc.Container([      
-                        html.H4('CENSO NACIONAL AGROPECUARIO', className="text-white"),
+                        html.H4('CENSO NACIONAL AGROPECUARIO', className="text-white pt-3"),
                         html.Br(),
                         html.H5('Entre el 2002 y el 2018, en la Provincia de Buenos Aires, cada mes:', className="text-white"),
                         html.H5([f'Se cerraban ', html.Strong(f"{PERDIDA_EAPS_X_MES}", className="text-primary"), " EAP"], className="text-white px-5"),

@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 
 TextoRanking_1 = dbc.Container(
     [      
-        html.H4("NORMATIVA COMPARADA", className="text-white", style={'font-weight': 'bold'}),
+        html.H4("NORMATIVA COMPARADA", className="text-white pt-3"),
         html.P(["Para el comparativo de normativas se establecieron cuatro dimensiones analíticas,"]),
         html.P(["1) Transparencia, 2) Protección de poblados, 3) Protección de escuelas rurales y 4) Protección del agua."]),
     ],
