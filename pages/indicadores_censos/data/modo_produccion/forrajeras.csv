@@ -1,0 +1,823 @@
+;HA de EAPs;Año del censo;Partido;Tipo forrajera
+0;1604.875;2018;Provincia de Buenos Aires;Forrajeras anuales
+1;74.792;2018;Adolfo Alsina;Forrajeras anuales
+2;18.797;2018;Adolfo Gonzales Chaves;Forrajeras anuales
+3;1.604;2018;Alberti;Forrajeras anuales
+4;0.004;2018;Almirante Brown;Forrajeras anuales
+5;1.144;2018;Arrecifes;Forrajeras anuales
+6;0.0;2018;Avellaneda;Forrajeras anuales
+7;33.942;2018;Ayacucho;Forrajeras anuales
+8;30.664;2018;Azul;Forrajeras anuales
+9;30.678;2018;Bahía Blanca;Forrajeras anuales
+10;15.697;2018;Balcarce;Forrajeras anuales
+11;1.388;2018;Baradero;Forrajeras anuales
+12;23.685;2018;Benito Juárez;Forrajeras anuales
+13;0.0;2018;Berazategui;Forrajeras anuales
+14;0.001;2018;Berisso;Forrajeras anuales
+15;21.681;2018;Bolívar;Forrajeras anuales
+16;2.696;2018;Bragado;Forrajeras anuales
+17;3.443;2018;Brandsen;Forrajeras anuales
+18;0.153;2018;Campana;Forrajeras anuales
+19;3.622;2018;Cañuelas;Forrajeras anuales
+20;1.722;2018;Capitán Sarmiento;Forrajeras anuales
+21;9.973;2018;Carlos Casares;Forrajeras anuales
+22;10.355;2018;Carlos Tejedor;Forrajeras anuales
+23;2.158;2018;Carmen de Areco;Forrajeras anuales
+24;7.335;2018;Castelli;Forrajeras anuales
+25;3.423;2018;Chacabuco;Forrajeras anuales
+26;7.73;2018;Chascomús;Forrajeras anuales
+27;1.937;2018;Chivilcoy;Forrajeras anuales
+28;0.539;2018;Colón;Forrajeras anuales
+29;13.29;2018;Coronel de Marina Leonardo Rosales;Forrajeras anuales
+30;58.521;2018;Coronel Dorrego;Forrajeras anuales
+31;53.505;2018;Coronel Pringles;Forrajeras anuales
+32;51.659;2018;Coronel Suárez;Forrajeras anuales
+33;19.495;2018;Daireaux;Forrajeras anuales
+34;3.665;2018;Dolores;Forrajeras anuales
+35;0.0;2018;Ensenada;Forrajeras anuales
+36;0.099;2018;Escobar;Forrajeras anuales
+37;0.0;2018;Esteban Echeverría;Forrajeras anuales
+38;2.245;2018;Exaltación de la Cruz;Forrajeras anuales
+39;0.06;2018;Ezeiza;Forrajeras anuales
+40;0.0;2018;Florencio Varela;Forrajeras anuales
+41;8.214;2018;Florentino Ameghino;Forrajeras anuales
+42;2.421;2018;General Alvarado;Forrajeras anuales
+43;15.555;2018;General Alvear;Forrajeras anuales
+44;0.287;2018;General Arenales;Forrajeras anuales
+45;2.95;2018;General Belgrano;Forrajeras anuales
+46;5.218;2018;General Guido;Forrajeras anuales
+47;6.606;2018;General Juan Madariaga;Forrajeras anuales
+48;39.966;2018;General La Madrid;Forrajeras anuales
+49;4.182;2018;General Las Heras;Forrajeras anuales
+50;3.293;2018;General Lavalle;Forrajeras anuales
+51;7.586;2018;General Paz;Forrajeras anuales
+52;10.154;2018;General Pinto;Forrajeras anuales
+53;3.616;2018;General Pueyrredón;Forrajeras anuales
+54;0.205;2018;General Rodríguez;Forrajeras anuales
+55;0.0;2018;General San Martín;Forrajeras anuales
+56;5.227;2018;General Viamonte;Forrajeras anuales
+57;16.412;2018;General Villegas;Forrajeras anuales
+58;51.234;2018;Guaminí;Forrajeras anuales
+59;6.631;2018;Hipólito Yrigoyen;Forrajeras anuales
+60;0.0;2018;Hurlingham;Forrajeras anuales
+61;0.0;2018;Ituzaingó;Forrajeras anuales
+62;0.0;2018;José C, Paz;Forrajeras anuales
+63;3.995;2018;Junín;Forrajeras anuales
+64;0.0;2018;La Costa;Forrajeras anuales
+65;0.07;2018;La Matanza;Forrajeras anuales
+66;0.0;2018;Lanús;Forrajeras anuales
+67;1.748;2018;La Plata;Forrajeras anuales
+68;19.072;2018;Laprida;Forrajeras anuales
+69;10.148;2018;Las Flores;Forrajeras anuales
+70;2.997;2018;Leandro N, Alem;Forrajeras anuales
+71;3.313;2018;Lezama;Forrajeras anuales
+72;17.041;2018;Lincoln;Forrajeras anuales
+73;14.222;2018;Lobería;Forrajeras anuales
+74;7.927;2018;Lobos;Forrajeras anuales
+75;0.088;2018;Lomas de Zamora;Forrajeras anuales
+76;1.607;2018;Luján;Forrajeras anuales
+77;6.865;2018;Magdalena;Forrajeras anuales
+78;6.697;2018;Maipú;Forrajeras anuales
+79;0.0;2018;Malvinas Argentinas;Forrajeras anuales
+80;13.592;2018;Mar Chiquita;Forrajeras anuales
+81;2.696;2018;Marcos Paz;Forrajeras anuales
+82;3.452;2018;Mercedes;Forrajeras anuales
+83;0.12;2018;Merlo;Forrajeras anuales
+84;7.779;2018;Monte;Forrajeras anuales
+85;0.816;2018;Monte Hermoso;Forrajeras anuales
+86;0.0;2018;Moreno;Forrajeras anuales
+87;0.0;2018;Morón;Forrajeras anuales
+88;10.004;2018;Navarro;Forrajeras anuales
+89;19.157;2018;Necochea;Forrajeras anuales
+90;14.566;2018;9 de julio;Forrajeras anuales
+91;40.641;2018;Olavarría;Forrajeras anuales
+92;125.866;2018;Patagones;Forrajeras anuales
+93;11.748;2018;Pehuajó;Forrajeras anuales
+94;11.841;2018;Pellegrini;Forrajeras anuales
+95;3.432;2018;Pergamino;Forrajeras anuales
+96;4.254;2018;Pila;Forrajeras anuales
+97;0.0;2018;Pilar;Forrajeras anuales
+98;0.0;2018;Pinamar;Forrajeras anuales
+99;0.03;2018;Presidente Perón;Forrajeras anuales
+100;83.958;2018;Puán;Forrajeras anuales
+101;2.413;2018;Punta Indio;Forrajeras anuales
+102;0.0;2018;Quilmes;Forrajeras anuales
+103;0.324;2018;Ramallo;Forrajeras anuales
+104;19.014;2018;Rauch;Forrajeras anuales
+105;17.978;2018;Rivadavia;Forrajeras anuales
+106;4.307;2018;Rojas;Forrajeras anuales
+107;1.81;2018;Roque Pérez;Forrajeras anuales
+108;61.644;2018;Saavedra;Forrajeras anuales
+109;8.241;2018;Saladillo;Forrajeras anuales
+110;11.926;2018;Salliqueló;Forrajeras anuales
+111;2.052;2018;Salto;Forrajeras anuales
+112;0.983;2018;San Andrés de Giles;Forrajeras anuales
+113;1.544;2018;San Antonio de Areco;Forrajeras anuales
+114;12.041;2018;San Cayetano;Forrajeras anuales
+115;0.14;2018;San Fernando;Forrajeras anuales
+116;0.0;2018;San Isidro;Forrajeras anuales
+117;0.0;2018;San Miguel;Forrajeras anuales
+118;0.141;2018;San Nicolás;Forrajeras anuales
+119;1.122;2018;San Pedro;Forrajeras anuales
+120;1.164;2018;San Vicente;Forrajeras anuales
+121;4.914;2018;Suipacha;Forrajeras anuales
+122;31.803;2018;Tandil;Forrajeras anuales
+123;10.913;2018;Tapalqué;Forrajeras anuales
+124;0.0;2018;Tigre;Forrajeras anuales
+125;0.86;2018;Tordillo;Forrajeras anuales
+126;75.151;2018;Tornquist;Forrajeras anuales
+127;46.68;2018;Trenque Lauquen;Forrajeras anuales
+128;34.231;2018;Tres Arroyos;Forrajeras anuales
+129;0.0;2018;Tres de Febrero;Forrajeras anuales
+130;6.745;2018;Tres Lomas;Forrajeras anuales
+131;18.664;2018;25 de mayo;Forrajeras anuales
+132;0.0;2018;Vicente López;Forrajeras anuales
+133;0.0;2018;Villa Gesell;Forrajeras anuales
+134;76.529;2018;Villarino;Forrajeras anuales
+135;0.352;2018;Zárate;Forrajeras anuales
+136;1325.414;2002;Provincia de Buenos Aires;Forrajeras anuales
+137;78.016;2002;Adolfo Alsina;Forrajeras anuales
+138;16.3;2002;Adolfo Gonzales Chaves;Forrajeras anuales
+139;1.666;2002;Alberti;Forrajeras anuales
+140;0.0;2002;Almirante Brown;Forrajeras anuales
+141;1.093;2002;Arrecifes;Forrajeras anuales
+142;0.0;2002;Avellaneda;Forrajeras anuales
+143;13.23;2002;Ayacucho;Forrajeras anuales
+144;23.429;2002;Azul;Forrajeras anuales
+145;39.196;2002;Bahía Blanca;Forrajeras anuales
+146;11.59;2002;Balcarce;Forrajeras anuales
+147;1.395;2002;Baradero;Forrajeras anuales
+148;11.474;2002;Benito Juárez;Forrajeras anuales
+149;0.0;2002;Berazategui;Forrajeras anuales
+150;0.0;2002;Berisso;Forrajeras anuales
+151;11.084;2002;Bolívar;Forrajeras anuales
+152;1.618;2002;Bragado;Forrajeras anuales
+153;3.623;2002;Brandsen;Forrajeras anuales
+154;0.31;2002;Campana;Forrajeras anuales
+155;1.068;2002;Cañuelas;Forrajeras anuales
+156;1.043;2002;Capitán Sarmiento;Forrajeras anuales
+157;6.683;2002;Carlos Casares;Forrajeras anuales
+158;6.757;2002;Carlos Tejedor;Forrajeras anuales
+159;3.603;2002;Carmen de Areco;Forrajeras anuales
+160;4.355;2002;Castelli;Forrajeras anuales
+161;3.378;2002;Chacabuco;Forrajeras anuales
+162;4.086;2002;Chascomús;Forrajeras anuales
+163;4.23;2002;Chivilcoy;Forrajeras anuales
+164;0.398;2002;Colón;Forrajeras anuales
+165;14.829;2002;Coronel de Marina Leonardo Rosales;Forrajeras anuales
+166;59.795;2002;Coronel Dorrego;Forrajeras anuales
+167;33.811;2002;Coronel Pringles;Forrajeras anuales
+168;41.107;2002;Coronel Suárez;Forrajeras anuales
+169;11.721;2002;Daireaux;Forrajeras anuales
+170;0.261;2002;Dolores;Forrajeras anuales
+171;0.0;2002;Ensenada;Forrajeras anuales
+172;0.242;2002;Escobar;Forrajeras anuales
+173;0.0;2002;Esteban Echeverría;Forrajeras anuales
+174;1.148;2002;Exaltación de la Cruz;Forrajeras anuales
+175;0.09;2002;Ezeiza;Forrajeras anuales
+176;0.0;2002;Florencio Varela;Forrajeras anuales
+177;8.199;2002;Florentino Ameghino;Forrajeras anuales
+178;4.971;2002;General Alvarado;Forrajeras anuales
+179;4.124;2002;General Alvear;Forrajeras anuales
+180;1.44;2002;General Arenales;Forrajeras anuales
+181;2.657;2002;General Belgrano;Forrajeras anuales
+182;1.086;2002;General Guido;Forrajeras anuales
+183;2.84;2002;General Juan Madariaga;Forrajeras anuales
+184;14.151;2002;General La Madrid;Forrajeras anuales
+185;1.559;2002;General Las Heras;Forrajeras anuales
+186;1.485;2002;General Lavalle;Forrajeras anuales
+187;2.314;2002;General Paz;Forrajeras anuales
+188;10.785;2002;General Pinto;Forrajeras anuales
+189;4.329;2002;General Pueyrredón;Forrajeras anuales
+190;0.992;2002;General Rodríguez;Forrajeras anuales
+191;0.0;2002;General San Martín;Forrajeras anuales
+192;3.054;2002;General Viamonte;Forrajeras anuales
+193;29.191;2002;General Villegas;Forrajeras anuales
+194;50.815;2002;Guaminí;Forrajeras anuales
+195;4.889;2002;Hipólito Yrigoyen;Forrajeras anuales
+196;0.0;2002;Hurlingham;Forrajeras anuales
+197;0.0;2002;Ituzaingó;Forrajeras anuales
+198;0.0;2002;José C, Paz;Forrajeras anuales
+199;2.89;2002;Junín;Forrajeras anuales
+200;0.0;2002;La Costa;Forrajeras anuales
+201;2.997;2002;La Matanza;Forrajeras anuales
+202;0.0;2002;Lanús;Forrajeras anuales
+203;1.013;2002;La Plata;Forrajeras anuales
+204;12.231;2002;Laprida;Forrajeras anuales
+205;2.586;2002;Las Flores;Forrajeras anuales
+206;6.5;2002;Leandro N, Alem;Forrajeras anuales
+207;0.0;2002;Lezama;Forrajeras anuales
+208;16.588;2002;Lincoln;Forrajeras anuales
+209;19.833;2002;Lobería;Forrajeras anuales
+210;3.785;2002;Lobos;Forrajeras anuales
+211;0.077;2002;Lomas de Zamora;Forrajeras anuales
+212;1.504;2002;Luján;Forrajeras anuales
+213;3.74;2002;Magdalena;Forrajeras anuales
+214;1.886;2002;Maipú;Forrajeras anuales
+215;0.0;2002;Malvinas Argentinas;Forrajeras anuales
+216;6.067;2002;Mar Chiquita;Forrajeras anuales
+217;2.661;2002;Marcos Paz;Forrajeras anuales
+218;3.764;2002;Mercedes;Forrajeras anuales
+219;0.22;2002;Merlo;Forrajeras anuales
+220;5.552;2002;Monte;Forrajeras anuales
+221;1.24;2002;Monte Hermoso;Forrajeras anuales
+222;0.0;2002;Moreno;Forrajeras anuales
+223;0.0;2002;Morón;Forrajeras anuales
+224;5.532;2002;Navarro;Forrajeras anuales
+225;15.271;2002;Necochea;Forrajeras anuales
+226;7.35;2002;9 de julio;Forrajeras anuales
+227;16.651;2002;Olavarría;Forrajeras anuales
+228;134.056;2002;Patagones;Forrajeras anuales
+229;7.717;2002;Pehuajó;Forrajeras anuales
+230;25.229;2002;Pellegrini;Forrajeras anuales
+231;3.323;2002;Pergamino;Forrajeras anuales
+232;0.832;2002;Pila;Forrajeras anuales
+233;0.006;2002;Pilar;Forrajeras anuales
+234;0.0;2002;Pinamar;Forrajeras anuales
+235;0.004;2002;Presidente Perón;Forrajeras anuales
+236;70.718;2002;Puán;Forrajeras anuales
+237;0.397;2002;Punta Indio;Forrajeras anuales
+238;0.0;2002;Quilmes;Forrajeras anuales
+239;0.188;2002;Ramallo;Forrajeras anuales
+240;4.895;2002;Rauch;Forrajeras anuales
+241;26.878;2002;Rivadavia;Forrajeras anuales
+242;1.954;2002;Rojas;Forrajeras anuales
+243;0.96;2002;Roque Pérez;Forrajeras anuales
+244;52.78;2002;Saavedra;Forrajeras anuales
+245;2.439;2002;Saladillo;Forrajeras anuales
+246;16.898;2002;Salliqueló;Forrajeras anuales
+247;1.256;2002;Salto;Forrajeras anuales
+248;1.692;2002;San Andrés de Giles;Forrajeras anuales
+249;0.958;2002;San Antonio de Areco;Forrajeras anuales
+250;8.978;2002;San Cayetano;Forrajeras anuales
+251;0.0;2002;San Fernando;Forrajeras anuales
+252;0.0;2002;San Isidro;Forrajeras anuales
+253;0.0;2002;San Miguel;Forrajeras anuales
+254;0.309;2002;San Nicolás;Forrajeras anuales
+255;0.566;2002;San Pedro;Forrajeras anuales
+256;1.193;2002;San Vicente;Forrajeras anuales
+257;3.146;2002;Suipacha;Forrajeras anuales
+258;22.179;2002;Tandil;Forrajeras anuales
+259;1.59;2002;Tapalqué;Forrajeras anuales
+260;0.0;2002;Tigre;Forrajeras anuales
+261;0.22;2002;Tordillo;Forrajeras anuales
+262;62.214;2002;Tornquist;Forrajeras anuales
+263;47.74;2002;Trenque Lauquen;Forrajeras anuales
+264;23.982;2002;Tres Arroyos;Forrajeras anuales
+265;0.0;2002;Tres de Febrero;Forrajeras anuales
+266;14.421;2002;Tres Lomas;Forrajeras anuales
+267;5.971;2002;25 de mayo;Forrajeras anuales
+268;0.0;2002;Vicente López;Forrajeras anuales
+269;0.0;2002;Villa Gesell;Forrajeras anuales
+270;77.872;2002;Villarino;Forrajeras anuales
+271;0.418;2002;Zárate;Forrajeras anuales
+272;1829.899;1988;Provincia de Buenos Aires;Forrajeras anuales
+273;102.545;1988;Adolfo Alsina;Forrajeras anuales
+274;20.314;1988;Adolfo Gonzales Chaves;Forrajeras anuales
+275;2.378;1988;Alberti;Forrajeras anuales
+276;0.022;1988;Almirante Brown;Forrajeras anuales
+277;0.0;1988;Arrecifes;Forrajeras anuales
+278;0.0;1988;Avellaneda;Forrajeras anuales
+279;34.007;1988;Ayacucho;Forrajeras anuales
+280;28.725;1988;Azul;Forrajeras anuales
+281;38.901;1988;Bahía Blanca;Forrajeras anuales
+282;26.62;1988;Balcarce;Forrajeras anuales
+283;2.483;1988;Baradero;Forrajeras anuales
+284;2.296;1988;Bartolomé Mitre;Forrajeras anuales
+285;30.276;1988;Benito Juárez;Forrajeras anuales
+286;0.13;1988;Berazategui;Forrajeras anuales
+287;0.003;1988;Berisso;Forrajeras anuales
+288;11.477;1988;Bolívar;Forrajeras anuales
+289;10.173;1988;Bragado;Forrajeras anuales
+290;8.074;1988;Brandsen;Forrajeras anuales
+291;1.014;1988;Campana;Forrajeras anuales
+292;5.955;1988;Cañuelas;Forrajeras anuales
+293;2.12;1988;Capitán Sarmiento;Forrajeras anuales
+294;11.206;1988;Carlos Casares;Forrajeras anuales
+295;12.228;1988;Carlos Tejedor;Forrajeras anuales
+296;4.701;1988;Carmen de Areco;Forrajeras anuales
+297;7.349;1988;Castelli;Forrajeras anuales
+298;6.17;1988;Chacabuco;Forrajeras anuales
+299;12.834;1988;Chascomús;Forrajeras anuales
+300;7.597;1988;Chivilcoy;Forrajeras anuales
+301;1.19;1988;Colón;Forrajeras anuales
+302;18.599;1988;Coronel de Marina Leonardo Rosales;Forrajeras anuales
+303;55.34;1988;Coronel Dorrego;Forrajeras anuales
+304;39.763;1988;Coronel Pringles;Forrajeras anuales
+305;48.182;1988;Coronel Suárez;Forrajeras anuales
+306;19.963;1988;Daireaux;Forrajeras anuales
+307;1.427;1988;Dolores;Forrajeras anuales
+308;0.0;1988;Ensenada;Forrajeras anuales
+309;0.021;1988;Escobar;Forrajeras anuales
+310;0.442;1988;Esteban Echeverría;Forrajeras anuales
+311;3.203;1988;Exaltación de la Cruz;Forrajeras anuales
+312;0.0;1988;Ezeiza;Forrajeras anuales
+313;0.308;1988;Florencio Varela;Forrajeras anuales
+314;0.0;1988;Florentino Ameghino;Forrajeras anuales
+315;10.984;1988;General Alvarado;Forrajeras anuales
+316;4.267;1988;General Alvear;Forrajeras anuales
+317;3.932;1988;General Arenales;Forrajeras anuales
+318;4.285;1988;General Belgrano;Forrajeras anuales
+319;3.177;1988;General Guido;Forrajeras anuales
+320;7.1;1988;General Juan Madariaga;Forrajeras anuales
+321;18.385;1988;General La Madrid;Forrajeras anuales
+322;2.852;1988;General Las Heras;Forrajeras anuales
+323;2.552;1988;General Lavalle;Forrajeras anuales
+324;5.39;1988;General Paz;Forrajeras anuales
+325;41.653;1988;General Pinto;Forrajeras anuales
+326;9.826;1988;General Pueyrredón;Forrajeras anuales
+327;1.66;1988;General Rodríguez;Forrajeras anuales
+328;0.0;1988;General San Martín;Forrajeras anuales
+329;0.002;1988;General Sarmiento;Forrajeras anuales
+330;9.411;1988;General Viamonte;Forrajeras anuales
+331;60.477;1988;General Villegas;Forrajeras anuales
+332;47.858;1988;Guaminí;Forrajeras anuales
+333;6.785;1988;Hipólito Yrigoyen;Forrajeras anuales
+334;0.0;1988;Hurlingham;Forrajeras anuales
+335;0.0;1988;Ituzaingó;Forrajeras anuales
+336;0.0;1988;José C, Paz;Forrajeras anuales
+337;10.279;1988;Junín;Forrajeras anuales
+338;0.003;1988;La Costa;Forrajeras anuales
+339;0.287;1988;La Matanza;Forrajeras anuales
+340;0.0;1988;Lanús;Forrajeras anuales
+341;2.653;1988;La Plata;Forrajeras anuales
+342;20.061;1988;Laprida;Forrajeras anuales
+343;3.88;1988;Las Flores;Forrajeras anuales
+344;21.586;1988;Leandro N, Alem;Forrajeras anuales
+345;0.0;1988;Lezama;Forrajeras anuales
+346;37.565;1988;Lincoln;Forrajeras anuales
+347;37.556;1988;Lobería;Forrajeras anuales
+348;7.209;1988;Lobos;Forrajeras anuales
+349;0.0;1988;Lomas de Zamora;Forrajeras anuales
+350;3.596;1988;Luján;Forrajeras anuales
+351;10.488;1988;Magdalena;Forrajeras anuales
+352;4.223;1988;Maipú;Forrajeras anuales
+353;0.0;1988;Malvinas Argentinas;Forrajeras anuales
+354;11.744;1988;Mar Chiquita;Forrajeras anuales
+355;3.615;1988;Marcos Paz;Forrajeras anuales
+356;4.983;1988;Mercedes;Forrajeras anuales
+357;0.028;1988;Merlo;Forrajeras anuales
+358;5.813;1988;Monte;Forrajeras anuales
+359;0.07;1988;Monte Hermoso;Forrajeras anuales
+360;0.015;1988;Moreno;Forrajeras anuales
+361;0.0;1988;Morón;Forrajeras anuales
+362;10.284;1988;Navarro;Forrajeras anuales
+363;20.869;1988;Necochea;Forrajeras anuales
+364;19.608;1988;9 de julio;Forrajeras anuales
+365;34.684;1988;Olavarría;Forrajeras anuales
+366;84.035;1988;Patagones;Forrajeras anuales
+367;15.104;1988;Pehuajó;Forrajeras anuales
+368;25.309;1988;Pellegrini;Forrajeras anuales
+369;4.244;1988;Pergamino;Forrajeras anuales
+370;3.444;1988;Pila;Forrajeras anuales
+371;1.229;1988;Pilar;Forrajeras anuales
+372;0.0;1988;Pinamar;Forrajeras anuales
+373;0.0;1988;Presidente Perón;Forrajeras anuales
+374;67.333;1988;Puán;Forrajeras anuales
+375;0.0;1988;Punta Indio;Forrajeras anuales
+376;0.0;1988;Quilmes;Forrajeras anuales
+377;0.84;1988;Ramallo;Forrajeras anuales
+378;10.445;1988;Rauch;Forrajeras anuales
+379;57.782;1988;Rivadavia;Forrajeras anuales
+380;4.931;1988;Rojas;Forrajeras anuales
+381;3.772;1988;Roque Pérez;Forrajeras anuales
+382;48.55;1988;Saavedra;Forrajeras anuales
+383;3.535;1988;Saladillo;Forrajeras anuales
+384;33.465;1988;Salliqueló;Forrajeras anuales
+385;4.032;1988;Salto;Forrajeras anuales
+386;2.026;1988;San Andrés de Giles;Forrajeras anuales
+387;5.924;1988;San Antonio de Areco;Forrajeras anuales
+388;18.758;1988;San Cayetano;Forrajeras anuales
+389;0.0;1988;San Fernando;Forrajeras anuales
+390;0.0;1988;San Isidro;Forrajeras anuales
+391;0.0;1988;San Miguel;Forrajeras anuales
+392;0.55;1988;San Nicolás;Forrajeras anuales
+393;1.902;1988;San Pedro;Forrajeras anuales
+394;3.013;1988;San Vicente;Forrajeras anuales
+395;6.336;1988;Suipacha;Forrajeras anuales
+396;40.69;1988;Tandil;Forrajeras anuales
+397;4.465;1988;Tapalqué;Forrajeras anuales
+398;0.001;1988;Tigre;Forrajeras anuales
+399;0.192;1988;Tordillo;Forrajeras anuales
+400;60.088;1988;Tornquist;Forrajeras anuales
+401;47.945;1988;Trenque Lauquen;Forrajeras anuales
+402;40.772;1988;Tres Arroyos;Forrajeras anuales
+403;0.0;1988;Tres de Febrero;Forrajeras anuales
+404;24.241;1988;Tres Lomas;Forrajeras anuales
+405;15.682;1988;25 de mayo;Forrajeras anuales
+406;0.0;1988;Vicente López;Forrajeras anuales
+407;0.0;1988;Villa Gesell;Forrajeras anuales
+408;97.213;1988;Villarino;Forrajeras anuales
+409;1.487;1988;Zárate;Forrajeras anuales
+410;0.848;1988;Indeterminado;Forrajeras anuales
+0;1060.391;2018;Provincia de Buenos Aires;Forrajeras perennes
+1;24.24;2018;Adolfo Alsina;Forrajeras perennes
+2;10.999;2018;Adolfo Gonzales Chaves;Forrajeras perennes
+3;2.014;2018;Alberti;Forrajeras perennes
+4;0.0;2018;Almirante Brown;Forrajeras perennes
+5;2.553;2018;Arrecifes;Forrajeras perennes
+6;0.0;2018;Avellaneda;Forrajeras perennes
+7;26.05;2018;Ayacucho;Forrajeras perennes
+8;30.701;2018;Azul;Forrajeras perennes
+9;4.196;2018;Bahía Blanca;Forrajeras perennes
+10;30.338;2018;Balcarce;Forrajeras perennes
+11;2.792;2018;Baradero;Forrajeras perennes
+12;14.88;2018;Benito Juárez;Forrajeras perennes
+13;0.0;2018;Berazategui;Forrajeras perennes
+14;0.0;2018;Berisso;Forrajeras perennes
+15;16.723;2018;Bolívar;Forrajeras perennes
+16;5.542;2018;Bragado;Forrajeras perennes
+17;1.839;2018;Brandsen;Forrajeras perennes
+18;0.639;2018;Campana;Forrajeras perennes
+19;3.349;2018;Cañuelas;Forrajeras perennes
+20;3.436;2018;Capitán Sarmiento;Forrajeras perennes
+21;11.807;2018;Carlos Casares;Forrajeras perennes
+22;16.014;2018;Carlos Tejedor;Forrajeras perennes
+23;3.167;2018;Carmen de Areco;Forrajeras perennes
+24;6.232;2018;Castelli;Forrajeras perennes
+25;5.48;2018;Chacabuco;Forrajeras perennes
+26;8.815;2018;Chascomús;Forrajeras perennes
+27;3.192;2018;Chivilcoy;Forrajeras perennes
+28;2.203;2018;Colón;Forrajeras perennes
+29;8.046;2018;Coronel de Marina Leonardo Rosales;Forrajeras perennes
+30;7.471;2018;Coronel Dorrego;Forrajeras perennes
+31;7.308;2018;Coronel Pringles;Forrajeras perennes
+32;32.687;2018;Coronel Suárez;Forrajeras perennes
+33;26.262;2018;Daireaux;Forrajeras perennes
+34;1.355;2018;Dolores;Forrajeras perennes
+35;0.0;2018;Ensenada;Forrajeras perennes
+36;0.985;2018;Escobar;Forrajeras perennes
+37;0.077;2018;Esteban Echeverría;Forrajeras perennes
+38;3.366;2018;Exaltación de la Cruz;Forrajeras perennes
+39;0.0;2018;Ezeiza;Forrajeras perennes
+40;0.001;2018;Florencio Varela;Forrajeras perennes
+41;8.388;2018;Florentino Ameghino;Forrajeras perennes
+42;7.118;2018;General Alvarado;Forrajeras perennes
+43;14.323;2018;General Alvear;Forrajeras perennes
+44;1.803;2018;General Arenales;Forrajeras perennes
+45;5.921;2018;General Belgrano;Forrajeras perennes
+46;0.618;2018;General Guido;Forrajeras perennes
+47;12.072;2018;General Juan Madariaga;Forrajeras perennes
+48;43.523;2018;General La Madrid;Forrajeras perennes
+49;2.35;2018;General Las Heras;Forrajeras perennes
+50;2.736;2018;General Lavalle;Forrajeras perennes
+51;4.12;2018;General Paz;Forrajeras perennes
+52;5.992;2018;General Pinto;Forrajeras perennes
+53;3.877;2018;General Pueyrredón;Forrajeras perennes
+54;1.386;2018;General Rodríguez;Forrajeras perennes
+55;0.0;2018;General San Martín;Forrajeras perennes
+56;3.334;2018;General Viamonte;Forrajeras perennes
+57;28.464;2018;General Villegas;Forrajeras perennes
+58;46.973;2018;Guaminí;Forrajeras perennes
+59;2.808;2018;Hipólito Yrigoyen;Forrajeras perennes
+60;0.0;2018;Hurlingham;Forrajeras perennes
+61;0.0;2018;Ituzaingó;Forrajeras perennes
+62;0.0;2018;José C, Paz;Forrajeras perennes
+63;4.394;2018;Junín;Forrajeras perennes
+64;0.0;2018;La Costa;Forrajeras perennes
+65;0.27;2018;La Matanza;Forrajeras perennes
+66;0.0;2018;Lanús;Forrajeras perennes
+67;0.95;2018;La Plata;Forrajeras perennes
+68;10.847;2018;Laprida;Forrajeras perennes
+69;6.871;2018;Las Flores;Forrajeras perennes
+70;1.167;2018;Leandro N, Alem;Forrajeras perennes
+71;4.305;2018;Lezama;Forrajeras perennes
+72;16.545;2018;Lincoln;Forrajeras perennes
+73;23.797;2018;Lobería;Forrajeras perennes
+74;2.896;2018;Lobos;Forrajeras perennes
+75;0.041;2018;Lomas de Zamora;Forrajeras perennes
+76;1.608;2018;Luján;Forrajeras perennes
+77;2.56;2018;Magdalena;Forrajeras perennes
+78;1.947;2018;Maipú;Forrajeras perennes
+79;0.0;2018;Malvinas Argentinas;Forrajeras perennes
+80;33.824;2018;Mar Chiquita;Forrajeras perennes
+81;1.249;2018;Marcos Paz;Forrajeras perennes
+82;6.492;2018;Mercedes;Forrajeras perennes
+83;0.168;2018;Merlo;Forrajeras perennes
+84;5.263;2018;Monte;Forrajeras perennes
+85;0.02;2018;Monte Hermoso;Forrajeras perennes
+86;0.006;2018;Moreno;Forrajeras perennes
+87;0.0;2018;Morón;Forrajeras perennes
+88;9.195;2018;Navarro;Forrajeras perennes
+89;25.636;2018;Necochea;Forrajeras perennes
+90;19.645;2018;9 de julio;Forrajeras perennes
+91;32.552;2018;Olavarría;Forrajeras perennes
+92;15.429;2018;Patagones;Forrajeras perennes
+93;8.547;2018;Pehuajó;Forrajeras perennes
+94;11.31;2018;Pellegrini;Forrajeras perennes
+95;8.85;2018;Pergamino;Forrajeras perennes
+96;2.102;2018;Pila;Forrajeras perennes
+97;0.037;2018;Pilar;Forrajeras perennes
+98;0.0;2018;Pinamar;Forrajeras perennes
+99;0.035;2018;Presidente Perón;Forrajeras perennes
+100;12.669;2018;Puán;Forrajeras perennes
+101;0.933;2018;Punta Indio;Forrajeras perennes
+102;0.0;2018;Quilmes;Forrajeras perennes
+103;0.876;2018;Ramallo;Forrajeras perennes
+104;4.387;2018;Rauch;Forrajeras perennes
+105;14.153;2018;Rivadavia;Forrajeras perennes
+106;6.243;2018;Rojas;Forrajeras perennes
+107;3.178;2018;Roque Pérez;Forrajeras perennes
+108;12.379;2018;Saavedra;Forrajeras perennes
+109;5.957;2018;Saladillo;Forrajeras perennes
+110;6.754;2018;Salliqueló;Forrajeras perennes
+111;1.459;2018;Salto;Forrajeras perennes
+112;5.633;2018;San Andrés de Giles;Forrajeras perennes
+113;4.299;2018;San Antonio de Areco;Forrajeras perennes
+114;14.337;2018;San Cayetano;Forrajeras perennes
+115;0.0;2018;San Fernando;Forrajeras perennes
+116;0.0;2018;San Isidro;Forrajeras perennes
+117;0.0;2018;San Miguel;Forrajeras perennes
+118;0.658;2018;San Nicolás;Forrajeras perennes
+119;0.237;2018;San Pedro;Forrajeras perennes
+120;0.634;2018;San Vicente;Forrajeras perennes
+121;4.73;2018;Suipacha;Forrajeras perennes
+122;19.125;2018;Tandil;Forrajeras perennes
+123;12.62;2018;Tapalqué;Forrajeras perennes
+124;0.0;2018;Tigre;Forrajeras perennes
+125;0.381;2018;Tordillo;Forrajeras perennes
+126;13.889;2018;Tornquist;Forrajeras perennes
+127;39.719;2018;Trenque Lauquen;Forrajeras perennes
+128;29.869;2018;Tres Arroyos;Forrajeras perennes
+129;0.0;2018;Tres de Febrero;Forrajeras perennes
+130;2.735;2018;Tres Lomas;Forrajeras perennes
+131;25.832;2018;25 de mayo;Forrajeras perennes
+132;0.0;2018;Vicente López;Forrajeras perennes
+133;0.0;2018;Villa Gesell;Forrajeras perennes
+134;36.508;2018;Villarino;Forrajeras perennes
+135;1.085;2018;Zárate;Forrajeras perennes
+136;2986.768;2002;Provincia de Buenos Aires;Forrajeras perennes
+137;74.577;2002;Adolfo Alsina;Forrajeras perennes
+138;60.1;2002;Adolfo Gonzales Chaves;Forrajeras perennes
+139;2.668;2002;Alberti;Forrajeras perennes
+140;0.01;2002;Almirante Brown;Forrajeras perennes
+141;6.274;2002;Arrecifes;Forrajeras perennes
+142;0.0;2002;Avellaneda;Forrajeras perennes
+143;56.527;2002;Ayacucho;Forrajeras perennes
+144;77.441;2002;Azul;Forrajeras perennes
+145;19.15;2002;Bahía Blanca;Forrajeras perennes
+146;71.091;2002;Balcarce;Forrajeras perennes
+147;5.093;2002;Baradero;Forrajeras perennes
+148;53.122;2002;Benito Juárez;Forrajeras perennes
+149;0.0;2002;Berazategui;Forrajeras perennes
+150;0.061;2002;Berisso;Forrajeras perennes
+151;45.996;2002;Bolívar;Forrajeras perennes
+152;18.18;2002;Bragado;Forrajeras perennes
+153;7.37;2002;Brandsen;Forrajeras perennes
+154;0.321;2002;Campana;Forrajeras perennes
+155;4.206;2002;Cañuelas;Forrajeras perennes
+156;5.268;2002;Capitán Sarmiento;Forrajeras perennes
+157;11.847;2002;Carlos Casares;Forrajeras perennes
+158;31.936;2002;Carlos Tejedor;Forrajeras perennes
+159;10.962;2002;Carmen de Areco;Forrajeras perennes
+160;6.783;2002;Castelli;Forrajeras perennes
+161;20.637;2002;Chacabuco;Forrajeras perennes
+162;22.13;2002;Chascomús;Forrajeras perennes
+163;15.545;2002;Chivilcoy;Forrajeras perennes
+164;9.575;2002;Colón;Forrajeras perennes
+165;12.951;2002;Coronel de Marina Leonardo Rosales;Forrajeras perennes
+166;31.684;2002;Coronel Dorrego;Forrajeras perennes
+167;63.093;2002;Coronel Pringles;Forrajeras perennes
+168;116.921;2002;Coronel Suárez;Forrajeras perennes
+169;41.881;2002;Daireaux;Forrajeras perennes
+170;12.682;2002;Dolores;Forrajeras perennes
+171;0.0;2002;Ensenada;Forrajeras perennes
+172;0.278;2002;Escobar;Forrajeras perennes
+173;0.0;2002;Esteban Echeverría;Forrajeras perennes
+174;5.019;2002;Exaltación de la Cruz;Forrajeras perennes
+175;0.15;2002;Ezeiza;Forrajeras perennes
+176;0.0;2002;Florencio Varela;Forrajeras perennes
+177;21.478;2002;Florentino Ameghino;Forrajeras perennes
+178;29.7;2002;General Alvarado;Forrajeras perennes
+179;21.716;2002;General Alvear;Forrajeras perennes
+180;7.617;2002;General Arenales;Forrajeras perennes
+181;15.952;2002;General Belgrano;Forrajeras perennes
+182;11.465;2002;General Guido;Forrajeras perennes
+183;22.804;2002;General Juan Madariaga;Forrajeras perennes
+184;55.43;2002;General La Madrid;Forrajeras perennes
+185;5.39;2002;General Las Heras;Forrajeras perennes
+186;8.754;2002;General Lavalle;Forrajeras perennes
+187;5.198;2002;General Paz;Forrajeras perennes
+188;34.169;2002;General Pinto;Forrajeras perennes
+189;22.106;2002;General Pueyrredón;Forrajeras perennes
+190;4.157;2002;General Rodríguez;Forrajeras perennes
+191;0.0;2002;General San Martín;Forrajeras perennes
+192;4.259;2002;General Viamonte;Forrajeras perennes
+193;134.312;2002;General Villegas;Forrajeras perennes
+194;97.06;2002;Guaminí;Forrajeras perennes
+195;8.781;2002;Hipólito Yrigoyen;Forrajeras perennes
+196;0.0;2002;Hurlingham;Forrajeras perennes
+197;0.0;2002;Ituzaingó;Forrajeras perennes
+198;0.0;2002;José C, Paz;Forrajeras perennes
+199;12.862;2002;Junín;Forrajeras perennes
+200;0.0;2002;La Costa;Forrajeras perennes
+201;0.26;2002;La Matanza;Forrajeras perennes
+202;0.0;2002;Lanús;Forrajeras perennes
+203;2.045;2002;La Plata;Forrajeras perennes
+204;41.778;2002;Laprida;Forrajeras perennes
+205;21.873;2002;Las Flores;Forrajeras perennes
+206;9.785;2002;Leandro N, Alem;Forrajeras perennes
+207;0.0;2002;Lezama;Forrajeras perennes
+208;72.517;2002;Lincoln;Forrajeras perennes
+209;68.414;2002;Lobería;Forrajeras perennes
+210;23.391;2002;Lobos;Forrajeras perennes
+211;0.0;2002;Lomas de Zamora;Forrajeras perennes
+212;6.403;2002;Luján;Forrajeras perennes
+213;12.233;2002;Magdalena;Forrajeras perennes
+214;24.322;2002;Maipú;Forrajeras perennes
+215;0.0;2002;Malvinas Argentinas;Forrajeras perennes
+216;61.459;2002;Mar Chiquita;Forrajeras perennes
+217;2.231;2002;Marcos Paz;Forrajeras perennes
+218;9.519;2002;Mercedes;Forrajeras perennes
+219;0.077;2002;Merlo;Forrajeras perennes
+220;18.319;2002;Monte;Forrajeras perennes
+221;6.42;2002;Monte Hermoso;Forrajeras perennes
+222;0.0;2002;Moreno;Forrajeras perennes
+223;0.0;2002;Morón;Forrajeras perennes
+224;17.658;2002;Navarro;Forrajeras perennes
+225;42.244;2002;Necochea;Forrajeras perennes
+226;30.85;2002;9 de julio;Forrajeras perennes
+227;67.039;2002;Olavarría;Forrajeras perennes
+228;41.337;2002;Patagones;Forrajeras perennes
+229;46.518;2002;Pehuajó;Forrajeras perennes
+230;54.998;2002;Pellegrini;Forrajeras perennes
+231;21.283;2002;Pergamino;Forrajeras perennes
+232;12.947;2002;Pila;Forrajeras perennes
+233;0.539;2002;Pilar;Forrajeras perennes
+234;0.0;2002;Pinamar;Forrajeras perennes
+235;0.258;2002;Presidente Perón;Forrajeras perennes
+236;47.436;2002;Puán;Forrajeras perennes
+237;2.835;2002;Punta Indio;Forrajeras perennes
+238;0.0;2002;Quilmes;Forrajeras perennes
+239;2.81;2002;Ramallo;Forrajeras perennes
+240;21.139;2002;Rauch;Forrajeras perennes
+241;66.924;2002;Rivadavia;Forrajeras perennes
+242;14.924;2002;Rojas;Forrajeras perennes
+243;4.716;2002;Roque Pérez;Forrajeras perennes
+244;40.029;2002;Saavedra;Forrajeras perennes
+245;25.255;2002;Saladillo;Forrajeras perennes
+246;12.82;2002;Salliqueló;Forrajeras perennes
+247;12.815;2002;Salto;Forrajeras perennes
+248;4.2;2002;San Andrés de Giles;Forrajeras perennes
+249;12.527;2002;San Antonio de Areco;Forrajeras perennes
+250;23.436;2002;San Cayetano;Forrajeras perennes
+251;0.0;2002;San Fernando;Forrajeras perennes
+252;0.0;2002;San Isidro;Forrajeras perennes
+253;0.0;2002;San Miguel;Forrajeras perennes
+254;2.462;2002;San Nicolás;Forrajeras perennes
+255;4.041;2002;San Pedro;Forrajeras perennes
+256;0.762;2002;San Vicente;Forrajeras perennes
+257;17.484;2002;Suipacha;Forrajeras perennes
+258;87.877;2002;Tandil;Forrajeras perennes
+259;7.081;2002;Tapalqué;Forrajeras perennes
+260;0.002;2002;Tigre;Forrajeras perennes
+261;9.643;2002;Tordillo;Forrajeras perennes
+262;36.613;2002;Tornquist;Forrajeras perennes
+263;121.161;2002;Trenque Lauquen;Forrajeras perennes
+264;89.767;2002;Tres Arroyos;Forrajeras perennes
+265;0.0;2002;Tres de Febrero;Forrajeras perennes
+266;33.343;2002;Tres Lomas;Forrajeras perennes
+267;34.551;2002;25 de mayo;Forrajeras perennes
+268;0.0;2002;Vicente López;Forrajeras perennes
+269;0.0;2002;Villa Gesell;Forrajeras perennes
+270;85.914;2002;Villarino;Forrajeras perennes
+271;2.759;2002;Zárate;Forrajeras perennes
+272;3780.642;1988;Provincia de Buenos Aires;Forrajeras perennes
+273;100.564;1988;Adolfo Alsina;Forrajeras perennes
+274;71.515;1988;Adolfo Gonzales Chaves;Forrajeras perennes
+275;24.461;1988;Alberti;Forrajeras perennes
+276;0.061;1988;Almirante Brown;Forrajeras perennes
+277;0.0;1988;Arrecifes;Forrajeras perennes
+278;0.0;1988;Avellaneda;Forrajeras perennes
+279;73.558;1988;Ayacucho;Forrajeras perennes
+280;71.388;1988;Azul;Forrajeras perennes
+281;15.888;1988;Bahía Blanca;Forrajeras perennes
+282;88.594;1988;Balcarce;Forrajeras perennes
+283;14.579;1988;Baradero;Forrajeras perennes
+284;17.327;1988;Bartolomé Mitre;Forrajeras perennes
+285;73.423;1988;Benito Juárez;Forrajeras perennes
+286;0.07;1988;Berazategui;Forrajeras perennes
+287;0.006;1988;Berisso;Forrajeras perennes
+288;36.066;1988;Bolívar;Forrajeras perennes
+289;38.76;1988;Bragado;Forrajeras perennes
+290;7.614;1988;Brandsen;Forrajeras perennes
+291;1.449;1988;Campana;Forrajeras perennes
+292;7.471;1988;Cañuelas;Forrajeras perennes
+293;17.482;1988;Capitán Sarmiento;Forrajeras perennes
+294;25.086;1988;Carlos Casares;Forrajeras perennes
+295;56.13;1988;Carlos Tejedor;Forrajeras perennes
+296;11.988;1988;Carmen de Areco;Forrajeras perennes
+297;26.563;1988;Castelli;Forrajeras perennes
+298;41.521;1988;Chacabuco;Forrajeras perennes
+299;36.617;1988;Chascomús;Forrajeras perennes
+300;44.273;1988;Chivilcoy;Forrajeras perennes
+301;22.288;1988;Colón;Forrajeras perennes
+302;14.735;1988;Coronel de Marina Leonardo Rosales;Forrajeras perennes
+303;44.301;1988;Coronel Dorrego;Forrajeras perennes
+304;61.082;1988;Coronel Pringles;Forrajeras perennes
+305;78.621;1988;Coronel Suárez;Forrajeras perennes
+306;61.692;1988;Daireaux;Forrajeras perennes
+307;4.406;1988;Dolores;Forrajeras perennes
+308;0.0;1988;Ensenada;Forrajeras perennes
+309;0.028;1988;Escobar;Forrajeras perennes
+310;0.82;1988;Esteban Echeverría;Forrajeras perennes
+311;7.354;1988;Exaltación de la Cruz;Forrajeras perennes
+312;0.0;1988;Ezeiza;Forrajeras perennes
+313;0.593;1988;Florencio Varela;Forrajeras perennes
+314;0.0;1988;Florentino Ameghino;Forrajeras perennes
+315;46.745;1988;General Alvarado;Forrajeras perennes
+316;20.631;1988;General Alvear;Forrajeras perennes
+317;16.357;1988;General Arenales;Forrajeras perennes
+318;17.571;1988;General Belgrano;Forrajeras perennes
+319;8.117;1988;General Guido;Forrajeras perennes
+320;18.924;1988;General Juan Madariaga;Forrajeras perennes
+321;77.574;1988;General La Madrid;Forrajeras perennes
+322;4.501;1988;General Las Heras;Forrajeras perennes
+323;8.481;1988;General Lavalle;Forrajeras perennes
+324;7.06;1988;General Paz;Forrajeras perennes
+325;125.28;1988;General Pinto;Forrajeras perennes
+326;34.569;1988;General Pueyrredón;Forrajeras perennes
+327;3.727;1988;General Rodríguez;Forrajeras perennes
+328;0.0;1988;General San Martín;Forrajeras perennes
+329;0.002;1988;General Sarmiento;Forrajeras perennes
+330;30.856;1988;General Viamonte;Forrajeras perennes
+331;208.429;1988;General Villegas;Forrajeras perennes
+332;86.368;1988;Guaminí;Forrajeras perennes
+333;15.9;1988;Hipólito Yrigoyen;Forrajeras perennes
+334;0.0;1988;Hurlingham;Forrajeras perennes
+335;0.0;1988;Ituzaingó;Forrajeras perennes
+336;0.0;1988;José C, Paz;Forrajeras perennes
+337;26.355;1988;Junín;Forrajeras perennes
+338;0.0;1988;La Costa;Forrajeras perennes
+339;0.136;1988;La Matanza;Forrajeras perennes
+340;0.0;1988;Lanús;Forrajeras perennes
+341;2.284;1988;La Plata;Forrajeras perennes
+342;40.739;1988;Laprida;Forrajeras perennes
+343;23.496;1988;Las Flores;Forrajeras perennes
+344;34.688;1988;Leandro N, Alem;Forrajeras perennes
+345;0.0;1988;Lezama;Forrajeras perennes
+346;121.223;1988;Lincoln;Forrajeras perennes
+347;80.456;1988;Lobería;Forrajeras perennes
+348;21.533;1988;Lobos;Forrajeras perennes
+349;0.03;1988;Lomas de Zamora;Forrajeras perennes
+350;11.537;1988;Luján;Forrajeras perennes
+351;13.163;1988;Magdalena;Forrajeras perennes
+352;24.272;1988;Maipú;Forrajeras perennes
+353;0.0;1988;Malvinas Argentinas;Forrajeras perennes
+354;44.454;1988;Mar Chiquita;Forrajeras perennes
+355;2.995;1988;Marcos Paz;Forrajeras perennes
+356;15.913;1988;Mercedes;Forrajeras perennes
+357;0.084;1988;Merlo;Forrajeras perennes
+358;25.209;1988;Monte;Forrajeras perennes
+359;6.025;1988;Monte Hermoso;Forrajeras perennes
+360;0.039;1988;Moreno;Forrajeras perennes
+361;0.0;1988;Morón;Forrajeras perennes
+362;23.36;1988;Navarro;Forrajeras perennes
+363;46.507;1988;Necochea;Forrajeras perennes
+364;68.925;1988;9 de julio;Forrajeras perennes
+365;108.309;1988;Olavarría;Forrajeras perennes
+366;32.194;1988;Patagones;Forrajeras perennes
+367;29.846;1988;Pehuajó;Forrajeras perennes
+368;36.999;1988;Pellegrini;Forrajeras perennes
+369;49.243;1988;Pergamino;Forrajeras perennes
+370;12.354;1988;Pila;Forrajeras perennes
+371;1.846;1988;Pilar;Forrajeras perennes
+372;0.0;1988;Pinamar;Forrajeras perennes
+373;0.0;1988;Presidente Perón;Forrajeras perennes
+374;52.095;1988;Puán;Forrajeras perennes
+375;0.0;1988;Punta Indio;Forrajeras perennes
+376;0.0;1988;Quilmes;Forrajeras perennes
+377;6.002;1988;Ramallo;Forrajeras perennes
+378;33.068;1988;Rauch;Forrajeras perennes
+379;105.393;1988;Rivadavia;Forrajeras perennes
+380;36.593;1988;Rojas;Forrajeras perennes
+381;8.826;1988;Roque Pérez;Forrajeras perennes
+382;43.462;1988;Saavedra;Forrajeras perennes
+383;13.279;1988;Saladillo;Forrajeras perennes
+384;25.326;1988;Salliqueló;Forrajeras perennes
+385;21.655;1988;Salto;Forrajeras perennes
+386;10.759;1988;San Andrés de Giles;Forrajeras perennes
+387;21.904;1988;San Antonio de Areco;Forrajeras perennes
+388;32.786;1988;San Cayetano;Forrajeras perennes
+389;0.0;1988;San Fernando;Forrajeras perennes
+390;0.0;1988;San Isidro;Forrajeras perennes
+391;0.0;1988;San Miguel;Forrajeras perennes
+392;4.775;1988;San Nicolás;Forrajeras perennes
+393;9.829;1988;San Pedro;Forrajeras perennes
+394;2.075;1988;San Vicente;Forrajeras perennes
+395;20.042;1988;Suipacha;Forrajeras perennes
+396;90.154;1988;Tandil;Forrajeras perennes
+397;27.104;1988;Tapalqué;Forrajeras perennes
+398;0.0;1988;Tigre;Forrajeras perennes
+399;2.265;1988;Tordillo;Forrajeras perennes
+400;29.888;1988;Tornquist;Forrajeras perennes
+401;76.614;1988;Trenque Lauquen;Forrajeras perennes
+402;99.403;1988;Tres Arroyos;Forrajeras perennes
+403;0.0;1988;Tres de Febrero;Forrajeras perennes
+404;29.707;1988;Tres Lomas;Forrajeras perennes
+405;53.623;1988;25 de mayo;Forrajeras perennes
+406;0.0;1988;Vicente López;Forrajeras perennes
+407;0.0;1988;Villa Gesell;Forrajeras perennes
+408;83.683;1988;Villarino;Forrajeras perennes
+409;3.804;1988;Zárate;Forrajeras perennes
+410;2.86;1988;Indeterminado;Forrajeras perennes

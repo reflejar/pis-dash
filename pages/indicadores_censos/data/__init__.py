@@ -22,6 +22,10 @@ df_ha_tipo_juridico = pd.read_csv(f'{FOLDER}/tierra/ha_tipo_juridico.csv', sep='
 
 df_ha_tipo_cultivo = pd.read_csv(f'{FOLDER}/modo_produccion/hectareas_tipo_cultivo.csv', sep=';' )
 df_cultivado_bosques = pd.read_csv(f'{FOLDER}/modo_produccion/cultivos_bosques.csv', sep=';' )
+df_practicas_organicas = pd.read_csv(f'{FOLDER}/modo_produccion/practicas_organicas.csv', sep=';' )
+df_oleaginosas = pd.read_csv(f'{FOLDER}/modo_produccion/oleaginosas.csv', sep=';' )
+df_cereales = pd.read_csv(f'{FOLDER}/modo_produccion/cereales.csv', sep=';' )
+df_forrajeras = pd.read_csv(f'{FOLDER}/modo_produccion/forrajeras.csv', sep=';' )
 
 
 

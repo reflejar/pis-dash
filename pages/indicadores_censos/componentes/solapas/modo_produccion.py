@@ -1,10 +1,10 @@
 from dash import html
 import dash_bootstrap_components as dbc
-# from .tipo_cultivo_ha import CULTIVOS_HA
+from dash import dcc
 from ..constantes import *
 
 from ..indicadores import Indicador
-from ...data import df_ha_tipo_cultivo, df_cultivado_bosques
+from ...data import df_ha_tipo_cultivo, df_cultivado_bosques, df_practicas_organicas, df_oleaginosas, df_cereales, df_forrajeras
 
 indicadores = [
     Indicador(
@@ -21,26 +21,67 @@ indicadores = [
         texto_descriptivo = TEXTO_HA_TIPO_CULTIVO
     ),
     Indicador(
+        id_indicador="oleaginosas",
+        df=df_oleaginosas,
+        tipo_grafico="histogram",
+        titulo_grafico="Oleaginosas sembradas (miles de hectáreas)" ,
+        x="Año del censo",
+        y='HA de EAPs',
+        y_titulo = 'Héctáreas sembradas (miles)',
+        z='Tipo de Oleaginosa',
+        colores=[LIMA, NARANJA],
+        hover='Hectáreas sembradas: %{y} mil<br>Año del censo: %{x}',
+        texto_descriptivo = TEXTO_HA_OLEAGINOSAS
+    ),
+    Indicador(
+        id_indicador="cereales",
+        df= df_cereales,
+        tipo_grafico="histogram",
+        titulo_grafico="Cereales sembrados (miles de hectáreas)" ,
+        x="Año del censo",
+        y='HA de EAPs',
+        y_titulo = 'Héctáreas sembradas (miles)',
+        z='Tipo de cereal',
+        colores=[LIMA, NARANJA, LILA],
+        hover='Hectáreas sembradas: %{y} mil<br>Año del censo: %{x}',
+        texto_descriptivo = TEXTO_HA_CEREALES
+    ),
+    Indicador(
+        id_indicador="forrajeras",
+        df= df_forrajeras,
+        tipo_grafico="histogram",
+        titulo_grafico="Forrajeras sembradas (miles de hectáreas)" ,
+        x="Año del censo",
+        y='HA de EAPs',
+        y_titulo = 'Héctáreas sembradas (miles)',
+        z='Tipo forrajera',
+        colores=[LIMA, NARANJA],
+        hover='Hectáreas sembradas: %{y} mil <br>Año del censo: %{x}',
+        texto_descriptivo = TEXTO_HA_FORRAJERAS
+    ),
+    Indicador(
         id_indicador="ha-bosques-cultivos",
         df=df_cultivado_bosques,
         tipo_grafico="histogram",
-        titulo_grafico="Bosques y Montes Naturales (ha)" ,
+        titulo_grafico="Bosques y Montes Naturales (hectáreas)" ,
         x="Año del censo",
         y='HA de EAPs',
         y_titulo = 'Héctáreas',
         z='Tipo de suelo',
-        colores=[LILA, LIMA],
+        colores=[NARANJA, LIMA],
         hover='Hectareas cultivadas: %{y} <br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_BOSQUES
-    ), 
-    # Indicador(
-    #     id_indicador="eaps-practicas-organicas",
-    #     df=df_cultivado_bosques,
-    #     tipo_grafico="gauge",
-    #     titulo_grafico="Bosques y Montes Naturales (ha)" ,
-    #     y='HA de EAPs',
-    #     texto_descriptivo = TEXTO_HA_BOSQUES
-    # ),  
+    ),
+    Indicador(
+        id_indicador="practicas-organicas",
+        df=df_practicas_organicas,
+        tipo_grafico="number",
+        titulo_grafico="EAPs con prácticas orgánicas y agroecológicas (Año 2018)" ,
+        y='Prácticas orgánicasbiodinámicas/agroecológicas_EAPs',
+        colores=[LILA],
+        # hover='Hectareas cultivadas: %{y}',
+        texto_descriptivo = TEXTO_PRACTICAS_AGROECOLOGICAS
+        ),   
 ]
 
 
@@ -55,7 +96,7 @@ Produccion = html.Div([
                        destinados a exportación y a ganadería.
                         """, className="text-white"),
                 ]),
-            dbc.Row([dbc.Col(i.inicializar(), sm=12, md=6, xl=4) for i in indicadores], class_name="mt-5"),    
+            dbc.Row([dbc.Col(i.inicializar(), sm=12, md=6, xl=4) for i in indicadores], class_name="mt-5")
         ], className="mt-5")         
 
 

@@ -148,13 +148,14 @@ class Indicador:
             color_discrete_sequence=self.colores
         )
     
-    def gauge(self):
-        return go.Indicator(
-            mode = "gauge+number",
-            value=self.y_var, 
-            title = self.titulo_grafico
-        )
-
+    def number(self, df):
+        _valor = df[self.y_var].values
+        _valor = _valor[0]
+        return go.Figure(go.Indicator(
+            mode = "number",
+            value = _valor,
+            ))
+    
     def actualizar(self, partido):
         """
             Esto va para el callback
@@ -173,21 +174,26 @@ class Indicador:
             mask = df[VAR_PARTIDO]==partido
             df = df[mask]
         
-        grupos = [self.x_var, VAR_PARTIDO]
-        if self.z_var:
-            grupos.append(self.z_var)
+        if self.tipo_grafico != 'number':
+            grupos = [self.x_var, VAR_PARTIDO]
+            if self.z_var:
+                grupos.append(self.z_var)
 
-        df = df.groupby(by = grupos)[self.y_var].sum().reset_index()
+            df = df.groupby(by = grupos)[self.y_var].sum().reset_index()
 
-        fig = getattr(self, self.tipo_grafico)(df)
-        fig.update_xaxes( title_text = self.x_titulo, title_font=dict(size=self.TAMANIO_FUENTE, family=self.LETRA_DEFAULT, color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))
-        fig.update_yaxes(title_text = self.y_titulo,  title_font=dict(size=self.TAMANIO_FUENTE,family=self.LETRA_DEFAULT,color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))
-        fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
+            fig = getattr(self, self.tipo_grafico)(df)
+            fig.update_xaxes( title_text = self.x_titulo, title_font=dict(size=self.TAMANIO_FUENTE, family=self.LETRA_DEFAULT, color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))
+            fig.update_yaxes(title_text = self.y_titulo,  title_font=dict(size=self.TAMANIO_FUENTE,family=self.LETRA_DEFAULT,color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))
+            fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
+
+            #Armar el texto de las etiquetas emergentes
+            fig.update_traces(hovertemplate=self.hover)
+
+        else:            
+            fig = getattr(self, self.tipo_grafico)(df)
+            fig.update_layout(font = {'color': self.colores[0], 'family': self.LETRA_DEFAULT})
         
-        #Armar el texto de las etiquetas emergentes
-        fig.update_traces(hovertemplate=self.hover)
-    
-    
+        
         # Actualizar el diseño del gráfico
         fig.update_layout(
             title={
@@ -219,6 +225,7 @@ class Indicador:
                 tracegroupgap=10
             )
         )
+        
         return fig
     
     @staticmethod
