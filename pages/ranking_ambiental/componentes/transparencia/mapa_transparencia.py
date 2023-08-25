@@ -13,36 +13,33 @@ from shapely.geometry import box, Point, Polygon
 from dash_extensions.javascript import arrow_function, assign
 import dash_bootstrap_components as dbc
 from dash_loading_spinners import Hash
+from pages.ranking_ambiental.bases_mapa import bsas,VAR_PUNTAJE, escuelas, classes
 
 # Establecer el renderizador predeterminado para Plotly.
 pio.renderers.default = 'browser'
 
-# Leer archivo geojson y cargar datos.
-bsas = gpd.read_file('pages/ranking_ambiental/limite_partidos_expandido.geojson', encoding="ASCI")
+# Agregar informacion de etiquetas
 bsas["tooltip"] = bsas["nam"]
+
+#Transformar a geobuf
 bsas_geojson = json.loads(bsas.to_json(na="keep"))
 geobuf = dlx.geojson_to_geobuf(bsas_geojson)
 
-# Crear valores medios y clases.
-min_value = bsas["arl"].min()
-max_value = bsas["arl"].max()
-middle_values = np.linspace(min_value, max_value, num=8, endpoint=True)
-classes = list(middle_values)
-
 # Definir colores para las clases.
-colorscale = [ '#F5BBCB', '#F2A4B6', '#EF8DA1', '#ED769C', '#EB5F87', '#E94872', '#E7315D', '#E51A48']
+colorscale = ['#F5BBCB', '#F2A4B6', '#EF8DA1', '#ED769C', '#EB5F87', '#E94872', '#E7315D', '#E51A48']
 style = dict(weight=2, opacity=1, color='white', dashArray='3', fillOpacity=0.7)
 
 # Crear colorbar.
 ctg = ["{}+".format(cls, classes[i + 1]) for i, cls in enumerate(classes[:-1])] + ["{}+".format(classes[-1])]
-# Barra de colores categóricos personalizada
-colorbar = dlx.categorical_colorbar(
-    categories=ctg,
-    colorscale=colorscale,
-    width=200,  # Ancho personalizado
-    height=20,  # Altura personalizada
-    position="bottomleft",  # Posición
-)
+
+# # Barra de colores categóricos personalizada
+# colorbar = dlx.categorical_colorbar(
+#     categories=ctg,
+#     colorscale=colorscale,
+#     width=200,  # Ancho personalizado
+#     height=20,  # Altura personalizada
+#     position="bottomleft",  # Posición
+# )
 
 # Lógica de representación del GeoJSON.
 style_handle = assign("""function(feature, context){
@@ -85,8 +82,6 @@ colorscale_reference = html.Div(
         'flex-direction': 'column',
         
         'font-size': '12px',
-        # 'background': f'linear-gradient(to top, {", ".join(colorbar)})',
-        # Añade espacio entre el texto y la barra de colores
     }
 )
 
@@ -107,7 +102,7 @@ Mapa_transparencia =dl.Map(
                                     zoomToBoundsOnClick=False,
                                     options=dict(style=style_handle),
                                     hoverStyle=arrow_function(dict(weight=5, dashArray='')),
-                                    hideout=dict(colorscale=colorscale, classes=classes, style=style, colorProp="arl")
+                                    hideout=dict(colorscale=colorscale, classes=classes, style=style, colorProp=VAR_PUNTAJE)
                                 ),
                                
                             ],
