@@ -16,6 +16,7 @@ dash-extensions==0.1.7
 dash-html-components==2.0.0
 dash-leaflet==0.1.23
 dash-loading-spinners==1.0.0
+dash-mantine-components==0.12.1
 dash-table==5.0.0
 EditorConfig==0.12.3
 Fiona==1.8.22
