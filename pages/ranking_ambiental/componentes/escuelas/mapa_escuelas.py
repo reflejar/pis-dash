@@ -13,7 +13,7 @@ from shapely.geometry import box, Point, Polygon
 from dash_extensions.javascript import arrow_function, assign
 import dash_bootstrap_components as dbc
 from dash_loading_spinners import Hash
-from pages.ranking_ambiental.bases_mapa import bsas,VAR_PUNTAJE, escuelas, classes
+from pages.ranking_ambiental.bases_mapa import bsas,VAR_PUNTAJE,  classes
 
 # Establecer el renderizador predeterminado para Plotly.
 pio.renderers.default = 'browser'
@@ -74,19 +74,12 @@ colorscale_reference = html.Div(
                     ]),     
             ],
     style={
-        'position': 'absolute',
-        'bottom': '0px',
-        'right': '510px',
-        'width': '25%',
-        'display': 'flex',
-        'flex-direction': 'column',
-        
         'font-size': '12px',
     }
 )
 
 
-Mapa_transparencia =dl.Map(
+Mapa =dl.Map(
                             zoom=13,
                             dragging=False,
                             # touchZoom=False,
@@ -122,34 +115,29 @@ Mapa_transparencia =dl.Map(
 titulo_del_mapa_1 = html.H6(
     "PROVINCIA DE BUENOS AIRES",
     style={
-        'position': 'absolute',
-        'top': '0px',
-        'left': '225px',
-        'font-size': '18px',
         'font-weight': 'bold',
         'color': 'black',
         'white-space': 'pre-line',  # Forzar el salto de línea
-    }
+    },
+    className="d-flex justify-content-center align-items-center"
 )
 titulo_del_mapa_2 = html.H6(
     "CONURBANO",
     style={
-        'position': 'absolute',
-        'top': '0px',
-        'left': '700px',
-        'font-size': '18px',  # Ajustar el tamaño de fuente
         'font-weight': 'bold',  # Hacer que el texto sea negrita
         'color': 'black',
-    }
+    },
+    className="d-flex justify-content-center align-items-center"
 )
 
 mapa_layout = html.Div(
     id="mapa-container",
     children=[
-        Mapa_transparencia,
-        titulo_del_mapa_1,
-        titulo_del_mapa_2,  
-        colorscale_reference   
+        dbc.Row([
+            dbc.Row([dbc.Col([titulo_del_mapa_1], md=7), dbc.Col([titulo_del_mapa_2], md=2)]),
+            dbc.Col([Mapa], md=12),  
+            dbc.Row([dbc.Col([html.Div()], md=3),dbc.Col([colorscale_reference], md=6),dbc.Col([html.Div()], md=3) ]),
+            ])  
     ],
     style={'display':'flex', 'position': 'relative', 'width': '100%', 'height': '100%'}
 )
