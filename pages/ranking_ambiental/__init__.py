@@ -16,6 +16,9 @@ layout = html.Div([
                     dbc.Col(SolapasRanking, md=12)
                     ]),
                 ]),
+                html.Br(),
+                html.Br(),
+                html.Br(),
                 dbc.Container(
                 children=[
                 dbc.Row([

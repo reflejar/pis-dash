@@ -29,7 +29,9 @@ SolapasRanking = html.Div([
 @callback(Output('tabs-content-ranking', 'children'), Input('tabs-ranking', 'active_tab'))
 def render_content(tab):
    if tab == 'tab-A':
-       return html.Div([dbc.Row([Escuelas]), dbc.Row([TextoRanking_2])])
+       return html.Div([dbc.Row([Escuelas]), 
+                        html.Br(),
+                        dbc.Row([TextoRanking_2])])
 #    
 #    elif tab == 'tab-2':
 #        return Produccion
