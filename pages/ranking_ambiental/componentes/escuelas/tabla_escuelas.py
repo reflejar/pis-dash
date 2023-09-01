@@ -20,7 +20,7 @@ y = escuelas.copy()
 
 
 
-tabla_escuelas = dbc.Container([
+tabla_escuelas =  dbc.Container([
     dash_table.DataTable(
         data=y.to_dict('records'),
         columns=[{"name": i, "id": i} for i in y.columns],
@@ -35,7 +35,8 @@ tabla_escuelas = dbc.Container([
         },
         style_cell={'textAlign': 'center',
                     'whiteSpace': 'normal',
-                    'width': '10%'},
+                    'width': '10%',
+                    'fontFamily': 'Arial'},  # Cambiar la fuente a Arial
         style_header={
             'fontWeight': 'normal',
             'whiteSpace': 'pre-wrap',
@@ -54,6 +55,7 @@ tabla_escuelas = dbc.Container([
                 'height': 'auto',  # Ajuste de altura dinámica
                 'overflow': 'hidden',
                 'textOverflow': 'ellipsis',
+                'fontFamily': 'Arial',  # Cambiar la fuente a Arial
             }  for col in y.columns 
         ],
         style_data_conditional=[
@@ -61,11 +63,10 @@ tabla_escuelas = dbc.Container([
                 'if': {'column_id': col},
                 'whiteSpace': 'normal',
                 'height': 'auto',
+                'fontFamily': 'Arial',  # Cambiar la fuente a Arial
             }
             for col in y.columns 
         ],
         fixed_columns={'headers': True},
     )
 ])
-
-
