@@ -40,8 +40,9 @@ AcordeonRanking = html.Div([
                                 dmc.AccordionPanel(
                                     dbc.Col([html.Div(tabla_escuelas)], md=12)
                                 ),
-                            ],
-                            value="escuelas",
+                                
+                            ],id="accordion_escuelas",
+                            value="on",
                         ),
                         dmc.AccordionItem(
                             [

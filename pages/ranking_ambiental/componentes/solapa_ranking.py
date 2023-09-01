@@ -26,7 +26,10 @@ SolapasRanking = html.Div([
     html.Div(id='tabs-content-ranking'),
 ])
 
-@callback(Output('tabs-content-ranking', 'children'), Input('tabs-ranking', 'active_tab'))
+@callback(
+        Output('tabs-content-ranking','children'), 
+        Input('tabs-ranking','active_tab')
+        )
 def render_content(tab):
    if tab == 'tab-A':
        return html.Div([dbc.Row([Escuelas]), 
