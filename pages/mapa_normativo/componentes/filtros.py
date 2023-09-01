@@ -9,7 +9,7 @@ from ..data import MUNICIPIOS
 
 Filtros = html.Div(
     [
-        html.H4("MAPA NORMATIVO", className="text-white"),
+        html.H4("MAPA NORMATIVO", className="text-white pt-3"),
         html.P([
             "Seleccioná el municipio de tu interés.",
             html.Br(),
@@ -62,5 +62,5 @@ Filtros = html.Div(
         
     ],
     id="filtros",
-    className=" mt-5"
+    className="mt-5"
 )
