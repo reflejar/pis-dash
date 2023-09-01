@@ -75,9 +75,11 @@ indicadores = [
     Indicador(
         id_indicador="practicas-organicas",
         df=df_practicas_organicas,
-        tipo_grafico="number",
-        titulo_grafico="EAPs con prácticas orgánicas y agroecológicas (Año 2018)" ,
+        tipo_grafico="bar",
+        x="Año del censo",
         y='Prácticas orgánicasbiodinámicas/agroecológicas_EAPs',
+        y_titulo = 'Cantidad de EAPs',
+        titulo_grafico="EAPs con prácticas orgánicas y agroecológicas" ,        
         colores=[LILA],
         # hover='Hectareas cultivadas: %{y}',
         texto_descriptivo = TEXTO_PRACTICAS_AGROECOLOGICAS
