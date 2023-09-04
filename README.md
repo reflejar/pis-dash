@@ -4,8 +4,9 @@
 
 Aplicaciones realizadas en python dash para proyecto PIS de Democracia en Red
 
-- Módulo de Mapa Normativo 
+- Módulo de Mapa de Zonificación Normativa 
 - Módulo de Ranking Ambiental
+- Módulo de Análisis estadístico de los censos
 
 ## Setup
 
@@ -28,7 +29,6 @@ Abrí una terminal del sistema en el directorio raiz del proyecto, creá el ento
 $ virtualenv env
 $ source env/bin/activate
 $ pip install -r requirements.txt
-$ python main.py
 ```
 
 #### Ejecución
@@ -38,8 +38,14 @@ Abrí una terminal del sistema en el directorio raiz del proyecto, activá el en
 
 ```bash
 $ source env/bin/activate
-$ python main.py
+$ python main.py <tool>
 ```
+
+tool puede ser alguna de las siguientes opciones:
+- zonificacion
+- censos
+- ranking
+
 
 ### 2 - Docker
 
@@ -62,6 +68,12 @@ Abrí una terminal del sistema en el directorio raiz del proyecto y ejecutá la 
 
 ```bash
 $ docker compose up
+```
+
+Para cambiar la herramienta que querés visualizar tenes que cambiar el command en docker-compose.yml
+
+```yml
+    command: python main.py <tool>
 ```
 
 ## Licencia
