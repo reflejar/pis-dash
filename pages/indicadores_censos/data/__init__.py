@@ -28,7 +28,5 @@ df_cereales = pd.read_csv(f'{FOLDER}/modo_produccion/cereales.csv', sep=';' )
 df_forrajeras = pd.read_csv(f'{FOLDER}/modo_produccion/forrajeras.csv', sep=';' )
 
 
-
-
 df_residentes_por_sexo = pd.read_csv(f'{FOLDER}/empleo-y-residencia/residentes_por_sexo.csv', sep=';' )
 df_evolucion_empleo = pd.read_csv(f'{FOLDER}/empleo-y-residencia/evolucion_empleo.csv', sep=';' )
