@@ -1,7 +1,7 @@
 from dash import html,Input, Output, callback
 import dash_bootstrap_components as dbc
 from dash import Dash
-from .transparencia import Transparencia
+from .escuelas import Escuelas
 from .texto_inicial_ranking import TextoRanking_2
 
 color_transparencia = '#FF865F'
@@ -26,10 +26,15 @@ SolapasRanking = html.Div([
     html.Div(id='tabs-content-ranking'),
 ])
 
-@callback(Output('tabs-content-ranking', 'children'), Input('tabs-ranking', 'active_tab'))
+@callback(
+        Output('tabs-content-ranking','children'), 
+        Input('tabs-ranking','active_tab')
+        )
 def render_content(tab):
    if tab == 'tab-A':
-       return html.Div([dbc.Row([Transparencia]), dbc.Row([TextoRanking_2])])
+       return html.Div([dbc.Row([Escuelas]), 
+                        html.Br(),
+                        dbc.Row([TextoRanking_2])])
 #    
 #    elif tab == 'tab-2':
 #        return Produccion

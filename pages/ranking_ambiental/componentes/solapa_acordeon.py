@@ -2,8 +2,8 @@ from dash import html,Input, Output, callback
 import dash_bootstrap_components as dbc
 from dash import Dash
 import dash_mantine_components as dmc
-from .transparencia import Transparencia
-from .texto_inicial_ranking import TextoRanking_2
+from .escuelas.tabla_escuelas import tabla_escuelas
+
 
 
 color_transparencia = '#FF865F'
@@ -38,10 +38,11 @@ AcordeonRanking = html.Div([
                             [
                                 dmc.AccordionControl("Escuelas", style={"color":"#000000" , 'font-size': '18px','font-weight': 'bold',"backgroundColor": color_escuelas,  "text-align": "center"}),
                                 dmc.AccordionPanel(
-                                    "Colors, fonts, shadows and many other parts are customizable to fit your design needs"
+                                    dbc.Col([html.Div(tabla_escuelas)], md=12)
                                 ),
-                            ],
-                            value="escuelas",
+                                
+                            ],id="accordion_escuelas",
+                            value="on",
                         ),
                         dmc.AccordionItem(
                             [
@@ -119,3 +120,5 @@ AcordeonRanking = html.Div([
                 )
     ], style={'borderBottom': '0px', 'width': '100%'})
 ])
+
+

@@ -1,9 +1,9 @@
 from dash import html
 import dash_bootstrap_components as dbc
-from .mapa_transparencia import mapa_card
-color_transparencia = '#EF7286'
+from .mapa_escuelas import mapa_card
 
-Transparencia = html.Div([
+
+Escuelas = html.Div([
             html.Br(),
             dbc.Row([
                 html.Br(),
