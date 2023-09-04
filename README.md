@@ -4,8 +4,8 @@
 
 Aplicaciones realizadas en python dash para proyecto PIS de Democracia en Red
 
-- Módulo de Mapa de Zonificación Normativa 
-- Módulo de Ranking Ambiental
+- Módulo de Mapa de zonificación normativa 
+- Módulo de Ranking ambiental
 - Módulo de Análisis estadístico de los censos
 
 ## Setup
