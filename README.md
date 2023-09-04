@@ -8,6 +8,11 @@ Aplicaciones realizadas en python dash para proyecto PIS de Democracia en Red
 - Módulo de Ranking ambiental
 - Módulo de Análisis estadístico de los censos
 
+
+## Manual de integración
+
+El presente repositorio forma parte de un proyecto que integra múltiples tecnologías. Para conocer más accedé a nuestro [Manual de integración](https://github.com/reflejar/pis-manual)
+
 ## Setup
 
 Hay 2 maneras de preparar el entorno para desarrollo. A través de un entorno virtual de python, o a través de Docker
