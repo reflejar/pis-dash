@@ -31,7 +31,7 @@ indicadores = [
         y_titulo = 'Héctáreas sembradas (miles)',
         z='Tipo de Oleaginosa',
         colores=[NARANJA, LIMA],
-        hover='Hectáreas sembradas: %{y} mil<br>Año del censo: %{x}',
+        hover='Hectáreas sembradas: %{text} mil<br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_OLEAGINOSAS,
         divisor = 1000
     ),
@@ -45,7 +45,7 @@ indicadores = [
         y_titulo = 'Héctáreas sembradas (miles)',
         z='Tipo de cereal',
         colores=[NARANJA, LILA, LIMA],
-        hover='Hectáreas sembradas: %{y} mil<br>Año del censo: %{x}',
+        hover='Hectáreas sembradas: %{text} mil<br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_CEREALES,
         divisor = 1000
     ),
@@ -59,7 +59,7 @@ indicadores = [
         y_titulo = 'Héctáreas sembradas (miles)',
         z='Tipo forrajera',
         colores=[NARANJA, LIMA],
-        hover='Hectáreas sembradas: %{y} mil <br>Año del censo: %{x}',
+        hover='Hectáreas sembradas: %{text} mil <br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_FORRAJERAS,
         divisor = 1000
     ),
@@ -73,9 +73,9 @@ indicadores = [
         y_titulo = 'Hectáreas (miles)',
         z='Tipo de suelo',
         colores=[NARANJA, LIMA],
-        hover='Hectareas: %{y} mil <br>Año del censo: %{x}',
+        hover='Hectareas: %{text} mil <br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_BOSQUES,
-        divisor=1000
+        divisor = 1000
 
     ),
     Indicador(
