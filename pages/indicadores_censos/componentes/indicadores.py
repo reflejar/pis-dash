@@ -133,8 +133,9 @@ class Indicador:
             color=self.z_var, 
             # color='Tamaño EAPs',
             barnorm='percent' if self.porcentaje else None,  
-            text_auto=True,
-            color_discrete_sequence=self.colores            
+            text_auto=False,
+            color_discrete_sequence=self.colores,
+            text='y_text',         
         )
         
     def area(self, df):
@@ -188,6 +189,7 @@ class Indicador:
             df = df.groupby(by = grupos)[self.y_var].sum().reset_index()
             df[self.y_var] = (df[self.y_var]/self.divisor).astype(int)
             df['y_text'] = df[self.y_var].apply(lambda x: f'{x:,}'.replace(',', '.'))        
+
             fig = getattr(self, self.tipo_grafico)(df)
             fig.update_xaxes( title_text = self.x_titulo, title_font=dict(size=self.TAMANIO_FUENTE, family=self.LETRA_DEFAULT, color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))
             fig.update_yaxes(title_text = self.y_titulo,  title_font=dict(size=self.TAMANIO_FUENTE,family=self.LETRA_DEFAULT,color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))

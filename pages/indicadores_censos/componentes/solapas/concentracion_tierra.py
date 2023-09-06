@@ -1,5 +1,5 @@
 
-from dash import dash, html, dcc, Input, Output, State, callback
+from dash import html
 import dash_bootstrap_components as dbc
 from ..constantes import *
 from ..indicadores import Indicador
@@ -42,7 +42,7 @@ indicadores = [
         z='Tamaño EAPs',
         porcentaje=True,
         colores=[LILA, LIMA],
-        hover='Participación: %{y}%<br>Año del censo: %{x}',
+        hover='Participación: %{y}%<br>Cantidad de EAPs: %{text} <br>Año del censo: %{x}',
         texto_descriptivo= TEXTO_EAPS_TAMANIO
     ),    
     Indicador(
@@ -55,7 +55,7 @@ indicadores = [
         y_titulo="Superficie ocupada (miles) ",
         z='Tamaño EAPs',
         colores=[LILA, LIMA],
-        hover='Superficie ocupada: %{y:.0f} mil<br>Año del censo: %{x}',
+        hover='Superficie ocupada: %{text} mil<br>Año del censo: %{x}',
         texto_descriptivo=TEXTO_SUPERFICIE_TAMANIO,
         divisor = 1000
     ),        
@@ -82,7 +82,7 @@ indicadores = [
         y_titulo="Superficie ocupada (en miles de ha)",
         z='Tipo jurídico',
         colores=[LILA, LIMA],
-        hover='Superficie ocupada: %{y:.0f} mil<br>Año del censo: %{x}',
+        hover='Superficie ocupada: %{text} mil<br>Año del censo: %{x}',
         texto_descriptivo =TEXTO_HA_TIPO_JURIDICO,
         divisor = 1000
     ),
@@ -97,8 +97,6 @@ indicadores = [
         texto_descriptivo= TEXTO_EAPS_SEXO
     ),                
 ]
-
-
 
 
 ConcentracionTierra = html.Div([
