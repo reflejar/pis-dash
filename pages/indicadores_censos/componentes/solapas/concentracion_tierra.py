@@ -56,7 +56,8 @@ indicadores = [
         z='Tamaño EAPs',
         colores=[LILA, LIMA],
         hover='Superficie ocupada: %{y:.0f} mil<br>Año del censo: %{x}',
-        texto_descriptivo=TEXTO_SUPERFICIE_TAMANIO
+        texto_descriptivo=TEXTO_SUPERFICIE_TAMANIO,
+        divisor = 1000
     ),        
     Indicador(
         id_indicador="q-eaps-juridico",
@@ -82,7 +83,8 @@ indicadores = [
         z='Tipo jurídico',
         colores=[LILA, LIMA],
         hover='Superficie ocupada: %{y:.0f} mil<br>Año del censo: %{x}',
-        texto_descriptivo =TEXTO_HA_TIPO_JURIDICO
+        texto_descriptivo =TEXTO_HA_TIPO_JURIDICO,
+        divisor = 1000
     ),
     Indicador(
         id_indicador="eaps-sexo-propiedad",
@@ -92,7 +94,6 @@ indicadores = [
         x='Sexo',
         y='Cantidad de EAPs',
         colores=[LILA, LIMA],
-        #hover='Cantidad de Hectareas: %{y} ha<br>Sexo: %{x}',
         texto_descriptivo= TEXTO_EAPS_SEXO
     ),                
 ]

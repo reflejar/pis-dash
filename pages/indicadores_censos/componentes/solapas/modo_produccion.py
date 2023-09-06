@@ -16,9 +16,10 @@ indicadores = [
         y='HA de EAPs',
         y_titulo = 'Héctáreas implantadas (en miles)',
         z='Tipo de cultivo',
-        colores=[LILA, LIMA, NARANJA, CELESTE ],
+        colores=[NARANJA,LILA, LIMA, CELESTE ],
         hover='Hectareas cultivadas: %{y} mil<br>Año del censo: %{x}',
-        texto_descriptivo = TEXTO_HA_TIPO_CULTIVO
+        texto_descriptivo = TEXTO_HA_TIPO_CULTIVO,
+        divisor = 1000
     ),
     Indicador(
         id_indicador="oleaginosas",
@@ -29,9 +30,10 @@ indicadores = [
         y='HA de EAPs',
         y_titulo = 'Héctáreas sembradas (miles)',
         z='Tipo de Oleaginosa',
-        colores=[LIMA, NARANJA],
+        colores=[NARANJA, LIMA],
         hover='Hectáreas sembradas: %{y} mil<br>Año del censo: %{x}',
-        texto_descriptivo = TEXTO_HA_OLEAGINOSAS
+        texto_descriptivo = TEXTO_HA_OLEAGINOSAS,
+        divisor = 1000
     ),
     Indicador(
         id_indicador="cereales",
@@ -42,9 +44,10 @@ indicadores = [
         y='HA de EAPs',
         y_titulo = 'Héctáreas sembradas (miles)',
         z='Tipo de cereal',
-        colores=[LIMA, NARANJA, LILA],
+        colores=[NARANJA, LILA, LIMA],
         hover='Hectáreas sembradas: %{y} mil<br>Año del censo: %{x}',
-        texto_descriptivo = TEXTO_HA_CEREALES
+        texto_descriptivo = TEXTO_HA_CEREALES,
+        divisor = 1000
     ),
     Indicador(
         id_indicador="forrajeras",
@@ -55,22 +58,25 @@ indicadores = [
         y='HA de EAPs',
         y_titulo = 'Héctáreas sembradas (miles)',
         z='Tipo forrajera',
-        colores=[LIMA, NARANJA],
+        colores=[NARANJA, LIMA],
         hover='Hectáreas sembradas: %{y} mil <br>Año del censo: %{x}',
-        texto_descriptivo = TEXTO_HA_FORRAJERAS
+        texto_descriptivo = TEXTO_HA_FORRAJERAS,
+        divisor = 1000
     ),
     Indicador(
         id_indicador="ha-bosques-cultivos",
         df=df_cultivado_bosques,
         tipo_grafico="histogram",
-        titulo_grafico="Bosques y Montes Naturales (hectáreas)" ,
+        titulo_grafico="Bosques y Montes Naturales (miles ha)" ,
         x="Año del censo",
         y='HA de EAPs',
-        y_titulo = 'Héctáreas',
+        y_titulo = 'Hectáreas (miles)',
         z='Tipo de suelo',
         colores=[NARANJA, LIMA],
-        hover='Hectareas cultivadas: %{y} <br>Año del censo: %{x}',
-        texto_descriptivo = TEXTO_HA_BOSQUES
+        hover='Hectareas: %{y} mil <br>Año del censo: %{x}',
+        texto_descriptivo = TEXTO_HA_BOSQUES,
+        divisor=1000
+
     ),
     Indicador(
         id_indicador="practicas-organicas",
@@ -80,8 +86,8 @@ indicadores = [
         y='Prácticas orgánicasbiodinámicas/agroecológicas_EAPs',
         y_titulo = 'Cantidad de EAPs',
         titulo_grafico="EAPs con prácticas orgánicas y agroecológicas" ,        
-        colores=[LILA],
-        # hover='Hectareas cultivadas: %{y}',
+        colores=[LIMA],
+        hover='EAPs: %{y} <br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_PRACTICAS_AGROECOLOGICAS
         ),   
 ]

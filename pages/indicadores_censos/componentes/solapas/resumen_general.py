@@ -4,8 +4,6 @@ import locale
 # Establecer la configuración regional según tu preferencia (por ejemplo, en_US para inglés en Estados Unidos)
 locale.setlocale(locale.LC_ALL, 'es_AR.UTF-8')
 
-numero = 1234567  # Tu número entero
-
 ### CALCULOS DE RESUMEN GENERAL
 
 VAR_EMPLEO_2018 = 53782

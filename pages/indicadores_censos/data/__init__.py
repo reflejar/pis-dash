@@ -8,7 +8,10 @@ base_censos[VAR_ANIO_CENSO]=base_censos[VAR_ANIO_CENSO].astype(int).astype(str)
 
 #Listado de opciones de filtros
 anio_censo=base_censos[VAR_ANIO_CENSO].sort_values(ascending=True).unique().tolist()
-partidos=base_censos[VAR_PARTIDO].sort_values(ascending=True).unique().tolist()
+
+partidos_sin_PBA = base_censos[VAR_PARTIDO].sort_values(ascending=True).unique().tolist()
+partidos_sin_PBA = [c for c in partidos_sin_PBA if c != 'Provincia de Buenos Aires']
+partidos= ['Provincia de Buenos Aires'] + partidos_sin_PBA
 
 # Lecturas de bases de datos particulares
 df_eaps_cantidad = pd.read_csv(f'{FOLDER}/tierra/q_eaps.csv', sep=';', decimal=',')

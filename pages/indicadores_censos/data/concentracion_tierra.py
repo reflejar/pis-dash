@@ -42,8 +42,8 @@ grandes_ha_df_base = grandes_ha_df_base.rename(columns = {VAR_EAPS_HA_GRANDES: V
 grandes_ha_df_base[VAR_TAMANIO_EAPS] = 'Grandes (>500 ha)'
 
 df_base_ha = pd.concat([pequenias_ha_df_base, grandes_ha_df_base])
-df_base_ha[VAR_EAPS_HA] = df_base_ha[VAR_EAPS_HA].fillna(0.).astype(float)
-df_base_ha[VAR_EAPS_HA] = df_base_ha[VAR_EAPS_HA]/1000
+# df_base_ha[VAR_EAPS_HA] = df_base_ha[VAR_EAPS_HA].fillna(0.).astype(float)
+# df_base_ha[VAR_EAPS_HA] = df_base_ha[VAR_EAPS_HA]/1000
 df_base_ha.to_csv('pages/indicadores_censos/data/tierra/eaps_ha_por_tamanio.csv', sep=';')
 
 
@@ -73,9 +73,6 @@ personas_ha_df_base = personas_ha_df_base.rename(columns = {VAR_EAPS_HA_PERSONAS
 personas_ha_df_base[VAR_EAPS_TIPO_JURICIO] = 'Personas Humanas'
 
 df_base_ha_juridico = pd.concat([empresas_ha_df_base, personas_ha_df_base])
-df_base_ha_juridico[VAR_EAPS_HA] = df_base_ha_juridico[VAR_EAPS_HA].fillna(0.).astype(float)
-df_base_ha_juridico[VAR_EAPS_HA] = df_base_ha_juridico[VAR_EAPS_HA]/1000
-
 df_base_ha_juridico.to_csv('pages/indicadores_censos/data/tierra/ha_tipo_juridico.csv', sep=';')
 
 
