@@ -82,8 +82,10 @@ def display_page(_):
     try:
         return sections[request.host.split(".")[0]]
     except:
-        tool = sys.argv[1]
-        return sections[tool]
+        if len(sys.argv) > 1:
+            tool = sys.argv[1]
+            return sections[tool]
+        return ""
 
 
 # Se corre la aplicación
