@@ -6,9 +6,10 @@ import plotly.graph_objects as go
 import textwrap
 import locale
 
-
-from .constantes import *
-from ..data import VAR_ANIO_CENSO, VAR_PARTIDO, VAR_EAPS_Q
+from ._chart_types import histogram as reflejar_histogram
+# Esto habría que corregir para hacer una libreria publicable
+from pages.indicadores_censos.componentes.constantes import *
+from pages.indicadores_censos.data import VAR_ANIO_CENSO, VAR_PARTIDO, VAR_EAPS_Q
 
 # Establecer la configuración regional según tu preferencia (por ejemplo, en_US para inglés en Estados Unidos)
 locale.setlocale(locale.LC_ALL, 'es_AR.UTF-8')
@@ -126,14 +127,13 @@ class Indicador:
         )
 
     def histogram(self, df):
-        return px.histogram(
+        return reflejar_histogram(
             df, 
             x=self.x_var, 
             y=self.y_var, 
             color=self.z_var, 
             # color='Tamaño EAPs',
             barnorm='percent' if self.porcentaje else None,  
-            text_auto=False,
             color_discrete_sequence=self.colores,
             text='y_text',         
         )
