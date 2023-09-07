@@ -2,13 +2,13 @@
 from dash import html
 import dash_bootstrap_components as dbc
 from ..constantes import *
-from ..indicadores import Indicador
+import dash_tools_reflejar as dtr
 
 from ...data import *
 
 
 indicadores = [
-    Indicador(
+    dtr.Indicador(
         id_indicador="q-eaps-total",
         df=df_eaps_cantidad,
         tipo_grafico="bar",
@@ -19,7 +19,7 @@ indicadores = [
         hover='Cantidad de EAPs: %{text}<br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_EAPS_CANTIDAD
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="eaps-superficie",
         df=df_superficie_promedio,
         tipo_grafico="bar",
@@ -31,7 +31,7 @@ indicadores = [
         hover='Superficie promedio: %{y} hectáreas<br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_PROMEDIO
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="q-eaps-tamanio",
         df=df_eaps_por_tamanio,
         tipo_grafico="histogram",
@@ -45,7 +45,7 @@ indicadores = [
         hover='Participación: %{y}%<br>Cantidad de EAPs: %{text} <br>Año del censo: %{x}',
         texto_descriptivo= TEXTO_EAPS_TAMANIO
     ),    
-    Indicador(
+    dtr.Indicador(
         id_indicador="superficie-eaps-tamanio",
         df=df_eaps_ha_por_tamanio,
         tipo_grafico="histogram",
@@ -59,7 +59,7 @@ indicadores = [
         texto_descriptivo=TEXTO_SUPERFICIE_TAMANIO,
         divisor = 1000
     ),        
-    Indicador(
+    dtr.Indicador(
         id_indicador="q-eaps-juridico",
         df=df_eaps_tipo_juridico,
         tipo_grafico="area",
@@ -72,7 +72,7 @@ indicadores = [
         texto_descriptivo= TEXTO_TIPO_JURIDICO
 
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="superficie-eaps-juridico",
         df=df_ha_tipo_juridico,
         tipo_grafico="histogram",
@@ -86,7 +86,7 @@ indicadores = [
         texto_descriptivo =TEXTO_HA_TIPO_JURIDICO,
         divisor = 1000
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="eaps-sexo-propiedad",
         df=df_propiedad_x_sexo,
         tipo_grafico="pie",
@@ -113,5 +113,5 @@ ConcentracionTierra = html.Div([
 
 
 
-Indicador.generar_callbacks(indicadores)
+dtr.Indicador.generar_callbacks(indicadores)
  

@@ -3,11 +3,11 @@ import dash_bootstrap_components as dbc
 from dash import dcc
 from ..constantes import *
 
-from ..indicadores import Indicador
+import dash_tools_reflejar as dtr
 from ...data import df_ha_tipo_cultivo, df_cultivado_bosques, df_practicas_organicas, df_oleaginosas, df_cereales, df_forrajeras
 
 indicadores = [
-    Indicador(
+    dtr.Indicador(
         id_indicador="ha-tipo-cultivo",
         df=df_ha_tipo_cultivo,
         tipo_grafico="area",
@@ -21,7 +21,7 @@ indicadores = [
         texto_descriptivo = TEXTO_HA_TIPO_CULTIVO,
         divisor = 1000
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="oleaginosas",
         df=df_oleaginosas,
         tipo_grafico="histogram",
@@ -35,7 +35,7 @@ indicadores = [
         texto_descriptivo = TEXTO_HA_OLEAGINOSAS,
         divisor = 1000
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="cereales",
         df= df_cereales,
         tipo_grafico="histogram",
@@ -49,7 +49,7 @@ indicadores = [
         texto_descriptivo = TEXTO_HA_CEREALES,
         divisor = 1000
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="forrajeras",
         df= df_forrajeras,
         tipo_grafico="histogram",
@@ -63,7 +63,7 @@ indicadores = [
         texto_descriptivo = TEXTO_HA_FORRAJERAS,
         divisor = 1000
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="ha-bosques-cultivos",
         df=df_cultivado_bosques,
         tipo_grafico="histogram",
@@ -78,7 +78,7 @@ indicadores = [
         divisor = 1000
 
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="practicas-organicas",
         df=df_practicas_organicas,
         tipo_grafico="bar",
@@ -109,4 +109,4 @@ Produccion = html.Div([
 
 
 
-Indicador.generar_callbacks(indicadores)
+dtr.Indicador.generar_callbacks(indicadores)
