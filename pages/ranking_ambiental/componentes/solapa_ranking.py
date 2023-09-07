@@ -63,13 +63,10 @@ def render_content(tab):
                         dbc.Row([TextoRanking_2])])
 
     return {
-          'tab-A': MapaEscuelas,
-    }[tab]
-
-
-#    
-#    elif tab == 'tab-2':
-#        return Produccion
-#    
-#    elif tab == 'tab-3':
-#        return Empleo
+        'tab-A':MapaEscuelas,
+        'tab-B':MapaEscuelas,
+        'tab-C':MapaEscuelas,
+        'tab-D':MapaEscuelas,
+        'tab-E':MapaEscuelas,
+        'tab-F':MapaEscuelas,
+        }[tab]
