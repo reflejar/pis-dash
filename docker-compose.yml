@@ -2,7 +2,7 @@ version: '3'
 
 
 services:
-  web: &web
+  web:
     build:
       context: .
     image: ghcr.io/reflejar/pis-dash:latest
