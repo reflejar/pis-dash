@@ -10,4 +10,4 @@ services:
       - .:/app
     ports:
       - "8050:8050"
-    command: python main.py zonificacion
+    # command: python main.py censos
