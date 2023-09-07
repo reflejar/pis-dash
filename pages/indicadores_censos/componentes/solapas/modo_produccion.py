@@ -3,11 +3,11 @@ import dash_bootstrap_components as dbc
 from dash import dcc
 from ..constantes import *
 
-from ..indicadores import Indicador
+import dash_tools_reflejar as dtr
 from ...data import df_ha_tipo_cultivo, df_cultivado_bosques, df_practicas_organicas, df_oleaginosas, df_cereales, df_forrajeras
 
 indicadores = [
-    Indicador(
+    dtr.Indicador(
         id_indicador="ha-tipo-cultivo",
         df=df_ha_tipo_cultivo,
         tipo_grafico="area",
@@ -16,11 +16,12 @@ indicadores = [
         y='HA de EAPs',
         y_titulo = 'Héctáreas implantadas (en miles)',
         z='Tipo de cultivo',
-        colores=[LILA, LIMA, NARANJA, CELESTE ],
+        colores=[NARANJA,LILA, LIMA, CELESTE ],
         hover='Hectareas cultivadas: %{y} mil<br>Año del censo: %{x}',
-        texto_descriptivo = TEXTO_HA_TIPO_CULTIVO
+        texto_descriptivo = TEXTO_HA_TIPO_CULTIVO,
+        divisor = 1000
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="oleaginosas",
         df=df_oleaginosas,
         tipo_grafico="histogram",
@@ -29,11 +30,12 @@ indicadores = [
         y='HA de EAPs',
         y_titulo = 'Héctáreas sembradas (miles)',
         z='Tipo de Oleaginosa',
-        colores=[LIMA, NARANJA],
-        hover='Hectáreas sembradas: %{y} mil<br>Año del censo: %{x}',
-        texto_descriptivo = TEXTO_HA_OLEAGINOSAS
+        colores=[NARANJA, LIMA],
+        hover='Hectáreas sembradas: %{text} mil<br>Año del censo: %{x}',
+        texto_descriptivo = TEXTO_HA_OLEAGINOSAS,
+        divisor = 1000
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="cereales",
         df= df_cereales,
         tipo_grafico="histogram",
@@ -42,11 +44,12 @@ indicadores = [
         y='HA de EAPs',
         y_titulo = 'Héctáreas sembradas (miles)',
         z='Tipo de cereal',
-        colores=[LIMA, NARANJA, LILA],
-        hover='Hectáreas sembradas: %{y} mil<br>Año del censo: %{x}',
-        texto_descriptivo = TEXTO_HA_CEREALES
+        colores=[NARANJA, LILA, LIMA],
+        hover='Hectáreas sembradas: %{text} mil<br>Año del censo: %{x}',
+        texto_descriptivo = TEXTO_HA_CEREALES,
+        divisor = 1000
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="forrajeras",
         df= df_forrajeras,
         tipo_grafico="histogram",
@@ -55,24 +58,27 @@ indicadores = [
         y='HA de EAPs',
         y_titulo = 'Héctáreas sembradas (miles)',
         z='Tipo forrajera',
-        colores=[LIMA, NARANJA],
-        hover='Hectáreas sembradas: %{y} mil <br>Año del censo: %{x}',
-        texto_descriptivo = TEXTO_HA_FORRAJERAS
+        colores=[NARANJA, LIMA],
+        hover='Hectáreas sembradas: %{text} mil <br>Año del censo: %{x}',
+        texto_descriptivo = TEXTO_HA_FORRAJERAS,
+        divisor = 1000
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="ha-bosques-cultivos",
         df=df_cultivado_bosques,
         tipo_grafico="histogram",
-        titulo_grafico="Bosques y Montes Naturales (hectáreas)" ,
+        titulo_grafico="Bosques y Montes Naturales (miles ha)" ,
         x="Año del censo",
         y='HA de EAPs',
-        y_titulo = 'Héctáreas',
+        y_titulo = 'Hectáreas (miles)',
         z='Tipo de suelo',
         colores=[NARANJA, LIMA],
-        hover='Hectareas cultivadas: %{y} <br>Año del censo: %{x}',
-        texto_descriptivo = TEXTO_HA_BOSQUES
+        hover='Hectareas: %{text} mil <br>Año del censo: %{x}',
+        texto_descriptivo = TEXTO_HA_BOSQUES,
+        divisor = 1000
+
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="practicas-organicas",
         df=df_practicas_organicas,
         tipo_grafico="bar",
@@ -80,8 +86,8 @@ indicadores = [
         y='Prácticas orgánicasbiodinámicas/agroecológicas_EAPs',
         y_titulo = 'Cantidad de EAPs',
         titulo_grafico="EAPs con prácticas orgánicas y agroecológicas" ,        
-        colores=[LILA],
-        # hover='Hectareas cultivadas: %{y}',
+        colores=[LIMA],
+        hover='EAPs: %{y} <br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_PRACTICAS_AGROECOLOGICAS
         ),   
 ]
@@ -103,4 +109,4 @@ Produccion = html.Div([
 
 
 
-Indicador.generar_callbacks(indicadores)
+dtr.Indicador.generar_callbacks(indicadores)

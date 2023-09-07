@@ -2,13 +2,13 @@
 from dash import html
 import dash_bootstrap_components as dbc
 from ..constantes import *
-from ..indicadores import Indicador
+import dash_tools_reflejar as dtr
 
 from ...data import *
 
 
 indicadores = [        
-    Indicador(
+    dtr.Indicador(
         id_indicador="residentes-sexo",
         df=df_residentes_por_sexo,
         tipo_grafico="histogram",
@@ -20,7 +20,7 @@ indicadores = [
         hover='Cantidad de Residentes: %{y}<br>Año del censo: %{x}',
         texto_descriptivo=TEXTO_RESIDENTES_SEXO
     ),      
-    Indicador(
+    dtr.Indicador(
         id_indicador="evolucion-empleo",
         df=df_evolucion_empleo,
         tipo_grafico="area",
@@ -50,4 +50,4 @@ Empleo = html.Div([
 
 
 
-Indicador.generar_callbacks(indicadores)
+dtr.Indicador.generar_callbacks(indicadores)

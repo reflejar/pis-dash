@@ -4,10 +4,15 @@ from dash_loading_spinners import Hash
 import plotly.express as px
 import plotly.graph_objects as go
 import textwrap
+import locale
 
+from ._chart_types import histogram as reflejar_histogram
+# Esto habría que corregir para hacer una libreria publicable
+from pages.indicadores_censos.componentes.constantes import *
+from pages.indicadores_censos.data import VAR_ANIO_CENSO, VAR_PARTIDO, VAR_EAPS_Q
 
-from .constantes import *
-from ..data import VAR_ANIO_CENSO, VAR_PARTIDO, VAR_EAPS_Q, VAR_TAMANIO_EAPS
+# Establecer la configuración regional según tu preferencia (por ejemplo, en_US para inglés en Estados Unidos)
+locale.setlocale(locale.LC_ALL, 'es_AR.UTF-8')
 
 class Indicador:
     """
@@ -32,7 +37,8 @@ class Indicador:
         z="",
         hover="",
         porcentaje=False,
-        texto_descriptivo = ''
+        texto_descriptivo = '',
+        divisor = 1
 
     ) -> None:
         self.id = id_indicador
@@ -48,6 +54,7 @@ class Indicador:
         self.hover = hover
         self.porcentaje = porcentaje
         self.texto_descriptivo = texto_descriptivo
+        self.divisor = divisor
 
     def inicializar(self):
         """
@@ -116,19 +123,19 @@ class Indicador:
             x=self.x_var, 
             y=self.y_var, 
             color_discrete_sequence=[self.colores[0]], 
-            text=self.y_var
+            text='y_text'
         )
 
     def histogram(self, df):
-        return px.histogram(
+        return reflejar_histogram(
             df, 
             x=self.x_var, 
             y=self.y_var, 
             color=self.z_var, 
             # color='Tamaño EAPs',
             barnorm='percent' if self.porcentaje else None,  
-            text_auto=True, 
-            color_discrete_sequence=self.colores            
+            color_discrete_sequence=self.colores,
+            text='y_text',         
         )
         
     def area(self, df):
@@ -137,7 +144,7 @@ class Indicador:
             x=self.x_var, 
             y=self.y_var, 
             color=self.z_var or None,  
-            color_discrete_sequence=self.colores
+            color_discrete_sequence=self.colores,
         )
 
     def pie(self, df):
@@ -180,11 +187,14 @@ class Indicador:
                 grupos.append(self.z_var)
 
             df = df.groupby(by = grupos)[self.y_var].sum().reset_index()
+            df[self.y_var] = (df[self.y_var]/self.divisor).astype(int)
+            df['y_text'] = df[self.y_var].apply(lambda x: f'{x:,}'.replace(',', '.'))        
 
             fig = getattr(self, self.tipo_grafico)(df)
             fig.update_xaxes( title_text = self.x_titulo, title_font=dict(size=self.TAMANIO_FUENTE, family=self.LETRA_DEFAULT, color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))
             fig.update_yaxes(title_text = self.y_titulo,  title_font=dict(size=self.TAMANIO_FUENTE,family=self.LETRA_DEFAULT,color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))
             fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
+
 
             #Armar el texto de las etiquetas emergentes
             fig.update_traces(hovertemplate=self.hover)

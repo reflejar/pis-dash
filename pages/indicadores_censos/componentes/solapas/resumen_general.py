@@ -1,4 +1,8 @@
 from datetime import datetime
+import locale
+
+# Establecer la configuración regional según tu preferencia (por ejemplo, en_US para inglés en Estados Unidos)
+locale.setlocale(locale.LC_ALL, 'es_AR.UTF-8')
 
 ### CALCULOS DE RESUMEN GENERAL
 
@@ -11,9 +15,10 @@ VAR_RESIDENCIA_2002 = 150923
 VAR_CANTIDAD_EAPS_2018 = 36744
 VAR_CANTIDAD_EAPS_2002 = 51107
 
-caida_empleo = VAR_EMPLEO_2018 - VAR_EMPLEO_2002
-caida_residencia = VAR_RESIDENCIA_2018 - VAR_RESIDENCIA_2002
-caida_eaps = VAR_CANTIDAD_EAPS_2018 - VAR_CANTIDAD_EAPS_2002
+caida_empleo = abs(int(VAR_EMPLEO_2018 - VAR_EMPLEO_2002))
+
+caida_residencia = abs(int(VAR_RESIDENCIA_2018 - VAR_RESIDENCIA_2002))
+caida_eaps = abs(int(VAR_CANTIDAD_EAPS_2018 - VAR_CANTIDAD_EAPS_2002))
 
 # fecha_censo_2002 = '31/12/2002'
 # fecha_censo_2018 = '31/03/2019'
@@ -25,9 +30,9 @@ caida_eaps = VAR_CANTIDAD_EAPS_2018 - VAR_CANTIDAD_EAPS_2002
 # diff = end.date() - start.date()
 # cantidad_mes = abs(diff.days)/30
 
-PERDIDA_EMPLEO_X_MES = abs(int(caida_empleo))
-PERDIDA_RESIDENCIA_X_MES = abs(int(caida_residencia))
-PERDIDA_EAPS_X_MES = abs(int(caida_eaps))
+PERDIDA_EMPLEO_X_MES = locale.format_string('%d', caida_empleo, grouping=True)
+PERDIDA_RESIDENCIA_X_MES = locale.format_string('%d', caida_residencia, grouping=True) 
+PERDIDA_EAPS_X_MES = locale.format_string('%d', caida_eaps, grouping=True)
 
 
 
