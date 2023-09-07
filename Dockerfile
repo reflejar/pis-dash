@@ -1,8 +1,9 @@
 # Stage 1
 FROM python:3.11-slim as base
 
+ENV PYTHONUNBUFFERED 1
 
-# Instalo los paquetes necesarios para la configuración regional
+# Instalo los paquetes necesarios para la configuración regional y OpenBLAS
 RUN apt-get update && apt-get install -y locales
 
 # Configuro region predeterminada a 'es_AR.UTF-8'
@@ -12,7 +13,6 @@ ENV LANG es_AR.UTF-8
 ENV LC_ALL es_AR.UTF-8
 
 
-ENV PYTHONUNBUFFERED 1
 
 RUN apt-get update
 
