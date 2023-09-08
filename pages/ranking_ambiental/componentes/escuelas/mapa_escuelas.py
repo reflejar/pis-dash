@@ -42,14 +42,21 @@ ctg = ["{}+".format(cls, classes[i + 1]) for i, cls in enumerate(classes[:-1])] 
 # )
 
 # Lógica de representación del GeoJSON.
-style_handle = assign("""function(feature, context){
+style_handle =  assign("""function(feature, context){
     const {classes, colorscale, style, colorProp} = context.props.hideout;
     const value = feature.properties[colorProp];
-    for (let i = 0; i < classes.length; ++i) {
-        if (value > classes[i]) {
-            style.fillColor = colorscale[i];
-            style.weight = 1;
-            style.dashArray = false;
+    if (value === null || isNaN(value)) {
+        // Asigna color gris para observaciones sin datos
+        style.fillColor = 'rgb(128, 128, 128)';
+        style.weight = 1;
+        style.dashArray = false;
+    } else {
+        for (let i = 0; i < classes.length; ++i) {
+            if (value > classes[i]) {
+                style.fillColor = colorscale[i];
+                style.weight = 1;
+                style.dashArray = false;
+            }
         }
     }
     return style;
@@ -63,16 +70,31 @@ color_bar = html.Div(
         'background': f'linear-gradient(to right, {", ".join(colorscale)})'
     }
 )
-
+color_bar_gris = html.Div(
+    style={
+        'width': '40px',
+        'height': '25px', 
+        'background': 'grey'
+    }
+)
 
 colorscale_reference = html.Div(
     id='colorscale-reference',
-    children=[dbc.Row([html.Div("PROTECCIÓN", style={'text-align': 'center','font-size': '12px','color': 'black'})]),
-              dbc.Row([dbc.Col([html.Div("MENOR", style={'text-align':'right','color': 'black'})], md=3),
-                       dbc.Col([color_bar], md=6),
+    children=[dbc.Col([
+                dbc.Row([html.Div("PROTECCIÓN", style={'text-align': 'center','font-size': '12px','color': 'black'})]),
+                dbc.Row([dbc.Col([html.Div("MENOR", style={'text-align':'right','color': 'black'})], md=3),
+                       dbc.Col([color_bar], md=5),
                        dbc.Col([html.Div("MAYOR", style={'text-align': 'left','color': 'black'})], md=3),
-                    ]),     
-            ],
+                    ]),  
+            ]), 
+                html.Br(), 
+                dbc.Row([ 
+                     dbc.Col([html.Br()], md=3),   
+                    dbc.Col([color_bar_gris], md=1),
+                    dbc.Col([html.Div("SIN ORDENANZA", style={'text-align': 'right','color': 'black'})], md=3) 
+            ]),
+        ],
+                        
     style={
         'font-size': '12px',
     }
@@ -80,7 +102,8 @@ colorscale_reference = html.Div(
 
 
 Mapa =dl.Map(
-                            zoom=13,
+                            id="mapa",
+                            zoom=15,
                             dragging=False,
                             # touchZoom=False,
                             zoomControl=False,
@@ -99,11 +122,7 @@ Mapa =dl.Map(
                                 ),
                                
                             ],
-                            style={
-                                'width': '1200px',
-                                'height': '500px',
-                                'background-color': 'white'
-                            }
+                            className="min-vh-50 bg-white"
                         )
 
 
@@ -135,11 +154,10 @@ mapa_layout = html.Div(
     children=[
         dbc.Row([
             dbc.Row([dbc.Col([titulo_del_mapa_1], md=7), dbc.Col([titulo_del_mapa_2], md=2)]),
-            dbc.Col([Mapa], md=12),  
+            dbc.Row([dbc.Col([Mapa], md=12)]),  
             dbc.Row([dbc.Col([html.Div()], md=3),dbc.Col([colorscale_reference], md=6),dbc.Col([html.Div()], md=3) ]),
             ])  
     ],
-    style={'display':'flex', 'position': 'relative', 'width': '100%', 'height': '100%'}
 )
 
 # Crea la tarjeta centrada
@@ -152,3 +170,5 @@ mapa_card = dbc.Card(
     outline=True,
     id="censo-empleo"
 )
+
+
