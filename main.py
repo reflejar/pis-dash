@@ -16,8 +16,8 @@ import dash_bootstrap_components as dbc
 from dash import html, Output, Input, dcc
 
 from pages import (
-	# mapa_normativo,
-	# ranking_ambiental,
+	mapa_normativo,
+	ranking_ambiental,
 	indicadores_censos
 )
 
@@ -48,7 +48,7 @@ app.layout = html.Div(children=[
         fixed="top",
         className="text-primary",
     ),
-	indicadores_censos.layout,
+	html.Div(id='page-content'),
 	html.Footer([
         dbc.Container([
             dbc.Row([
@@ -72,20 +72,20 @@ app.layout = html.Div(children=[
 
 
 
-# @app.callback(Output('page-content', 'children'),Input('url', 'pathname'))
-# def display_page(_):
-#     sections = {
-#             # 'zonificacion': mapa_normativo.layout,
-#             'censos': indicadores_censos.layout,
-#             # 'ranking': ranking_ambiental.layout
-#     }
-#     try:
-#         return sections[request.host.split(".")[0]]
-#     except:
-#         if len(sys.argv) > 1:
-#             tool = sys.argv[1]
-#             return sections[tool]
-#         return ""
+@app.callback(Output('page-content', 'children'),Input('url', 'pathname'))
+def display_page(_):
+    sections = {
+            'zonificacion': mapa_normativo.layout,
+            'censos': indicadores_censos.layout,
+            'ranking': ranking_ambiental.layout
+    }
+    try:
+        return sections[request.host.split(".")[0]]
+    except:
+        if len(sys.argv) > 1:
+            tool = sys.argv[1]
+            return sections[tool]
+        return ""
 
 
 # Se corre la aplicación
