@@ -83,6 +83,7 @@ Mapa =dl.Map(
                             zoom=13,
                             dragging=False,
                             # touchZoom=False,
+                            keyboard=False,
                             zoomControl=False,
                             scrollWheelZoom=False,
                             doubleClickZoom=False,
