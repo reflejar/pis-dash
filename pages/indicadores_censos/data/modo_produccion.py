@@ -46,8 +46,6 @@ df_areas_cultivadas_bosques.to_csv('pages/indicadores_censos/data/modo_produccio
 ######################## PRACTICAS AGROECOLOGICAS ##########################
 
 practicas_organicas_df_base = df_base_original[[VAR_PRACTICAS_ORGANICAS, VAR_ANIO_CENSO, VAR_PARTIDO]]
-#practicas_organicas_df_base = practicas_organicas_df_base[practicas_organicas_df_base[VAR_ANIO_CENSO]==2018]
-
 practicas_organicas_df_base.to_csv('pages/indicadores_censos/data/modo_produccion/practicas_organicas.csv', sep=';')
 
 

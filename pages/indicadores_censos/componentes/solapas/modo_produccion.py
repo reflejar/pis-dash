@@ -3,11 +3,11 @@ import dash_bootstrap_components as dbc
 from dash import dcc
 from ..constantes import *
 
-from ..indicadores import Indicador
+import dash_tools_reflejar as dtr
 from ...data import df_ha_tipo_cultivo, df_cultivado_bosques, df_practicas_organicas, df_oleaginosas, df_cereales, df_forrajeras
 
 indicadores = [
-    Indicador(
+    dtr.Indicador(
         id_indicador="ha-tipo-cultivo",
         df=df_ha_tipo_cultivo,
         tipo_grafico="area",
@@ -21,7 +21,7 @@ indicadores = [
         texto_descriptivo = TEXTO_HA_TIPO_CULTIVO,
         divisor = 1000
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="oleaginosas",
         df=df_oleaginosas,
         tipo_grafico="histogram",
@@ -31,11 +31,11 @@ indicadores = [
         y_titulo = 'Héctáreas sembradas (miles)',
         z='Tipo de Oleaginosa',
         colores=[NARANJA, LIMA],
-        hover='Hectáreas sembradas: %{y} mil<br>Año del censo: %{x}',
+        hover='Hectáreas sembradas: %{text} mil<br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_OLEAGINOSAS,
         divisor = 1000
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="cereales",
         df= df_cereales,
         tipo_grafico="histogram",
@@ -45,11 +45,11 @@ indicadores = [
         y_titulo = 'Héctáreas sembradas (miles)',
         z='Tipo de cereal',
         colores=[NARANJA, LILA, LIMA],
-        hover='Hectáreas sembradas: %{y} mil<br>Año del censo: %{x}',
+        hover='Hectáreas sembradas: %{text} mil<br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_CEREALES,
         divisor = 1000
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="forrajeras",
         df= df_forrajeras,
         tipo_grafico="histogram",
@@ -59,11 +59,11 @@ indicadores = [
         y_titulo = 'Héctáreas sembradas (miles)',
         z='Tipo forrajera',
         colores=[NARANJA, LIMA],
-        hover='Hectáreas sembradas: %{y} mil <br>Año del censo: %{x}',
+        hover='Hectáreas sembradas: %{text} mil <br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_FORRAJERAS,
         divisor = 1000
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="ha-bosques-cultivos",
         df=df_cultivado_bosques,
         tipo_grafico="histogram",
@@ -73,12 +73,12 @@ indicadores = [
         y_titulo = 'Hectáreas (miles)',
         z='Tipo de suelo',
         colores=[NARANJA, LIMA],
-        hover='Hectareas: %{y} mil <br>Año del censo: %{x}',
+        hover='Hectareas: %{text} mil <br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_BOSQUES,
-        divisor=1000
+        divisor = 1000
 
     ),
-    Indicador(
+    dtr.Indicador(
         id_indicador="practicas-organicas",
         df=df_practicas_organicas,
         tipo_grafico="bar",
@@ -109,4 +109,4 @@ Produccion = html.Div([
 
 
 
-Indicador.generar_callbacks(indicadores)
+dtr.Indicador.generar_callbacks(indicadores)

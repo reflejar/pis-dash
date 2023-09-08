@@ -26,9 +26,12 @@ layout = html.Div([
             ], 
             class_name="mb-5"
         ),
-        dbc.Row(
-            dbc.Col(Solapas, md=12)
-        ),
+        dbc.Container(
+            dbc.Row(
+                dbc.Col(Solapas, md=12)
+            ),
+
+        )
         ],
         className="my-5 mx-5 min-vh-100",
     ) 
