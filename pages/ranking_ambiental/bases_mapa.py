@@ -18,7 +18,7 @@ bsas=pd.merge(bsas, escuelas[['Municipios', 'Puntaje - Escuelas rurales']], on='
 VAR_PUNTAJE="Puntaje - Escuelas rurales"
 
 # Crear valores medios y clases.
-bsas[VAR_PUNTAJE]=bsas[VAR_PUNTAJE].fillna(0).apply(lambda x: math.sqrt(int(x)))
+bsas[VAR_PUNTAJE]=bsas[VAR_PUNTAJE].fillna(" ").apply(lambda x: None if x==" " else math.sqrt(int(x)) )
 min_value = bsas[VAR_PUNTAJE].min()
 max_value = bsas[VAR_PUNTAJE].max()
 middle_values = np.linspace(min_value, max_value, num=8, endpoint=True)
