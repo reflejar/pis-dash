@@ -66,13 +66,13 @@ indicadores = [
     dtr.Indicador(
         id_indicador="ha-bosques-cultivos",
         df=df_cultivado_bosques,
-        tipo_grafico="histogram",
+        tipo_grafico="bar",
         titulo_grafico="Bosques y Montes Naturales (miles ha)" ,
         x="Año del censo",
         y='HA de EAPs',
         y_titulo = 'Hectáreas (miles)',
         z='Tipo de suelo',
-        colores=[NARANJA, LIMA],
+        colores=[NARANJA],
         hover='Hectareas: %{text} mil <br>Año del censo: %{x}',
         texto_descriptivo = TEXTO_HA_BOSQUES,
         divisor = 1000
