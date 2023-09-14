@@ -63,7 +63,7 @@ class Indicador:
                     dbc.CardBody(
                         Hash(dbc.Row(
                             [
-                            dbc.Col(dcc.Graph(id=self.id), md=12),                
+                            dbc.Col(dcc.Graph(id=self.id, config={'displayModeBar': False},), md=12),                
                             ]
                         ),
                         size=24,
