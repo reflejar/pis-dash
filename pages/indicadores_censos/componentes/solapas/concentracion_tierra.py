@@ -101,12 +101,13 @@ indicadores = [
 
 ConcentracionTierra = html.Div([
             dbc.Row([
-                html.H6('Concentración de la tierra', style={'font-size': '25px', 'color': LILA}),
-                html.P("""
-                       Siguiendo al INDEC, se utilizará como unidad de referencia a las explotaciones agropecuarias (EAP). 
-                       Para entenderlo más fácilmente, podemos pensar a las EAPs como los "campos" de Argentina. Se tomará como 
-                       EAPS grandes a aquellas que posean más de 500 hectáreas, mientras que las EAPS pequeñas serán las que tengan menos de 500 hectáreas. 
-                       """, className="text-white"),
+                html.H6('Concentración de tierras', style={'font-size': '25px', 'color': LILA}, className="space-grotesk"),
+                dbc.Container(dbc.Row(
+                              dbc.Col(html.H6(["La unidad de referencia de los Censos son las ",
+                       html.Strong("Explotaciones Agropecuarias"),
+                     """ o EAP. Podemos pensarlos como los "campos" de Argentina (se considera como EAPs grandes a aquellas que posean más de 500 hectáreas, 
+                       mientras que las EAPs pequeñas serán las que tengan menos de 500 hectáreas). 
+                       """], className="text-white"), md=9))),
                 ]),
             dbc.Row([dbc.Col(i.inicializar(), sm=12, md=6, xl=4) for i in indicadores], class_name="mt-5"),    
         ], className="mt-5")         

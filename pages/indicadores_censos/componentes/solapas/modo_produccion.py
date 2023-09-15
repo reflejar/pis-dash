@@ -92,21 +92,17 @@ indicadores = [
         ),   
 ]
 
-
 Produccion = html.Div([
             dbc.Row([
-                html.H6('Modo de producción', style={'font-size': '25px', 'color': LIMA}),
-                html.P("""
-                       Según el CNA 2018 los cultivos en Argentina estan categorizados de la siguiente manera: 
+                html.H6('Modo de producción', style={'font-size': '25px', 'color': LIMA}, className="space-grotesk"),
+                dbc.Container(dbc.Row(
+                              dbc.Col(html.H6("""Según el CNA 2018 los cultivos en Argentina estan categorizados de la siguiente manera: 
                        cereales, oleaginosas, legumbres, cultivos industriales, forrajeras anuales y perennes, frutales, y 
                        bosques y montes implantados. La razón por la cual se analizaran sólo cereales (maíz y trigo pan), 
                        oleaginosas (soja) y forrajeras es debido a la gran cantidad de superficie que ocupan ya que son cultivos 
-                       destinados a exportación y a ganadería.
-                        """, className="text-white"),
+                       destinados a exportación y a ganadería.""", className="text-white"), md=9))),
                 ]),
-            dbc.Row([dbc.Col(i.inicializar(), sm=12, md=6, xl=4) for i in indicadores], class_name="mt-5")
-        ], className="mt-5")         
-
-
+            dbc.Row([dbc.Col(i.inicializar(), sm=12, md=6, xl=4) for i in indicadores], class_name="mt-5"),   
+        ], className="mt-5") 
 
 dtr.Indicador.generar_callbacks(indicadores)

@@ -10,9 +10,9 @@ from ..constantes import *
 
 Solapas = html.Div([
     dbc.Tabs(id="tabs", active_tab='tab-1', children=[
-        dbc.Tab(label='Concentración de tierras', tab_id='tab-1', label_style={'background-color':LILA,  'border-radius': '40px', 'color': '#000', 'margin-top': "7px"},active_label_style={'border': '4px solid white'}),
-        dbc.Tab(label='Modo de producción', tab_id='tab-2', label_style={'background-color':LIMA,  'border-radius': '40px', 'color': '#000', 'margin-top': "7px"},active_label_style={'border': '4px solid white'}),
-        dbc.Tab(label='Empleo y residencia', tab_id='tab-3',label_style={'background-color':NARANJA,  'border-radius': '40px', 'color': '#000', 'margin-top': "7px"},active_label_style={'border': '4px solid white'}),
+        dbc.Tab(label='Concentración de tierras', tab_id='tab-1', label_style={'background-color':LILA,  'border-radius': '40px', 'color': '#000', 'margin-top': "7px", 'font-weight': 'bolder'},active_label_style={'border': '4px solid white'}),
+        dbc.Tab(label='Modo de producción', tab_id='tab-2', label_style={'background-color':LIMA,  'border-radius': '40px', 'color': '#000', 'margin-top': "7px", 'font-weight': 'bolder'},active_label_style={'border': '4px solid white'}),
+        dbc.Tab(label='Empleo y residencia', tab_id='tab-3',label_style={'background-color':NARANJA,  'border-radius': '40px', 'color': '#000', 'margin-top': "7px", 'font-weight': 'bolder'},active_label_style={'border': '4px solid white'}),
         ], 
         style={'borderBottom': '0px'}, 
         class_name="justify-content-center nav nav-pills nav-fill nav-justified"),
