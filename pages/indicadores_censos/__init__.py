@@ -14,8 +14,8 @@ layout = html.Div([
                         html.Br(),
                         html.H6(["""Visualizaciones y análisis de los principales indicadores de los últimos tres censos agropecuarios sistematizados por municipio. 
                                 Información histórica con perspectiva local. Podés descargar el dataset completo """, 
-                                html.A("aquí (FALTA)", href="https://drive.google.com/file/d/1SVmW-3-_LIpqGGVsO2Ud4o3vmxoja5mo/view", target="_blank")
-                                ], className="text-white poppins"),                     
+                                html.A("aquí", href="https://docs.google.com/spreadsheets/d/1zY0iOwGfm5hIg7eYTm1EAQBamPN7mzLm-9U1PxjwiNg/edit?usp=sharing", target="_blank")
+                                , "."], className="text-white poppins"),                     
                         html.H6([html.H6('Entre el 2002 y el 2018, en la Provincia de Buenos Aires:', style={'line-height': '2'}, className="text-white"),
                             html.Ul(
                                 [

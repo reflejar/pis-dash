@@ -24,7 +24,7 @@ TEXTO_HA_BOSQUES = 'Muestra la cantidad de hectáreas dedicadas a bosques implan
 TEXTO_PRACTICAS_AGROECOLOGICAS = 'Muestra la cantidad de explotaciones agropecuarias que declararon trabajar con prácticas orgánicas, biodinámicas y/o agroecológicas.'
 TEXTO_HA_OLEAGINOSAS = 'Muestra la cantidad de soja y otras oleaginosas sembradas con respecto al total del grupo de cultivo de oleaginosas (soja, lino, colza, girasol, maní, etc.)'
 TEXTO_HA_CEREALES = 'Muestra la cantidad de hectáreas sembradas con maíz, trigo pan y otros cultivos con respecto al total del grupo de cultivo de cereales (maíz para grano, trigo pan, alpiste, avena, cebada, etc.)'
-TEXTO_HA_FORRAJERAS = 'Acá iría un textooooo, falta'
+TEXTO_HA_FORRAJERAS = 'Muestra la cantidad de forrajes anuales y perennes implantadas'
 
 # TEXTOS DESCRIPTIVOS EMPLEO Y RESIDENCIA
 
