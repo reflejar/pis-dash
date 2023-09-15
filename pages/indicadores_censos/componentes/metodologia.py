@@ -36,7 +36,7 @@ MetodologiaCenso = dbc.Container([
         html.I([
             """Las fuentes de datos utilizadas provienen de fuente no oficiales encontrados en diversos portales. 
                Puede consultar las fuentes utilizadas """,
-               html.A("aquí.", href="https://www.indec.gob.ar/"),
+               html.A("aquí.", href="https://www.indec.gob.ar/", target='blank'),
                """ Si posee otras fuentes para verificar o refutar, alentamos contacto. 
                Reconocemos valor de verificación en búsqueda de información confiable."""
       ])],
