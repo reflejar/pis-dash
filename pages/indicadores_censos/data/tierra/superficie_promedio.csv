@@ -19,10 +19,10 @@
 17;362;2018;Brandsen
 18;317;2018;Campana
 19;396;2018;Cañuelas
-20;253;2018;Capitán Sarmiento
+20;251;2018;Capitán Sarmiento
 21;619;2018;Carlos Casares
 22;552;2018;Carlos Tejedor
-23;684;2018;Carmen de Areco
+23;671;2018;Carmen de Areco
 24;1420;2018;Castelli
 25;360;2018;Chacabuco
 26;513;2018;Chascomús
@@ -71,7 +71,7 @@
 69;636;2018;Las Flores
 70;653;2018;Leandro N, Alem
 71;320;2018;Lezama
-72;787;2018;Lincoln
+72;788;2018;Lincoln
 73;823;2018;Lobería
 74;325;2018;Lobos
 75;0;2018;Lomas de Zamora
@@ -126,8 +126,8 @@
 124;46;2018;Tigre
 125;1058;2018;Tordillo
 126;914;2018;Tornquist
-127;1265;2018;Trenque Lauquen
-128;866;2018;Tres Arroyos
+127;1258;2018;Trenque Lauquen
+128;865;2018;Tres Arroyos
 129;0;2018;Tres de Febrero
 130;674;2018;Tres Lomas
 131;632;2018;25 de mayo
@@ -245,8 +245,8 @@
 243;299;2002;Roque Pérez
 244;612;2002;Saavedra
 245;234;2002;Saladillo
-246;667;2002;Salliqueló
-247;175;2002;Salto
+246;431;2002;Salliqueló
+247;270;2002;Salto
 248;357;2002;San Andrés de Giles
 249;575;2002;San Antonio de Areco
 250;667;2002;San Cayetano
@@ -283,52 +283,52 @@
 281;659;1988;Bahía Blanca
 282;293;1988;Balcarce
 283;230;1988;Baradero
-284;2;1988;Bartolomé Mitre
-285;137;1988;Benito Juárez
-286;2360;1988;Berazategui
-287;99;1988;Berisso
-288;3;1988;Bolívar
-289;498;1988;Bragado
-290;503;1988;Brandsen
-291;356;1988;Campana
-292;108;1988;Cañuelas
-293;429;1988;Capitán Sarmiento
-294;53;1988;Carlos Casares
-295;282;1988;Carlos Tejedor
-296;1545;1988;Carmen de Areco
-297;205;1988;Castelli
-298;166;1988;Chacabuco
-299;216;1988;Chascomús
-300;360;1988;Chivilcoy
-301;327;1988;Colón
-302;578;1988;Coronel de Marina Leonardo Rosales
-303;122;1988;Coronel Dorrego
-304;623;1988;Coronel Pringles
-305;413;1988;Coronel Suárez
-306;776;1988;Daireaux
-307;869;1988;Dolores
-308;12240;1988;Ensenada
-309;7;1988;Escobar
-310;66;1988;Esteban Echeverría
-311;21;1988;Exaltación de la Cruz
+284;252;1988;Bartolomé Mitre
+285;672;1988;Benito Juárez
+286;39;1988;Berazategui
+287;66;1988;Berisso
+288;251;1988;Bolívar
+289;210;1988;Bragado
+290;237;1988;Brandsen
+291;212;1988;Campana
+292;201;1988;Cañuelas
+293;218;1988;Capitán Sarmiento
+294;236;1988;Carlos Casares
+295;442;1988;Carlos Tejedor
+296;314;1988;Carmen de Areco
+297;630;1988;Castelli
+298;155;1988;Chacabuco
+299;381;1988;Chascomús
+300;164;1988;Chivilcoy
+301;162;1988;Colón
+302;656;1988;Coronel de Marina Leonardo Rosales
+303;622;1988;Coronel Dorrego
+304;637;1988;Coronel Pringles
+305;473;1988;Coronel Suárez
+306;453;1988;Daireaux
+307;434;1988;Dolores
+308;210;1988;Ensenada
+309;23;1988;Escobar
+310;85;1988;Esteban Echeverría
+311;77;1988;Exaltación de la Cruz
 312;0;1988;Ezeiza
-313;0;1988;Florencio Varela
+313;19;1988;Florencio Varela
 314;0;1988;Florentino Ameghino
-315;0;1988;General Alvarado
-316;340;1988;General Alvear
-317;297;1988;General Arenales
-318;342;1988;General Belgrano
-319;501;1988;General Guido
-320;438;1988;General Juan Madariaga
-321;450;1988;General La Madrid
-322;1121;1988;General Las Heras
-323;293;1988;General Lavalle
-324;429;1988;General Paz
-325;124;1988;General Pinto
-326;590;1988;General Pueyrredón
-327;604;1988;General Rodríguez
+315;219;1988;General Alvarado
+316;577;1988;General Alvear
+317;157;1988;General Arenales
+318;481;1988;General Belgrano
+319;569;1988;General Guido
+320;561;1988;General Juan Madariaga
+321;676;1988;General La Madrid
+322;165;1988;General Las Heras
+323;1060;1988;General Lavalle
+324;190;1988;General Paz
+325;515;1988;General Pinto
+326;184;1988;General Pueyrredón
+327;144;1988;General Rodríguez
 328;0;1988;General San Martín
-329;0;1988;General Sarmiento
+329;4;1988;General Sarmiento
 330;220;1988;General Viamonte
 331;545;1988;General Villegas
 332;529;1988;Guaminí

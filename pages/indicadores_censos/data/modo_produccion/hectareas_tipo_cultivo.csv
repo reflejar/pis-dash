@@ -1232,7 +1232,7 @@
 408;180896;1988;Villarino;3.Forrajeras
 409;5291;1988;Zárate;3.Forrajeras
 410;3708;1988;Indeterminado;3.Forrajeras
-0;141015;2018;Provincia de Buenos Aires;4.Otros cultivos
+0;140507;2018;Provincia de Buenos Aires;4.Otros cultivos
 1;3672;2018;Adolfo Alsina;4.Otros cultivos
 2;1085;2018;Adolfo Gonzales Chaves;4.Otros cultivos
 3;1783;2018;Alberti;4.Otros cultivos
@@ -1282,7 +1282,7 @@
 47;156;2018;General Juan Madariaga;4.Otros cultivos
 48;370;2018;General La Madrid;4.Otros cultivos
 49;11;2018;General Las Heras;4.Otros cultivos
-50;494;2018;General Lavalle;4.Otros cultivos
+50;1;2018;General Lavalle;4.Otros cultivos
 51;6;2018;General Paz;4.Otros cultivos
 52;226;2018;General Pinto;4.Otros cultivos
 53;5556;2018;General Pueyrredón;4.Otros cultivos
@@ -1302,9 +1302,9 @@
 67;2923;2018;La Plata;4.Otros cultivos
 68;8;2018;Laprida;4.Otros cultivos
 69;66;2018;Las Flores;4.Otros cultivos
-70;433;2018;Leandro N, Alem;4.Otros cultivos
+70;398;2018;Leandro N, Alem;4.Otros cultivos
 71;40;2018;Lezama;4.Otros cultivos
-72;703;2018;Lincoln;4.Otros cultivos
+72;723;2018;Lincoln;4.Otros cultivos
 73;4291;2018;Lobería;4.Otros cultivos
 74;512;2018;Lobos;4.Otros cultivos
 75;0;2018;Lomas de Zamora;4.Otros cultivos
@@ -1349,7 +1349,7 @@
 114;1535;2018;San Cayetano;4.Otros cultivos
 115;2233;2018;San Fernando;4.Otros cultivos
 116;0;2018;San Isidro;4.Otros cultivos
-117;0;2018;San Miguel;4.Otros cultivos
+117;50;2018;San Miguel;4.Otros cultivos
 118;275;2018;San Nicolás;4.Otros cultivos
 119;6992;2018;San Pedro;4.Otros cultivos
 120;0;2018;San Vicente;4.Otros cultivos
@@ -1360,7 +1360,7 @@
 125;0;2018;Tordillo;4.Otros cultivos
 126;501;2018;Tornquist;4.Otros cultivos
 127;3069;2018;Trenque Lauquen;4.Otros cultivos
-128;5368;2018;Tres Arroyos;4.Otros cultivos
+128;5367;2018;Tres Arroyos;4.Otros cultivos
 129;0;2018;Tres de Febrero;4.Otros cultivos
 130;3311;2018;Tres Lomas;4.Otros cultivos
 131;910;2018;25 de mayo;4.Otros cultivos
@@ -1504,31 +1504,31 @@
 269;1;2002;Villa Gesell;4.Otros cultivos
 270;8255;2002;Villarino;4.Otros cultivos
 271;4809;2002;Zárate;4.Otros cultivos
-272;203546;1988;Provincia de Buenos Aires;4.Otros cultivos
+272;204705;1988;Provincia de Buenos Aires;4.Otros cultivos
 273;582;1988;Adolfo Alsina;4.Otros cultivos
 274;379;1988;Adolfo Gonzales Chaves;4.Otros cultivos
 275;1718;1988;Alberti;4.Otros cultivos
 276;85;1988;Almirante Brown;4.Otros cultivos
 277;0;1988;Arrecifes;4.Otros cultivos
-278;169;1988;Avellaneda;4.Otros cultivos
-279;1538;1988;Ayacucho;4.Otros cultivos
+278;170;1988;Avellaneda;4.Otros cultivos
+279;1539;1988;Ayacucho;4.Otros cultivos
 280;608;1988;Azul;4.Otros cultivos
-281;269;1988;Bahía Blanca;4.Otros cultivos
-282;12370;1988;Balcarce;4.Otros cultivos
-283;3009;1988;Baradero;4.Otros cultivos
+281;275;1988;Bahía Blanca;4.Otros cultivos
+282;12375;1988;Balcarce;4.Otros cultivos
+283;3018;1988;Baradero;4.Otros cultivos
 284;281;1988;Bartolomé Mitre;4.Otros cultivos
 285;1534;1988;Benito Juárez;4.Otros cultivos
 286;1022;1988;Berazategui;4.Otros cultivos
-287;130;1988;Berisso;4.Otros cultivos
-288;1488;1988;Bolívar;4.Otros cultivos
+287;138;1988;Berisso;4.Otros cultivos
+288;1491;1988;Bolívar;4.Otros cultivos
 289;1163;1988;Bragado;4.Otros cultivos
 290;141;1988;Brandsen;4.Otros cultivos
-291;20391;1988;Campana;4.Otros cultivos
-292;700;1988;Cañuelas;4.Otros cultivos
+291;20407;1988;Campana;4.Otros cultivos
+292;717;1988;Cañuelas;4.Otros cultivos
 293;10;1988;Capitán Sarmiento;4.Otros cultivos
 294;895;1988;Carlos Casares;4.Otros cultivos
 295;234;1988;Carlos Tejedor;4.Otros cultivos
-296;174;1988;Carmen de Areco;4.Otros cultivos
+296;224;1988;Carmen de Areco;4.Otros cultivos
 297;381;1988;Castelli;4.Otros cultivos
 298;911;1988;Chacabuco;4.Otros cultivos
 299;774;1988;Chascomús;4.Otros cultivos
@@ -1537,11 +1537,11 @@
 302;214;1988;Coronel de Marina Leonardo Rosales;4.Otros cultivos
 303;1200;1988;Coronel Dorrego;4.Otros cultivos
 304;604;1988;Coronel Pringles;4.Otros cultivos
-305;341;1988;Coronel Suárez;4.Otros cultivos
+305;343;1988;Coronel Suárez;4.Otros cultivos
 306;910;1988;Daireaux;4.Otros cultivos
-307;334;1988;Dolores;4.Otros cultivos
+307;336;1988;Dolores;4.Otros cultivos
 308;1;1988;Ensenada;4.Otros cultivos
-309;1955;1988;Escobar;4.Otros cultivos
+309;2468;1988;Escobar;4.Otros cultivos
 310;730;1988;Esteban Echeverría;4.Otros cultivos
 311;435;1988;Exaltación de la Cruz;4.Otros cultivos
 312;0;1988;Ezeiza;4.Otros cultivos
@@ -1552,16 +1552,16 @@
 317;325;1988;General Arenales;4.Otros cultivos
 318;561;1988;General Belgrano;4.Otros cultivos
 319;111;1988;General Guido;4.Otros cultivos
-320;521;1988;General Juan Madariaga;4.Otros cultivos
+320;523;1988;General Juan Madariaga;4.Otros cultivos
 321;484;1988;General La Madrid;4.Otros cultivos
-322;435;1988;General Las Heras;4.Otros cultivos
+322;438;1988;General Las Heras;4.Otros cultivos
 323;246;1988;General Lavalle;4.Otros cultivos
 324;450;1988;General Paz;4.Otros cultivos
 325;162;1988;General Pinto;4.Otros cultivos
-326;10627;1988;General Pueyrredón;4.Otros cultivos
-327;808;1988;General Rodríguez;4.Otros cultivos
+326;10640;1988;General Pueyrredón;4.Otros cultivos
+327;835;1988;General Rodríguez;4.Otros cultivos
 328;2;1988;General San Martín;4.Otros cultivos
-329;155;1988;General Sarmiento;4.Otros cultivos
+329;160;1988;General Sarmiento;4.Otros cultivos
 330;1492;1988;General Viamonte;4.Otros cultivos
 331;1749;1988;General Villegas;4.Otros cultivos
 332;757;1988;Guaminí;4.Otros cultivos
@@ -1573,21 +1573,21 @@
 338;36;1988;La Costa;4.Otros cultivos
 339;629;1988;La Matanza;4.Otros cultivos
 340;0;1988;Lanús;4.Otros cultivos
-341;4432;1988;La Plata;4.Otros cultivos
+341;4456;1988;La Plata;4.Otros cultivos
 342;91;1988;Laprida;4.Otros cultivos
 343;1157;1988;Las Flores;4.Otros cultivos
 344;79;1988;Leandro N, Alem;4.Otros cultivos
 345;0;1988;Lezama;4.Otros cultivos
 346;1233;1988;Lincoln;4.Otros cultivos
-347;5582;1988;Lobería;4.Otros cultivos
-348;1060;1988;Lobos;4.Otros cultivos
+347;5627;1988;Lobería;4.Otros cultivos
+348;1062;1988;Lobos;4.Otros cultivos
 349;2;1988;Lomas de Zamora;4.Otros cultivos
-350;1790;1988;Luján;4.Otros cultivos
-351;1916;1988;Magdalena;4.Otros cultivos
+350;1794;1988;Luján;4.Otros cultivos
+351;1918;1988;Magdalena;4.Otros cultivos
 352;186;1988;Maipú;4.Otros cultivos
 353;0;1988;Malvinas Argentinas;4.Otros cultivos
 354;1398;1988;Mar Chiquita;4.Otros cultivos
-355;847;1988;Marcos Paz;4.Otros cultivos
+355;853;1988;Marcos Paz;4.Otros cultivos
 356;1936;1988;Mercedes;4.Otros cultivos
 357;684;1988;Merlo;4.Otros cultivos
 358;283;1988;Monte;4.Otros cultivos
@@ -1601,45 +1601,45 @@
 366;2269;1988;Patagones;4.Otros cultivos
 367;477;1988;Pehuajó;4.Otros cultivos
 368;598;1988;Pellegrini;4.Otros cultivos
-369;3610;1988;Pergamino;4.Otros cultivos
+369;3615;1988;Pergamino;4.Otros cultivos
 370;1265;1988;Pila;4.Otros cultivos
-371;1516;1988;Pilar;4.Otros cultivos
+371;1579;1988;Pilar;4.Otros cultivos
 372;0;1988;Pinamar;4.Otros cultivos
 373;0;1988;Presidente Perón;4.Otros cultivos
 374;12;1988;Puán;4.Otros cultivos
 375;0;1988;Punta Indio;4.Otros cultivos
 376;0;1988;Quilmes;4.Otros cultivos
-377;2929;1988;Ramallo;4.Otros cultivos
+377;2930;1988;Ramallo;4.Otros cultivos
 378;659;1988;Rauch;4.Otros cultivos
 379;515;1988;Rivadavia;4.Otros cultivos
-380;1808;1988;Rojas;4.Otros cultivos
-381;1919;1988;Roque Pérez;4.Otros cultivos
-382;134;1988;Saavedra;4.Otros cultivos
-383;1306;1988;Saladillo;4.Otros cultivos
+380;1922;1988;Rojas;4.Otros cultivos
+381;1989;1988;Roque Pérez;4.Otros cultivos
+382;135;1988;Saavedra;4.Otros cultivos
+383;1357;1988;Saladillo;4.Otros cultivos
 384;8;1988;Salliqueló;4.Otros cultivos
-385;5159;1988;Salto;4.Otros cultivos
+385;5179;1988;Salto;4.Otros cultivos
 386;209;1988;San Andrés de Giles;4.Otros cultivos
 387;303;1988;San Antonio de Areco;4.Otros cultivos
 388;940;1988;San Cayetano;4.Otros cultivos
 389;10071;1988;San Fernando;4.Otros cultivos
 390;3;1988;San Isidro;4.Otros cultivos
 391;0;1988;San Miguel;4.Otros cultivos
-392;807;1988;San Nicolás;4.Otros cultivos
-393;18375;1988;San Pedro;4.Otros cultivos
+392;810;1988;San Nicolás;4.Otros cultivos
+393;18385;1988;San Pedro;4.Otros cultivos
 394;45;1988;San Vicente;4.Otros cultivos
 395;116;1988;Suipacha;4.Otros cultivos
-396;5376;1988;Tandil;4.Otros cultivos
+396;5387;1988;Tandil;4.Otros cultivos
 397;1125;1988;Tapalqué;4.Otros cultivos
-398;521;1988;Tigre;4.Otros cultivos
+398;522;1988;Tigre;4.Otros cultivos
 399;5;1988;Tordillo;4.Otros cultivos
-400;69;1988;Tornquist;4.Otros cultivos
+400;79;1988;Tornquist;4.Otros cultivos
 401;971;1988;Trenque Lauquen;4.Otros cultivos
 402;2809;1988;Tres Arroyos;4.Otros cultivos
 403;2;1988;Tres de Febrero;4.Otros cultivos
 404;241;1988;Tres Lomas;4.Otros cultivos
-405;3823;1988;25 de mayo;4.Otros cultivos
+405;3824;1988;25 de mayo;4.Otros cultivos
 406;2;1988;Vicente López;4.Otros cultivos
 407;0;1988;Villa Gesell;4.Otros cultivos
-408;6107;1988;Villarino;4.Otros cultivos
+408;6138;1988;Villarino;4.Otros cultivos
 409;6304;1988;Zárate;4.Otros cultivos
 410;74;1988;Indeterminado;4.Otros cultivos
