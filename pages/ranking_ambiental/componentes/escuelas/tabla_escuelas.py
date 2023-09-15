@@ -8,15 +8,15 @@ import os as o
 
 color_columnas = '#F2A4B6'
 
-escuelas["Ordenanza"] = escuelas["Ordenanza"].apply(lambda x: "Ord. " + str(x) if x != "Sin ordenanzas" else "Sin ordenanza")
-
+escuelas["Ordenanza"] = escuelas["Ordenanza"].fillna("").apply(lambda x: "Ord. " + str(x) if x!="" else "Sin ordenanza")
+escuelas["Fecha"] = escuelas["Fecha"].fillna("-")
 
 # Reemplazar valores nulos en columnas de tipo objeto con 'NO'
 columna_especifica = "Obligatoriedad de notificación"
 escuelas[columna_especifica] = escuelas[columna_especifica].fillna('NO')
 
 # Reemplazar valores nulos en la columna específica con '-'
-columna_especifica = 'Puntaje - Escuelas rurales'
+columna_especifica = 'Puntaje'
 escuelas[columna_especifica] = escuelas[columna_especifica].fillna('-')
 
 # Reemplazar valores nulos en columnas numéricas con 0
@@ -47,10 +47,10 @@ tabla_escuelas =  dbc.Container([
         },
         style_cell={'whiteSpace': 'pre',
                     'fontFamily': 'Arial',
-                    'textAlign':'left',
+                    'textAlign':'center',
                     'minWidth': '150px', 
                     'width': '150px', 
-                    'maxWidth': '150px'
+                    'maxWidth': '300px'
                     },  # Cambiar la fuente a Arial
         style_header={
             'fontWeight': 'normal',
@@ -61,8 +61,13 @@ tabla_escuelas =  dbc.Container([
         },
         style_header_conditional=[
             {'if': {'column_id': c}, 'fontWeight': 'bold'}
-            for c in y.columns[:2]  # Primeros dos encabezados en negritas
+            for c in y.columns[:3]  # Primeros dos encabezados en negritas
         ],
+        style_cell_conditional=[
+            {'if': {'column_id': c},  'textAlign':'left'}
+            for c in y.columns[:3]  # Primeros dos encabezados en negritas
+        ],
+        
         
         id='ordenador_de_filas',
         sort_action='native',

@@ -34,14 +34,8 @@ df_platanciones.to_csv('pages/indicadores_censos/data/modo_produccion/hectareas_
 
 bosques_montes_df_base = df_base_original[[VAR_BOSQUES_MONTES, VAR_ANIO_CENSO, VAR_PARTIDO]]
 bosques_montes_df_base = bosques_montes_df_base.rename(columns = {VAR_BOSQUES_MONTES: VAR_EAPS_HA})
-bosques_montes_df_base[VAR_TIPO_SUELO] = '2.Bosques y Montes Naturales'
-
-area_cultivada_df_base = df_base_original[[VAR_AREA_CULTIVADA, VAR_ANIO_CENSO, VAR_PARTIDO]]
-area_cultivada_df_base = area_cultivada_df_base.rename(columns = {VAR_AREA_CULTIVADA: VAR_EAPS_HA})
-area_cultivada_df_base[VAR_TIPO_SUELO] = '1.Área cultivada'
-
-df_areas_cultivadas_bosques = pd.concat([bosques_montes_df_base, area_cultivada_df_base])
-df_areas_cultivadas_bosques.to_csv('pages/indicadores_censos/data/modo_produccion/cultivos_bosques.csv', sep=';')
+bosques_montes_df_base[VAR_TIPO_SUELO] = 'Bosques y Montes Naturales'
+bosques_montes_df_base.to_csv('pages/indicadores_censos/data/modo_produccion/cultivos_bosques.csv', sep=';')
 
 ######################## PRACTICAS AGROECOLOGICAS ##########################
 

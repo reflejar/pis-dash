@@ -35,19 +35,14 @@ indicadores = [
 ]
 
 
-
-
 Empleo = html.Div([
             dbc.Row([
-                html.H6('Empleo y Residencia', style={'font-size': '25px', 'color': NARANJA}),
-                html.P("""
-                       ¿Qué sucedió con la residencia y los puestos de trabajo de los y 
-                       las trabajadoras del campo en estos años de fuerte industrialización de la agricultura y concentración de la tierra? 
-                       """, className="text-white"),
+                html.H6('Empleo y residencia', style={'font-size': '25px', 'color': NARANJA}, className="space-grotesk"),
+                dbc.Container(dbc.Row(
+                              dbc.Col(html.H6("""¿Qué sucedió con la residencia y los puestos de trabajo de los y 
+                       las trabajadoras del campo en estos años de fuerte industrialización de la agricultura y concentración de la tierra?""", className="text-white"), md=9))),
                 ]),
-            dbc.Row([dbc.Col(i.inicializar(), sm=12, md=6, xl=4) for i in indicadores], class_name="mt-5"),    
-        ], className="mt-5")         
-
-
+            dbc.Row([dbc.Col(i.inicializar(), sm=12, md=6, xl=4) for i in indicadores], class_name="mt-5"),   
+        ], className="mt-5") 
 
 dtr.Indicador.generar_callbacks(indicadores)

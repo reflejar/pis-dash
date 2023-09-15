@@ -11,9 +11,6 @@ from ._chart_types import histogram as reflejar_histogram
 from pages.indicadores_censos.componentes.constantes import *
 from pages.indicadores_censos.data import VAR_ANIO_CENSO, VAR_PARTIDO, VAR_EAPS_Q
 
-# Establecer la configuración regional según tu preferencia (por ejemplo, en_US para inglés en Estados Unidos)
-locale.setlocale(locale.LC_ALL, 'es_AR.UTF-8')
-
 class Indicador:
     """
         Clase para crear los diferentes indicadores
@@ -66,7 +63,7 @@ class Indicador:
                     dbc.CardBody(
                         Hash(dbc.Row(
                             [
-                            dbc.Col(dcc.Graph(id=self.id), md=12),                
+                            dbc.Col(dcc.Graph(id=self.id, config={'displayModeBar': False},), md=12),                
                             ]
                         ),
                         size=24,
@@ -132,10 +129,9 @@ class Indicador:
             x=self.x_var, 
             y=self.y_var, 
             color=self.z_var, 
-            # color='Tamaño EAPs',
             barnorm='percent' if self.porcentaje else None,  
             color_discrete_sequence=self.colores,
-            text='y_text',         
+            text='y_text',
         )
         
     def area(self, df):
@@ -145,6 +141,7 @@ class Indicador:
             y=self.y_var, 
             color=self.z_var or None,  
             color_discrete_sequence=self.colores,
+            # text='y_text'
         )
 
     def pie(self, df):
@@ -187,8 +184,13 @@ class Indicador:
                 grupos.append(self.z_var)
 
             df = df.groupby(by = grupos)[self.y_var].sum().reset_index()
+            
             df[self.y_var] = (df[self.y_var]/self.divisor).astype(int)
-            df['y_text'] = df[self.y_var].apply(lambda x: f'{x:,}'.replace(',', '.'))        
+            if self.tipo_grafico == "histogram":
+                df = df[df[self.y_var]!=0]
+
+            # df['y_text'] = df[self.y_var].apply(lambda x: f'{x:,}'.replace(',', '.'))
+            df['y_text'] = df[self.y_var].apply(lambda x: locale.format_string('%d', x, grouping=True))
 
             fig = getattr(self, self.tipo_grafico)(df)
             fig.update_xaxes( title_text = self.x_titulo, title_font=dict(size=self.TAMANIO_FUENTE, family=self.LETRA_DEFAULT, color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))

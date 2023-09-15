@@ -70,29 +70,17 @@ color_bar = html.Div(
         'background': f'linear-gradient(to right, {", ".join(colorscale)})'
     }
 )
-color_bar_gris = html.Div(
-    style={
-        'width': '40px',
-        'height': '25px', 
-        'background': 'grey'
-    }
-)
+
 
 colorscale_reference = html.Div(
     id='colorscale-reference',
     children=[dbc.Col([
-                dbc.Row([html.Div("PROTECCIÓN", style={'text-align': 'center','font-size': '12px','color': 'black'})]),
+                dbc.Row([html.Div("PROTECCIÓN", style={'text-align': 'center','font-size': '12px','color': 'black', 'font-weight': 'bold'})]),
                 dbc.Row([dbc.Col([html.Div("MENOR", style={'text-align':'right','color': 'black'})], md=3),
-                       dbc.Col([color_bar], md=5),
+                       dbc.Col([color_bar], md=6),
                        dbc.Col([html.Div("MAYOR", style={'text-align': 'left','color': 'black'})], md=3),
                     ]),  
             ]), 
-                html.Br(), 
-                dbc.Row([ 
-                     dbc.Col([html.Br()], md=3),   
-                    dbc.Col([color_bar_gris], md=1),
-                    dbc.Col([html.Div("SIN ORDENANZA", style={'text-align': 'right','color': 'black'})], md=3) 
-            ]),
         ],
                         
     style={
