@@ -26,20 +26,15 @@ IndicadoresCenso = dbc.Container(
 
 MetodologiaCenso = dbc.Container([
       html.H5([html.Strong("METODOLOGÍA & PRODUCTO"), html.Span("V1.0",className='badge bg-primary text-black mx-3')], className="text-white pt-3 space-grotesk"),
-      html.H6(html.H6(html.I('En la V1 del producto, se han implementado función 1, 2, 3 para enriquecer la experiencia. Estas funcionalidades incluyen:'), style={'line-height': '2'}, className="text-white")),
-      html.Ul([
-        html.Li(html.I("Función 1: Permite usuarios compartir contenido desde la aplicación, facilitando difusión de información")),
-        html.Li(html.I("Función 2: Agrega asistente de organización personalizado que sugiere horarios y recordatorios.")),
-        html.Li(html.I("Función 3: Algoritmo de recomendación basado en preferencias y análisis semántico para sugerencias relevantes.")),
-        html.Li(html.I("Función 4: Suite de herramientas colaborativas para trabajo en equipo remoto."))
-            ]),
-        html.I([
-            """Las fuentes de datos utilizadas provienen de fuente no oficiales encontrados en diversos portales. 
-               Puede consultar las fuentes utilizadas """,
-               html.A("aquí.", href="https://www.indec.gob.ar/", target='blank'),
-               """ Si posee otras fuentes para verificar o refutar, alentamos contacto. 
-               Reconocemos valor de verificación en búsqueda de información confiable."""
-      ])],
+        html.P([
+            """Las visualizaciones y los análisis aquí comprendidos tienen como fuente los principales indicadores de los últimos tres 
+            censos agropecuarios (1998, 2002 y 2018), los datos se encuentran procesados a nivel municipal para poder ver los indicadores 
+            tanto a nivel provincial como local."""
+        ]),
+        html.Br(),
+        html.I("""*Este proyecto posee un enfoque colectivo, participativo y abierto. Si encontraste algún error o información desactualizada 
+               comunícate a contacto. También se puede acceder al dataset utilizado para la construcción de la herramienta.""")
+        ],
     id="metodologia-censo",
     className=" text-white mt-5"
 )
