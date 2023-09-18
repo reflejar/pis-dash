@@ -16,7 +16,7 @@ layout = html.Div([
                                 Información histórica con perspectiva local. Podés descargar el dataset completo """, 
                                 html.A("aquí", href="https://docs.google.com/spreadsheets/d/1zY0iOwGfm5hIg7eYTm1EAQBamPN7mzLm-9U1PxjwiNg/edit?usp=sharing", target="_blank")
                                 , "."], className="text-white poppins"),                     
-                        html.H6([html.H6('Entre el 2002 y el 2018, en la Provincia de Buenos Aires:', style={'line-height': '2'}, className="text-white"),
+                        html.H6([html.H6('Entre el 1988 y el 2018, en la Provincia de Buenos Aires:', style={'line-height': '2'}, className="text-white"),
                             html.Ul(
                                 [
                                 html.Li([html.Strong(f"{PERDIDA_EAPS_X_MES}"), " EAP fueron cerradas" ], style={'line-height': '1.5'}),
