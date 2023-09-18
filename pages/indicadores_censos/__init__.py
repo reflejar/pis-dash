@@ -3,7 +3,7 @@ import dash_bootstrap_components as dbc
 
 from .componentes.filtros import Filtros_censos
 from .componentes.solapas import Solapas
-from .componentes.solapas.resumen_general import PERDIDA_EMPLEO_X_MES, PERDIDA_EAPS_X_MES, PERDIDA_RESIDENCIA_X_MES
+from .componentes.solapas.resumen_general import *
 from .componentes.metodologia import MetodologiaCenso, IndicadoresCenso
 
 
@@ -19,9 +19,10 @@ layout = html.Div([
                         html.H6([html.H6('Entre el 1988 y el 2018, en la Provincia de Buenos Aires:', style={'line-height': '2'}, className="text-white"),
                             html.Ul(
                                 [
-                                html.Li([html.Strong(f"{PERDIDA_EAPS_X_MES}"), " EAP fueron cerradas" ], style={'line-height': '1.5'}),
-                                html.Li([html.Strong(f"{PERDIDA_RESIDENCIA_X_MES}"), " personas fueron expulsadas de su residencia" ], style={'line-height': '1.5'}),
-                                html.Li([html.Strong(f"{PERDIDA_EMPLEO_X_MES}"), " personas perdieron su puesto de trabajo permanente" ], style={'line-height': '1.5'}),
+                                html.Li([f"las explotaciones agropecuarias se redujeron a la mitad (de {VAR_CANTIDAD_EAPS_1988} a {VAR_CANTIDAD_EAPS_2018})"], style={'line-height': '1.5'}),
+                                html.Li([f"la superficie promedio de las EAP aumentó en un 78% (de {VAR_SUPERFICIE_1988} ha a {VAR_SUPERFICIE_2018} ha)"], style={'line-height': '1.5'}),
+                                html.Li([f"más de la mitad de la población rural fue expulsada de su residencia (de {VAR_RESIDENCIA_1988} personas a {VAR_RESIDENCIA_2018} personas)"], style={'line-height': '1.5'}),
+                                html.Li([f"hubo una caída de más del 70% del empleo rural (de {VAR_EMPLEO_1988} trabajadores a {VAR_EMPLEO_2018} trabajadores)" ], style={'line-height': '1.5'}),
                                 ])], className="text-white"),
                         html.A("V 1.0 (METODOLOGÍA & PRODUCTO)", href="#metodologia-censo")
                     ],
