@@ -50,24 +50,25 @@ app.layout = html.Div(children=[
     ),
 	html.Div(id='page-content'),
 	html.Footer([
+        html.Hr(),
         dbc.Container([
             dbc.Row([
-                dbc.Col(dbc.Row(
-                    [
-                    dbc.Col(ISOLOGOTIPO, lg=2), 
-                    dbc.Col([
+                dbc.Col([
+                    ISOLOGOTIPO,
+                    html.P([
                         "PIS es un proyecto de ", html.A("Democracia en Red", target="_blank", href="https://democraciaenred.org"), ",", html.Br(),
                         "una ONG con base en Buenos Aires, Argentina."
-                    ], lg=10)
-                ]
-                ),lg=6),
-                dbc.Col(html.A("Explorá las demás herramientas", href="https://pis.org.ar", className="btn btn-outline-light text-uppercase"), class_name="text-end", lg=6),
-            ]),
+                    ], className="mx-4")
+                ], className="d-flex align-items-center"),
+                dbc.Col(
+                    html.A("Explorá las demás herramientas", href="https://pis.org.ar", className="btn btn-outline-light text-uppercase"), 
+                    class_name="text-end mt-3", 
+                    lg=6)
         ])
         ],
         className="text-white position-relative py-4",
         id="footer"
-    )
+    )])
 ])
 
 
