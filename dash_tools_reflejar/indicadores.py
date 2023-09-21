@@ -213,6 +213,8 @@ class Indicador:
 
             #Armar el texto de las etiquetas emergentes
             fig.update_traces(hovertemplate=self.hover)
+            if self.tipo_grafico == "area":
+                fig.update_traces(texttemplate=" ")
 
         else:            
             fig = getattr(self, self.tipo_grafico)(df)
