@@ -27,13 +27,17 @@ IndicadoresCenso = dbc.Container(
 MetodologiaCenso = dbc.Container([
       html.H5([html.Strong("METODOLOGÍA & PRODUCTO"), html.Span("V1.0",className='badge bg-primary text-black mx-3')], className="text-white pt-3 space-grotesk"),
         html.P([
-            """Las visualizaciones y los análisis aquí comprendidos tienen como fuente los principales indicadores de los últimos tres 
+            """Las visualizaciones y los análisis aquí comprendidos tienen como """,
+             html.A("fuente", href="https://docs.google.com/spreadsheets/d/1UdK8i1dcfgTkCAIg-tWHSZVoNEDUhGkO-D1d5opgrEo/edit#gid=157269157", target="_blank"),
+            """ los principales indicadores de los últimos tres 
             censos agropecuarios (1998, 2002 y 2018), los datos se encuentran procesados a nivel municipal para poder ver los indicadores 
             tanto a nivel provincial como local."""
         ]),
         html.Br(),
-        html.I("""*Este proyecto posee un enfoque colectivo, participativo y abierto. Si encontraste algún error o información desactualizada 
-               comunícate a contacto. También se puede acceder al dataset utilizado para la construcción de la herramienta.""")
+        html.I(["""*Este proyecto posee un enfoque colectivo, participativo y abierto. Si encontraste algún error o información desactualizada 
+               comunícate a contacto. También se puede acceder al """,
+               html.A("dataset", href="https://docs.google.com/spreadsheets/d/1zY0iOwGfm5hIg7eYTm1EAQBamPN7mzLm-9U1PxjwiNg/edit?usp=sharing", target="_blank"),
+                " utilizado para la construcción de la herramienta."])
         ],
     id="metodologia-censo",
     className=" text-white mt-5"
