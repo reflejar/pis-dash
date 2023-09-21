@@ -66,7 +66,7 @@ class Indicador:
                     dbc.CardBody(
                         Hash(dbc.Row(
                             [
-                            dbc.Col(dcc.Graph(id=self.id, config={'displayModeBar': False},), md=12),                
+                            dbc.Col(dcc.Graph(id=self.id, config={'displayModeBar': False},), sm=12),                
                             ]
                         ),
                         size=24,
@@ -98,7 +98,7 @@ class Indicador:
                         dbc.ModalHeader(html.H4(html.Strong(self.titulo_grafico), style = {"font-family": self.LETRA_DEFAULT}, className="text-dark text-center"), ),
                         dbc.ModalBody([
                             dbc.Row(dbc.Col(html.P(self.texto_descriptivo,className="text-dark" ))),
-                            dcc.Graph(id=f"modal-graph-{self.id}")                            
+                            dcc.Graph(id=f"modal-graph-{self.id}", config={'displayModeBar': False})                            
                     ]),
                         dbc.ModalFooter(
                             dbc.Button("Volver atrás", 
