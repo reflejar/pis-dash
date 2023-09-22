@@ -62,7 +62,7 @@ df_oleaginosas.to_csv('pages/indicadores_censos/data/modo_produccion/oleaginosas
 
 maiz_df_base = df_base_original[[VAR_MAIZ, VAR_ANIO_CENSO, VAR_PARTIDO]]
 maiz_df_base = maiz_df_base.rename(columns = {VAR_MAIZ: VAR_EAPS_HA})
-maiz_df_base[VAR_TIPO_CEREAL] = '2.Maíz'
+maiz_df_base[VAR_TIPO_CEREAL] = '2.Maíz para grano'
 
 trigo_pan_df_base = df_base_original[[VAR_TRIGO, VAR_ANIO_CENSO, VAR_PARTIDO]]
 trigo_pan_df_base = trigo_pan_df_base.rename(columns = {VAR_TRIGO: VAR_EAPS_HA})

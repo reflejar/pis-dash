@@ -5,6 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import textwrap
 import locale
+import pandas as pd
 
 from ._chart_types import histogram as reflejar_histogram
 # Esto habría que corregir para hacer una libreria publicable
@@ -35,7 +36,8 @@ class Indicador:
         hover="",
         porcentaje=False,
         texto_descriptivo = '',
-        divisor = 1
+        divisor = 1,
+        PBAexception = False
 
     ) -> None:
         self.id = id_indicador
@@ -52,6 +54,7 @@ class Indicador:
         self.porcentaje = porcentaje
         self.texto_descriptivo = texto_descriptivo
         self.divisor = divisor
+        self.PBAexception = PBAexception
 
     def inicializar(self):
         """
@@ -63,7 +66,7 @@ class Indicador:
                     dbc.CardBody(
                         Hash(dbc.Row(
                             [
-                            dbc.Col(dcc.Graph(id=self.id, config={'displayModeBar': False},), md=12),                
+                            dbc.Col(dcc.Graph(id=self.id, config={'displayModeBar': False},), sm=12),                
                             ]
                         ),
                         size=24,
@@ -95,7 +98,7 @@ class Indicador:
                         dbc.ModalHeader(html.H4(html.Strong(self.titulo_grafico), style = {"font-family": self.LETRA_DEFAULT}, className="text-dark text-center"), ),
                         dbc.ModalBody([
                             dbc.Row(dbc.Col(html.P(self.texto_descriptivo,className="text-dark" ))),
-                            dcc.Graph(id=f"modal-graph-{self.id}")                            
+                            dcc.Graph(id=f"modal-graph-{self.id}", config={'displayModeBar': False})                            
                     ]),
                         dbc.ModalFooter(
                             dbc.Button("Volver atrás", 
@@ -141,7 +144,7 @@ class Indicador:
             y=self.y_var, 
             color=self.z_var or None,  
             color_discrete_sequence=self.colores,
-            # text='y_text'
+            text='y_text'
         )
 
     def pie(self, df):
@@ -185,21 +188,33 @@ class Indicador:
 
             df = df.groupby(by = grupos)[self.y_var].sum().reset_index()
             
-            df[self.y_var] = (df[self.y_var]/self.divisor).astype(int)
+            if (self.PBAexception) and (partido=='Provincia de Buenos Aires'):
+                df[self.y_var] = (df[self.y_var]/1000000).round(2)
+                unidad_de_medida = ' (en millones)'
+
+            else:
+                df[self.y_var] = (df[self.y_var]/self.divisor).round(2)
+                unidad_de_medida = ' (en miles)' if self.divisor==1000 else ''
+
             if self.tipo_grafico == "histogram":
                 df = df[df[self.y_var]!=0]
-
-            # df['y_text'] = df[self.y_var].apply(lambda x: f'{x:,}'.replace(',', '.'))
-            df['y_text'] = df[self.y_var].apply(lambda x: locale.format_string('%d', x, grouping=True))
+            
+            if (self.PBAexception) and (partido=='Provincia de Buenos Aires'):
+                df['y_text'] = df[self.y_var].apply(lambda x: locale.format_string('%.2f', x, grouping=True))
+            else:
+                df['y_text'] = df[self.y_var].apply(lambda x: locale.format_string('%d', x, grouping=True))
 
             fig = getattr(self, self.tipo_grafico)(df)
-            fig.update_xaxes( title_text = self.x_titulo, title_font=dict(size=self.TAMANIO_FUENTE, family=self.LETRA_DEFAULT, color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))
-            fig.update_yaxes(title_text = self.y_titulo,  title_font=dict(size=self.TAMANIO_FUENTE,family=self.LETRA_DEFAULT,color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))
-            fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
 
+            title_y_unidad_medida = self.y_titulo + unidad_de_medida
+            fig.update_xaxes( title_text = self.x_titulo, title_font=dict(size=self.TAMANIO_FUENTE, family=self.LETRA_DEFAULT, color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))
+            fig.update_yaxes(title_text = title_y_unidad_medida,  title_font=dict(size=self.TAMANIO_FUENTE,family=self.LETRA_DEFAULT,color=self.LETRA_COLOR), tickfont=dict(family=self.LETRA_DEFAULT, color=self.LETRA_COLOR, size=11))
+            fig.update_layout(yaxis=dict(tickformat='.0f',ticksuffix='')) #se le saca la K a los números del eje de las y
 
             #Armar el texto de las etiquetas emergentes
             fig.update_traces(hovertemplate=self.hover)
+            if self.tipo_grafico == "area":
+                fig.update_traces(texttemplate=" ")
 
         else:            
             fig = getattr(self, self.tipo_grafico)(df)
@@ -207,9 +222,10 @@ class Indicador:
         
         
         # Actualizar el diseño del gráfico
+        titulo_unidad_medida = self.titulo_grafico + unidad_de_medida
         fig.update_layout(
             title={
-            "text": f"<b>{'<br>'.join(textwrap.wrap(self.titulo_grafico, width=30))}</b>",
+            "text": f"<b>{'<br>'.join(textwrap.wrap(titulo_unidad_medida, width=30))}</b>",
             "x": 0.5,
             "y": 0.95,
             "xanchor": "center",
