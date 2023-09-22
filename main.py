@@ -50,7 +50,6 @@ app.layout = html.Div(children=[
     ),
 	html.Div(id='page-content'),
 	html.Footer([
-        html.Hr(),
         dbc.Container([
             dbc.Row([
                 dbc.Col([
