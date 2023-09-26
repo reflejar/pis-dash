@@ -10,7 +10,7 @@ from .componentes.metodologia import MetodologiaCenso, IndicadoresCenso
 layout = dbc.Container([
             dbc.Row([
                     dbc.Col(html.Div([      
-                            html.H4([html.Strong('Censo Nacional Agropecuario'), "      " , html.A("V 1.0", href="#metodologia-censo")], className="text-white pt-3 space-grotesk"),
+                            html.H4([html.Strong('Censo Nacional Agropecuario'), html.A("V 1.0", href="#metodologia-censo", className="btn btn-sm text-primary")], className="text-white pt-3 space-grotesk"),
                             html.Br(),
                             html.H6("""Visualizaciones y análisis de los principales indicadores de los últimos tres censos agropecuarios sistematizados por municipio. 
                                     Información histórica con perspectiva local. Entre el 1988 y el 2018, en la Provincia de Buenos Aires:  """, className="text-white poppins"),                       
