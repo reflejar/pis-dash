@@ -192,9 +192,17 @@ class Indicador:
                 df[self.y_var] = (df[self.y_var]/1000000).round(2)
                 unidad_de_medida = ' (en millones)'
 
+            elif self.divisor==1000:
+                _check =  df[self.y_var]<=1000
+                _check = _check.sum()
+                if _check:
+                    df[self.y_var] = (df[self.y_var]/1).round(2)
+                    unidad_de_medida = ''
+                else:
+                    df[self.y_var] = (df[self.y_var]/self.divisor).round(2)
+                    unidad_de_medida = ' (en miles)'
             else:
-                df[self.y_var] = (df[self.y_var]/self.divisor).round(2)
-                unidad_de_medida = ' (en miles)' if self.divisor==1000 else ''
+                unidad_de_medida = ''
 
             if self.tipo_grafico == "histogram":
                 df = df[df[self.y_var]!=0]
