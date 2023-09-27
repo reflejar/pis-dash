@@ -1,5 +1,5 @@
 ;HA de EAPs;Año del censo;Partido;Tipo de cultivo
-0;4510442;2018;Provincia de Buenos Aires;2.Oleaginosas
+0;4510492;2018;Provincia de Buenos Aires;2.Oleaginosas
 1;54835;2018;Adolfo Alsina;2.Oleaginosas
 2;64575;2018;Adolfo Gonzales Chaves;2.Oleaginosas
 3;34435;2018;Alberti;2.Oleaginosas
@@ -71,7 +71,7 @@
 69;16285;2018;Las Flores;2.Oleaginosas
 70;48651;2018;Leandro N, Alem;2.Oleaginosas
 71;7277;2018;Lezama;2.Oleaginosas
-72;115424;2018;Lincoln;2.Oleaginosas
+72;115474;2018;Lincoln;2.Oleaginosas
 73;132597;2018;Lobería;2.Oleaginosas
 74;28711;2018;Lobos;2.Oleaginosas
 75;0;2018;Lomas de Zamora;2.Oleaginosas
@@ -821,7 +821,7 @@
 408;74839;1988;Villarino;1.Cereales
 409;8308;1988;Zárate;1.Cereales
 410;988;1988;Indeterminado;1.Cereales
-0;2665266;2018;Provincia de Buenos Aires;3.Forrajeras
+0;2665381;2018;Provincia de Buenos Aires;3.Forrajeras
 1;99032;2018;Adolfo Alsina;3.Forrajeras
 2;29796;2018;Adolfo Gonzales Chaves;3.Forrajeras
 3;3618;2018;Alberti;3.Forrajeras
@@ -864,7 +864,7 @@
 40;1;2018;Florencio Varela;3.Forrajeras
 41;16602;2018;Florentino Ameghino;3.Forrajeras
 42;9539;2018;General Alvarado;3.Forrajeras
-43;29878;2018;General Alvear;3.Forrajeras
+43;29993;2018;General Alvear;3.Forrajeras
 44;2090;2018;General Arenales;3.Forrajeras
 45;8871;2018;General Belgrano;3.Forrajeras
 46;5836;2018;General Guido;3.Forrajeras
@@ -1108,12 +1108,12 @@
 284;19623;1988;Bartolomé Mitre;3.Forrajeras
 285;103699;1988;Benito Juárez;3.Forrajeras
 286;200;1988;Berazategui;3.Forrajeras
-287;9;1988;Berisso;3.Forrajeras
+287;90;1988;Berisso;3.Forrajeras
 288;47543;1988;Bolívar;3.Forrajeras
 289;48933;1988;Bragado;3.Forrajeras
 290;15688;1988;Brandsen;3.Forrajeras
 291;2463;1988;Campana;3.Forrajeras
-292;13426;1988;Cañuelas;3.Forrajeras
+292;134260;1988;Cañuelas;3.Forrajeras
 293;19602;1988;Capitán Sarmiento;3.Forrajeras
 294;36291;1988;Carlos Casares;3.Forrajeras
 295;68357;1988;Carlos Tejedor;3.Forrajeras
@@ -1123,7 +1123,7 @@
 299;49451;1988;Chascomús;3.Forrajeras
 300;51869;1988;Chivilcoy;3.Forrajeras
 301;23478;1988;Colón;3.Forrajeras
-302;33334;1988;Coronel de Marina Leonardo Rosales;3.Forrajeras
+302;333340;1988;Coronel de Marina Leonardo Rosales;3.Forrajeras
 303;99641;1988;Coronel Dorrego;3.Forrajeras
 304;100845;1988;Coronel Pringles;3.Forrajeras
 305;126803;1988;Coronel Suárez;3.Forrajeras
@@ -1140,7 +1140,7 @@
 316;24898;1988;General Alvear;3.Forrajeras
 317;20289;1988;General Arenales;3.Forrajeras
 318;21856;1988;General Belgrano;3.Forrajeras
-319;11294;1988;General Guido;3.Forrajeras
+319;380159;1988;General Guido;3.Forrajeras
 320;26024;1988;General Juan Madariaga;3.Forrajeras
 321;95959;1988;General La Madrid;3.Forrajeras
 322;7353;1988;General Las Heras;3.Forrajeras
@@ -1165,7 +1165,7 @@
 341;4937;1988;La Plata;3.Forrajeras
 342;60800;1988;Laprida;3.Forrajeras
 343;27376;1988;Las Flores;3.Forrajeras
-344;56273;1988;Leandro N, Alem;3.Forrajeras
+344;562730;1988;Leandro N, Alem;3.Forrajeras
 345;0;1988;Lezama;3.Forrajeras
 346;158788;1988;Lincoln;3.Forrajeras
 347;118013;1988;Lobería;3.Forrajeras
@@ -1178,9 +1178,9 @@
 354;56198;1988;Mar Chiquita;3.Forrajeras
 355;6610;1988;Marcos Paz;3.Forrajeras
 356;20896;1988;Mercedes;3.Forrajeras
-357;112;1988;Merlo;3.Forrajeras
+357;1120;1988;Merlo;3.Forrajeras
 358;31022;1988;Monte;3.Forrajeras
-359;6095;1988;Monte Hermoso;3.Forrajeras
+359;346827;1988;Monte Hermoso;3.Forrajeras
 360;54;1988;Moreno;3.Forrajeras
 361;0;1988;Morón;3.Forrajeras
 362;33643;1988;Navarro;3.Forrajeras
@@ -1218,7 +1218,7 @@
 394;5088;1988;San Vicente;3.Forrajeras
 395;26378;1988;Suipacha;3.Forrajeras
 396;130844;1988;Tandil;3.Forrajeras
-397;31569;1988;Tapalqué;3.Forrajeras
+397;315690;1988;Tapalqué;3.Forrajeras
 398;1;1988;Tigre;3.Forrajeras
 399;2457;1988;Tordillo;3.Forrajeras
 400;89976;1988;Tornquist;3.Forrajeras
@@ -1304,7 +1304,7 @@
 69;66;2018;Las Flores;4.Otros cultivos
 70;398;2018;Leandro N, Alem;4.Otros cultivos
 71;40;2018;Lezama;4.Otros cultivos
-72;723;2018;Lincoln;4.Otros cultivos
+72;7235;2018;Lincoln;4.Otros cultivos
 73;4291;2018;Lobería;4.Otros cultivos
 74;512;2018;Lobos;4.Otros cultivos
 75;0;2018;Lomas de Zamora;4.Otros cultivos
@@ -1356,7 +1356,7 @@
 121;7;2018;Suipacha;4.Otros cultivos
 122;5053;2018;Tandil;4.Otros cultivos
 123;40;2018;Tapalqué;4.Otros cultivos
-124;225;2018;Tigre;4.Otros cultivos
+124;2256;2018;Tigre;4.Otros cultivos
 125;0;2018;Tordillo;4.Otros cultivos
 126;501;2018;Tornquist;4.Otros cultivos
 127;3069;2018;Trenque Lauquen;4.Otros cultivos
@@ -1543,7 +1543,7 @@
 308;1;1988;Ensenada;4.Otros cultivos
 309;2468;1988;Escobar;4.Otros cultivos
 310;730;1988;Esteban Echeverría;4.Otros cultivos
-311;435;1988;Exaltación de la Cruz;4.Otros cultivos
+311;434;1988;Exaltación de la Cruz;4.Otros cultivos
 312;0;1988;Ezeiza;4.Otros cultivos
 313;1387;1988;Florencio Varela;4.Otros cultivos
 314;0;1988;Florentino Ameghino;4.Otros cultivos
@@ -1586,7 +1586,7 @@
 351;1918;1988;Magdalena;4.Otros cultivos
 352;186;1988;Maipú;4.Otros cultivos
 353;0;1988;Malvinas Argentinas;4.Otros cultivos
-354;1398;1988;Mar Chiquita;4.Otros cultivos
+354;1397;1988;Mar Chiquita;4.Otros cultivos
 355;853;1988;Marcos Paz;4.Otros cultivos
 356;1936;1988;Mercedes;4.Otros cultivos
 357;684;1988;Merlo;4.Otros cultivos
@@ -1612,7 +1612,7 @@
 377;2930;1988;Ramallo;4.Otros cultivos
 378;659;1988;Rauch;4.Otros cultivos
 379;515;1988;Rivadavia;4.Otros cultivos
-380;1922;1988;Rojas;4.Otros cultivos
+380;1921;1988;Rojas;4.Otros cultivos
 381;1989;1988;Roque Pérez;4.Otros cultivos
 382;135;1988;Saavedra;4.Otros cultivos
 383;1357;1988;Saladillo;4.Otros cultivos
@@ -1620,7 +1620,7 @@
 385;5179;1988;Salto;4.Otros cultivos
 386;209;1988;San Andrés de Giles;4.Otros cultivos
 387;303;1988;San Antonio de Areco;4.Otros cultivos
-388;940;1988;San Cayetano;4.Otros cultivos
+388;939;1988;San Cayetano;4.Otros cultivos
 389;10071;1988;San Fernando;4.Otros cultivos
 390;3;1988;San Isidro;4.Otros cultivos
 391;0;1988;San Miguel;4.Otros cultivos

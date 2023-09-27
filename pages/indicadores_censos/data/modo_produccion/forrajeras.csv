@@ -1,5 +1,5 @@
 ;HA de EAPs;Año del censo;Partido;Tipo forrajera
-0;1604875;2018;Provincia de Buenos Aires;2.Forrajeras anuales
+0;1604990;2018;Provincia de Buenos Aires;2.Forrajeras anuales
 1;74792;2018;Adolfo Alsina;2.Forrajeras anuales
 2;18797;2018;Adolfo Gonzales Chaves;2.Forrajeras anuales
 3;1604;2018;Alberti;2.Forrajeras anuales
@@ -42,7 +42,7 @@
 40;0;2018;Florencio Varela;2.Forrajeras anuales
 41;8214;2018;Florentino Ameghino;2.Forrajeras anuales
 42;2421;2018;General Alvarado;2.Forrajeras anuales
-43;15555;2018;General Alvear;2.Forrajeras anuales
+43;15670;2018;General Alvear;2.Forrajeras anuales
 44;287;2018;General Arenales;2.Forrajeras anuales
 45;2950;2018;General Belgrano;2.Forrajeras anuales
 46;5218;2018;General Guido;2.Forrajeras anuales
@@ -286,12 +286,12 @@
 284;2296;1988;Bartolomé Mitre;2.Forrajeras anuales
 285;30276;1988;Benito Juárez;2.Forrajeras anuales
 286;130;1988;Berazategui;2.Forrajeras anuales
-287;3;1988;Berisso;2.Forrajeras anuales
+287;30;1988;Berisso;2.Forrajeras anuales
 288;11477;1988;Bolívar;2.Forrajeras anuales
 289;10173;1988;Bragado;2.Forrajeras anuales
 290;8074;1988;Brandsen;2.Forrajeras anuales
 291;1014;1988;Campana;2.Forrajeras anuales
-292;5955;1988;Cañuelas;2.Forrajeras anuales
+292;2794227;1988;Cañuelas;2.Forrajeras anuales
 293;2120;1988;Capitán Sarmiento;2.Forrajeras anuales
 294;11206;1988;Carlos Casares;2.Forrajeras anuales
 295;12228;1988;Carlos Tejedor;2.Forrajeras anuales
@@ -301,12 +301,12 @@
 299;12834;1988;Chascomús;2.Forrajeras anuales
 300;7597;1988;Chivilcoy;2.Forrajeras anuales
 301;1190;1988;Colón;2.Forrajeras anuales
-302;18599;1988;Coronel de Marina Leonardo Rosales;2.Forrajeras anuales
+302;185990;1988;Coronel de Marina Leonardo Rosales;2.Forrajeras anuales
 303;55340;1988;Coronel Dorrego;2.Forrajeras anuales
 304;39763;1988;Coronel Pringles;2.Forrajeras anuales
 305;48182;1988;Coronel Suárez;2.Forrajeras anuales
 306;19963;1988;Daireaux;2.Forrajeras anuales
-307;1427;1988;Dolores;2.Forrajeras anuales
+307;865627;1988;Dolores;2.Forrajeras anuales
 308;0;1988;Ensenada;2.Forrajeras anuales
 309;21;1988;Escobar;2.Forrajeras anuales
 310;442;1988;Esteban Echeverría;2.Forrajeras anuales
@@ -314,15 +314,15 @@
 312;0;1988;Ezeiza;2.Forrajeras anuales
 313;308;1988;Florencio Varela;2.Forrajeras anuales
 314;0;1988;Florentino Ameghino;2.Forrajeras anuales
-315;10984;1988;General Alvarado;2.Forrajeras anuales
+315;2900301;1988;General Alvarado;2.Forrajeras anuales
 316;4267;1988;General Alvear;2.Forrajeras anuales
 317;3932;1988;General Arenales;2.Forrajeras anuales
 318;4285;1988;General Belgrano;2.Forrajeras anuales
-319;3177;1988;General Guido;2.Forrajeras anuales
+319;47420;1988;General Guido;2.Forrajeras anuales
 320;7100;1988;General Juan Madariaga;2.Forrajeras anuales
 321;18385;1988;General La Madrid;2.Forrajeras anuales
 322;2852;1988;General Las Heras;2.Forrajeras anuales
-323;2552;1988;General Lavalle;2.Forrajeras anuales
+323;1322210;1988;General Lavalle;2.Forrajeras anuales
 324;5390;1988;General Paz;2.Forrajeras anuales
 325;41653;1988;General Pinto;2.Forrajeras anuales
 326;9826;1988;General Pueyrredón;2.Forrajeras anuales
@@ -356,9 +356,9 @@
 354;11744;1988;Mar Chiquita;2.Forrajeras anuales
 355;3615;1988;Marcos Paz;2.Forrajeras anuales
 356;4983;1988;Mercedes;2.Forrajeras anuales
-357;28;1988;Merlo;2.Forrajeras anuales
+357;280;1988;Merlo;2.Forrajeras anuales
 358;5813;1988;Monte;2.Forrajeras anuales
-359;70;1988;Monte Hermoso;2.Forrajeras anuales
+359;700;1988;Monte Hermoso;2.Forrajeras anuales
 360;15;1988;Moreno;2.Forrajeras anuales
 361;0;1988;Morón;2.Forrajeras anuales
 362;10284;1988;Navarro;2.Forrajeras anuales
@@ -384,9 +384,9 @@
 382;48550;1988;Saavedra;2.Forrajeras anuales
 383;3535;1988;Saladillo;2.Forrajeras anuales
 384;33465;1988;Salliqueló;2.Forrajeras anuales
-385;4032;1988;Salto;2.Forrajeras anuales
+385;576991;1988;Salto;2.Forrajeras anuales
 386;2026;1988;San Andrés de Giles;2.Forrajeras anuales
-387;5924;1988;San Antonio de Areco;2.Forrajeras anuales
+387;2681003;1988;San Antonio de Areco;2.Forrajeras anuales
 388;18758;1988;San Cayetano;2.Forrajeras anuales
 389;0;1988;San Fernando;2.Forrajeras anuales
 390;0;1988;San Isidro;2.Forrajeras anuales
@@ -396,7 +396,7 @@
 394;3013;1988;San Vicente;2.Forrajeras anuales
 395;6336;1988;Suipacha;2.Forrajeras anuales
 396;40690;1988;Tandil;2.Forrajeras anuales
-397;4465;1988;Tapalqué;2.Forrajeras anuales
+397;1004509;1988;Tapalqué;2.Forrajeras anuales
 398;1;1988;Tigre;2.Forrajeras anuales
 399;192;1988;Tordillo;2.Forrajeras anuales
 400;60088;1988;Tornquist;2.Forrajeras anuales
@@ -697,12 +697,12 @@
 284;17327;1988;Bartolomé Mitre;1.Forrajeras perennes
 285;73423;1988;Benito Juárez;1.Forrajeras perennes
 286;70;1988;Berazategui;1.Forrajeras perennes
-287;6;1988;Berisso;1.Forrajeras perennes
+287;60;1988;Berisso;1.Forrajeras perennes
 288;36066;1988;Bolívar;1.Forrajeras perennes
 289;38760;1988;Bragado;1.Forrajeras perennes
 290;7614;1988;Brandsen;1.Forrajeras perennes
-291;1449;1988;Campana;1.Forrajeras perennes
-292;7471;1988;Cañuelas;1.Forrajeras perennes
+291;945981;1988;Campana;1.Forrajeras perennes
+292;1026514;1988;Cañuelas;1.Forrajeras perennes
 293;17482;1988;Capitán Sarmiento;1.Forrajeras perennes
 294;25086;1988;Carlos Casares;1.Forrajeras perennes
 295;56130;1988;Carlos Tejedor;1.Forrajeras perennes
@@ -712,14 +712,14 @@
 299;36617;1988;Chascomús;1.Forrajeras perennes
 300;44273;1988;Chivilcoy;1.Forrajeras perennes
 301;22288;1988;Colón;1.Forrajeras perennes
-302;14735;1988;Coronel de Marina Leonardo Rosales;1.Forrajeras perennes
+302;147350;1988;Coronel de Marina Leonardo Rosales;1.Forrajeras perennes
 303;44301;1988;Coronel Dorrego;1.Forrajeras perennes
 304;61082;1988;Coronel Pringles;1.Forrajeras perennes
 305;78621;1988;Coronel Suárez;1.Forrajeras perennes
 306;61692;1988;Daireaux;1.Forrajeras perennes
 307;4406;1988;Dolores;1.Forrajeras perennes
 308;0;1988;Ensenada;1.Forrajeras perennes
-309;28;1988;Escobar;1.Forrajeras perennes
+309;280;1988;Escobar;1.Forrajeras perennes
 310;820;1988;Esteban Echeverría;1.Forrajeras perennes
 311;7354;1988;Exaltación de la Cruz;1.Forrajeras perennes
 312;0;1988;Ezeiza;1.Forrajeras perennes
@@ -729,7 +729,7 @@
 316;20631;1988;General Alvear;1.Forrajeras perennes
 317;16357;1988;General Arenales;1.Forrajeras perennes
 318;17571;1988;General Belgrano;1.Forrajeras perennes
-319;8117;1988;General Guido;1.Forrajeras perennes
+319;266413;1988;General Guido;1.Forrajeras perennes
 320;18924;1988;General Juan Madariaga;1.Forrajeras perennes
 321;77574;1988;General La Madrid;1.Forrajeras perennes
 322;4501;1988;General Las Heras;1.Forrajeras perennes
@@ -767,9 +767,9 @@
 354;44454;1988;Mar Chiquita;1.Forrajeras perennes
 355;2995;1988;Marcos Paz;1.Forrajeras perennes
 356;15913;1988;Mercedes;1.Forrajeras perennes
-357;84;1988;Merlo;1.Forrajeras perennes
+357;840;1988;Merlo;1.Forrajeras perennes
 358;25209;1988;Monte;1.Forrajeras perennes
-359;6025;1988;Monte Hermoso;1.Forrajeras perennes
+359;602497;1988;Monte Hermoso;1.Forrajeras perennes
 360;39;1988;Moreno;1.Forrajeras perennes
 361;0;1988;Morón;1.Forrajeras perennes
 362;23360;1988;Navarro;1.Forrajeras perennes
@@ -807,9 +807,9 @@
 394;2075;1988;San Vicente;1.Forrajeras perennes
 395;20042;1988;Suipacha;1.Forrajeras perennes
 396;90154;1988;Tandil;1.Forrajeras perennes
-397;27104;1988;Tapalqué;1.Forrajeras perennes
+397;271040;1988;Tapalqué;1.Forrajeras perennes
 398;0;1988;Tigre;1.Forrajeras perennes
-399;2265;1988;Tordillo;1.Forrajeras perennes
+399;273965;1988;Tordillo;1.Forrajeras perennes
 400;29888;1988;Tornquist;1.Forrajeras perennes
 401;76614;1988;Trenque Lauquen;1.Forrajeras perennes
 402;99403;1988;Tres Arroyos;1.Forrajeras perennes
