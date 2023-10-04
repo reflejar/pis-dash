@@ -1,4 +1,4 @@
-from dash import html,Input, Output, callback
+from dash import html,Input, Output, callback, State
 import dash_bootstrap_components as dbc
 from dash import Dash
 import dash_mantine_components as dmc
@@ -13,36 +13,17 @@ color_poblaciones = '#D8D87C'
 color_apiarios = '#C3A4E7'
 color_agroecologia= '#9AD5FF'
 
-# AcordeonRanking = html.Div([
-#     dbc.Row([
-#         dbc.Accordion([
-#             dbc.AccordionItem(title="ESCUELAS", className="mb-0"),
-#             dbc.AccordionItem(title="TRANSPARENCIAS", className="mb-0"),
-#             dbc.AccordionItem(title="AGUA", className="mb-0"),
-#             dbc.AccordionItem(title="POBLACIONES", className="mb-0"),
-#             dbc.AccordionItem(title="APIARIOS", className="mb-0"),
-#             dbc.AccordionItem(title="AGROECOLOGÍA", className="mb-0"),
-#         ],
-#         className="accordion-horizontal",  # Agregar una clase de estilo personalizada
-#         flush=True, # Eliminar bordes de los elementos del acordeóN
-#         ),  
-#     ], style={'borderBottom': '0px', 'width': '100%'})
-# ])
 
-AcordeonRanking = html.Div([
-        dbc.Row([
-                dmc.Accordion(
-                    value="accordion_ranking",
-                    children=[
+AcordeonRanking = dmc.Accordion([
                         dmc.AccordionItem(
                             [
                                 dmc.AccordionControl("Escuelas", style={"color":"#000000" , 'font-size': '18px','font-weight': 'bold',"backgroundColor": color_escuelas,  "text-align": "center"}),
                                 dmc.AccordionPanel(
-                                    dbc.Col([html.Div(tabla_escuelas)], md=12)
+                                    tabla_escuelas
                                 ),
                                 
-                            ],id="accordion_escuelas",
-                            value="on",
+                            ],
+                            value="escuelas",
                         ),
                         dmc.AccordionItem(
                             [
@@ -91,34 +72,22 @@ AcordeonRanking = html.Div([
                         ),
                         
                     ],
-                    styles={
-                        "root": {
-                            "backgroundColor": dmc.theme.DEFAULT_COLORS["gray"][0],
-                            "borderRadius": 5,
-                        },
-                        "item": {
-                            "backgroundColor":  dmc.theme.DEFAULT_COLORS["gray"][0],
-                            "border": "1px solid transparent",
-                            "position": "relative",
-                            "zIndex": 0,
-                            "transition": "transform 150ms ease",
-                            "&[data-active]": {
-                                "transform": "scale(1.03)",
-                                "backgroundColor": "white",
-                                "boxShadow": 5,
-                                "borderColor":  dmc.theme.DEFAULT_COLORS["gray"][0],
-                                "borderRadius": 5,
-                                "zIndex": 1,
-                            },
-                        },
-                        "chevron": {
-                            "&[data-rotate]": {
-                                "transform": "rotate(-90deg)",
-                            },
-                        },
-                    },
+                    value="",  
+                    className="bg-white accordion-item accordion-chevron",
+                    id="accordion-tabla",             
                 )
-    ], style={'borderBottom': '0px', 'width': '100%'})
-])
+    
+# @callback (
+#         [
+#         Output('tabs-ranking','active_tab'), 
+#         ],
+#         Input('accordion-tabla','value'),
+#         State('tabs-ranking','active_tab' )
+# )
+# def prender_mapas(value, active_tab): 
+#     if value!=active_tab:
+#         return value
+#     else: 
+#         return active_tab
 
 
