@@ -176,10 +176,10 @@ class Indicador:
             df[VAR_EAPS_Q]= round(df[VAR_EAPS_Q],2)
         
         # Captura del filtro
-        
         if partido:
             mask = df[VAR_PARTIDO]==partido
             df = df[mask]
+            
         
         if self.tipo_grafico != 'number':
             grupos = [self.x_var, VAR_PARTIDO]
@@ -246,6 +246,7 @@ class Indicador:
             "yref": "container",
             "yanchor": "top"
             },
+            dragmode=False,
             showlegend=True,
             plot_bgcolor='rgba(0,0,0,0)',
             xaxis_tickangle=-45,
