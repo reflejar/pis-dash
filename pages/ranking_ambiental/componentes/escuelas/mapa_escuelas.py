@@ -27,7 +27,7 @@ geobuf = dlx.geojson_to_geobuf(bsas_geojson)
 
 # Definir colores para las clases.
 colorscale = ['#F5BBCB', '#F2A4B6', '#EF8DA1', '#ED769C', '#EB5F87', '#E94872', '#E7315D', '#E51A48']
-style = dict(weight=2, opacity=1, color='white', dashArray='3', fillOpacity=0.7)
+style = dict(weight=3, opacity=1, color='white', dashArray='4', fillOpacity=0.8)
 
 # Crear colorbar.
 ctg = ["{}+".format(cls, classes[i + 1]) for i, cls in enumerate(classes[:-1])] + ["{}+".format(classes[-1])]
@@ -105,7 +105,7 @@ Mapa =dl.Map(
                                     zoomToBounds=True,
                                     zoomToBoundsOnClick=False,
                                     options=dict(style=style_handle),
-                                    hoverStyle=arrow_function(dict(weight=5, dashArray='')),
+                                    hoverStyle=arrow_function(dict(weight=8, dashArray='')),
                                     hideout=dict(colorscale=colorscale, classes=classes, style=style, colorProp=VAR_PUNTAJE)
                                 ),
                                
@@ -120,33 +120,42 @@ Mapa =dl.Map(
 
 
 titulo_del_mapa_1 = html.H6(
-    "PROVINCIA DE BUENOS AIRES",
+    "PROVINCIA DE \n BUENOS AIRES",
     style={
         'font-weight': 'bold',
         'color': 'black',
-        'white-space': 'pre-line',  # Forzar el salto de línea
+        'white-space': 'pre-line',  # Permitir saltos de línea automáticos
+        'max-width': '100%',
     },
-    className="d-flex justify-content-center align-items-center"
+    className="rm-3 lm-3 text-center",
+    
 )
 titulo_del_mapa_2 = html.H6(
     "CONURBANO",
     style={
         'font-weight': 'bold',  # Hacer que el texto sea negrita
         'color': 'black',
+        'max-width': '100%'
+        
     },
-    className="d-flex justify-content-center align-items-center"
+    className="rm-3 tm-3 text-center"
 )
 
-mapa_layout = html.Div(
-    id="mapa-container",
-    children=[
-        dbc.Row([
-            dbc.Row([dbc.Col([titulo_del_mapa_1], md=7), dbc.Col([titulo_del_mapa_2], md=2)]),
-            dbc.Row([dbc.Col([Mapa], md=12)]),  
-            dbc.Row([dbc.Col([html.Div()], md=3),dbc.Col([colorscale_reference], md=6),dbc.Col([html.Div()], md=3) ]),
-            ])  
-    ],
-)
+mapa_layout = dbc.Container([
+                            html.Div([
+                        
+                                dbc.Row([
+                                    dbc.Col([titulo_del_mapa_1]), 
+                                    dbc.Col([titulo_del_mapa_2])
+                                    ]),
+                                dbc.Row([dbc.Col([Mapa], md=12)]),  
+                                dbc.Row([dbc.Col([html.Div()], md=3),dbc.Col([colorscale_reference], md=6),dbc.Col([html.Div()], md=3) ]),  
+                            ],
+                            id="mapa-container",
+                        ),
+                        ],
+                    )
+                
 
 # Crea la tarjeta centrada
 mapa_card = dbc.Card(
