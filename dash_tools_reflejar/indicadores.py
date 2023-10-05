@@ -67,7 +67,7 @@ class Indicador:
                         Hash(dbc.Row(
                             [
                             dbc.Col(dcc.Graph(id=self.id, config={'displayModeBar': False},), sm=12),                
-                            ]
+                            ], class_name="min-vh-25"
                         ),
                         size=24,
                         color=self.colores[0],
