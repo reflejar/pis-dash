@@ -32,8 +32,7 @@ y = escuelas.copy()
 
 
 
-tabla_escuelas =  dbc.Container([
-    dash_table.DataTable(
+tabla_escuelas =  dash_table.DataTable(
         data=y.to_dict('records'),
         columns=[{"name": i, "id": i} for i in y.columns],
         style_as_list_view=True,
@@ -72,5 +71,4 @@ tabla_escuelas =  dbc.Container([
         id='ordenador_de_filas',
         sort_action='native',
     )
-])
 
