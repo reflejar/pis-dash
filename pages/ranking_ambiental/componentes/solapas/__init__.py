@@ -1,8 +1,7 @@
 from dash import html,Input, Output, callback
 import dash_bootstrap_components as dbc
 from dash import Dash
-from .escuelas import Escuelas
-from .texto_inicial_ranking import TextoRanking_2
+from ..escuelas import Escuelas
 
 color_transparencia = '#FF865F'
 color_escuelas = '#EF7286'
@@ -38,9 +37,7 @@ SolapasRanking = html.Div([
         )
 def render_content(tab):
    
-    MapaEscuelas= html.Div([dbc.Row([Escuelas]), 
-                        html.Br(),
-                        dbc.Row([TextoRanking_2])])
+    MapaEscuelas= Escuelas
 
     return {
         'escuelas':MapaEscuelas,

@@ -4,12 +4,35 @@ import numpy as np
 import math
 
 # Leer archivo geojson y cargar datos.
-bsas = gpd.read_file('pages/ranking_ambiental/limite_partidos_expandido.geojson', encoding="ASCI")
+bsas = gpd.read_file('pages/ranking_ambiental/data/limite_partidos_expandido.geojson', encoding="ASCI")
 #bsas.columns=["cca", "cde", "Municipios", "gna", "nam","sag", "ara3", "arl", "geometry"]
 bsas["Municipios"]=bsas["fna"].copy().apply(lambda x: str(x).replace("Partido de ", ""))
 
+
+
+
+
 # Leer archivo csv y cargar datos de escuelas.
-escuelas=pd.read_csv('pages/ranking_ambiental/escuelas_normativa.csv', sep=";",encoding="latin" )
+escuelas=pd.read_csv('pages/ranking_ambiental/data/escuelas_normativa.csv', sep=";",encoding="latin" )
+escuelas["Ordenanza"] = escuelas["Ordenanza"].fillna("").apply(lambda x: "Ord. " + str(x) if x!="" else "Sin ordenanza")
+escuelas["Fecha"] = escuelas["Fecha"].fillna("-")
+
+# Reemplazar valores nulos en columnas de tipo objeto con 'NO'
+columna_especifica = "Obligatoriedad de notificación"
+escuelas[columna_especifica] = escuelas[columna_especifica].fillna('NO')
+
+# Reemplazar valores nulos en la columna específica con '-'
+columna_especifica = 'Puntaje'
+escuelas[columna_especifica] = escuelas[columna_especifica].fillna('-')
+
+# Reemplazar valores nulos en columnas numéricas con 0
+numeric_columns = escuelas.select_dtypes(include=['number']).columns
+escuelas[numeric_columns] = escuelas[numeric_columns].fillna(0)
+del escuelas["Link"]
+
+
+
+
 
 #union de tablas para incorporar ranking 
 bsas=pd.merge(bsas, escuelas[['Municipios', 'Puntaje']], on='Municipios', how='left')
