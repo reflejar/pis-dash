@@ -13,7 +13,7 @@ from shapely.geometry import box, Point, Polygon
 from dash_extensions.javascript import arrow_function, assign
 import dash_bootstrap_components as dbc
 from dash_loading_spinners import Hash
-from pages.ranking_ambiental.bases_mapa import bsas,VAR_PUNTAJE,  classes
+from pages.ranking_ambiental.data import bsas,VAR_PUNTAJE,  classes
 
 # Establecer el renderizador predeterminado para Plotly.
 pio.renderers.default = 'browser'
@@ -90,28 +90,28 @@ colorscale_reference = html.Div(
 
 
 Mapa =dl.Map(
-                            id="mapa",
-                            zoom=15,
-                            dragging=False,
-                            # touchZoom=False,
-                            zoomControl=False,
-                            scrollWheelZoom=False,
-                            doubleClickZoom=False,
-                            children=[
-                                
-                                dl.GeoJSON(
-                                    data=geobuf,
-                                    format='geobuf',
-                                    zoomToBounds=True,
-                                    zoomToBoundsOnClick=False,
-                                    options=dict(style=style_handle),
-                                    hoverStyle=arrow_function(dict(weight=8, dashArray='')),
-                                    hideout=dict(colorscale=colorscale, classes=classes, style=style, colorProp=VAR_PUNTAJE)
-                                ),
-                               
-                            ],
-                            className="min-vh-50 bg-white"
-                        )
+    id="mapa",
+    zoom=15,
+    dragging=False,
+    # touchZoom=False,
+    zoomControl=False,
+    scrollWheelZoom=False,
+    doubleClickZoom=False,
+    children=[
+        
+        dl.GeoJSON(
+            data=geobuf,
+            format='geobuf',
+            zoomToBounds=True,
+            zoomToBoundsOnClick=False,
+            options=dict(style=style_handle),
+            hoverStyle=arrow_function(dict(weight=8, dashArray='')),
+            hideout=dict(colorscale=colorscale, classes=classes, style=style, colorProp=VAR_PUNTAJE)
+        ),
+        
+    ],
+    className="min-vh-50 bg-white"
+)
 
 
 

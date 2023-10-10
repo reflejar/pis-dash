@@ -1,7 +1,7 @@
 import dash
 from dash import dash_table
 import pandas as pd
-from pages.ranking_ambiental.bases_mapa import escuelas
+from pages.ranking_ambiental.data import escuelas
 import dash_bootstrap_components as dbc 
 from dash import html, dcc, callback, Input, Output
 import os as o
