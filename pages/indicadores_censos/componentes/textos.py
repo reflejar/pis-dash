@@ -1,12 +1,3 @@
-# COLORES
-ROJO = '#EF7286'
-VERDE_AGUA= '#6FBFB5'
-CELESTE = '#9AD5FF'
-LILA = '#C3A4E7'
-NARANJA= '#FF865F'
-LIMA= '#DEDE7C'
-NEGRO =  '#000000'
-
 # TEXTOS DESCRIPTIVOS CONCENTRACION TIERRA
 
 TEXTO_EAPS_CANTIDAD ='Muestra la cantidad de EAP que se encontraban en funcionamiento según cada año en que se realizó el Censo Nacional Agropecuario.'

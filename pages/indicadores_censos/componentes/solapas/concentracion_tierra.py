@@ -1,10 +1,11 @@
 
 from dash import html
 import dash_bootstrap_components as dbc
-from ..constantes import *
+from ..textos import *
 import dash_tools_reflejar as dtr
 
 from ...data import *
+from pages.constantes import *
 
 
 indicadores = [
