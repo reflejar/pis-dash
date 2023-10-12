@@ -42,7 +42,7 @@ app.layout = html.Div(children=[
         dbc.Container(
             [
                 html.A(ISOLOGOTIPO),
-                dbc.Nav([html.A("Volver a PIS", href="https://pis.org.ar", className="btn text-uppercase")]),
+                dbc.Nav([html.A("Volver a PIS", href="https://pis.org.ar", className="btn text-uppercase poppins")]),
             ],
         ),
         fixed="top",
@@ -74,18 +74,44 @@ app.layout = html.Div(children=[
 
 @app.callback(Output('page-content', 'children'),Input('url', 'pathname'))
 def display_page(_):
+
     sections = {
-            'zonificacion': mapa_normativo.layout,
-            'censos': indicadores_censos.layout,
-            'ranking': ranking_ambiental.layout
+            'zonificacion': {'layout': mapa_normativo.layout, 'analytics': 'G-4BW9V2HCS0'},
+            'censos': {'layout': indicadores_censos.layout, 'analytics': 'G-P4RK1GKTG0'},
+            'ranking': {'layout': ranking_ambiental.layout, 'analytics': 'G-FBLLE0SDB7'}
     }
+
     try:
-        return sections[request.host.split(".")[0]]
+        page_config = sections[request.host.split(".")[0]]
     except:
-        if len(sys.argv) > 1:
-            tool = sys.argv[1]
-            return sections[tool]
-        return ""
+        page_config = sections[sys.argv[1]] if len(sys.argv) > 1 else sections['censos']
+    
+    app.index_string = """<!DOCTYPE html>
+        <html>
+            <head>
+                <!-- Google tag (gtag.js) --> """ + \
+                f"""<script async src="https://www.googletagmanager.com/gtag/js?id={page_config['analytics']}"></script>""" + \
+                """<script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());""" + \
+                f"""gtag('config', '{page_config['analytics']}');
+                </script>""" + \
+                """{%metas%}
+                <title>{%title%}</title>
+                {%favicon%}
+                {%css%}
+            </head>
+            <body>
+                {%app_entry%}
+                <footer>
+                    {%config%}
+                    {%scripts%}
+                    {%renderer%}
+                </footer>
+            </body>
+        </html>""" 
+    return page_config['layout']
 
 
 # Se corre la aplicación
