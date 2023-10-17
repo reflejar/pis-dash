@@ -1,10 +1,11 @@
 from dash import html
 import dash_bootstrap_components as dbc
 from dash import dcc
-from ..constantes import *
+from ..textos import *
 
 import dash_tools_reflejar as dtr
 from ...data import df_ha_tipo_cultivo, df_cultivado_bosques, df_practicas_organicas, df_oleaginosas, df_cereales, df_forrajeras
+from pages.constantes import *
 
 indicadores = [
     dtr.Indicador(

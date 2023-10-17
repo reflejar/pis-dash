@@ -1,16 +1,17 @@
-import dash_bootstrap_components as dbc
-from dash import dash, html, dcc, Input, Output, State, callback
-from dash_loading_spinners import Hash
 import plotly.express as px
 import plotly.graph_objects as go
 import textwrap
 import locale
 import pandas as pd
+import dash_bootstrap_components as dbc
+
+from dash import dash, html, dcc, Input, Output, State, callback
+from dash_loading_spinners import Hash
 
 from ._chart_types import histogram as reflejar_histogram
 # Esto habría que corregir para hacer una libreria publicable
-from pages.indicadores_censos.componentes.constantes import *
 from pages.indicadores_censos.data import VAR_ANIO_CENSO, VAR_PARTIDO, VAR_EAPS_Q
+# from pages.constantes import *
 
 class Indicador:
     """
@@ -78,7 +79,6 @@ class Indicador:
                         dbc.Button("Ver más", 
                                     id=f"modal-open-{self.id}", 
                                     style={
-                                        "background-color": NEGRO, 
                                         "border-color": "#FFFFFF", 
                                         "color": "#FFFFFF", 
                                         "font-family": self.LETRA_DEFAULT
@@ -103,7 +103,7 @@ class Indicador:
                         dbc.ModalFooter(
                             dbc.Button("Volver atrás", 
                                         id=f"modal-close-{self.id}", 
-                                        color="light",style={"background-color": NEGRO, "border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": self.LETRA_DEFAULT},  
+                                        color="light",style={"border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": self.LETRA_DEFAULT},  
                                         className="mx-auto"), className="text-center", 
                                         style={
                                             "background-color": "#FFFFFF" ,

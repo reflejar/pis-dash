@@ -4,9 +4,9 @@ from .concentracion_tierra import ConcentracionTierra
 from .empleo_residencia import Empleo
 from .modo_produccion import Produccion
 from dash import Dash
-from ..constantes import *
+from ..textos import *
 
-
+from pages.constantes import *
 
 Solapas = html.Div([
     dbc.Tabs(id="tabs", active_tab='tab-1', children=[
