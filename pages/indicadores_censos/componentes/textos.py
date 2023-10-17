@@ -1,23 +1,44 @@
-# TEXTOS DESCRIPTIVOS CONCENTRACION TIERRA
+from dash import html
 
-TEXTO_EAPS_CANTIDAD ='Muestra la cantidad de EAP que se encontraban en funcionamiento según cada año en que se realizó el Censo Nacional Agropecuario.'
-TEXTO_HA_PROMEDIO = 'Muestra la cantidad de hectáreas promedio por EAP según cada año en que se realizó el Censo Nacional Agropecuario.'
-TEXTO_EAPS_TAMANIO = 'Se define como EAP pequeñas a aquellas que tienen 500 hectáreas o menos ya que poseen menos hectáreas que la media del 2018 y es el punto de corte más cercano a la media que habilita el CNA. Se define como EAP grandes a aquellas que tienen más de 500 hectáreas. Se puede observar la cantidad de EAP pequeñas y grandes que hay en cada año que se realizó el Censo Nacional Agropecuario.'
-TEXTO_SUPERFICIE_TAMANIO = 'Muestra la superficie ocupada por las EAPs pequeñas y las EAPs grandes según cada año en que se realizó el Censo Nacional Agropecuario.'
-TEXTO_TIPO_JURIDICO = 'Muestra la cantidad de EAPs que están en propiedad de Personas y la cantidad que está en propiedad de Empresas según cada año en que se realizó el Censo Nacional Agropecuario.'
-TEXTO_HA_TIPO_JURIDICO = 'Muestra la cantidad hectáreas (superficie) que es propiedad de Personas y la cantidad que es propiedad de Empresas.'
-TEXTO_EAPS_SEXO = 'Muestra el porcentaje de EAP que está en propiedad de Mujeres y en propiedad de Varones según datos del Censo Nacional Agropecuario 2018.'
+import dash_bootstrap_components as dbc
 
-# TEXTOS DESCRIPTIVOS MODO DE PRODUCCION
+Explicacion = dbc.Row(dbc.Col(
+    [  
+        html.H5(html.Strong("Indicadores del Censo"), className="text-white pt-3 space-grotesk"),
+        html.P([
+            """Los indicadores del Censo Agropecuario nos permiten una visión estructural y a 
+            la vez detallada de la actividad agropecuaria en nuestro país. Contrastando los datos de las distintas ediciones 
+            podemos identificar tendencias, comprender patrones y dar cuenta de relaciones causales que se sostienen o se modifican a 
+            lo largo del tiempo. La información del Censo nos permite enmarcar de forma sistémica el modelo agrícolo-ganadero, y 
+            así problematizar la conexión entre la concentración de tierras, el decrecimiento del empleo rural y distintas características 
+            del modo de producción imperante con los impactos de los agroquímicos en la salud humana y de los territorios. Entenderlas como 
+            partes más o menos conectados (partes interrelacionadas de un mismo sistema o no), otorgando una visión multidimensional 
+            necesaria a la hora de pensar la mitigación de los impactos o postular las posibilidades alternativas del uso del suelo y la 
+            producción"""
+        ]),
+        html.Br(),
+        html.I("""*No ignoramos que los resultados de los Censos Agropecuarios en ocasiones pueden no ser un reflejo idéntico de la realidad. 
+               De todas formas son el único dato oficial y por tanto son el mejor acercamiento a una comprensión integral de las tendencias y 
+               modificaciones estructurales en la producción agropecuaria.""")
+    ], 
+    className=" text-white mt-5"))
 
-TEXTO_HA_TIPO_CULTIVO = 'Muestra la cantidad de hectáreas sembradas por grupo de cultivo: cereales, oleaginosas, forrajeras y otros cultivos según cada año en que se realizó el Censo Nacional Agropecuario.'
-TEXTO_HA_BOSQUES = 'Muestra la cantidad de hectáreas dedicadas a bosques implantados y bosques naturales.'
-TEXTO_PRACTICAS_AGROECOLOGICAS = 'Muestra la cantidad de explotaciones agropecuarias que declararon trabajar con prácticas orgánicas, biodinámicas y/o agroecológicas.'
-TEXTO_HA_OLEAGINOSAS = 'Muestra la cantidad de soja y otras oleaginosas sembradas con respecto al total del grupo de cultivo de oleaginosas (soja, lino, colza, girasol, maní, etc.)'
-TEXTO_HA_CEREALES = 'Muestra la cantidad de hectáreas sembradas con maíz, trigo pan y otros cultivos con respecto al total del grupo de cultivo de cereales (maíz para grano, trigo pan, alpiste, avena, cebada, etc.)'
-TEXTO_HA_FORRAJERAS = 'Muestra la cantidad de forrajes anuales y perennes implantadas'
 
-# TEXTOS DESCRIPTIVOS EMPLEO Y RESIDENCIA
-
-TEXTO_RESIDENTES_SEXO= 'Muestra la cantidad de Mujeres y de Varones que residen en el campo según el año en que se realizó el Censo Nacional Agropecuario.'
-TEXTO_VARIACION_EMPLEO = 'Muestra la variación del empleo permanente en el campo entre cada año en que se realizó el Censo Nacional Agropecuario.'
+Metodologia = dbc.Row(dbc.Col([
+      html.H5([html.Strong("METODOLOGÍA & PRODUCTO"), html.Span("V1.0",className='badge bg-primary text-black mx-3')], className="text-white pt-3 space-grotesk"),
+        html.P([
+            """Las visualizaciones y los análisis aquí comprendidos tienen como """,
+             html.A("fuente", href="https://docs.google.com/spreadsheets/d/1UdK8i1dcfgTkCAIg-tWHSZVoNEDUhGkO-D1d5opgrEo/edit#gid=157269157", target="_blank"),
+            """ los principales indicadores de los últimos tres 
+            Censos Agropecuarios (1998, 2002 y 2018), los datos se encuentran procesados a nivel municipal para poder ver los indicadores 
+            tanto a nivel provincial como local."""
+        ]),
+        html.Br(),
+        html.I(["""*Este proyecto posee un enfoque colectivo, participativo y abierto. Si encontraste algún error o información desactualizada por favor 
+               comunícate con nosotros. También podés acceder al """,
+               html.A("dataset", href="https://docs.google.com/spreadsheets/d/1zY0iOwGfm5hIg7eYTm1EAQBamPN7mzLm-9U1PxjwiNg/edit?usp=sharing", target="_blank"),
+                " utilizado para la construcción de la herramienta."])
+        ],
+    id="metodologia-censo",
+    className=" text-white mt-5"
+))

@@ -7,6 +7,14 @@ import dash_tools_reflejar as dtr
 from ...data import df_ha_tipo_cultivo, df_cultivado_bosques, df_practicas_organicas, df_oleaginosas, df_cereales, df_forrajeras
 from pages.constantes import *
 
+TEXTO_HA_TIPO_CULTIVO = 'Muestra la cantidad de hectáreas sembradas por grupo de cultivo: cereales, oleaginosas, forrajeras y otros cultivos según cada año en que se realizó el Censo Nacional Agropecuario.'
+TEXTO_HA_BOSQUES = 'Muestra la cantidad de hectáreas dedicadas a bosques implantados y bosques naturales.'
+TEXTO_PRACTICAS_AGROECOLOGICAS = 'Muestra la cantidad de explotaciones agropecuarias que declararon trabajar con prácticas orgánicas, biodinámicas y/o agroecológicas.'
+TEXTO_HA_OLEAGINOSAS = 'Muestra la cantidad de soja y otras oleaginosas sembradas con respecto al total del grupo de cultivo de oleaginosas (soja, lino, colza, girasol, maní, etc.)'
+TEXTO_HA_CEREALES = 'Muestra la cantidad de hectáreas sembradas con maíz, trigo pan y otros cultivos con respecto al total del grupo de cultivo de cereales (maíz para grano, trigo pan, alpiste, avena, cebada, etc.)'
+TEXTO_HA_FORRAJERAS = 'Muestra la cantidad de forrajes anuales y perennes implantadas'
+
+
 indicadores = [
     dtr.Indicador(
         id_indicador="ha-tipo-cultivo",

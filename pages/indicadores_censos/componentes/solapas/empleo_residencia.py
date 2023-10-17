@@ -8,6 +8,10 @@ from ...data import *
 from pages.constantes import *
 
 
+TEXTO_RESIDENTES_SEXO= 'Muestra la cantidad de Mujeres y de Varones que residen en el campo según el año en que se realizó el Censo Nacional Agropecuario.'
+TEXTO_VARIACION_EMPLEO = 'Muestra la variación del empleo permanente en el campo entre cada año en que se realizó el Censo Nacional Agropecuario.'
+
+
 indicadores = [        
     dtr.Indicador(
         id_indicador="residentes-sexo",
