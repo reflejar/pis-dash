@@ -8,17 +8,18 @@ FooterNormativo = dbc.Container(
         dbc.Table([
             html.Thead(
                 html.Tr([
-                    html.Th("BIENES PROTEGIDOS"), html.Th("EXCLUSIÓN AÉREA") , html.Th("ZONA DE EXCLUSIÓN"), html.Th("ZONA DE AMORTIGUAMIENTO"),
+                    html.Th("Bienes Protegidos"), html.Th("Zona de Aplicación Aérea") , html.Th("Zona de Exclusión"), html.Th("Zona de Amortiguamiento"),
                 ],
-                className="text-white")
-            , className="bg-secondary"),
+                className="text-primary border-primary")
+            , className="bg-black"),
             html.Tbody([
-                html.Tr([html.Td("Zonas urbanas"), html.Td("2000 m"), html.Td("1000 Mts"), html.Td("500 Mts")], className="text-dark"),
-                html.Tr([html.Td("Población Rural"), html.Td("2000 m"), html.Td("1000 Mts"), html.Td("500 Mts")], className="text-dark"),
-                html.Tr([html.Td("Escuelas Rurales"), html.Td("300 m"), html.Td("200 Mts"), html.Td("100 Mts")], className="text-dark"),
-                html.Tr([html.Td("Estaciones de bombeo*"), html.Td("0 m"), html.Td("50 Mts"), html.Td("100 Mts")], className="text-dark"),
-                html.Tr([html.Td("Superficies de agua"), html.Td("0 m"), html.Td("50 Mts"), html.Td("50 Mts")], className="text-dark"), 
-                ], className="bg-white bg-opacity-75"
+                html.Tr([html.Td("Zonas urbanas"), html.Td("2000 m"), html.Td("150 m"), html.Td("500 m")], className="text-white"),
+                html.Tr([html.Td("Población Rural"), html.Td("300 m"), html.Td("50 m"), html.Td("500 m")], className="text-white"),
+                html.Tr([html.Td("Escuelas Rurales"), html.Td("300 m"), html.Td("200 m"), html.Td("500 m")], className="text-white"),
+                html.Tr([html.Td("Cursos de agua"), html.Td("0 m"), html.Td("25 m"), html.Td("0 m")], className="text-white"),
+                html.Tr([html.Td("Superficies de agua"), html.Td("0 m"), html.Td("25 m"), html.Td("0 m")], className="text-white"),
+                html.Tr([html.Td("Estaciones de bombeo*"), html.Td("0 m"), html.Td("50 m"), html.Td("0 m")], className="text-white"),                
+                ], className="bg-black bg-opacity-75 border-white"
                 )
         ],  bordered=True),
         html.I([
@@ -26,24 +27,24 @@ FooterNormativo = dbc.Container(
         ]),
         html.Br(),  
         html.Br(),      
-        html.H4("EXCLUSIÓN AÉREA:", className="text-white"),
+        html.H4("Zona de Exclusión Aérea:", className="text-white"),
         html.P([
             "Se prohíbe la pulverización aérea de agroquímicos desde la distancia establecida al bien protegido."
         ]),
         html.Br(),
-        html.H4("ZONA DE EXCLUSIÓN:", className="text-white"),
+        html.H4("Zona de Exclusión:", className="text-white"),
         html.P([
             "Área en la que se prohíbe la aplicación de agroquímicos de cualquier forma."
         ]),
         html.Br(),
-        html.H4("ZONA DE AMORTIGUAMIENTO:", className="text-white"),
+        html.H4("Zona de Amortiguamiento:", className="text-white"),
         html.P([
             """Área en la que solo está permitida la aplicación de agroquímicos bajo estrictas pautas. Estas son: que los vientos sean mayores a 5
  kilómetros por hora y menores a 15 kilómetros por hora. Además estos siempre deben ser provenientes desde la zona resguardada
  hacia zona rural. Por otra parte la humedad relativa debe ser mayor al 50%. Y la temperatura no mayor a 25°C."""
         ]),
         html.Br(),
-        html.H4("SOBRE ESCUELAS RURALES:", className="text-white"),
+        html.H4("Sobre Escuelas Rurales:", className="text-white"),
         html.P([
             """En tanto bien protegido en su cuidado se aplican las pautas generales de las zonas de amortiguamiento. Pero además la normativa 
             comprende las siguientes exigencias:""",
@@ -55,7 +56,7 @@ FooterNormativo = dbc.Container(
             ])
         ]),
         html.Br(),
-        html.H4("REGISTRO DE APLICADORES Y EQUIPOS TERRESTRES:", className="text-white"),
+        html.H4("Registro de Aplicadores y Equipos Terrestres:", className="text-white"),
         html.P([
             html.Ul([
                 html.Li("Todas las personas físicas y jurídicas que hagan aplicaciones a nombre propio o de terceros deberán estar inscriptos en el registro municipal"),
@@ -63,23 +64,23 @@ FooterNormativo = dbc.Container(
             ])
         ]),
         html.Br(),
-        html.H4("CONTROL MÉDICO:", className="text-white"),
+        html.H4("Control Médico:", className="text-white"),
         html.P([
             html.Ul([
                 html.Li("Titular de dominio del sector rural deberá generar barreras forestales cuando su propiedad rural linde con zonas urbanas y/o establecimientos educativos a fin de lograr una defensa de protección natural permanente."),
             ])
         ]),
         html.Br(),
-        html.H4("BARRERAS FORESTALES:", className="text-white"),
+        html.H4("Barreras Forestales:", className="text-white"),
         html.P([
             "Titular de dominio del sector rural deberá generar barreras forestales cuando su propiedad rural linde con zonas urbanas y/o establecimientos educativos a fin de lograr una defensa de protección natural permanente."
         ]),
         html.Br(),
-        html.H4("ORDENANZA:", className="text-white"),
+        html.H4("Ordenanza:", className="text-white"),
         html.A("Aquí", href="https://drive.google.com/file/d/1SVmW-3-_LIpqGGVsO2Ud4o3vmxoja5mo/view", target="_blank"),
         html.Br(),
         html.Br(),
-        html.H4("CANAL DE DENUNCIAS:", className="text-white"),
+        html.H4("Canal de Denuncias:", className="text-white"),
         html.P([
             "+54 9 2265 41-8289"
         ]),
