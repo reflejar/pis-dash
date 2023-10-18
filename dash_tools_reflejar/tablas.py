@@ -32,8 +32,7 @@ class Tabla:
                         'maxWidth': '300px'
                         },
             style_header={
-                'backgroundColor': "#F2A4B6",
-                'color': 'rgb(76,30,39)',
+                'backgroundColor': "#eceeef",
                 'textAlign':'center',
             },
             style_header_conditional=[
