@@ -1,28 +1,20 @@
 from dash import html,Input, Output, callback
 import dash_bootstrap_components as dbc
+from dash_loading_spinners import Hash
 
-import dash_tools_reflejar as dtr
-
-from ..data import escuelas
 from pages.constantes import *
+import dash_tools_reflejar as dtr
+from ..data import DATA
 
-
-Tabla = html.Div(id='tabla-ranking')
+Tabla = Hash(html.Div(id='tabla-ranking'), size=24, color=ROJO)
 
 @callback(
         Output('tabla-ranking','children'),
         Input('tabs-ranking','active_tab')
 )
 def render_content(tab):
-    tables = {
-        'escuelas': [escuelas, ROJO],
-        'transparencia': [escuelas, NARANJA],
-        'agua': [escuelas, VERDE_AGUA],
-        'poblaciones': [escuelas, LIMA],
-        'apiarios': [escuelas, LILA],
-        'agroecologia': [escuelas, CELESTE],
-    }
+    selected = DATA[tab]
     return dbc.Card([
-        dbc.CardHeader(tab.upper(), style={"background-color": tables[tab][1]}, class_name="text-center"),
-        dbc.CardBody(dtr.Tabla(tables[tab][0]).inicializar())
+        dbc.CardHeader(tab.upper(), style={"background-color": selected['color']}, class_name="text-center"),
+        dbc.CardBody(dtr.Tabla('tabla-ranking', selected['data'], {'Ordenanza': 'Link'}).inicializar())
     ])
