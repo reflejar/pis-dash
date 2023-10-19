@@ -9,8 +9,11 @@ from dash import dash, html, dcc, Input, Output, State, callback
 from dash_loading_spinners import Hash
 
 from ._chart_types import histogram as reflejar_histogram
+
 # Esto habría que corregir para hacer una libreria publicable
-from pages.indicadores_censos.data import VAR_ANIO_CENSO, VAR_PARTIDO, VAR_EAPS_Q
+VAR_ANIO_CENSO = 'Año del censo'
+VAR_PARTIDO = 'Partido'
+VAR_EAPS_Q = 'Cantidad de EAPs'
 # from pages.constantes import *
 
 class Indicador:

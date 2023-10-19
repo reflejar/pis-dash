@@ -8,7 +8,7 @@ from ..textos import *
 
 from pages.constantes import *
 
-Solapas = html.Div([
+Solapas = dbc.Row(dbc.Col([
     dbc.Tabs(id="tabs", active_tab='tab-1', children=[
         dbc.Tab(label='Concentración de tierras', tab_id='tab-1', label_style={'background-color':LILA,  'border-radius': '40px', 'color': '#000', 'margin-top': "7px", 'font-weight': 'bolder'},active_label_style={'border': '4px solid white'}),
         dbc.Tab(label='Modo de producción', tab_id='tab-2', label_style={'background-color':LIMA,  'border-radius': '40px', 'color': '#000', 'margin-top': "7px", 'font-weight': 'bolder'},active_label_style={'border': '4px solid white'}),
@@ -17,7 +17,7 @@ Solapas = html.Div([
         style={'borderBottom': '0px'}, 
         class_name="justify-content-center nav nav-pills nav-fill nav-justified"),
     html.Div(id='tabs-content'),
-])
+]))
 
 
 

@@ -3,10 +3,7 @@ import dash_bootstrap_components as dbc
 
 from ..data import partidos
 
-Filtros_censos = html.Div([
-    dbc.Container(
-        children=[
-            dbc.Row([                        
+Filtros = dbc.Row([                        
                 dbc.Col([
                     html.Label(htmlFor="select-partidos", title='partidos'),
                     dcc.Dropdown(
@@ -20,9 +17,5 @@ Filtros_censos = html.Div([
                         
                         
                         )], 
-                        className='col-md-3'),
-                ]),
-        ]),
-    ],
-    id="filtros-censo",
-)
+                        className='col-md-3 mb-5'),
+                ])

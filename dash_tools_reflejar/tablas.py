@@ -1,4 +1,5 @@
-from dash import dash_table
+import pandas as pd
+from dash import dash_table, html
 
 
 class Tabla:
@@ -8,16 +9,19 @@ class Tabla:
 
     def __init__(
             self,
-            df,
             id_tabla="", 
+            df=pd.DataFrame(),
     ) -> None:
         self.id = id_tabla
         self.df = df.copy()
+        self.columns = self.df.columns
+
 
     def inicializar(self):
         return dash_table.DataTable(
+            id=self.id,
             data=self.df.to_dict('records'),
-            columns=[{"name": i, "id": i} for i in self.df.columns],
+            columns=[{"name": i, "id": i, "presentation": 'markdown'} for i in self.columns],
             style_as_list_view=True,
             style_table={
                 'overflowX': 'scroll',
@@ -32,19 +36,16 @@ class Tabla:
                         'maxWidth': '300px'
                         },
             style_header={
-                'backgroundColor': "#F2A4B6",
-                'color': 'rgb(76,30,39)',
+                'backgroundColor': "#eceeef",
                 'textAlign':'center',
             },
             style_header_conditional=[
                 {'if': {'column_id': c}, 'fontWeight': 'bold'}
-                for c in self.df.columns[:3]  # Primeros dos encabezados en negritas
+                for c in self.columns[:3]  # Primeros dos encabezados en negritas
             ],
             style_cell_conditional=[
                 {'if': {'column_id': c},  'textAlign':'left'}
-                for c in self.df.columns[:3]  # Primeros dos encabezados en negritas
+                for c in self.columns[:3]  # Primeros dos encabezados en negritas
             ],
-        
-            id=f"tabla-{self.id}",
             sort_action='native',
     )
