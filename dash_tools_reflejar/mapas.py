@@ -48,14 +48,16 @@ class Mapa:
     def __init__(
             self,
             geojson,
-            colores=[]
+            colores=[],
+            id_map=""
     ) -> None:
         self.geobuf = dlx.geojson_to_geobuf(geojson)
         self.colores = colores
+        self.id = id_map
 
     def inicializar(self):
         return dl.Map(
-            id="mapa-ranking",
+            id=self.id,
             zoom=15,
             dragging=False,
             # touchZoom=False,

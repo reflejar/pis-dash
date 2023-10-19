@@ -6,15 +6,16 @@ from pages.constantes import *
 import dash_tools_reflejar as dtr
 from ..data import DATA
 
-Tabla = Hash(html.Div(id='tabla-ranking'), size=24, color=ROJO)
+Tabla = Hash(html.Div(id='card-tabla-ranking'), size=24, color=ROJO)
+
 
 @callback(
-        Output('tabla-ranking','children'),
+        Output('card-tabla-ranking','children'),
         Input('tabs-ranking','active_tab')
 )
 def render_content(tab):
     selected = DATA[tab]
     return dbc.Card([
-        dbc.CardHeader(tab.upper(), style={"background-color": selected['color']}, class_name="text-center"),
-        dbc.CardBody(dtr.Tabla('tabla-ranking', selected['data'], {'Ordenanza': 'Link'}).inicializar())
+        dbc.CardHeader(tab.upper(), style={"background-color": selected['color']}, class_name="fw-bolder text-center"),
+        dbc.CardBody(dtr.Tabla('tabla-ranking', selected['data']).inicializar())
     ])

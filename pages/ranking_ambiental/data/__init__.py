@@ -17,10 +17,12 @@ bsas["Municipios"]=bsas["fna"].copy().apply(lambda x: str(x).replace("Partido de
 
 # Leer archivo csv y cargar datos de escuelas.
 escuelas=pd.read_csv('pages/ranking_ambiental/data/escuelas_normativa.csv', sep=";",encoding="latin" )
-escuelas["Ordenanza"] = escuelas["Ordenanza"].fillna("").apply(lambda x: f"[Ord. {x}]" if x!="" else "[Sin ordenanza]")
-escuelas['Ordenanza'] = escuelas['Ordenanza'] + '(' + escuelas['Link'] + ')'
+escuelas["Ordenanza"] = escuelas["Ordenanza"].fillna("").apply(lambda x: f"Ord. {x}" if x!="" else "")
+escuelas['Ordenanza'] = "[" + escuelas['Ordenanza'] + "]" + '(' + escuelas['Link'] + ')'
+escuelas["Ordenanza"] = escuelas["Ordenanza"].fillna("Sin Ordenanza")
 
-escuelas["Fecha"] = escuelas["Fecha"].fillna("-")
+
+escuelas["Fecha"] = escuelas["Fecha"].fillna("\-")
 
 # Reemplazar valores nulos en columnas de tipo objeto con 'NO'
 columna_especifica = "Obligatoriedad de notificación"
@@ -61,31 +63,37 @@ DATA = {
     'escuelas': {
         'data': escuelas,
         'geojson_bsas': bsas_geojson,
+        'geojson_caba': bsas_geojson,
         'color': ROJO
     },
     'transparencia': {
         'data': escuelas,
         'geojson_bsas': bsas_geojson,
+        'geojson_caba': bsas_geojson,
         'color': NARANJA
     },
     'agua': {
         'data': escuelas,
         'geojson_bsas': bsas_geojson,
+        'geojson_caba': bsas_geojson,
         'color': VERDE_AGUA
     },
     'poblaciones': {
         'data': escuelas,
         'geojson_bsas': bsas_geojson,
+        'geojson_caba': bsas_geojson,
         'color': LIMA
     },
     'apiarios': {
         'data': escuelas,
         'geojson_bsas': bsas_geojson,
+        'geojson_caba': bsas_geojson,
         'color': LILA
     },
     'agroecologia': {
         'data': escuelas,
         'geojson_bsas': bsas_geojson,
+        'geojson_caba': bsas_geojson,
         'color': CELESTE
     },
 }

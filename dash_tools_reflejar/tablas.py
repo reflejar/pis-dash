@@ -11,7 +11,6 @@ class Tabla:
             self,
             id_tabla="", 
             df=pd.DataFrame(),
-            links={}
     ) -> None:
         self.id = id_tabla
         self.df = df.copy()

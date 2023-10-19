@@ -1,6 +1,6 @@
 
 
-def hacer_colorscale(color_end="#FFFFFF", n=10, k=8):
+def hacer_colorscale(color_end="#000000", n=10, k=8):
     color_start="#FFFFFF"
     # Convierte los colores hexadecimales a valores RGB
     start_rgb = (
