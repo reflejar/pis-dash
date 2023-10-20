@@ -10,12 +10,14 @@ class Tabla:
     def __init__(
             self,
             id_tabla="", 
+            color_id="",
             df=pd.DataFrame(),
     ) -> None:
         self.id = id_tabla
+        self.color=color_id
         self.df = df.copy()
         self.columns = self.df.columns
-
+       
 
     def inicializar(self):
         return dash_table.DataTable(
@@ -27,12 +29,14 @@ class Tabla:
                 'overflowX': 'scroll',
                 'overflowY': 'scroll',
                 'width': '100%',
+                'height': '500px',
                 'borderCollapse': 'separate',
                 'borderSpacing': '0 10px',
             },
             style_cell={'whiteSpace': 'pre',
                         'fontFamily': 'Arial',
                         'textAlign':'center',
+                        'verticalAlign': 'middle',
                         'maxWidth': '300px'
                         },
             style_header={
@@ -40,12 +44,18 @@ class Tabla:
                 'textAlign':'center',
             },
             style_header_conditional=[
-                {'if': {'column_id': c}, 'fontWeight': 'bold'}
-                for c in self.columns[:3]  # Primeros dos encabezados en negritas
+                {'if': {'column_id': c}, 'fontWeight': 'bold', 'textAlign':'left'}
+                for c in self.columns[:3]  # Primeros tres encabezados en negritas y alineados a la izquierda
             ],
-            style_cell_conditional=[
-                {'if': {'column_id': c},  'textAlign':'left'}
-                for c in self.columns[:3]  # Primeros dos encabezados en negritas
+            style_data_conditional = [
+                {
+                    'if': {'state': 'active'},
+                    'color' : 'rgba(0,0,0,1)',
+                    'backgroundColor': self.color,
+                    'opacity': 0.3, # Cambia el color de fondo al hacer clic en celdas
+                    'border': f'1px solid {self.color}',
+                }
             ],
             sort_action='native',
+
     )
