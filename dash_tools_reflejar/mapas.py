@@ -58,7 +58,6 @@ class Mapa:
     def inicializar(self):
         return dl.Map(
             id=self.id,
-            zoom=15,
             dragging=False,
             # touchZoom=False,
             zoomControl=False,

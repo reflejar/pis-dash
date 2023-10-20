@@ -1,4 +1,4 @@
-.accordion-item {
+/* .accordion-item {
     border: 1px solid transparent;
     position: relative;
     z-index: 0;
@@ -15,4 +15,4 @@
     &[data-rotate] {
         transform: rotate(-90deg);
     }
-}
+} */
