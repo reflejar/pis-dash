@@ -88,8 +88,7 @@ app.layout = html.Div(children=[
 @app.callback(Output('contenido-herramienta', 'children'),Input('url', 'pathname'))
 def display_page(url):
     # Fecha y hora actual
-    now = datetime.datetime.now()
-    logger.info(f'{request.host} {url} - {now.strftime("%Y-%m-%d %H:%M:%S")}')
+    logger.info(f'{request.host} {url}')
     # Fecha y hora actual
     return herramienta.layout
 # Se corre la aplicación
