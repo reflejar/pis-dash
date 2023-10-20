@@ -25,7 +25,7 @@ from pages import (
 app = dash.Dash(
 	__name__,
 	server=server,
-	external_stylesheets=[dbc.icons.BOOTSTRAP], # COSMO, FLATLY, LUX, MINTY
+	external_stylesheets=[dbc.icons.BOOTSTRAP, 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'], # COSMO, FLATLY, LUX, MINTY
 	use_pages=True,
 	update_title="Actualizando...",
 	prevent_initial_callbacks=True,
