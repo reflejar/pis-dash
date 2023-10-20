@@ -12,7 +12,9 @@ RUN dpkg-reconfigure --frontend=noninteractive locales
 ENV LANG es_AR.UTF-8
 ENV LC_ALL es_AR.UTF-8
 
-
+# Configuro la zona horaria a 'America/Argentina/Buenos_Aires'
+RUN ln -snf /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
+RUN echo "America/Argentina/Buenos_Aires" > /etc/timezone
 
 RUN apt-get update
 
