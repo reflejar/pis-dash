@@ -36,8 +36,6 @@ ns = Namespace("dash_props", "module")
 
 MapaNormativo = html.Div(
     [
-        html.Br(),
-        html.Br(),
         dl.Map([
             dl.LayersControl(
                 [
@@ -85,110 +83,6 @@ MapaNormativo = html.Div(
                 ]), 
                 id="pane_excl"
             ),
-            # dl.Pane(
-            #     dl.LayerGroup([
-            #         dl.GeoJSON(
-            #             data=dlx.geojson_to_geobuf(localidades_amort_geojson), 
-            #             format='geobuf', 
-            #             zoomToBounds=True, 
-            #             zoomToBoundsOnClick=True,                       
-            #             hoverStyle=arrow_function(HOVER_STYLE),
-            #             options=dict(onEachFeature=ns("on_each_feature"),
-            #             style={"color":"#8c0d22","weight":2,"fillOpacity":0.3}))
-            #     ]), 
-            #     id="pane_localidades_amort"
-            # ), 
-            # dl.Pane(
-            #     dl.LayerGroup([
-            #         dl.GeoJSON(
-            #             data=dlx.geojson_to_geobuf(parajes_amort_geojson), 
-            #             format='geobuf', 
-            #             zoomToBounds=True, 
-            #             zoomToBoundsOnClick=True,                       
-            #             hoverStyle=arrow_function(HOVER_STYLE),
-            #             options=dict(onEachFeature=ns("on_each_feature"),
-            #             style={"color":"#8c0d22","weight":2,"fillOpacity":0.3}))
-            #     ]), 
-            #     id="pane_parajes_amort"
-            # ),
-            # dl.Pane(
-            #     dl.LayerGroup([
-            #         dl.GeoJSON(
-            #             data=dlx.geojson_to_geobuf(escuelas_parcelas_amort_geojson), 
-            #             format='geobuf', 
-            #             zoomToBounds=True, 
-            #             zoomToBoundsOnClick=True,                       
-            #             hoverStyle=arrow_function(HOVER_STYLE),
-            #             options=dict(onEachFeature=ns("on_each_feature"),
-            #             style={"color":"#8c0d22","weight":2,"fillOpacity":0.3}))
-            #     ]), 
-            #     id="pane_escuelas_parcelas_amort"
-            # ),                                              
-            # dl.Pane(
-            #     dl.LayerGroup([
-            #         dl.GeoJSON(
-            #             data=dlx.geojson_to_geobuf(cursos_excl_geojson), 
-            #             format='geobuf', 
-            #             zoomToBounds=True, 
-            #             zoomToBoundsOnClick=True,
-            #             hoverStyle=arrow_function(HOVER_STYLE),
-            #             options=dict(onEachFeature=ns("on_each_feature"),
-            #             style={"color":"#8c0d22","weight":2,"fillOpacity":0.3}))
-            #     ]), 
-            #     id="pane_cursos_excl"
-            # ), 
-            # dl.Pane(
-            #     dl.LayerGroup([
-            #         dl.GeoJSON(
-            #             data=dlx.geojson_to_geobuf(cuerpos_excl_geojson), 
-            #             format='geobuf', 
-            #             zoomToBounds=True, 
-            #             zoomToBoundsOnClick=True,
-            #             hoverStyle=arrow_function(HOVER_STYLE),
-            #             options=dict(onEachFeature=ns("on_each_feature"),
-            #             style={"color":"#8c0d22","weight":2,"fillOpacity":0.3}))
-            #     ]), 
-            #     id="pane_cuerpos_excl"
-            # ),
-            # dl.Pane(
-            #     dl.LayerGroup([
-            #         dl.GeoJSON(
-            #             data=dlx.geojson_to_geobuf(localidades_excl_geojson), 
-            #             format='geobuf', 
-            #             zoomToBounds=True, 
-            #             zoomToBoundsOnClick=True,
-            #             hoverStyle=arrow_function(HOVER_STYLE),
-            #             options=dict(onEachFeature=ns("on_each_feature"),
-            #             style={"color":"#8c0d22","weight":2,"fillOpacity":0.3}))
-            #     ]), 
-            #     id="pane_localidades_excl"
-            # ),
-            # dl.Pane(
-            #     dl.LayerGroup([
-            #         dl.GeoJSON(
-            #             data=dlx.geojson_to_geobuf(parajes_excl_geojson), 
-            #             format='geobuf', 
-            #             zoomToBounds=True, 
-            #             zoomToBoundsOnClick=True,
-            #             hoverStyle=arrow_function(HOVER_STYLE),
-            #             options=dict(onEachFeature=ns("on_each_feature"),
-            #             style={"color":"#8c0d22","weight":2,"fillOpacity":0.3}))
-            #     ]), 
-            #     id="pane_parajes_excl"
-            # ),
-            # dl.Pane(
-            #     dl.LayerGroup([
-            #         dl.GeoJSON(
-            #             data=dlx.geojson_to_geobuf(escuelas_parcelas_excl_geojson), 
-            #             format='geobuf', 
-            #             zoomToBounds=True, 
-            #             zoomToBoundsOnClick=True,
-            #             hoverStyle=arrow_function(HOVER_STYLE),
-            #             options=dict(onEachFeature=ns("on_each_feature"),
-            #             style={"color":"#8c0d22","weight":2,"fillOpacity":0.3}))
-            #     ]), 
-            #     id="pane_escuelas_parcelas_excl"
-            # ),
             dl.Pane(
                 dl.LayerGroup([
                     dl.GeoJSON(
@@ -254,7 +148,7 @@ MapaNormativo = html.Div(
             ),            
         ], 
         # style={'width': '1080px', 'height': '720px'},
-        className="mt-3 min-vh-75"
+        className="mt-5 min-vh-75"
         ),
     ]
 )

@@ -2,13 +2,13 @@ from dash import html
 
 import dash_bootstrap_components as dbc
 
-FooterNormativo = dbc.Container(
+FooterNormativo = dbc.Row(dbc.Col(
     [
         html.H4("Detalle de las distancias protegidas según la ordenanza citada", className="text-white"),
         dbc.Table([
             html.Thead(
                 html.Tr([
-                    html.Th("Bienes Protegidos"), html.Th("Zona de Aplicación Aérea") , html.Th("Zona de Exclusión"), html.Th("Zona de Amortiguamiento"),
+                    html.Th("Bienes Protegidos"), html.Th("Zona de Exclusión Aérea") , html.Th("Zona de Exclusión"), html.Th("Zona de Amortiguamiento"),
                 ],
                 className="text-primary border-primary")
             , className="bg-black"),
@@ -21,7 +21,7 @@ FooterNormativo = dbc.Container(
                 html.Tr([html.Td("Estaciones de bombeo*"), html.Td("0 m"), html.Td("50 m"), html.Td("0 m")], className="text-white"),                
                 ], className="bg-black bg-opacity-75 border-white"
                 )
-        ],  bordered=True),
+        ],  bordered=True, responsive=True),
         html.I([
             "*Las estaciones de bombeo contemplan tambien las camaras de inspeccion de agua abastecimiento público."
         ]),
@@ -40,8 +40,8 @@ FooterNormativo = dbc.Container(
         html.H4("Zona de Amortiguamiento:", className="text-white"),
         html.P([
             """Área en la que solo está permitida la aplicación de agroquímicos bajo estrictas pautas. Estas son: que los vientos sean mayores a 5
- kilómetros por hora y menores a 15 kilómetros por hora. Además estos siempre deben ser provenientes desde la zona resguardada
- hacia zona rural. Por otra parte la humedad relativa debe ser mayor al 50%. Y la temperatura no mayor a 25°C."""
+            kilómetros por hora y menores a 15 kilómetros por hora. Además estos siempre deben ser provenientes desde la zona resguardada
+            hacia zona rural. Por otra parte la humedad relativa debe ser mayor al 50%. Y la temperatura no mayor a 25°C."""
         ]),
         html.Br(),
         html.H4("Sobre Escuelas Rurales:", className="text-white"),
@@ -99,8 +99,8 @@ FooterNormativo = dbc.Container(
 
     ],
     id="footer-normativo",
-    className=" text-white mt-5"
-)
+    className="text-white mt-5"
+))
 
 
 

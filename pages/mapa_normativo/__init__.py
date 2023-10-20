@@ -14,9 +14,7 @@ layout = html.Div([
         dbc.Row([
             dbc.Col(Filtros, lg=3),
             dbc.Col(MapaNormativo, lg=9)
-        ]),
-        html.Br(),
-        html.Br(),
+        ], class_name="my-5"),
         html.Hr(),
         dbc.Row([
             dbc.Col(FooterNormativo, md=12),

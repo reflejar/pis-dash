@@ -16,6 +16,6 @@ Tabla = Hash(html.Div(id='card-tabla-ranking'), size=24, color=ROJO)
 def render_content(tab):
     selected = DATA[tab]
     return dbc.Card([
-        dbc.CardHeader(tab.upper(), style={"background-color": selected['color']}, class_name="fw-bolder text-center"),
-        dbc.CardBody(dtr.Tabla('tabla-ranking', selected['data']).inicializar())
-    ])
+        dbc.CardHeader(tab.upper(), style={"background-color": selected['color'], "border-radius": "0.5rem"}, class_name="fw-bolder text-center"),
+        dbc.CardBody(dtr.Tabla('tabla-ranking',selected['color'],  selected['data'] ).inicializar())
+    ], style={"border-radius": "0.5rem"})

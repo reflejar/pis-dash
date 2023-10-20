@@ -106,7 +106,7 @@ class Indicador:
                         dbc.ModalFooter(
                             dbc.Button("Volver atrás", 
                                         id=f"modal-close-{self.id}", 
-                                        color="light",style={"border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": self.LETRA_DEFAULT},  
+                                        style={"border-color": "#FFFFFF", "color": "#FFFFFF", "font-family": self.LETRA_DEFAULT},  
                                         className="mx-auto"), className="text-center", 
                                         style={
                                             "background-color": "#FFFFFF" ,
