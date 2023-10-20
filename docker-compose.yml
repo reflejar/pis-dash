@@ -10,4 +10,4 @@ services:
       - .:/app
     ports:
       - "8050:8050"
-    # command: python main.py censos
+    command: python main.py indicadores_censos
