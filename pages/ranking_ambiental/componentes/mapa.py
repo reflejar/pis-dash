@@ -12,17 +12,17 @@ Mapa = Hash(dbc.Card(
             dbc.CardBody([
                 dbc.Row([
                     dbc.Col([
-                        html.H6("PROVINCIA DE BUENOS AIRES", className="fw-bolder rm-3 lm-3 text-center"),
+                        html.H5("PROVINCIA DE BUENOS AIRES", className="fw-bolder rm-3 lm-3 text-center"),
                         html.Div(id='mapa-ranking-bsas'),
                     ], lg=6, xs=12), 
                     dbc.Col([
-                        html.H6("CONURBANO", className="fw-bolder rm-3 tm-3 text-center"),
+                        html.H5("CONURBANO", className="fw-bolder rm-3 tm-3 text-center"),
                         html.Div(id='mapa-ranking-caba'),
                     ], lg=6, xs=12)
                 ]),
                 dbc.Row(
                     dbc.Col([
-                        html.H5("PROTECCIÓN", className="fw-bolder rm-3 lm-3 text-center"),
+                        html.H6("PROTECCIÓN", className="fw-bolder rm-3 lm-3 text-center"),
                             dbc.Row([
                                 dbc.Col("MENOR", class_name="text-end", xs=3),
                                 dbc.Col(html.Div(id="colorscale-ranking"), xs=6),

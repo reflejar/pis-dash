@@ -17,9 +17,30 @@ bsas["Municipios"]=bsas["fna"].copy().apply(lambda x: str(x).replace("Partido de
 
 # Leer archivo csv y cargar datos de escuelas.
 escuelas=pd.read_csv('pages/ranking_ambiental/data/escuelas_normativa.csv', sep=";",encoding="latin" )
-escuelas["Ordenanza"] = escuelas["Ordenanza"].fillna("").apply(lambda x: f"Ord. {x}" if x!="" else "")
-escuelas['Ordenanza'] = "[" + escuelas['Ordenanza'] + "]" + '(' + escuelas['Link'] + ')'
+
+
+
+def func(x):
+    if " y " in x[0] or "--y--" in x[1]:
+        a=x[0].split("y")
+        b=x[1].split("--y--")
+        c=""
+        for i,j in zip(a,b):
+            c=c + "\n" + "[" +"Ord. " + i.strip()+ "]" + '(' + j.strip() + ')'
+        rdo=c
+    elif " y " in x[1]:
+        a=x[0].strip()
+        b=x[1].split("y")
+        rdo= "[" +"Ord. "+ a+ "]" + '(' + b[0].strip() + ')'
+    elif x[0]=="" or x[0]=="Sin Ordenanza":
+        rdo="Sin Ordenanza"
+    else:
+        rdo="[" + "Ord. " + x[0].strip()+ "]" + '(' + x[1].strip() + ')'
+    return rdo
+
 escuelas["Ordenanza"] = escuelas["Ordenanza"].fillna("Sin Ordenanza")
+escuelas["Link"] = escuelas["Link"].fillna("")
+escuelas['Ordenanza'] = escuelas[['Ordenanza','Link' ]].apply(func, axis=1) 
 
 
 escuelas["Fecha"] = escuelas["Fecha"].fillna("\-")
