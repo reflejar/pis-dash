@@ -50,10 +50,9 @@ class Tabla:
             style_data_conditional = [
                 {
                     'if': {'state': 'active'},
-                    'color' : 'rgba(0,0,0,1)',
-                    'backgroundColor': self.color,
-                    'opacity': 0.3, # Cambia el color de fondo al hacer clic en celdas
+                    'backgroundColor': 'rgba(0,0,0,0.05)',
                     'border': f'1px solid {self.color}',
+                    'color' : 'rgba(0,0,0,1)',
                 }
             ],
             sort_action='native',
