@@ -13,7 +13,7 @@ Mapa = Hash(dbc.Card(
                 dbc.Row([
                     dbc.Col([
                         html.H5("PROVINCIA DE BUENOS AIRES", className="fw-bolder rm-3 lm-3 text-center"),
-                        html.Div(id='mapa-ranking-bsas'),
+                        html.Div(id='mapa-ranking-gba'),
                     ], lg=6, xs=12), 
                     dbc.Col([
                         html.H5("CONURBANO", className="fw-bolder rm-3 tm-3 text-center"),
@@ -51,7 +51,7 @@ Mapa = Hash(dbc.Card(
 
 @callback(
         [
-            Output('mapa-ranking-bsas','children'),
+            Output('mapa-ranking-gba','children'),
             Output('mapa-ranking-caba','children'),
             Output('colorscale-ranking','style'),
         ],
@@ -61,8 +61,8 @@ def render_content(tab):
     selected = DATA[tab]
     colorscale = dtr.hacer_colorscale(selected['color'], 10, 8)
 
-    MapaBuenosAires = dtr.Mapa(selected['geojson_bsas'], colorscale, 'mapa-ranking-bsas').inicializar()
-    MapaCABA = dtr.Mapa(selected['geojson_caba'], colorscale, 'mapa-ranking-caba').inicializar()
+    MapaBuenosAires = dtr.Mapa(selected['geojson_pba'], colorscale, 'mapa-ranking-gba').inicializar()
+    MapaCABA = dtr.Mapa(selected['geojson_gba'], colorscale, 'mapa-ranking-caba').inicializar()
     EstiloColorScale = {
             'width': '100%',
             'height': '25px', 

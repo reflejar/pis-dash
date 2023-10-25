@@ -4,7 +4,7 @@ import dash_leaflet.express as dlx
 # import plotly.io as pio
 from dash_extensions.javascript import arrow_function, assign
 
-from pages.ranking_ambiental.data import bsas,VAR_PUNTAJE,  classes
+from pages.ranking_ambiental.data import gba,VAR_PUNTAJE,  classes
 
 # Establecer el renderizador predeterminado para Plotly.
 # pio.renderers.default = 'browser'
@@ -63,6 +63,7 @@ class Mapa:
             zoomControl=False,
             scrollWheelZoom=False,
             doubleClickZoom=False,
+            attributionControl=False,
             children=[
                 dl.GeoJSON(
                     data=self.geobuf,

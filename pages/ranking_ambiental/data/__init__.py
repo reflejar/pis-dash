@@ -7,9 +7,12 @@ from dash import html
 from pages.constantes import *
 
 # Leer archivo geojson y cargar datos.
-bsas = gpd.read_file('pages/ranking_ambiental/data/limite_partidos_expandido.geojson', encoding="ASCI")
-#bsas.columns=["cca", "cde", "Municipios", "gna", "nam","sag", "ara3", "arl", "geometry"]
-bsas["Municipios"]=bsas["fna"].copy().apply(lambda x: str(x).replace("Partido de ", ""))
+gba = gpd.read_file('pages/ranking_ambiental/data/gba_limite_partidos_expandido.geojson', encoding="ASCI")
+
+pba = gpd.read_file('pages/ranking_ambiental/data/bsas_provincia.geojson', encoding="ASCI")
+#gba.columns=["cca", "cde", "Municipios", "gna", "nam","sag", "ara3", "arl", "geometry"]
+gba["Municipios"]=gba["fna"].copy().apply(lambda x: str(x).replace("Partido de ", ""))
+pba["Municipios"]=pba["fna"].copy().apply(lambda x: str(x).replace("Partido de ", ""))
 
 
 
@@ -63,58 +66,68 @@ del escuelas["Link"]
 
 
 #union de tablas para incorporar ranking 
-bsas=pd.merge(bsas, escuelas[['Municipios', 'Puntaje']], on='Municipios', how='left')
+gba=pd.merge(gba, escuelas[['Municipios', 'Puntaje']], on='Municipios', how='left')
+pba=pd.merge(pba, escuelas[['Municipios', 'Puntaje']], on='Municipios', how='left')
 
 #Se crea variable con el nombre de la columna que contiene el listado de puntuación que hace al ranking
 VAR_PUNTAJE="Puntaje"
 
 # Crear valores medios y clases.
-bsas[VAR_PUNTAJE]=bsas[VAR_PUNTAJE].fillna(0).apply(lambda x: math.sqrt(x) )
-min_value = bsas[VAR_PUNTAJE].min()
-max_value = bsas[VAR_PUNTAJE].max()
+gba[VAR_PUNTAJE]=gba[VAR_PUNTAJE].fillna(0).apply(lambda x: math.sqrt(x) )
+min_value = gba[VAR_PUNTAJE].min()
+max_value = gba[VAR_PUNTAJE].max()
 middle_values = np.linspace(min_value, max_value, num=8, endpoint=True)
 classes = list(middle_values)
-# Agregar informacion de etiquetas
-bsas["tooltip"] = bsas["nam"]
+# Crear valores medios y clases.
+pba[VAR_PUNTAJE]=pba[VAR_PUNTAJE].fillna(0).apply(lambda x: math.sqrt(x) )
+min_value = pba[VAR_PUNTAJE].min()
+max_value = pba[VAR_PUNTAJE].max()
+middle_values = np.linspace(min_value, max_value, num=8, endpoint=True)
+classes = list(middle_values)
 
-bsas_geojson = json.loads(bsas.to_json(na="keep"))
+# Agregar informacion de etiquetas
+gba["tooltip"] = gba["nam"]
+pba["tooltip"] = pba["nam"]
+
+gba_geojson = json.loads(gba.to_json(na="keep"))
+pba_geojson = json.loads(pba.to_json(na="keep"))
 
 # Preparamos datas
 DATA = {
     'escuelas': {
         'data': escuelas,
-        'geojson_bsas': bsas_geojson,
-        'geojson_caba': bsas_geojson,
+        'geojson_pba': pba_geojson,
+        'geojson_gba': gba_geojson,
         'color': ROJO
     },
     'transparencia': {
         'data': escuelas,
-        'geojson_bsas': bsas_geojson,
-        'geojson_caba': bsas_geojson,
+        'geojson_pba': gba_geojson,
+        'geojson_gba': gba_geojson,
         'color': NARANJA
     },
     'agua': {
         'data': escuelas,
-        'geojson_bsas': bsas_geojson,
-        'geojson_caba': bsas_geojson,
+        'geojson_pba': gba_geojson,
+        'geojson_gba': gba_geojson,
         'color': VERDE_AGUA
     },
     'poblaciones': {
         'data': escuelas,
-        'geojson_bsas': bsas_geojson,
-        'geojson_caba': bsas_geojson,
+        'geojson_pba': gba_geojson,
+        'geojson_gba': gba_geojson,
         'color': LIMA
     },
     'apiarios': {
         'data': escuelas,
-        'geojson_bsas': bsas_geojson,
-        'geojson_caba': bsas_geojson,
+        'geojson_pba': gba_geojson,
+        'geojson_gba': gba_geojson,
         'color': LILA
     },
     'agroecologia': {
         'data': escuelas,
-        'geojson_bsas': bsas_geojson,
-        'geojson_caba': bsas_geojson,
+        'geojson_pba': gba_geojson,
+        'geojson_gba': gba_geojson,
         'color': CELESTE
     },
 }
