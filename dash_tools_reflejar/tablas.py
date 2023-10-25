@@ -37,10 +37,9 @@ class Tabla:
                         'fontFamily': 'Arial',
                         'textAlign':'center',
                         'verticalAlign': 'middle',
-                        'maxWidth': '300px'
                         },
             style_header={
-                'backgroundColor': "#eceeef",
+                'backgroundColor': 'rgba(0,0,0, 0.2)',
                 'textAlign':'center',
             },
             style_header_conditional=[
@@ -48,6 +47,12 @@ class Tabla:
                 for c in self.columns[:3]  # Primeros tres encabezados en negritas y alineados a la izquierda
             ],
             style_data_conditional = [
+                {
+                    'if': {
+                        'filter_query': '{{Puntaje}} = {}'.format(self.df['Puntaje'].min()),
+                    },
+                    'backgroundColor': '#EEEEEE',
+                },
                 {
                     'if': {'state': 'active'},
                     'backgroundColor': 'rgba(0,0,0,0.05)',

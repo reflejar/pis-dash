@@ -4,20 +4,10 @@ import dash_leaflet.express as dlx
 # import plotly.io as pio
 from dash_extensions.javascript import arrow_function, assign
 
-from pages.ranking_ambiental.data import gba,VAR_PUNTAJE,  classes
-
-# Establecer el renderizador predeterminado para Plotly.
-# pio.renderers.default = 'browser'
-
-# Agregar informacion de etiquetas
-
 
 #Transformar a geobuf
 
-
-style = dict(weight=3, opacity=1, color='white', dashArray='4', fillOpacity=0.8)
-
-aver = assign("""function(feature, context){
+js_func = assign("""function(feature, context){
                         const {classes, colorscale, style, colorProp} = context.props.hideout;
                         const value = feature.properties[colorProp];
                         if (value === null || isNaN(value)) {
@@ -37,9 +27,6 @@ aver = assign("""function(feature, context){
                         return style;
                     }""")
 
-# Crear colorbar.
-ctg = ["{}+".format(cls, classes[i + 1]) for i, cls in enumerate(classes[:-1])] + ["{}+".format(classes[-1])]
-
 class Mapa:
     """
         Clase para crear las diferentes tablas
@@ -49,13 +36,18 @@ class Mapa:
             self,
             geojson,
             colores=[],
-            id_map=""
+            classes=[],
+            id_map="",
+            color_prop=""
     ) -> None:
         self.geobuf = dlx.geojson_to_geobuf(geojson)
         self.colores = colores
+        self.classes= classes
         self.id = id_map
+        self.color_prop = color_prop
 
     def inicializar(self):
+
         return dl.Map(
             id=self.id,
             dragging=False,
@@ -70,9 +62,20 @@ class Mapa:
                     format='geobuf',
                     zoomToBounds=True,
                     zoomToBoundsOnClick=False,
-                    options=dict(style=aver),
+                    options=dict(style=js_func),
                     hoverStyle=arrow_function(dict(weight=8, dashArray='')),
-                    hideout=dict(colorscale=self.colores, classes=classes, style=style, colorProp=VAR_PUNTAJE)
+                    hideout=dict(
+                        colorscale=self.colores, 
+                        classes=self.classes, 
+                        style=dict(
+                            weight=3, 
+                            opacity=1, 
+                            color='white', 
+                            dashArray='4', 
+                            fillOpacity=0.8
+                            ), 
+                        colorProp=self.color_prop
+                    )
                 ),
                 
             ],
