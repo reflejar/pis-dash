@@ -10,11 +10,11 @@ from pages.constantes import *
 gba = gpd.read_file('pages/ranking_ambiental/data/gba_limite_partidos_expandido.geojson', encoding="ASCI")
 pba = gpd.read_file('pages/ranking_ambiental/data/bsas_provincia.geojson', encoding="ASCI")
 
-#gba.columns=["cca", "cde", "Municipios", "gna", "nam","sag", "ara3", "arl", "geometry"]
+# Comuna Municipios
 gba["Municipios"]=gba["fna"].copy().apply(lambda x: str(x).replace("Partido de ", ""))
 pba["Municipios"]=pba["fna"].copy().apply(lambda x: str(x).replace("Partido de ", ""))
 
-# Leer archivo csv y cargar datos de escuelas.
+# Leer archivo csv
 escuelas=pd.read_csv('pages/ranking_ambiental/data/escuelas_normativa.csv', sep=";",encoding="latin" )
 transparencia=pd.read_csv('pages/ranking_ambiental/data/transparencia_normativa.csv', sep=";",encoding="latin" )
 agua=pd.read_csv('pages/ranking_ambiental/data/agua_normativa.csv', sep=";",encoding="latin" )
@@ -24,6 +24,10 @@ agroecologia=pd.read_csv('pages/ranking_ambiental/data/agroecologia_normativa.cs
 
 
 def crear_link(x):
+    """
+        función para limpiar el link
+        y convertirlo a formato Markdown
+    """
     if " y " in x[0] or "--y--" in x[1]:
         a=x[0].split("y")
         b=x[1].split("--y--")
@@ -42,6 +46,9 @@ def crear_link(x):
     return rdo
 
 def preparar_base(base): 
+    """
+        función para preparar la base
+    """    
     if 'Link - Repositorio' in base.columns:
         base.rename(columns={'Link - Repositorio': 'Link'}, inplace=True)
     elif 'LINK' in base.columns: 
@@ -84,6 +91,9 @@ poblaciones=preparar_base(poblaciones)
 agroecologia=preparar_base(agroecologia)
 
 def crear_geojson(mapa, base):
+    """
+        función para mergear las bases con el geojson
+    """    
     # union de tablas para incorporar ranking 
     final_mapa=pd.merge(mapa, base[['Municipios', 'Puntaje']], on='Municipios', how='left')
     # Agregar informacion de etiquetas
@@ -91,6 +101,9 @@ def crear_geojson(mapa, base):
     return json.loads(final_mapa.to_json(na="keep"))
 
 def crear_classes(base):
+    """
+        función para crear los diferentes valores de las clases
+    """        
     min_value = base["Puntaje"].min()
     max_value = base["Puntaje"].max()
     middle_values = np.linspace(min_value, max_value, num=8, endpoint=True)
