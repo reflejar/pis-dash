@@ -39,16 +39,6 @@ Mapa = Hash(dbc.Card(
 
 
 
-
-
-
-
-
-
-
-
-
-
 @callback(
         [
             Output('mapa-ranking-bsas','children'),
@@ -61,8 +51,8 @@ def render_content(tab):
     selected = DATA[tab]
     colorscale = dtr.hacer_colorscale(selected['color'], 10, 8)
 
-    MapaBuenosAires = dtr.Mapa(selected['geojson_bsas'], colorscale, 'mapa-ranking-bsas').inicializar()
-    MapaCABA = dtr.Mapa(selected['geojson_caba'], colorscale, 'mapa-ranking-caba').inicializar()
+    MapaBuenosAires = dtr.Mapa(selected['geojson_bsas'], colorscale, selected['classes'], 'mapa-ranking-bsas').inicializar()
+    MapaCABA = dtr.Mapa(selected['geojson_caba'], colorscale, selected['classes'], 'mapa-ranking-caba').inicializar()
     EstiloColorScale = {
             'width': '100%',
             'height': '25px', 

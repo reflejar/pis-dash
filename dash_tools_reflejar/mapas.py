@@ -4,7 +4,7 @@ import dash_leaflet.express as dlx
 # import plotly.io as pio
 from dash_extensions.javascript import arrow_function, assign
 
-from pages.ranking_ambiental.data import bsas,VAR_PUNTAJE,  classes
+from pages.ranking_ambiental.data import VAR_PUNTAJE
 
 # Establecer el renderizador predeterminado para Plotly.
 # pio.renderers.default = 'browser'
@@ -13,8 +13,6 @@ from pages.ranking_ambiental.data import bsas,VAR_PUNTAJE,  classes
 
 
 #Transformar a geobuf
-
-
 style = dict(weight=3, opacity=1, color='white', dashArray='4', fillOpacity=0.8)
 
 aver = assign("""function(feature, context){
@@ -37,9 +35,6 @@ aver = assign("""function(feature, context){
                         return style;
                     }""")
 
-# Crear colorbar.
-ctg = ["{}+".format(cls, classes[i + 1]) for i, cls in enumerate(classes[:-1])] + ["{}+".format(classes[-1])]
-
 class Mapa:
     """
         Clase para crear las diferentes tablas
@@ -49,13 +44,16 @@ class Mapa:
             self,
             geojson,
             colores=[],
+            classes=[],
             id_map=""
     ) -> None:
         self.geobuf = dlx.geojson_to_geobuf(geojson)
         self.colores = colores
+        self.classes= classes
         self.id = id_map
 
     def inicializar(self):
+
         return dl.Map(
             id=self.id,
             dragging=False,
@@ -71,7 +69,7 @@ class Mapa:
                     zoomToBoundsOnClick=False,
                     options=dict(style=aver),
                     hoverStyle=arrow_function(dict(weight=8, dashArray='')),
-                    hideout=dict(colorscale=self.colores, classes=classes, style=style, colorProp=VAR_PUNTAJE)
+                    hideout=dict(colorscale=self.colores, classes=self.classes, style=style, colorProp=VAR_PUNTAJE)
                 ),
                 
             ],
