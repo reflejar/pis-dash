@@ -1,2 +1,0 @@
-# Herramienta Ranking
-

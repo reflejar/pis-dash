@@ -2,7 +2,7 @@ version: '3'
 
 
 services:
-  web:
+  censos:
     build:
       context: .
     image: ghcr.io/reflejar/pis-dash:latest
@@ -10,4 +10,27 @@ services:
       - .:/app
     ports:
       - "8050:8050"
-    # command: python main.py censos
+    environment:
+      - APP_CONFIG=indicadores_censos
+
+  ranking:
+    build:
+      context: .
+    image: ghcr.io/reflejar/pis-dash:latest
+    volumes:
+      - .:/app
+    ports:
+      - "8051:8050"
+    environment:
+      - APP_CONFIG=ranking_ambiental
+
+  zonificacion:
+    build:
+      context: .
+    image: ghcr.io/reflejar/pis-dash:latest
+    volumes:
+      - .:/app
+    ports:
+      - "8052:8050"
+    environment:
+      - APP_CONFIG=mapa_normativo

@@ -47,9 +47,9 @@ $ python main.py <tool>
 ```
 
 tool puede ser alguna de las siguientes opciones:
-- zonificacion
-- censos
-- ranking
+- mapa_normativo
+- indicadores_censos
+- ranking_ambiental
 
 
 ### 2 - Docker

@@ -3,8 +3,9 @@ import dash_bootstrap_components as dbc
 
 Encabezado = dbc.Row([
                 dbc.Col([
-                    html.H4("NORMATIVA COMPARADA",className="text-white mt-5"),
-                    html.P(["Para el comparativo de normativas se establecieron cuatro dimensiones analíticas,"]),
-                    html.P(["1) Transparencia, 2) Protección de poblados, 3) Protección de escuelas rurales y 4) Protección del agua."]),
-                ],  md=12, class_name="text-white mt-5"),
+                    html.H3("Ranking",className="text-white fw-bolder pt-3"),
+                    html.Br(),
+                    html.P(["Clasificación interactiva de ordenanzas municipales de regulación de agroquímicos y promoción de la agroecología. Seleccioná la dimensión analítica de tu interés y compara entre municipios"], className="text-white poppins"),
+                    html.P(html.A("V 1.0 (métodologia & producto)", href="#metodologia-ranking", className="text-primary text-uppercase"))],  md=12, class_name="text-white mt-5"),
             ], class_name="my-5")
+

@@ -7,93 +7,152 @@ from dash import html
 from pages.constantes import *
 
 # Leer archivo geojson y cargar datos.
-bsas = gpd.read_file('pages/ranking_ambiental/data/limite_partidos_expandido.geojson', encoding="ASCI")
-#bsas.columns=["cca", "cde", "Municipios", "gna", "nam","sag", "ara3", "arl", "geometry"]
-bsas["Municipios"]=bsas["fna"].copy().apply(lambda x: str(x).replace("Partido de ", ""))
+gba = gpd.read_file('pages/ranking_ambiental/data/gba_limite_partidos_expandido.geojson', encoding="ASCI")
+pba = gpd.read_file('pages/ranking_ambiental/data/bsas_provincia.geojson', encoding="ASCI")
 
+# Comuna Municipios
+gba["Municipios"]=gba["fna"].copy().apply(lambda x: str(x).replace("Partido de ", ""))
+pba["Municipios"]=pba["fna"].copy().apply(lambda x: str(x).replace("Partido de ", ""))
 
-
-
-
-# Leer archivo csv y cargar datos de escuelas.
+# Leer archivo csv
 escuelas=pd.read_csv('pages/ranking_ambiental/data/escuelas_normativa.csv', sep=";",encoding="latin" )
-escuelas["Ordenanza"] = escuelas["Ordenanza"].fillna("").apply(lambda x: f"Ord. {x}" if x!="" else "")
-escuelas['Ordenanza'] = "[" + escuelas['Ordenanza'] + "]" + '(' + escuelas['Link'] + ')'
-escuelas["Ordenanza"] = escuelas["Ordenanza"].fillna("Sin Ordenanza")
+transparencia=pd.read_csv('pages/ranking_ambiental/data/transparencia_normativa.csv', sep=";",encoding="latin" )
+agua=pd.read_csv('pages/ranking_ambiental/data/agua_normativa.csv', sep=";",encoding="latin" )
+apiarios=pd.read_csv('pages/ranking_ambiental/data/apiarios_normativa.csv', sep=";",encoding="latin" )
+poblaciones=pd.read_csv('pages/ranking_ambiental/data/poblaciones_normativa.csv', sep=";",encoding="latin" )
+agroecologia=pd.read_csv('pages/ranking_ambiental/data/agroecologia_normativa.csv', sep=";",encoding="latin" )
 
 
-escuelas["Fecha"] = escuelas["Fecha"].fillna("\-")
+def crear_link(x):
+    """
+        función para limpiar el link
+        y convertirlo a formato Markdown
+    """
+    if " y " in x[0] or "--y--" in x[1]:
+        a=x[0].split("y")
+        b=x[1].split("--y--")
+        c=""
+        for i,j in zip(a,b):
+            c=c + "\n" + "[" +"Ord. " + i.strip()+ "]" + '(' + j.strip() + ')'
+        rdo=c
+    elif " y " in x[1]:
+        a=x[0].strip()
+        b=x[1].split("y")
+        rdo= "[" +"Ord. "+ a+ "]" + '(' + b[0].strip() + ')'
+    elif x[0]=="" or x[0]=="Sin Ordenanza":
+        rdo="Sin Ordenanza"
+    else:
+        rdo="[" + "Ord. " + x[0].strip()+ "]" + '(' + x[1].strip() + ')'
+    return rdo
 
-# Reemplazar valores nulos en columnas de tipo objeto con 'NO'
-columna_especifica = "Obligatoriedad de notificación"
-escuelas[columna_especifica] = escuelas[columna_especifica].fillna('NO')
+def preparar_base(base): 
+    """
+        función para preparar la base
+    """    
+    if 'Link - Repositorio' in base.columns:
+        base.rename(columns={'Link - Repositorio': 'Link'}, inplace=True)
+    elif 'LINK' in base.columns: 
+        base.rename(columns={'LOCALIDAD':'Municipios','LINK': 'Link','ORDENANZA': 'Ordenanza', 'FECHA': 'Fecha' , 'Puntaje - agroeco NORMALIZADO': 'Puntaje'}, inplace=True)
+    
 
-# Reemplazar valores nulos en la columna específica con '-'
-columna_especifica = 'Puntaje'
-escuelas[columna_especifica] = escuelas[columna_especifica].fillna('-')
+    base["Ordenanza"] = base["Ordenanza"].fillna("Sin Ordenanza")
 
-# Reemplazar valores nulos en columnas numéricas con 0
-numeric_columns = escuelas.select_dtypes(include=['number']).columns
-escuelas[numeric_columns] = escuelas[numeric_columns].fillna(0)
-del escuelas["Link"]
+    base["Link"] = base["Link"].fillna("")
+    base['Ordenanza'] = base[['Ordenanza','Link' ]].apply(crear_link, axis=1) 
 
 
+    base["Fecha"] = base["Fecha"].fillna("\-")
+
+    # # Reemplazar valores nulos en columnas de tipo objeto con 'NO'
+    # columna_especifica = "Obligatoriedad de notificación"
+    # base[columna_especifica] = base[columna_especifica].fillna('NO')
+
+    # # Reemplazar valores nulos en la columna específica con '-'
+    # columna_especifica = 'Puntaje'
+    # base[columna_especifica] = base[columna_especifica].fillna(0)
+
+    # Identificar las columnas que no son numéricas
+    non_numeric_columns = base.select_dtypes(exclude=['number']).columns
+    # Llenar los valores faltantes en las columnas no numéricas con una cadena vacía
+    base[non_numeric_columns] = base[non_numeric_columns].fillna("NO")
+
+    # Reemplazar valores nulos en columnas numéricas con 0
+    numeric_columns = base.select_dtypes(include=['number']).columns
+    base[numeric_columns] = base[numeric_columns].fillna(0)
+    base["Puntaje"]=base["Puntaje"].fillna(0).apply(lambda x: round(math.sqrt(x), 2) )
+    del base["Link"]
+    return base
+
+escuelas=preparar_base(escuelas)
+transparencia=preparar_base(transparencia)
+agua=preparar_base(agua)
+apiarios=preparar_base(apiarios)
+poblaciones=preparar_base(poblaciones)
+agroecologia=preparar_base(agroecologia)
+
+def crear_geojson(mapa, base):
+    """
+        función para mergear las bases con el geojson
+    """    
+    # union de tablas para incorporar ranking 
+    final_mapa=pd.merge(mapa, base[['Municipios', 'Puntaje']], on='Municipios', how='left')
+    # Agregar informacion de etiquetas
+    final_mapa["tooltip"] = final_mapa["nam"]
+    return json.loads(final_mapa.to_json(na="keep"))
+
+def crear_classes(base):
+    """
+        función para crear los diferentes valores de las clases
+    """        
+    min_value = base["Puntaje"].min()
+    max_value = base["Puntaje"].max()
+    middle_values = np.linspace(min_value, max_value, num=8, endpoint=True)
+    return list(middle_values)
 
 
-
-#union de tablas para incorporar ranking 
-bsas=pd.merge(bsas, escuelas[['Municipios', 'Puntaje']], on='Municipios', how='left')
-
-#Se crea variable con el nombre de la columna que contiene el listado de puntuación que hace al ranking
-VAR_PUNTAJE="Puntaje"
-
-# Crear valores medios y clases.
-bsas[VAR_PUNTAJE]=bsas[VAR_PUNTAJE].fillna(0).apply(lambda x: math.sqrt(x) )
-min_value = bsas[VAR_PUNTAJE].min()
-max_value = bsas[VAR_PUNTAJE].max()
-middle_values = np.linspace(min_value, max_value, num=8, endpoint=True)
-classes = list(middle_values)
-# Agregar informacion de etiquetas
-bsas["tooltip"] = bsas["nam"]
-
-bsas_geojson = json.loads(bsas.to_json(na="keep"))
 
 # Preparamos datas
 DATA = {
     'escuelas': {
         'data': escuelas,
-        'geojson_bsas': bsas_geojson,
-        'geojson_caba': bsas_geojson,
+        'geojson_pba': crear_geojson(pba, escuelas),
+        'geojson_gba': crear_geojson(gba, escuelas),
+        'classes': crear_classes(escuelas),
         'color': ROJO
     },
     'transparencia': {
-        'data': escuelas,
-        'geojson_bsas': bsas_geojson,
-        'geojson_caba': bsas_geojson,
+        'data': transparencia,
+        'geojson_pba': crear_geojson(pba, transparencia),
+        'geojson_gba': crear_geojson(gba, transparencia),
+        'classes': crear_classes(transparencia),
         'color': NARANJA
     },
     'agua': {
-        'data': escuelas,
-        'geojson_bsas': bsas_geojson,
-        'geojson_caba': bsas_geojson,
+        'data': agua,
+        'geojson_pba': crear_geojson(pba, agua),
+        'geojson_gba': crear_geojson(gba, agua),
+        'classes': crear_classes(agua),
         'color': VERDE_AGUA
     },
     'poblaciones': {
-        'data': escuelas,
-        'geojson_bsas': bsas_geojson,
-        'geojson_caba': bsas_geojson,
+        'data': poblaciones,
+        'geojson_pba': crear_geojson(pba, poblaciones),
+        'geojson_gba': crear_geojson(gba, poblaciones),
+        'classes': crear_classes(poblaciones),
         'color': LIMA
     },
     'apiarios': {
-        'data': escuelas,
-        'geojson_bsas': bsas_geojson,
-        'geojson_caba': bsas_geojson,
+        'data': apiarios,
+        'geojson_pba': crear_geojson(pba, apiarios),
+        'geojson_gba': crear_geojson(gba, apiarios),
+        'classes': crear_classes(apiarios),
         'color': LILA
     },
     'agroecologia': {
-        'data': escuelas,
-        'geojson_bsas': bsas_geojson,
-        'geojson_caba': bsas_geojson,
+        'data': agroecologia,
+        'geojson_pba': crear_geojson(pba, agroecologia),
+        'geojson_gba': crear_geojson(gba, agroecologia),
+        'classes': crear_classes(agroecologia),
         'color': CELESTE
     },
 }

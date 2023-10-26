@@ -1,7 +1,6 @@
 import sys
 import importlib
 import os
-import datetime
 from logger import logger
 
 ############################
@@ -11,6 +10,12 @@ from logger import logger
 from flask import Flask, request
 
 server = Flask(__name__)
+@server.route('/alive')
+def ok(): return "OK", 200
+
+@server.before_request
+def log_request_info():
+    logger.info('{} - {} - {}'.format(request.method, request.path, request.remote_addr))
 
 
 ############################
@@ -62,7 +67,7 @@ app.layout = html.Div(children=[
         fixed="top",
         className="text-primary",
     ),
-    html.Div(id='contenido-herramienta'),
+    herramienta.layout,
 	html.Footer([
         dbc.Container([
             dbc.Row([
@@ -85,13 +90,6 @@ app.layout = html.Div(children=[
     
 ])
 
-@app.callback(Output('contenido-herramienta', 'children'),Input('url', 'pathname'))
-def display_page(url):
-    # Fecha y hora actual
-    now = datetime.datetime.now()
-    logger.info(f'{request.host} {url} - {now.strftime("%Y-%m-%d %H:%M:%S")}')
-    # Fecha y hora actual
-    return herramienta.layout
 # Se corre la aplicación
 if __name__ == "__main__":
-	app.run(host="0.0.0.0", port=8050, debug=True, use_reloader=True)
+	server.run(host="0.0.0.0", port=8050, debug=True, use_reloader=True)
