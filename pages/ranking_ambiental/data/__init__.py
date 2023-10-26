@@ -51,9 +51,9 @@ def preparar_base(base):
         función para preparar la base
     """    
     if 'Link - Repositorio' in base.columns:
-        base.rename(columns={'Link - Repositorio': 'Link'}, inplace=True)
+        base = base.rename(columns={'Link - Repositorio': 'Link'})
     elif 'LINK' in base.columns: 
-        base.rename(columns={'LOCALIDAD':'Municipios','LINK': 'Link','ORDENANZA': 'Ordenanza', 'FECHA': 'Fecha' , 'Puntaje - agroeco NORMALIZADO': 'Puntaje'}, inplace=True)
+        base = base.rename(columns={'LOCALIDAD':'Municipios','LINK': 'Link','ORDENANZA': 'Ordenanza', 'FECHA': 'Fecha' , 'Puntaje - agroeco NORMALIZADO': 'Puntaje'})
     
 
     base["Ordenanza"] = base["Ordenanza"].fillna("Sin Ordenanza")
@@ -96,7 +96,7 @@ def concatenar_base_mapa(mapa, base, nombre_normativa):
         función para mergear las bases con la base del mapa
     """    
     a=base.copy()
-    a.rename(columns={'Puntaje': nombre_normativa}, inplace=True)
+    a = a.rename(columns={'Puntaje': nombre_normativa})
     # union de tablas para incorporar ranking 
     final_mapa=pd.merge(mapa, a[['Municipios', nombre_normativa]], on='Municipios', how='left')
     final_mapa[nombre_normativa]=final_mapa[nombre_normativa].fillna(0)
@@ -148,7 +148,7 @@ def crear_geojson (mapa, filtro):
         función para crear los diferentes geojson
     """ 
     mapa=mapa[['cca', 'cde', 'fna', 'gna', 'nam', 'sag', 'ara3', 'arl', 'geometry','Municipios', 'tooltip', filtro]]
-    mapa.rename(columns={filtro:'Puntaje'}, inplace=True)
+    mapa = mapa.rename(columns={filtro:'Puntaje'})
     return json.loads(mapa.to_json(na="keep"))
 
 
