@@ -9,12 +9,6 @@ from ..data import MUNICIPIOS
 
 Filtros = html.Div(
     [
-        html.H4("MAPA NORMATIVO", className="text-white pt-3"),
-        html.P([
-            "Seleccioná el municipio de tu interés.",
-            html.Br(),
-            "Activá y desactivá las capas de los diferentes elementos. De momento está disponible Mar Chiquita."
-        ], className="text-white"),
         dbc.Row([dbc.Col([
                     html.Label(htmlFor="select-municipio", title='Municipio'),
                     dcc.Dropdown(
@@ -58,11 +52,7 @@ Filtros = html.Div(
             dbc.Col(daq.BooleanSwitch(on=True, id="toggle_amort", labelPosition="bottom",color=ZONA_AMORTIGUAMIENTO), xs=3),
             dbc.Col(html.Span("Zonas de Amortiguamiento"), xs=9)
         ], className="text-white mb-2"),
-        dbc.Row(
-            dbc.Col(html.A(html.Img(src="assets/img/flechita.svg", className="animate__animated animate__fadeInDown animate__slower animate__infinite"), href="#footer-normativo"), class_name="text-center mt-5")
-        )
         
     ],
     id="filtros",
-    className="mt-5"
 )
