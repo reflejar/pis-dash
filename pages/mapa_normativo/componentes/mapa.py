@@ -148,7 +148,7 @@ MapaNormativo = html.Div(
             ),            
         ], 
         # style={'width': '1080px', 'height': '720px'},
-        className="mt-5 min-vh-75"
+        className="min-vh-50"
         ),
     ]
 )

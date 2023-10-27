@@ -39,10 +39,14 @@ FooterNormativo = dbc.Row(dbc.Col(
         html.Br(),
         html.H4("Zona de Amortiguamiento:", className="text-white"),
         html.P([
-            """Área en la que solo está permitida la aplicación de agroquímicos bajo estrictas pautas. Estas son: que los vientos sean mayores a 5
-            kilómetros por hora y menores a 15 kilómetros por hora. Además estos siempre deben ser provenientes desde la zona resguardada
-            hacia zona rural. Por otra parte la humedad relativa debe ser mayor al 50%. Y la temperatura no mayor a 25°C."""
+            """Área en la que solo está permitida la aplicación de agroquímicos bajo estrictas pautas. Estas son:"""
         ]),
+        html.Ul([
+                html.Li("Que los vientos sean mayores a 5 kilómetros por hora y menores a 15 kilómetros por hora"),
+                html.Li("Los vientos siempre deben ser provenientes desde la zona resguardada hacia la zona rural"),
+                html.Li("Humedad relativa mayor al 50%"),
+                html.Li("Temperatura no mayor a 25°C")
+            ]),
         html.Br(),
         html.H4("Sobre Escuelas Rurales:", className="text-white"),
         html.P([
@@ -51,8 +55,8 @@ FooterNormativo = dbc.Row(dbc.Col(
             html.Ul([
                 html.Li("Es obligatorio el aviso directo al director del establecimiento previo a la aplicación"),
                 html.Li("Es obligatoria la presencia de un profesional habilitado al momento de la pulverización"),
-                html.Li("Estas solo pueden realizarse o a contra horario escolar, es decir sin niños en los establecimientos"),
-                html.Li("La persona titular de dominio del sector rural deberá generar barreras forestales necesarias para que resguarden a la escuela.")
+                html.Li("Estas solo pueden realizarse o a contra horario escolar, es decir, sin niños en los establecimientos"),
+                html.Li("La persona titular de dominio del sector rural deberá generar barreras forestales necesarias para que resguarden a la escuela")
             ])
         ]),
         html.Br(),
@@ -60,14 +64,15 @@ FooterNormativo = dbc.Row(dbc.Col(
         html.P([
             html.Ul([
                 html.Li("Todas las personas físicas y jurídicas que hagan aplicaciones a nombre propio o de terceros deberán estar inscriptos en el registro municipal"),
-                html.Li("Todos los equipos de aplicación deberán estar registrados y ehibir la identificación alfanumérica en el frente ambos laterales y en la parte posterior de cada equipo con material reflectivo y en un tamaño no inferiores a 20 cm  12cm"),
+                html.Li("Todos los equipos de aplicación deberán estar registrados y exhibir la identificación alfanumérica en el frente ambos laterales y en la parte posterior de cada equipo con material reflectivo y en un tamaño no inferiores a 20cmx12cm"),
             ])
         ]),
         html.Br(),
         html.H4("Control Médico:", className="text-white"),
         html.P([
             html.Ul([
-                html.Li("Titular de dominio del sector rural deberá generar barreras forestales cuando su propiedad rural linde con zonas urbanas y/o establecimientos educativos a fin de lograr una defensa de protección natural permanente."),
+                html.Li("Es obligatorio el control del médico preocupacional y anual del personal de las empresas habilitadas:  aplicadores aéreos y terrestres, agronomías y empleados de establecimientos agropecuarios que manipulan productos agroquímicos"),
+                html.Li("La  documentación médica será propiedad del empleado"),
             ])
         ]),
         html.Br(),
@@ -81,9 +86,9 @@ FooterNormativo = dbc.Row(dbc.Col(
         html.Br(),
         html.Br(),
         html.H4("Canal de Denuncias:", className="text-white"),
-        html.P([
-            "+54 9 2265 41-8289"
-        ]),
+        html.P("Etchemendy Alejandro"),
+        html.P("Director de Higiene y Bromatología"),
+        html.P("+54 9 2235 69-6563"),
         html.Br(),
         html.I([
             "**Este mapa integra información de diversidad de fuentes: ",
@@ -103,5 +108,40 @@ FooterNormativo = dbc.Row(dbc.Col(
 ))
 
 
+
+
+
+Metodologia = dbc.Row(dbc.Col([
+        html.H5([html.Strong("METODOLOGÍA & PRODUCTO"), html.Span("V1.0",className='badge bg-primary text-black mx-3')], className="text-white pt-3 space-grotesk"),
+        html.P(html.I("""
+        Las normativas de regulación de agroquímicos a nivel local protegen distintos bienes delimitando zonas en las que se prohíbe 
+        la aplicación de agroquímicos (zonas de exclusión) o se requieren cuidados específicos para hacer aplicaciones (zonas de 
+        amortiguamiento). El Mapa de Zonificación Normativa es una herramienta que permite por medio de información geográfica (GIS) 
+        visualizar las restricciones de aplicación de agroquímicos de cada municipio. Esta herramienta está pensada para que:       
+        """)),
+        html.Ul([
+            html.Li(html.I("Gobiernos tenga un mejor instrumento de control")),
+            html.Li(html.I("Productores sepan en qué lotes deben adecuar sus manejos")),
+            html.Li(html.I("Comunidades puedan controlar el cumplimiento")),
+        ]),
+        html.P(html.I("""
+        A falta de un mapa oficial esta herramienta GIS integra información de diversas fuentes: 
+        escuelas de la Provincia de Buenos Aire (Datos Abiertos PBA) la georreferenciación de cursos de agua (Datos Abiertos PBA), 
+        parajes rurales y poblados urbanos a partir de imágenes satelitales (google maps) , información poblacional (INDEC), 
+        ontactos de las escuelas rurales (Datos Abiertos PBA y relevamiento propio) en suma a un conjunto de correcciones y precisiones 
+        reportadas desde el territorio. Las distancias de protección utilizadas (zonas de exclusión/amortiguamiento) se obtienen del 
+        texto original de cada ordenanza municipal.     
+        """)),
+        html.P(html.I("""PRODUCTO: La versión 1.0 solo mapea Mar Chiquita. Ya estamos trabajando en un una versión mejorada para Mar Chiquita 
+         (exclusión aerea + parajes rurales) y en versiones que incorperen a Saladillo , Lobos y 9 de Julio.""")),
+        html.P(html.I(""" *Este proyecto posee un enfoque colectivo, participativo y abierto. Si encontraste algún error o información 
+        desactualizada comunícate a contacto. También se puede acceder al dataset utilizado para la construcción de la herramienta."""))
+    ],
+    id="metodologia-normativa",
+    className=" text-white mt-5"
+))
+
+
+ 
 
 
