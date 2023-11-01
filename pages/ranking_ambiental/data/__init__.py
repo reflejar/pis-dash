@@ -159,41 +159,47 @@ DATA = {
         'geojson_pba': crear_geojson(pba, "escuelas"),
         'geojson_gba': crear_geojson(gba, "escuelas"),
         'classes': clases_escuelas,
-        'color': ROJO
+        'color': ROJO,
+        'color_claro':ROJO_CLARO
     },
     'transparencia': {
         'data': transparencia,
         'geojson_pba': crear_geojson(pba, "transparencia"),
         'geojson_gba': crear_geojson(gba, "transparencia"),
         'classes': clases_transparencia,
-        'color': NARANJA
+        'color': NARANJA,
+        'color_claro':NARANJA_CLARO
     },
     'agua': {
         'data': agua,
         'geojson_pba': crear_geojson(pba, "agua"),
         'geojson_gba': crear_geojson(gba, "agua"),
         'classes': clases_agua,
-        'color': VERDE_AGUA
+        'color': VERDE_AGUA,
+        'color_claro':VERDE_AGUA_CLARO
     },
     'poblaciones': {
         'data': poblaciones,
         'geojson_pba': crear_geojson(pba, "poblaciones"),
         'geojson_gba': crear_geojson(gba, "poblaciones"),
         'classes': clases_poblaciones,
-        'color': LIMA
+        'color': LIMA,
+        'color_claro':LIMA_CLARO
     },
     'apiarios': {
         'data': apiarios,
         'geojson_pba': crear_geojson(pba, "apiarios"),
         'geojson_gba': crear_geojson(gba, "apiarios"),
         'classes': clases_apiarios,
-        'color': LILA
+        'color': LILA,
+        'color_claro':LILA_CLARO
     },
     'agroecologia': {
         'data': agroecologia,
         'geojson_pba': crear_geojson(pba, "agroecologia"),
         'geojson_gba': crear_geojson(gba, "agroecologia"), 
         'classes': clases_agroecologia,
-        'color': CELESTE
+        'color': CELESTE,
+        'color_claro':CELESTE_CLARO
     },
 }
