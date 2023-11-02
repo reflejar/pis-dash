@@ -24,7 +24,8 @@ class Tabla:
         return dash_table.DataTable(
             id=self.id,
             data=self.df.to_dict('records'),
-            columns=[{"name": i, "id": i, "presentation": 'markdown'} for i in self.columns],
+            columns=[{'id': i, 'name': i, 'presentation': 'markdown'} if (i == 'Ordenanza')
+                  else {'id': i, 'name': i} for i in self.columns],
             style_as_list_view=True,
             fixed_rows={'headers': True},
             fixed_columns={'headers': True,'data': 1},
@@ -39,7 +40,7 @@ class Tabla:
             },
             style_header={
                 'backgroundColor': self.colorclaro,
-                'height': '50px',
+                'height': '75px',
                 'fontWeight': 'bold',
                 'textAlign':'center',
                 'fontFamily': 'Arial',
@@ -56,7 +57,7 @@ class Tabla:
                 },
                 {
                     'if': {'state': 'active'},
-                    'backgroundColor': 'rgba(0,0,0,0.05)',
+                    'backgroundColor': 'rgba(0,0,0,0.025)',
                     'border': f'1px solid {self.color}',
                     'color' : 'rgba(0,0,0,1)',
                 },
@@ -71,7 +72,7 @@ class Tabla:
                         },
             style_cell={'whiteSpace': 'pre-line',
                         'minWidth':'100%',
-                        'width':'200px',
+                        'width':'150px',
                         'textAlign':'center',
                         },
 

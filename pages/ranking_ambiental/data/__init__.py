@@ -81,6 +81,7 @@ def preparar_base(base):
     numeric_columns = base.select_dtypes(include=['number']).columns
     base[numeric_columns] = base[numeric_columns].fillna(0)
     base["Puntaje"]=base["Puntaje"].fillna(0).apply(lambda x: round(math.sqrt(x), 2) )
+    base["Fecha"]=base["Fecha"].apply(lambda x: x if x!="\-" else "")
     del base["Link"]
     return base
 
