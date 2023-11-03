@@ -109,7 +109,7 @@ def agregar_etiquetas_mapa(mapa, etiquetas):
     """    
     final_mapa=pd.merge(mapa, etiquetas, on='Municipios', how='left')
     # Agregar informacion de etiquetas
-    final_mapa["tooltip"] = final_mapa['nam']+ '\n' + "Cantidad de habitantes: " + final_mapa['Habitantes (CENSO 2022)']
+    final_mapa["tooltip"] = f"{ final_mapa['nam']}<br>Cantidad de habitantes: { final_mapa['Habitantes (CENSO 2022)']}"
     return final_mapa
 
 gba=agregar_etiquetas_mapa(gba, etiquetas)

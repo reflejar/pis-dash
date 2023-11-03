@@ -1,6 +1,15 @@
 import pandas as pd
 from dash import dash_table, html
 
+
+# Función para establecer la altura del encabezado
+def estilo_encabezado(column_name):
+    num_palabras = len(column_name.split())
+    if num_palabras > 5:
+        return '150px'
+    else:
+        return  '75px' # Altura por defecto
+    
 class Tabla:
     """
         Clase para crear las diferentes tablas
@@ -40,14 +49,13 @@ class Tabla:
             },
             style_header={
                 'backgroundColor': self.colorclaro,
-                'height': '75px',
+                'height':estilo_encabezado(self.columns[5]),
                 'fontWeight': 'bold',
                 'textAlign':'center',
                 'fontFamily': 'Arial',
                 'overflow': 'hidden',
                 'textOverflow': 'ellipsis',
             },
-           
             style_data_conditional = [
                 {
                     'if': {
@@ -63,7 +71,8 @@ class Tabla:
                 },
             ],
 
-            sort_action='native',
+            sort_action="native",
+
             
             style_data={'minWidth': '100%', 
                         'textAlign':'center',
