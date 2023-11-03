@@ -81,6 +81,7 @@ def preparar_base(base):
     numeric_columns = base.select_dtypes(include=['number']).columns
     base[numeric_columns] = base[numeric_columns].fillna(0)
     base["Puntaje"]=base["Puntaje"].fillna(0).apply(lambda x: round(math.sqrt(x), 2) )
+    base["Fecha"]=base["Fecha"].apply(lambda x: x if x!="\-" else "")
     del base["Link"]
     return base
 
@@ -108,7 +109,7 @@ def agregar_etiquetas_mapa(mapa, etiquetas):
     """    
     final_mapa=pd.merge(mapa, etiquetas, on='Municipios', how='left')
     # Agregar informacion de etiquetas
-    final_mapa["tooltip"] = final_mapa['nam']+ '\n' + "Cantidad de habitantes: " + final_mapa['Habitantes (CENSO 2022)']
+    final_mapa["tooltip"] = f"{ final_mapa['nam']}<br>Cantidad de habitantes: { final_mapa['Habitantes (CENSO 2022)']}"
     return final_mapa
 
 gba=agregar_etiquetas_mapa(gba, etiquetas)
@@ -159,41 +160,47 @@ DATA = {
         'geojson_pba': crear_geojson(pba, "escuelas"),
         'geojson_gba': crear_geojson(gba, "escuelas"),
         'classes': clases_escuelas,
-        'color': ROJO
+        'color': ROJO,
+        'color_claro':ROJO_CLARO
     },
     'transparencia': {
         'data': transparencia,
         'geojson_pba': crear_geojson(pba, "transparencia"),
         'geojson_gba': crear_geojson(gba, "transparencia"),
         'classes': clases_transparencia,
-        'color': NARANJA
+        'color': NARANJA,
+        'color_claro':NARANJA_CLARO
     },
     'agua': {
         'data': agua,
         'geojson_pba': crear_geojson(pba, "agua"),
         'geojson_gba': crear_geojson(gba, "agua"),
         'classes': clases_agua,
-        'color': VERDE_AGUA
+        'color': VERDE_AGUA,
+        'color_claro':VERDE_AGUA_CLARO
     },
     'poblaciones': {
         'data': poblaciones,
         'geojson_pba': crear_geojson(pba, "poblaciones"),
         'geojson_gba': crear_geojson(gba, "poblaciones"),
         'classes': clases_poblaciones,
-        'color': LIMA
+        'color': LIMA,
+        'color_claro':LIMA_CLARO
     },
     'apiarios': {
         'data': apiarios,
         'geojson_pba': crear_geojson(pba, "apiarios"),
         'geojson_gba': crear_geojson(gba, "apiarios"),
         'classes': clases_apiarios,
-        'color': LILA
+        'color': LILA,
+        'color_claro':LILA_CLARO
     },
     'agroecologia': {
         'data': agroecologia,
         'geojson_pba': crear_geojson(pba, "agroecologia"),
         'geojson_gba': crear_geojson(gba, "agroecologia"), 
         'classes': clases_agroecologia,
-        'color': CELESTE
+        'color': CELESTE,
+        'color_claro':CELESTE_CLARO
     },
 }
