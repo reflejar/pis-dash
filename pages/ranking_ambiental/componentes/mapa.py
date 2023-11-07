@@ -33,7 +33,7 @@ Mapa = dbc.Card(
             ],
         ),
         color="light", 
-        class_name="shadow my-5",
+        class_name="shadow min-vh-50 my-5",
         outline=True,
     )
 
@@ -54,6 +54,7 @@ def render_content(tab):
         selected['geojson_pba'], 
         colorscale, 
         selected['classes'], 
+        [-37.13, -60.03],
         'mapa-ranking-pba', 
         "Puntaje"
         ).inicializar()
@@ -61,6 +62,7 @@ def render_content(tab):
         selected['geojson_gba'], 
         colorscale, 
         selected['classes'], 
+        [-37.13, -49.94],
         'mapa-ranking-caba', 
         "Puntaje"
         ).inicializar()

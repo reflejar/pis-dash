@@ -39,12 +39,14 @@ class Mapa:
             geojson,
             colores=[],
             classes=[],
+            centro=[],
             id_map="",
             color_prop=""
     ) -> None:
         self.geobuf = dlx.geojson_to_geobuf(geojson)
         self.colores = colores
         self.classes= classes
+        self.centro=centro
         self.id = id_map
         self.color_prop = color_prop
 
@@ -58,11 +60,12 @@ class Mapa:
             scrollWheelZoom=False,
             doubleClickZoom=False,
             attributionControl=False,   
+            zoom=6,
+            center=self.centro,
             children=[
                 dl.GeoJSON(
                     data=self.geobuf,
                     format='geobuf',
-                    zoomToBounds=True,
                     zoomToBoundsOnClick=False,
                     options=dict(style=js_func, onEachFeature=ns("on_each_feature")),
                     hoverStyle=arrow_function(dict(weight=8, dashArray='')),

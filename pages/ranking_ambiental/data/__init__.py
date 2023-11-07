@@ -7,8 +7,8 @@ from dash import html
 from pages.constantes import *
 
 # Leer archivo geojson y cargar datos.
-gba = gpd.read_file('pages/ranking_ambiental/data/gba_limite_partidos_expandido.geojson', encoding="ASCI")
-pba = gpd.read_file('pages/ranking_ambiental/data/bsas_provincia.geojson', encoding="ASCI")
+gba = gpd.read_parquet('pages/ranking_ambiental/data/gba_limite_partidos_expandido.parquet')
+pba = gpd.read_parquet('pages/ranking_ambiental/data/bsas_provincia.parquet')
 
 # Comuna Municipios
 gba["Municipios"]=gba["fna"].copy().apply(lambda x: str(x).replace("Partido de ", ""))
