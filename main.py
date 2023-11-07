@@ -15,7 +15,8 @@ def ok(): return "OK", 200
 
 @server.before_request
 def log_request_info():
-    logger.info('{} - {} - {}'.format(request.method, request.path, request.remote_addr))
+    if not 'alive' in request.remote_addr:
+        logger.info('{} - {} - {}'.format(request.method, request.path, request.remote_addr))
 
 
 ############################
