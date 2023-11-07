@@ -3,7 +3,9 @@ import dash_leaflet.express as dlx
 
 # import plotly.io as pio
 from dash_extensions.javascript import arrow_function, assign
+from dash_extensions.javascript import Namespace
 
+ns = Namespace("dash_props", "module")
 
 #Transformar a geobuf
 
@@ -55,14 +57,14 @@ class Mapa:
             zoomControl=False,
             scrollWheelZoom=False,
             doubleClickZoom=False,
-            attributionControl=False,
+            attributionControl=False,   
             children=[
                 dl.GeoJSON(
                     data=self.geobuf,
                     format='geobuf',
                     zoomToBounds=True,
                     zoomToBoundsOnClick=False,
-                    options=dict(style=js_func),
+                    options=dict(style=js_func, onEachFeature=ns("on_each_feature")),
                     hoverStyle=arrow_function(dict(weight=8, dashArray='')),
                     hideout=dict(
                         colorscale=self.colores, 
