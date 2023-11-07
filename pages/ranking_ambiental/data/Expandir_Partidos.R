@@ -4,8 +4,6 @@ library(leaflet)
 data=st_read("C:/Users/simon/Downloads/limite_partidos.geojson")
 st_crs(data) <- 4326  # Set the coordinate reference system to WGS84
 
-
-
 i=2
 
 partidos <- c("Almirante Brown", "Avellaneda", "Berazategui", "Esteban Echeverría", "Ezeiza", "Florencio Varela","General San Martín" ,"Hurlingham", "Ituzaingó", "José C. Paz", "La Matanza", "Lanús", "Lomas de Zamora", "Malvinas Argentinas", "Merlo", "Moreno", "Morón", "Presidente Perón", "Quilmes", "San Fernando", "San Isidro", "San Miguel", "Tigre", "Tres de Febrero", "Vicente López")
@@ -13,7 +11,6 @@ partidos <- c("Almirante Brown", "Avellaneda", "Berazategui", "Esteban Echeverr�
 sum(partidos %in% data$nam)
 
 leaflet()%>%addPolygons(data=data[data$nam %in% partidos,])%>%addTiles()
-
 
 gba=data[data$nam %in% partidos,]
 provincia=data[!data$nam %in% partidos,]
@@ -58,82 +55,112 @@ factor_expansion_altura=altura_bbox_provincia/altura_bbox_gba
 factor_expansion_ancho=ancho_bbox_provincia/ancho_bbox_gba
 
 factor_expansion=min(factor_expansion_altura,factor_expansion_ancho)
+factor_expansion=7
 
-for(i in 1:nrow(gba)){
+
+modificar_tamaño_poligonos=function(poligonos,factor_modificacion,expandir=T){
   
-  print(i)
+  bbox_poligonos <- st_as_sfc(st_bbox(poligonos))
+  bbox_poligonos <- st_cast(bbox_poligonos, "POLYGON")
   
+  centroide_poligonos=st_centroid(bbox_poligonos)
   
-  # Convert the polygon's coordinates to an sf object
-  # polygon_sf <- st_sfc(st_polygon(list(polygon_coords)))
-  polygon_sf=st_sfc(gba$geometry[i])
+  centroide_poligonos=st_coordinates(centroide_poligonos)
   
-  polygon_sf <- st_cast(polygon_sf, "POLYGON")
+  # Define the fixed point's coordinates
+  fixed_point <- c(centroide_poligonos[1], centroide_poligonos[2])
   
-  for(j in 1:length(polygon_sf)){
-    polygon_coords=st_coordinates(polygon_sf[[j]])
-    polygon_coords=polygon_coords[,c("X","Y")]
+  for(i in 1:nrow(poligonos)){
     
-    # st_crs(polygon_sf[[j]]) <- 4326  # Set the coordinate reference system to WGS84
-    
-    # leaflet()%>%addPolygons(data=polygon_sf)%>%addTiles()
+    print(i)
     
     
+    # Convert the polygon's coordinates to an sf object
+    # polygon_sf <- st_sfc(st_polygon(list(polygon_coords)))
+    polygon_sf=st_sfc(poligonos$geometry[i])
     
-    # Calculate the distances from each node to the fixed point
-    distances <- sqrt((polygon_coords[, 1] - fixed_point[1])^2 + (polygon_coords[, 2] - fixed_point[2])^2)
+    polygon_sf <- st_cast(polygon_sf, "POLYGON")
+    
+    for(j in 1:length(polygon_sf)){
+      polygon_coords=st_coordinates(polygon_sf[[j]])
+      polygon_coords=polygon_coords[,c("X","Y")]
+      
+      # st_crs(polygon_sf[[j]]) <- 4326  # Set the coordinate reference system to WGS84
+      
+      # leaflet()%>%addPolygons(data=polygon_sf)%>%addTiles()
+      
+      
+      
+      # Calculate the distances from each node to the fixed point
+      distances <- sqrt((polygon_coords[, 1] - fixed_point[1])^2 + (polygon_coords[, 2] - fixed_point[2])^2)
+      
+      
+      distancesx=polygon_coords[, 1] - fixed_point[1]
+      distancesy=polygon_coords[, 2] - fixed_point[2]
+      
+      matrix <- cbind(distancesx, distancesy)
+      
+      
+      # Create the transformation matrix
+      # transformation_matrix <- diag(scaling_factor, nrow = 2)
+      
+      
+      # Multiply the vertex matrix by the transformation matrix
+      # transformed_coords <- polygon_coords %*% transformation_matrix
+      if(expandir==F){
+        transformation_matrix=matrix/factor_modificacion
+        transformed_coords <- polygon_coords - transformation_matrix
+      }else{
+        transformation_matrix=matrix*factor_modificacion
+        transformed_coords <- polygon_coords + transformation_matrix
+      }
+      
+      # Convert the transformed coordinates to an sf object
+      transformed_sf <- st_sfc(st_polygon(list(transformed_coords)))
+      st_crs(transformed_sf) <- 4326  # Set the coordinate reference system to WGS84
+      # leaflet()%>%addPolygons(data=transformed_sf)%>%addTiles()
+      
+      
+      if(j==1){
+        transformed_sf_total=transformed_sf  
+      }else{
+        transformed_sf_total= append(transformed_sf_total, transformed_sf)
+      }
+      
+    }
+    transformed_sf_total <- st_combine(transformed_sf_total)
+    
+    transformed_sf_total<- st_cast(transformed_sf_total, "MULTIPOLYGON")
+    
+    transformed_sf_total=st_as_sf(transformed_sf_total)
+    
+    if(nrow(transformed_sf_total)>1){
+      print(paste0("Esta observacion ",i, " tiene mas"))
+    }
     
     
-    distancesx=polygon_coords[, 1] - fixed_point[1]
-    distancesy=polygon_coords[, 2] - fixed_point[2]
-    
-    matrix <- cbind(distancesx, distancesy)
-    
-    
-    # Create the transformation matrix
-    # transformation_matrix <- diag(scaling_factor, nrow = 2)
-    transformation_matrix=matrix*factor_expansion
-    
-    
-    # Multiply the vertex matrix by the transformation matrix
-    # transformed_coords <- polygon_coords %*% transformation_matrix
-    transformed_coords <- polygon_coords + transformation_matrix
-    
-    # Convert the transformed coordinates to an sf object
-    transformed_sf <- st_sfc(st_polygon(list(transformed_coords)))
-    st_crs(transformed_sf) <- 4326  # Set the coordinate reference system to WGS84
-    # leaflet()%>%addPolygons(data=transformed_sf)%>%addTiles()
-    
-    
-    if(j==1){
-      transformed_sf_total=transformed_sf  
+    if(i ==1){
+      total=transformed_sf_total
     }else{
-      transformed_sf_total= append(transformed_sf_total, transformed_sf)
+      total=rbind(total, transformed_sf_total)
     }
     
   }
-  transformed_sf_total <- st_combine(transformed_sf_total)
   
-  transformed_sf_total<- st_cast(transformed_sf_total, "MULTIPOLYGON")
-
-  transformed_sf_total=st_as_sf(transformed_sf_total)
-
-  if(nrow(transformed_sf_total)>1){
-    print(paste0("Esta observacion ",i, " tiene mas"))
-  }
+  st_geometry(poligonos)=total$x
   
-
-  if(i ==1){
-    total=transformed_sf_total
-  }else{
-    total=rbind(total, transformed_sf_total)
-  }
-  
+  return(poligonos)
 }
 
-st_geometry(gba)=total$x
+gba1=modificar_tamaño_poligonos(gba,factor_modificacion = 5)
+leaflet()%>%addPolygons(data=gba1)%>%addTiles()
 
-leaflet()%>%addPolygons(data=gba)%>%addTiles()
+pba1=modificar_tamaño_poligonos(provincia,factor_modificacion = 5,expandir=F)
+leaflet()%>%addPolygons(data=pba1)%>%addTiles()
+
+
+gba=gba1
+
 
 
 bbox_gba_expandido <- st_as_sfc(st_bbox(gba))
@@ -146,6 +173,8 @@ centroide_gba_expandido=st_coordinates(centroide_gba_expandido)
 # Define the fixed point's coordinates
 puntos_centro_gba <- c(centroide_gba_expandido[1], centroide_gba_expandido[2])
 puntos_centro_provincia <- c(centroide_provincia[1], centroide_provincia[2])
+
+
 
 
 correccion_vertical=centroide_provincia[2]-centroide_gba_expandido[2]
@@ -208,6 +237,7 @@ for(i in 1:nrow(gba)){
 st_geometry(gba)=total$x
 
 leaflet()%>%addPolygons(data=gba,label=~as.character(gba$nam))%>%addPolygons(data=provincia,label=~as.character(provincia$nam))%>%addTiles()
+leaflet()%>%addPolygons(data=gba,label=~as.character(gba$nam))%>%addPolygons(data=pba1,label=~as.character(provincia$nam))%>%addTiles()
 
 
 
@@ -216,7 +246,11 @@ provincia_total=rbind(provincia,gba)
 
 
 st_write(provincia_total,"C:/Users/simon/Downloads/limite_partidos_expandido.geojson")
+st_write(provincia,"C:/Users/simon/Downloads/bsas_provincia.geojson")
+st_write(gba,"C:/Users/simon/Downloads/gba_limite_partidos_expandido.geojson")
 
+st_write_parquet(pba1,"C:/Users/simon/Downloads/bsas_provincia.parquet")
+st_write_parquet(gba,"C:/Users/simon/Downloads/gba_limite_partidos_expandido.parquet")
 
 
 transformed_coords[1,]
