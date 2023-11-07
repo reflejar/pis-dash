@@ -81,6 +81,7 @@ def preparar_base(base):
     numeric_columns = base.select_dtypes(include=['number']).columns
     base[numeric_columns] = base[numeric_columns].fillna(0)
     base["Puntaje"]=base["Puntaje"].fillna(0).apply(lambda x: round(math.sqrt(x), 2) )
+    base["Fecha"]=base["Fecha"].apply(lambda x: x if x!="\-" else "")
     del base["Link"]
     return base
 
@@ -161,6 +162,7 @@ DATA = {
         'geojson_gba': crear_geojson(gba, "escuelas"),
         'classes': clases_escuelas,
         'color': ROJO,
+        'color_claro':ROJO_CLARO
     },
     'transparencia': {
         'data': transparencia,
@@ -168,6 +170,7 @@ DATA = {
         'geojson_gba': crear_geojson(gba, "transparencia"),
         'classes': clases_transparencia,
         'color': NARANJA,
+        'color_claro':NARANJA_CLARO
     },
     'agua': {
         'data': agua,
@@ -175,6 +178,7 @@ DATA = {
         'geojson_gba': crear_geojson(gba, "agua"),
         'classes': clases_agua,
         'color': VERDE_AGUA,
+        'color_claro':VERDE_AGUA_CLARO
     },
     'poblaciones': {
         'data': poblaciones,
@@ -182,6 +186,7 @@ DATA = {
         'geojson_gba': crear_geojson(gba, "poblaciones"),
         'classes': clases_poblaciones,
         'color': LIMA,
+        'color_claro':LIMA_CLARO
     },
     'apiarios': {
         'data': apiarios,
@@ -189,6 +194,7 @@ DATA = {
         'geojson_gba': crear_geojson(gba, "apiarios"),
         'classes': clases_apiarios,
         'color': LILA,
+        'color_claro':LILA_CLARO
     },
     'agroecologia': {
         'data': agroecologia,
@@ -196,5 +202,6 @@ DATA = {
         'geojson_gba': crear_geojson(gba, "agroecologia"), 
         'classes': clases_agroecologia,
         'color': CELESTE,
+        'color_claro':CELESTE_CLARO
     },
 }
