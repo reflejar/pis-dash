@@ -15,7 +15,7 @@ window.dashExtensions = Object.assign({}, window.dashExtensions, {
                 style.dashArray = false;
             } else {
                 for (let i = 0; i < classes.length; ++i) {
-                    if (value > classes[i]) {
+                    if (value >= classes[i]) {
                         style.fillColor = colorscale[i];
                         style.weight = 1;
                         style.dashArray = false;

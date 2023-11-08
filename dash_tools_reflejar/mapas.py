@@ -19,7 +19,7 @@ js_func = assign("""function(feature, context){
                             style.dashArray = false;
                         } else {
                             for (let i = 0; i < classes.length; ++i) {
-                                if (value > classes[i]) {
+                                if (value >= classes[i]) {
                                     style.fillColor = colorscale[i];
                                     style.weight = 1;
                                     style.dashArray = false;
@@ -77,7 +77,7 @@ class Mapa:
                             opacity=1, 
                             color='white', 
                             dashArray='4', 
-                            fillOpacity=0.8
+                            fillOpacity=1
                             ), 
                         colorProp=self.color_prop
                     )

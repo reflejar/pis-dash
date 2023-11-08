@@ -52,6 +52,7 @@ Mapa = Hash(
 def render_content(tab):
     selected = DATA[tab]
     colorscale = dtr.crear_colorscale(selected['color'], 10, 8)
+    print(len(colorscale))
     MapaBuenosAires = dtr.Mapa(
         selected['geojson_pba'], 
         colorscale, 
