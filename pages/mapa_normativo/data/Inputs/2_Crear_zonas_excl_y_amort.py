@@ -22,14 +22,6 @@ from itertools import combinations
 
 SAVE_FOLDER = 'pages/mapa_normativo/data/'
 
-#TEST PARA GUARDAR JSONS COMO PARQUET
-# from pyarrow import json
-# import pyarrow.parquet as pq
-
-# table = json.read_json('C:/python/json_teste') 
-# pq.write_table(table, 'C:/python/result.parquet')  # save json/table as parquet
-
-
 #Definir parametros de zonas de exclusion y amortiguamiento
 local_excl=150
 local_amort=500
@@ -38,6 +30,16 @@ par_amort=500
 esc_excl=200
 esc_amort=500
 sup_agua_excl=25
+
+## Funcion para Transformar la proyeccion que se usa
+
+#TEST PARA GUARDAR JSONS COMO PARQUET
+# from pyarrow import json
+# import pyarrow.parquet as pq
+
+# table = json.read_json('C:/python/json_teste') 
+# pq.write_table(table, 'C:/python/result.parquet')  # save json/table as parquet
+
 
 #### Localidades y parajes #####
 
@@ -64,7 +66,7 @@ localidades_excl.to_parquet(f"{SAVE_FOLDER}localidades_excl.parquet")
 localidades_amort.to_parquet(f"{SAVE_FOLDER}localidades_amort.parquet")
 
 
-#Parajes
+#PARAJES
 parajes=gpd.read_file(f"{SAVE_FOLDER}Inputs/Parajes_Poblacion.geojson")
 parajes=parajes.reset_index()
 
@@ -79,33 +81,27 @@ parajes_amort = parajes_amort.to_crs("epsg:22183")
 parajes_amort.geometry = parajes_amort.geometry.buffer(par_excl+par_amort, 10)
 parajes_amort= parajes_amort.to_crs('epsg:4326')  
 
-
 #Sacar overlap entre los poligonos
 parajes_amort = parajes_amort.overlay(parajes_excl, how='difference')
 parajes_excl = parajes_excl.overlay(parajes, how='difference')
 
+# Guardar parquet de parajes excl y amor
 parajes_excl.to_parquet(f"{SAVE_FOLDER}parajes_excl.parquet")
 parajes_amort.to_parquet(f"{SAVE_FOLDER}parajes_amort.parquet")
 
 
-#Unir localidades y parajes
+#Unir y guardar localidades y parajes
 localidades_parajes=pd.concat([localidades,parajes],ignore_index=True)
 localidades_parajes=localidades_parajes.drop(["index"],axis=1)
 localidades_parajes=localidades_parajes.reset_index()
-
-
-# localidades_parajes=pd.merge(localidades_parajes,poblacion,on="Name",how="left")
-# 
-# 
 localidades_parajes.to_parquet(f"{SAVE_FOLDER}localidades_parajes.parquet")
 
 #Transformar a json (para mapa) y guardar
 localidades_parajes_geojson=json.loads(localidades_parajes.to_json(na="keep"))
-with open('./localidades_parajes_geojson.pkl', 'wb') as f:
+with open(f'{SAVE_FOLDER}localidades_parajes_geojson.pkl', 'wb') as f:
     pickle.dump(localidades_parajes_geojson, f, protocol=pickle.HIGHEST_PROTOCOL)
 
-
-### Escuelas ###
+################################################### ESCUELAS ###########################################
 
 escuelas_en_parcelas = gpd.read_file(f"{SAVE_FOLDER}Inputs/escuelas_en_parcelas.geojson")
 # escuelas_en_parcelas['característica.telefónica']=escuelas_en_parcelas['característica.telefónica'].astype(str).replace('\.0', '', regex=True)
@@ -127,14 +123,12 @@ for idx in [i for i, c in enumerate(escuelas_en_parcelas.columns) if c.startswit
 for idx in [i for i, c in enumerate(escuelas_en_parcelas.columns) if c.startswith("direccion")]:
     escuelas_en_parcelas.iloc[:, idx] = escuelas_en_parcelas.iloc[:, idx].fillna("-")    
 
-
-
-escuelas_en_parcelas.to_parquet("./escuelas_parcelas.parquet")
+escuelas_en_parcelas.to_parquet(f"{SAVE_FOLDER}escuelas_parcelas.parquet")
 
 
 #Transformar a json (para mapa) y guardar
 escuelas_en_parcelas_geojson=json.loads(escuelas_en_parcelas.to_json(na="keep"))
-with open('./escuelas_parcelas_geojson.pkl', 'wb') as f:
+with open(f'{SAVE_FOLDER}escuelas_parcelas_geojson.pkl', 'wb') as f:
     pickle.dump(escuelas_en_parcelas_geojson, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 escuelas_en_parcelas = escuelas_en_parcelas.to_crs("epsg:4326")
@@ -155,8 +149,8 @@ escuelas_amort= escuelas_amort.to_crs('epsg:4326')
 escuelas_amort = escuelas_amort.overlay(escuelas_excl, how='difference')
 escuelas_excl = escuelas_excl.overlay(escuelas_en_parcelas, how='difference')
 
-escuelas_excl.to_parquet("./escuelas_parcelas_excl.parquet")
-escuelas_amort.to_parquet("./escuelas_parcelas_amort.parquet")
+escuelas_excl.to_parquet(f"{SAVE_FOLDER}escuelas_parcelas_excl.parquet")
+escuelas_amort.to_parquet(f"{SAVE_FOLDER}escuelas_parcelas_amort.parquet")
 
 # escuelas=gpd.read_file("./Inputs/escuelas.geojson")
 # escuelas=escuelas.reset_index()
@@ -181,16 +175,17 @@ escuelas_amort.to_parquet("./escuelas_parcelas_amort.parquet")
 # escuelas_excl.to_parquet("./Inputs/escuelas_excl.parquet")
 # escuelas_amort.to_parquet("./Inputs/escuelas_amort.parquet")
 
-####  Superficies de agua #####
+
+################################################### AGUAS ###########################################
 cuerpos=gpd.read_file(f"{SAVE_FOLDER}Inputs/cuerpos.geojson",encoding="ASCI")
 cuerpos=cuerpos.reset_index()
 
-cuerpos.to_parquet("./cuerpos.parquet")
+cuerpos.to_parquet(f"{SAVE_FOLDER}cuerpos.parquet")
 
 
 #Transformar a json (para mapa) y guardar
 cuerpos_geojson=json.loads(cuerpos.to_json(na="keep"))
-with open('./cuerpos_geojson.pkl', 'wb') as f:
+with open(f'{SAVE_FOLDER}cuerpos_geojson.pkl', 'wb') as f:
     pickle.dump(cuerpos_geojson, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 cuerpos = cuerpos.to_crs("epsg:4326")
@@ -215,11 +210,11 @@ cursos_excl= cursos_excl.to_crs('epsg:4326')
 cuerpos_excl = cuerpos_excl.overlay(cuerpos, how='difference')
 cursos_excl = cursos_excl.overlay(cursos, how='difference')
 
-cuerpos_excl.to_parquet("./cuerpos_excl.parquet")
-cursos_excl.to_parquet("./cursos_excl.parquet")
+cuerpos_excl.to_parquet(f"{SAVE_FOLDER}cuerpos_excl.parquet")
+cursos_excl.to_parquet(f"{SAVE_FOLDER}cursos_excl.parquet")
 
 
-###### #Generar areas de exclusion y amortiguamiento totales
+###### Generar areas de exclusion y amortiguamiento totales
 
 localidades_excl=gpd.read_parquet(f"{SAVE_FOLDER}localidades_excl.parquet")
 localidades_amort=gpd.read_parquet(f"{SAVE_FOLDER}localidades_amort.parquet")
@@ -265,10 +260,10 @@ total_amort.to_parquet(f"{SAVE_FOLDER}total_amort.parquet")
 total_excl_geojson=json.loads(total_excl.to_json(na="keep"))
 total_amort_geojson=json.loads(total_amort.to_json(na="keep"))
 
-with open('./total_excl_geojson.pkl', 'wb') as f:
+with open(f'{SAVE_FOLDER}total_excl_geojson.pkl', 'wb') as f:
     pickle.dump(total_excl_geojson, f, protocol=pickle.HIGHEST_PROTOCOL)
 
-with open('./total_amort_geojson.pkl', 'wb') as f:
+with open(f'{SAVE_FOLDER}total_amort_geojson.pkl', 'wb') as f:
     pickle.dump(total_amort_geojson, f, protocol=pickle.HIGHEST_PROTOCOL)
     
     
@@ -294,7 +289,7 @@ sum(total_excl_area)/100
 #################  Preprocesar archivos geoespaciales  ##################
 
 
-#####  Reservas ###########
+################################################### RESERVAS ###########################################
 
 
 reservas=gpd.read_file(f"{SAVE_FOLDER}Inputs/Reservas.geojson")
@@ -309,8 +304,7 @@ reservas_geojson=json.loads(reservas.to_json(na="keep"))
 with open(f'{SAVE_FOLDER}reservas_geojson.pkl', 'wb') as f:
     pickle.dump(reservas_geojson, f, protocol=pickle.HIGHEST_PROTOCOL)
 
-#####  Cursos ###########
-
+################################################### CURSOS ###########################################
 
 cursos=gpd.read_file(f"{SAVE_FOLDER}Inputs/cursos_agua.geojson")
 cursos.to_parquet(f"{SAVE_FOLDER}cursos_agua.parquet")
