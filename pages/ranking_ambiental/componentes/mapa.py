@@ -8,7 +8,8 @@ from dash_loading_spinners import Hash
 import dash_tools_reflejar as dtr
 from pages.constantes import *
 
-Mapa = dbc.Card(
+Mapa = Hash(
+    dbc.Card(
             dbc.CardBody([
                 dbc.Row([
                     dbc.Col([
@@ -35,7 +36,8 @@ Mapa = dbc.Card(
         color="light", 
         class_name="shadow min-vh-50 my-5",
         outline=True,
-    )
+    ), size=24, color=LIMA
+)
 
 
 
