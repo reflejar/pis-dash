@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 
 FooterNormativo = dbc.Row(dbc.Col(
     [
-        html.H4("Detalle de las distancias protegidas según la ordenanza citada", className="text-white"),
+        html.H4(html.Strong("Detalle de las distancias protegidas según la ordenanza citada"), className="text-white"),
         dbc.Table([
             html.Thead(
                 html.Tr([
@@ -23,72 +23,78 @@ FooterNormativo = dbc.Row(dbc.Col(
                 )
         ],  bordered=True, responsive=True),
         html.I([
-            "*Las estaciones de bombeo contemplan tambien las camaras de inspeccion de agua abastecimiento público."
+            "*Las estaciones de bombeo contemplan tambien las camaras de inspección de agua abastecimiento público."
         ]),
         html.Br(),  
         html.Br(),      
-        html.H4("Zona de Exclusión Aérea:", className="text-white"),
+        html.H4(html.Strong("EXCLUSIÓN AÉREA:"), className="text-white"),
         html.P([
             "Se prohíbe la pulverización aérea de agroquímicos desde la distancia establecida al bien protegido."
         ]),
         html.Br(),
-        html.H4("Zona de Exclusión:", className="text-white"),
+        html.H4(html.Strong("ZONA DE EXCLUSIÓN:"), className="text-white"),
         html.P([
             "Área en la que se prohíbe la aplicación de agroquímicos de cualquier forma."
         ]),
         html.Br(),
-        html.H4("Zona de Amortiguamiento:", className="text-white"),
+        html.H4(html.Strong("ZONA DE AMORTIGUAMIENTO:"), className="text-white"),
         html.P([
-            """Área en la que solo está permitida la aplicación de agroquímicos bajo estrictas pautas. Estas son:"""
+            """Área en la que solo está permitida la aplicación de agroquímicos bajo estrictas pautas. Estas son: """
         ]),
         html.Ul([
-                html.Li("Que los vientos sean mayores a 5 kilómetros por hora y menores a 15 kilómetros por hora"),
-                html.Li("Los vientos siempre deben ser provenientes desde la zona resguardada hacia la zona rural"),
-                html.Li("Humedad relativa mayor al 50%"),
-                html.Li("Temperatura no mayor a 25°C")
+                html.Li("Los vientos siempre deben ser provenientes desde la zona resguardada hacia la zona rural."),
+                html.Li("Humedad relativa mayor al 50%."),
+                html.Li("Temperatura no mayor a 25°C."),
+                html.Li("Sólo se podrán aplicar productos agroquímicos banda verde y/o azul (clase toxicológica IV según clasificación de SENASA)."),
+                html.Li("""En todos los casos los tratamientos deberán iniciarse con la presencia y el monitoreo de 
+                        un profesional habilitado. Este deberá prescribir recetas agronómicas (registrando condiciones de aplicación, 
+                        fecha y hora  tanto de inicio como de fin de la aplicación) y  permanecer durante todo el tratamiento.""")
             ]),
         html.Br(),
-        html.H4("Sobre Escuelas Rurales:", className="text-white"),
+        html.H4(html.Strong("SOBRE ESCUELAS RURALES:"), className="text-white"),
         html.P([
-            """En tanto bien protegido en su cuidado se aplican las pautas generales de las zonas de amortiguamiento. Pero además la normativa 
-            comprende las siguientes exigencias:""",
+            """Se aplican todas las  pautas de zonas de exclusión y amortiguamiento establecidas en la ordenanza a nivel general, y 
+            en particular en la cercanía de escuelas rurales también se suman las siguientes exigencias:""",
             html.Ul([
-                html.Li("Es obligatorio el aviso directo al director del establecimiento previo a la aplicación"),
-                html.Li("Es obligatoria la presencia de un profesional habilitado al momento de la pulverización"),
-                html.Li("Estas solo pueden realizarse o a contra horario escolar, es decir, sin niños en los establecimientos"),
-                html.Li("La persona titular de dominio del sector rural deberá generar barreras forestales necesarias para que resguarden a la escuela")
+                html.Li("Es obligatorio el aviso directo al director del establecimiento previo a la aplicación (pasando el mouse sobre cada escuela se muestra el whatsapp del director/a y el email oficial de la escuela)."),
+                html.Li("Es obligatoria la presencia de un  profesional habilitado al momento de la pulverización."),
+                html.Li("Estas solo pueden realizarse a contra horario escolar, es decir sin niños en los establecimientos."),
+                html.Li("La persona titular de dominio del sector rural deberá generar barreras forestales necesarias para que resguarden a la escuela.")
             ])
         ]),
         html.Br(),
-        html.H4("Registro de Aplicadores y Equipos Terrestres:", className="text-white"),
+        html.H4(html.Strong("REGISTROS DE APLICADORES Y EQUIPOS TERRESTRES:"), className="text-white"),
         html.P([
             html.Ul([
-                html.Li("Todas las personas físicas y jurídicas que hagan aplicaciones a nombre propio o de terceros deberán estar inscriptos en el registro municipal"),
-                html.Li("Todos los equipos de aplicación deberán estar registrados y exhibir la identificación alfanumérica en el frente ambos laterales y en la parte posterior de cada equipo con material reflectivo y en un tamaño no inferiores a 20cmx12cm"),
+                html.Li("Todas las personas físicas y jurídicas que hagan aplicaciones a nombre propio o de terceros deberán estar inscriptos en el registro municipal."),
+                html.Li("Todos los equipos de aplicación deberán estar registrados y exhibir la  identificación  alfanumérica en el frente ambos laterales y en la parte posterior de cada equipo con material reflectivo y en un tamaño no inferiores a 20 cm x 12 cm."),
             ])
         ]),
         html.Br(),
-        html.H4("Control Médico:", className="text-white"),
+        html.H4(html.Strong("CONTROL MÉDICO:"), className="text-white"),
         html.P([
             html.Ul([
-                html.Li("Es obligatorio el control del médico preocupacional y anual del personal de las empresas habilitadas:  aplicadores aéreos y terrestres, agronomías y empleados de establecimientos agropecuarios que manipulan productos agroquímicos"),
-                html.Li("La  documentación médica será propiedad del empleado"),
+                html.Li(["Es ", html.U("obligatorio"), " el control del médico preocupacional y anual del personal de las empresas habilitadas:  aplicadores aéreos y terrestres, agronomías y empleados de establecimientos agropecuarios que manipulan productos agroquímicos."]),
+                html.Li("La  documentación médica será propiedad del empleado."),
             ])
         ]),
         html.Br(),
-        html.H4("Barreras Forestales:", className="text-white"),
+        html.H4(html.Strong("BARRERAS FORESTALES:"), className="text-white"),
         html.P([
-            "Titular de dominio del sector rural deberá generar barreras forestales cuando su propiedad rural linde con zonas urbanas y/o establecimientos educativos a fin de lograr una defensa de protección natural permanente."
+            html.Ul([
+            html.Li("El titular de dominio del sector rural deberá generar barreras forestales cuando su propiedad rural linde con zonas urbanas y/o establecimientos educativos a fin de lograr una defensa de protección natural permanente.")
+            ])
         ]),
         html.Br(),
-        html.H4("Ordenanza:", className="text-white"),
-        html.A("Aquí", href="https://drive.google.com/file/d/1SVmW-3-_LIpqGGVsO2Ud4o3vmxoja5mo/view", target="_blank"),
+        html.H4(html.Strong("CANAL DE DENUNCIAS"), className="text-white"),
+        html.P("Etchemendy Alejandro (Director de Higiene y Bromatología)"),
+        html.P([ html.B('Whatsapp:') ,"+54 9 2235 69-6563"]),
+        html.Br(),
+        html.H4(html.Strong("ORDENANZA:"), className="text-white"),
+        html.A("Link a ordenanza", href="https://drive.google.com/file/d/1SVmW-3-_LIpqGGVsO2Ud4o3vmxoja5mo/view", target="_blank"),
         html.Br(),
         html.Br(),
-        html.H4("Canal de Denuncias:", className="text-white"),
-        html.P("Etchemendy Alejandro"),
-        html.P("Director de Higiene y Bromatología"),
-        html.P("+54 9 2235 69-6563"),
+        
         html.Br(),
         html.I([
             "**Este mapa integra información de diversidad de fuentes: ",
@@ -112,7 +118,7 @@ FooterNormativo = dbc.Row(dbc.Col(
 
 
 Metodologia = dbc.Row(dbc.Col([
-        html.H5([html.Strong("METODOLOGÍA & PRODUCTO"), html.Span("V1.0",className='badge bg-primary text-black mx-3')], className="text-white pt-3 space-grotesk"),
+        html.H5([html.Strong("METODOLOGÍA"), html.Span("V1.0",className='badge bg-primary text-black mx-3')], className="text-white pt-3 space-grotesk"),
         html.P(html.I("""
         Las normativas de regulación de agroquímicos a nivel local protegen distintos bienes delimitando zonas en las que se prohíbe 
         la aplicación de agroquímicos (zonas de exclusión) o se requieren cuidados específicos para hacer aplicaciones (zonas de 
@@ -132,10 +138,12 @@ Metodologia = dbc.Row(dbc.Col([
         reportadas desde el territorio. Las distancias de protección utilizadas (zonas de exclusión/amortiguamiento) se obtienen del 
         texto original de cada ordenanza municipal.     
         """)),
-        html.P(html.I("""PRODUCTO: La versión 1.0 solo mapea Mar Chiquita. Ya estamos trabajando en un una versión mejorada para Mar Chiquita 
-         (exclusión aerea + parajes rurales) y en versiones que incorperen a Saladillo , Lobos y 9 de Julio.""")),
+        html.H5(html.Strong("PRODUCTO"),className="text-white pt-3 space-grotesk" ),
+        html.P(html.I("""La versión 1.0 solo mapea Mar Chiquita. Ya estamos trabajando en un una versión mejorada para Mar Chiquita 
+                      (que incluya la exclusión aérea, las zonificación de parajes rurales y las zonas protegidas por amparo judicial) 
+                      y en versiones que incorperen a otros municipios.""")),
         html.P(html.I(""" *Este proyecto posee un enfoque colectivo, participativo y abierto. Si encontraste algún error o información 
-        desactualizada comunícate a contacto. También se puede acceder al dataset utilizado para la construcción de la herramienta."""))
+        desactualizada comunícate a contacto."""))
     ],
     id="metodologia-normativa",
     className=" text-white mt-5"

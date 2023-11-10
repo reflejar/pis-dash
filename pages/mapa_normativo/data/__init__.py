@@ -46,7 +46,7 @@ cuerpos["popup"]=cuerpos["tooltip"]
 reservas["tooltip"]="<b>Nombre</b>: "+reservas["Name"]
 reservas["popup"]="<b>Nombre</b>: "+reservas["Name"]
 
-localidades_parajes["tooltip"]='<b>Nombre</b>: '+localidades_parajes["Name"]+'<br>'+'<b>Habitantes</b>: '+localidades_parajes["Habitantes"]+'<extra></extra>'
+localidades_parajes["tooltip"]='<b>Nombre</b>: '+localidades_parajes["Name"]+'<br>'+'<b>Habitantes</b>: '+localidades_parajes["Habitantes"]+'<br>'+ '<b>Categoría</b>: '+localidades_parajes["Categoría"] + '<extra></extra>'
 localidades_parajes["popup"]=localidades_parajes["tooltip"]
 
 
