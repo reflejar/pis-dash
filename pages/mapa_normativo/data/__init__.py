@@ -3,6 +3,7 @@ import geopandas as gpd
 import json
 import pandas as pd
 from itertools import combinations
+from ..data.Inputs.constantes_mapa_normativo import *
 
 MUNICIPIOS = ['Mar Chiquita']
 
@@ -46,7 +47,7 @@ cuerpos["popup"]=cuerpos["tooltip"]
 reservas["tooltip"]="<b>Nombre</b>: "+reservas["Name"]
 reservas["popup"]="<b>Nombre</b>: "+reservas["Name"]
 
-localidades_parajes["tooltip"]='<b>Nombre</b>: '+localidades_parajes["Name"]+'<br>'+'<b>Habitantes</b>: '+localidades_parajes["Habitantes"]+'<br>'+ '<b>Categoría</b>: '+localidades_parajes["Categoría"] + '<extra></extra>'
+localidades_parajes["tooltip"]='<b>Nombre</b>: '+localidades_parajes[VAR_NOMBRE_HOVER]+'<br>'+'<b>Habitantes</b>: '+localidades_parajes[VAR_HABITANTES_HOVER]+'<br>'+ '<b>Categoría</b>: '+localidades_parajes[VAR_CATEGORIA_INDEC] + '<extra></extra>'
 localidades_parajes["popup"]=localidades_parajes["tooltip"]
 
 

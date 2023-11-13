@@ -13,12 +13,12 @@ FooterNormativo = dbc.Row(dbc.Col(
                 className="text-primary border-primary")
             , className="bg-black"),
             html.Tbody([
-                html.Tr([html.Td("Zonas urbanas"), html.Td("2000 m"), html.Td("150 m"), html.Td("500 m")], className="text-white"),
+                html.Tr([html.Td("Zonas Urbanas"), html.Td("2000 m"), html.Td("150 m"), html.Td("500 m")], className="text-white"),
                 html.Tr([html.Td("Población Rural"), html.Td("300 m"), html.Td("50 m"), html.Td("500 m")], className="text-white"),
                 html.Tr([html.Td("Escuelas Rurales"), html.Td("300 m"), html.Td("200 m"), html.Td("500 m")], className="text-white"),
-                html.Tr([html.Td("Cursos de agua"), html.Td("0 m"), html.Td("25 m"), html.Td("0 m")], className="text-white"),
-                html.Tr([html.Td("Superficies de agua"), html.Td("0 m"), html.Td("25 m"), html.Td("0 m")], className="text-white"),
-                html.Tr([html.Td("Estaciones de bombeo*"), html.Td("0 m"), html.Td("50 m"), html.Td("0 m")], className="text-white"),                
+                html.Tr([html.Td("Cursos de Agua"), html.Td("0 m"), html.Td("25 m"), html.Td("0 m")], className="text-white"),
+                html.Tr([html.Td("Superficies de Agua"), html.Td("0 m"), html.Td("25 m"), html.Td("0 m")], className="text-white"),
+                html.Tr([html.Td("Bombas de Agua*"), html.Td("0 m"), html.Td("50 m"), html.Td("0 m")], className="text-white"),                
                 ], className="bg-black bg-opacity-75 border-white"
                 )
         ],  bordered=True, responsive=True),
@@ -42,13 +42,12 @@ FooterNormativo = dbc.Row(dbc.Col(
             """Área en la que solo está permitida la aplicación de agroquímicos bajo estrictas pautas. Estas son: """
         ]),
         html.Ul([
+                html.Li("Vientos mayores a 5 kilómetros por hora y menores a 15 kilómetros por hora."),
                 html.Li("Los vientos siempre deben ser provenientes desde la zona resguardada hacia la zona rural."),
                 html.Li("Humedad relativa mayor al 50%."),
                 html.Li("Temperatura no mayor a 25°C."),
-                html.Li("Sólo se podrán aplicar productos agroquímicos banda verde y/o azul (clase toxicológica IV según clasificación de SENASA)."),
-                html.Li("""En todos los casos los tratamientos deberán iniciarse con la presencia y el monitoreo de 
-                        un profesional habilitado. Este deberá prescribir recetas agronómicas (registrando condiciones de aplicación, 
-                        fecha y hora  tanto de inicio como de fin de la aplicación) y  permanecer durante todo el tratamiento.""")
+                html.Li("Sólo se permiten agroquímicos banda verde y/o azul  (clase toxicológica IV, SENASA)."),
+                html.Li("Las aplicaciones solo podrán hacer aplicaciones con receta agronómica válida y presencia  de un profesional habilitado.")
             ]),
         html.Br(),
         html.H4(html.Strong("SOBRE ESCUELAS RURALES:"), className="text-white"),
