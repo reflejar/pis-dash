@@ -1,0 +1,9 @@
+#### CONSTANTES Y VARIABLES
+VAR_NOMBRE_INDEC = 'Name'
+VAR_NOMBRE_MANUAL = 'Nombre de Poblado'
+VAR_HABITANTES_MANUAL = 'Cantidad de Habitantes'
+VAR_ANIO_CENSO_MANUAL = 'Año del Censo'
+VAR_PARTIDO_MANUAL = 'Partido'
+VAR_CATEGORIA_INDEC = 'Categoría'
+VAR_HABITANTES_HOVER = 'Habitantes_Hover'
+VAR_NOMBRE_HOVER = 'Nombre_Hover'

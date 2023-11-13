@@ -10,6 +10,7 @@ import json
 import pandas as pd
 
 from .colores import *
+from ..data.Inputs.constantes_mapa_normativo import *
 
 from ..data import (
     cursos_geojson,
@@ -151,7 +152,7 @@ MapaNormativo = html.Div(
         className="min-vh-50"
         ),
     ]
-)
+, className="mt-4")
 
 
 
