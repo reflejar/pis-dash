@@ -10,6 +10,9 @@ window.dash_props = Object.assign({}, window.dash_props, {
             if (feature.properties.tooltip) {
                 // here you can change all leaflet tooltip options
                 layer.bindTooltip(feature.properties.tooltip, { opacity: 1.0 ,sticky:true})
+                layer.on('click', function () {
+                    layer.closeTooltip();
+                });                
             }
         }
     }

@@ -35,6 +35,21 @@ agroecologia=pd.read_parquet('pages/ranking_ambiental/data/agroecologia_normativ
 #etuiquetas para el mapa
 etiquetas=pd.read_parquet('pages/ranking_ambiental/data/datos_etiquetas_mapas.parquet')
 
+#Crear columnas para unir que tengan los nombres sin acento, para evitar problemas si estan escritos distinto
+etiquetas["Municipios_nombre_original"]=etiquetas["Municipios"]
+pba["Municipios_nombre_original"]=pba["Municipios"]
+gba["Municipios_nombre_original"]=gba["Municipios"]
+
+etiquetas["Municipios"]=etiquetas["Municipios"].str.normalize('NFD').str.encode('ascii', errors='ignore').str.decode('utf-8')
+pba["Municipios"]=pba["Municipios"].str.normalize('NFD').str.encode('ascii', errors='ignore').str.decode('utf-8')
+gba["Municipios"]=gba["Municipios"].str.normalize('NFD').str.encode('ascii', errors='ignore').str.decode('utf-8')
+
+
+etiquetas["Municipios"]=etiquetas["Municipios"].str.replace(" - Pigue","")
+
+etiquetas=etiquetas.fillna("-")
+
+
 def crear_link(x):
     """
         función para limpiar el link
@@ -117,6 +132,9 @@ def agregar_etiquetas_mapa(mapa, etiquetas):
         función para agregar tooltip a las bases con el geojson
     """    
     final_mapa=pd.merge(mapa, etiquetas, on='Municipios', how='left')
+    #Volver a poner los nombres originales y descartar la columna adicional
+    final_mapa["Municipios"]=final_mapa["Municipios_nombre_original_y"]
+    final_mapa=final_mapa.drop(columns=["Municipios_nombre_original_x","Municipios_nombre_original_y"])
     puntaje=final_mapa["Puntaje"].apply(lambda x: str(x))
     # Agregar informacion de etiquetas
     final_mapa["tooltip"] = '<b>Partido</b>: '+ final_mapa["nam"] + '<br>'+'<b>Puntaje</b>: '  + puntaje+ '<br>'+'<b>Habitantes</b>: '+final_mapa["Habitantes (CENSO 2022)"] + '<br>'+'<b>Intendente</b>: '+final_mapa["INTENDENTE"] + '<br>'+'<b>Afiliación política</b>: '+final_mapa["AFILIACIÓN POLÍTICA"] + '<br>'+'<b>Composición política del consejo deliberante</b>: '+final_mapa["% OFICIALISTA EN EL CONCEJO DELIBERANTE"]
@@ -201,3 +219,8 @@ DATA = {
         'color_claro':CELESTE_CLARO
     },
 }
+etiquetas['Municipios'].str.contains('Rojas').sum()
+pba['Municipios'].str.contains('Rojas').sum()
+
+(etiquetas['Municipios']=='Rojas').sum()
+(pba['Municipios']=='Rojas').sum()

@@ -39,9 +39,6 @@ class Tabla:
             fixed_rows={'headers': True},
             fixed_columns={'headers': True,'data': 1},
             style_table={
-                # 'overflowX': 'scroll',
-                # 'position': 'sticky',
-                # 'overflowY': 'scroll',
                 'minWidth': '100%',
                 'height': '500px',
                 'borderCollapse': 'separate',
@@ -68,21 +65,9 @@ class Tabla:
                     'backgroundColor': 'rgba(0,0,0,0.025)',
                     'border': f'1px solid {self.color}',
                     'color' : 'rgba(0,0,0,1)',
-                },
+                },          
             ],
 
             sort_action="native",
-
-            
-            style_data={'minWidth': '100%', 
-                        'textAlign':'center',
-                        'fontFamily': 'Arial',
-                        'verticalAlign': 'middle',
-                        },
-            style_cell={'whiteSpace': 'pre-line',
-                        'minWidth':'100%',
-                        'width':'150px',
-                        'textAlign':'center',
-                        },
 
     )
