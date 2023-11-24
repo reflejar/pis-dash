@@ -45,6 +45,6 @@ def update_fallos(voces, provincia, tipo, organismo):
                 html.P(row['Sintesis del fallo']),
                 html.A("Ver fallo completo", className="btn btn-primary text-dark")
             ], className="poppins small mx-2")
-        ), className="mt-4"))
+        ), className="mt-4 p-3 card-jurisprudencia"))
             
     return cards
