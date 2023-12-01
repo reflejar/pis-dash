@@ -23,7 +23,7 @@ FooterNormativo = dbc.Row(dbc.Col(
                 )
         ],  bordered=True, responsive=True),
         html.I([
-            "*Las estaciones de bombeo contemplan tambien las camaras de inspección de agua abastecimiento público."
+            "*Las estaciones de bombeo contemplan también las cámaras de inspección de agua y abastecimiento público."
         ]),
         html.Br(),  
         html.Br(),      
@@ -39,7 +39,7 @@ FooterNormativo = dbc.Row(dbc.Col(
         html.Br(),
         html.H4(html.Strong("ZONA DE AMORTIGUAMIENTO:"), className="text-white"),
         html.P([
-            """Área en la que solo está permitida la aplicación de agroquímicos bajo estrictas pautas. Estas son: """
+            """Área en la que sólo está permitida la aplicación de agroquímicos bajo estrictas pautas. Estas son:"""
         ]),
         html.Ul([
                 html.Li("Vientos mayores a 5 kilómetros por hora y menores a 15 kilómetros por hora."),
@@ -47,17 +47,17 @@ FooterNormativo = dbc.Row(dbc.Col(
                 html.Li("Humedad relativa mayor al 50%."),
                 html.Li("Temperatura no mayor a 25°C."),
                 html.Li("Sólo se permiten agroquímicos banda verde y/o azul  (clase toxicológica IV, SENASA)."),
-                html.Li("Las aplicaciones solo podrán hacer aplicaciones con receta agronómica válida y presencia  de un profesional habilitado.")
+                html.Li("Las aplicaciones sólo podrán hacer aplicaciones con receta agronómica válida y presencia  de un profesional habilitado.")
             ]),
         html.Br(),
         html.H4(html.Strong("SOBRE ESCUELAS RURALES:"), className="text-white"),
         html.P([
-            """Se aplican todas las  pautas de zonas de exclusión y amortiguamiento establecidas en la ordenanza a nivel general, y 
+            """Se aplican todas las pautas de zonas de exclusión y amortiguamiento establecidas en la ordenanza a nivel general, y 
             en particular en la cercanía de escuelas rurales también se suman las siguientes exigencias:""",
             html.Ul([
                 html.Li("Es obligatorio el aviso directo al director del establecimiento previo a la aplicación (pasando el mouse sobre cada escuela se muestra el whatsapp del director/a y el email oficial de la escuela)."),
-                html.Li("Es obligatoria la presencia de un  profesional habilitado al momento de la pulverización."),
-                html.Li("Estas solo pueden realizarse a contra horario escolar, es decir sin niños en los establecimientos."),
+                html.Li("Es obligatoria la presencia de un profesional habilitado al momento de la pulverización."),
+                html.Li("Estas sólo pueden realizarse a contra horario escolar, es decir sin niños en los establecimientos."),
                 html.Li("La persona titular de dominio del sector rural deberá generar barreras forestales necesarias para que resguarden a la escuela.")
             ])
         ]),
@@ -66,7 +66,7 @@ FooterNormativo = dbc.Row(dbc.Col(
         html.P([
             html.Ul([
                 html.Li("Todas las personas físicas y jurídicas que hagan aplicaciones a nombre propio o de terceros deberán estar inscriptos en el registro municipal."),
-                html.Li("Todos los equipos de aplicación deberán estar registrados y exhibir la  identificación  alfanumérica en el frente ambos laterales y en la parte posterior de cada equipo con material reflectivo y en un tamaño no inferiores a 20 cm x 12 cm."),
+                html.Li("Todos los equipos de aplicación deberán estar registrados y exhibir la identificación alfanumérica en el frente ambos laterales y en la parte posterior de cada equipo con material reflectivo y en un tamaño no inferior a 20 cm x 12 cm."),
             ])
         ]),
         html.Br(),
@@ -131,16 +131,16 @@ Metodologia = dbc.Row(dbc.Col([
         ]),
         html.P(html.I("""
         A falta de un mapa oficial esta herramienta GIS integra información de diversas fuentes: 
-        escuelas de la Provincia de Buenos Aire (Datos Abiertos PBA) la georreferenciación de cursos de agua (Datos Abiertos PBA), 
-        parajes rurales y poblados urbanos a partir de imágenes satelitales (google maps) , información poblacional (INDEC), 
-        ontactos de las escuelas rurales (Datos Abiertos PBA y relevamiento propio) en suma a un conjunto de correcciones y precisiones 
+        escuelas de la Provincia de Buenos Aires (Datos Abiertos PBA) la georreferenciación de cursos de agua (Datos Abiertos PBA), 
+        parajes rurales y poblados urbanos a partir de imágenes satelitales (OpenStreetMap) , información poblacional (INDEC), 
+        contactos de las escuelas rurales (Datos Abiertos PBA y relevamiento propio) en suma a un conjunto de correcciones y precisiones 
         reportadas desde el territorio. Las distancias de protección utilizadas (zonas de exclusión/amortiguamiento) se obtienen del 
         texto original de cada ordenanza municipal.     
         """)),
         html.H5(html.Strong("PRODUCTO"),className="text-white pt-3 space-grotesk" ),
-        html.P(html.I("""La versión 1.0 solo mapea Mar Chiquita. Ya estamos trabajando en un una versión mejorada para Mar Chiquita 
+        html.P(html.I("""La versión 1.0 sólo mapea Mar Chiquita. Ya estamos trabajando en una versión mejorada para Mar Chiquita 
                       (que incluya la exclusión aérea, las zonificación de parajes rurales y las zonas protegidas por amparo judicial) 
-                      y en versiones que incorperen a otros municipios.""")),
+                      y en versiones que incorporen a otros municipios.""")),
         html.P(html.I(""" *Este proyecto posee un enfoque colectivo, participativo y abierto. Si encontraste algún error o información 
         desactualizada comunícate a contacto."""))
     ],
