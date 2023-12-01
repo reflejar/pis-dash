@@ -2,7 +2,7 @@ from dash import dash, html, dcc, Input, Output, State, callback
 import dash_bootstrap_components as dbc
 from ..data import DATA
 
-Fallos = dbc.Row(dbc.Col(html.Div(id='fallos-judiciales'), class_name="mt-5"))
+Fallos = dbc.Row(dbc.Col(html.Div(id='fallos-judiciales', className="navbar-nav-scroll", ), class_name="mt-5"))
 
 @callback(
         Output('fallos-judiciales','children'),
@@ -30,10 +30,10 @@ def update_fallos(voces, provincia, tipo, organismo):
         cards.append(dbc.Card(dbc.CardBody(
             html.Div([
                 html.Div([
-                    html.Span([html.B('AÑO: '), f"{row['Año']}"], className="mx-3"),
-                    html.Span([html.B('PROVINCIA: '), f"{row['Provincia']}"], className="mx-3"),
-                    html.Span([html.B('CIUDAD: '), f"{row['Ciudad']}"], className="mx-3"),
-                ], className="text-end"),
+                    html.Span([html.B('AÑO: '), f"{row['Año']}"], className="mx-2"),
+                    html.Span([html.B('PROVINCIA: '), f"{row['Provincia']}"], className="mx-2"),
+                    html.Span([html.B('CIUDAD: '), f"{row['Ciudad']}"], className="mx-2"),
+                ], className="text-end juris-encabezado"),
                 html.Hr(),
                 html.P([html.B("VOCES TEMÁTICAS: "), row['Voces temáticas']]),
                 html.P([html.B("JURISDICCIÓN TERRITORIAL: "), row['Jurisdicción territorial']]),
@@ -45,6 +45,6 @@ def update_fallos(voces, provincia, tipo, organismo):
                 html.P(row['Sintesis del fallo']),
                 html.A("Ver fallo completo", className="btn btn-primary text-dark")
             ], className="poppins small mx-2")
-        ), className="mt-4 p-3 card-jurisprudencia"))
+        ), className="mb-4 mx-3 p-3 card-jurisprudencia"))
             
     return cards

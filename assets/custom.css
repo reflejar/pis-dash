@@ -31,9 +31,20 @@
     text-align: center!important;
     font-family: Arial, Helvetica, sans-serif;
 }
+.cell-table tbody tr th {
+    white-space: pre-line!important;
+    text-align: center!important;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 .card-jurisprudencia {
     border-left: 20px solid #DEDE7C;
     border-radius: 20px!important;
 
+}
+
+@media (max-width: 767px) {
+    .juris-encabezado {
+      display: flex;
+    }
 }

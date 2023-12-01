@@ -96,7 +96,7 @@ def preparar_base(base):
     # # Reemplazar valores nulos en la columna específica con '-'
     # columna_especifica = 'Puntaje'
     # base[columna_especifica] = base[columna_especifica].fillna(0)
-
+    base["Puntaje"]=base["Puntaje"].fillna(0).apply(lambda x:  round(float(x.replace(',', '.')), 2) if isinstance(x, str) else round(x, 2))
     # Identificar las columnas que no son numéricas
     non_numeric_columns = base.select_dtypes(exclude=['number']).columns
     # Llenar los valores faltantes en las columnas no numéricas con una cadena vacía
@@ -106,7 +106,7 @@ def preparar_base(base):
     numeric_columns = base.select_dtypes(include=['number']).columns
     base[numeric_columns] = base[numeric_columns].fillna(0)
     # base["Puntaje"]=base["Puntaje"].fillna(0).apply(lambda x: round(math.sqrt(x), 2) )
-    base["Puntaje"]=base["Puntaje"].fillna(0).apply(lambda x: round(x, 2) )
+    
     base["Fecha"]=base["Fecha"].apply(lambda x: x if x!="\-" else "")
     del base["Link"]
     return base
@@ -137,7 +137,7 @@ def agregar_etiquetas_mapa(mapa, etiquetas):
     final_mapa=final_mapa.drop(columns=["Municipios_nombre_original_x","Municipios_nombre_original_y"])
     puntaje=final_mapa["Puntaje"].apply(lambda x: str(x))
     # Agregar informacion de etiquetas
-    final_mapa["tooltip"] = '<b>Partido</b>: '+ final_mapa["nam"] + '<br>'+'<b>Puntaje</b>: '  + puntaje+ '<br>'+'<b>Habitantes</b>: '+final_mapa["Habitantes (CENSO 2022)"] + '<br>'+'<b>Intendente</b>: '+final_mapa["INTENDENTE"] + '<br>'+'<b>Afiliación política</b>: '+final_mapa["AFILIACIÓN POLÍTICA"] + '<br>'+'<b>Composición política del consejo deliberante</b>: '+final_mapa["% OFICIALISTA EN EL CONCEJO DELIBERANTE"]
+    final_mapa["tooltip"] = '<b>Partido</b>: '+ final_mapa["nam"] + '<br>'+'<b>Puntaje</b>: '  + puntaje+ '<br>'+'<b>Habitantes</b>: '+final_mapa["Habitantes (CENSO 2022)"].apply(lambda x: str(x).split(".")[0]) + '<br>'+'<b>Intendente</b>: '+final_mapa["INTENDENTE"] + '<br>'+'<b>Afiliación política</b>: '+final_mapa["AFILIACIÓN POLÍTICA"] 
     final_mapa["popup"] = final_mapa["tooltip"]
     return final_mapa
 
