@@ -132,7 +132,7 @@ Metodologia = dbc.Row(dbc.Col([
         html.P(html.I("""
         A falta de un mapa oficial esta herramienta GIS integra información de diversas fuentes: 
         escuelas de la Provincia de Buenos Aires (Datos Abiertos PBA) la georreferenciación de cursos de agua (Datos Abiertos PBA), 
-        parajes rurales y poblados urbanos a partir de imágenes satelitales (OpenStreetMap) , información poblacional (INDEC), 
+        parajes rurales y poblados urbanos a partir de imágenes satelitales (OpenStreetMap y ArcGIS) , información poblacional (INDEC), 
         contactos de las escuelas rurales (Datos Abiertos PBA y relevamiento propio) en suma a un conjunto de correcciones y precisiones 
         reportadas desde el territorio. Las distancias de protección utilizadas (zonas de exclusión/amortiguamiento) se obtienen del 
         texto original de cada ordenanza municipal.     
