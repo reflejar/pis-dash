@@ -15,10 +15,12 @@ Filtros = dbc.Row([
                         options=DATA['filtros']['voces-tematicas'],
                         searchable = True,
                         placeholder = 'Voces temáticas',
-                        className="mt-1"
+                        className="mt-1",
+                        optionHeight=50,
+                        maxHeight=300
                         )
                     ], 
-                    md=6, lg=3, xs=12
+                    md=12, lg=6
                 ),
                 dbc.Col([
                     dcc.Dropdown(
@@ -26,10 +28,11 @@ Filtros = dbc.Row([
                         options=DATA['filtros']['provincia'],
                         searchable = True,
                         placeholder = 'Provincia',
-                        className="mt-1"
+                        className="mt-1",
+                        maxHeight=300
                         )
                     ], 
-                    md=6, lg=3, xs=12
+                    md=12, lg=6
                 ),
                 dbc.Col([
                     dcc.Dropdown(
@@ -37,10 +40,12 @@ Filtros = dbc.Row([
                         options=DATA['filtros']['tipo-fallo'],
                         searchable = True,
                         placeholder = 'Tipo de fallo',
-                        className="mt-1"
+                        className="mt-1",
+                        optionHeight=50,
+                        maxHeight=300
                         )
                     ], 
-                    md=6, lg=3, xs=12
+                    md=12, lg=6
                 ),
                 dbc.Col([
                     dcc.Dropdown(
@@ -48,9 +53,11 @@ Filtros = dbc.Row([
                         options=DATA['filtros']['organismo'],
                         searchable = True,
                         placeholder = 'Organismo',
-                        className="mt-1"
+                        className="mt-1",
+                        optionHeight=100,
+                        maxHeight=300
                         )
                     ], 
-                    md=6, lg=3, xs=12
+                    md=12, lg=6
                 ),
             ])
