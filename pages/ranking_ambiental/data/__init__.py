@@ -87,7 +87,7 @@ def preparar_base(base):
     base['Ordenanza'] = base[['Ordenanza','Link' ]].apply(crear_link, axis=1) 
 
 
-    base["Fecha"] = base["Fecha"].fillna("\-")
+    base["Fecha"] = base["Fecha"].fillna("\-").apply(lambda x: x[-4:] if len(x)>=4 else x)
 
     # # Reemplazar valores nulos en columnas de tipo objeto con 'NO'
     # columna_especifica = "Obligatoriedad de notificación"
@@ -108,6 +108,7 @@ def preparar_base(base):
     # base["Puntaje"]=base["Puntaje"].fillna(0).apply(lambda x: round(math.sqrt(x), 2) )
     
     base["Fecha"]=base["Fecha"].apply(lambda x: x if x!="\-" else "")
+    base = base.rename(columns={"Fecha": "Año"})
     del base["Link"]
     return base
 
