@@ -5,7 +5,7 @@ window.dash_props = Object.assign({}, window.dash_props, {
                 return
             }
             if (feature.properties.popup) {
-                layer.bindPopup(feature.properties.popup)
+                layer.bindPopup(feature.properties.popup);         
             }
             if (feature.properties.tooltip) {
                 // here you can change all leaflet tooltip options
@@ -14,6 +14,11 @@ window.dash_props = Object.assign({}, window.dash_props, {
                     layer.closeTooltip();
                 });                
             }
+            layer.on('popupclose', function(e) {
+                if (layer._map.dragging._enabled === undefined) {
+                    layer._map.setView(layer._map.options.center)
+                }
+            });       
         }
     }
 });

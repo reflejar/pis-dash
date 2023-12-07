@@ -40,9 +40,9 @@ etiquetas["Municipios_nombre_original"]=etiquetas["Municipios"]
 pba["Municipios_nombre_original"]=pba["Municipios"]
 gba["Municipios_nombre_original"]=gba["Municipios"]
 
-etiquetas["Municipios"]=etiquetas["Municipios"].str.normalize('NFD').str.encode('ascii', errors='ignore').str.decode('utf-8')
-pba["Municipios"]=pba["Municipios"].str.normalize('NFD').str.encode('ascii', errors='ignore').str.decode('utf-8')
-gba["Municipios"]=gba["Municipios"].str.normalize('NFD').str.encode('ascii', errors='ignore').str.decode('utf-8')
+etiquetas["Municipios"]=etiquetas["Municipios"].str.normalize('NFD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.strip()
+pba["Municipios"]=pba["Municipios"].str.normalize('NFD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.strip()
+gba["Municipios"]=gba["Municipios"].str.normalize('NFD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.strip()
 
 
 etiquetas["Municipios"]=etiquetas["Municipios"].str.replace(" - Pigue","")
@@ -81,21 +81,15 @@ def preparar_base(base):
     elif 'LINK' in base.columns: 
         base = base.rename(columns={'LOCALIDAD':'Municipios','LINK': 'Link','ORDENANZA': 'Ordenanza', 'FECHA': 'Fecha' , 'Puntaje - agroeco NORMALIZADO': 'Puntaje'})
 
+    base["Municipios"] = base["Municipios"].str.normalize('NFD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.strip()
     base["Ordenanza"] = base["Ordenanza"].fillna("Sin Ordenanza")
 
     base["Link"] = base["Link"].fillna("")
     base['Ordenanza'] = base[['Ordenanza','Link' ]].apply(crear_link, axis=1) 
 
 
-    base["Fecha"] = base["Fecha"].fillna("\-")
+    base["Fecha"] = base["Fecha"].fillna("\-").apply(lambda x: x[-4:] if len(x)>=4 else x)
 
-    # # Reemplazar valores nulos en columnas de tipo objeto con 'NO'
-    # columna_especifica = "Obligatoriedad de notificación"
-    # base[columna_especifica] = base[columna_especifica].fillna('NO')
-
-    # # Reemplazar valores nulos en la columna específica con '-'
-    # columna_especifica = 'Puntaje'
-    # base[columna_especifica] = base[columna_especifica].fillna(0)
     base["Puntaje"]=base["Puntaje"].fillna(0).apply(lambda x:  round(float(x.replace(',', '.')), 2) if isinstance(x, str) else round(x, 2))
     # Identificar las columnas que no son numéricas
     non_numeric_columns = base.select_dtypes(exclude=['number']).columns
@@ -108,6 +102,7 @@ def preparar_base(base):
     # base["Puntaje"]=base["Puntaje"].fillna(0).apply(lambda x: round(math.sqrt(x), 2) )
     
     base["Fecha"]=base["Fecha"].apply(lambda x: x if x!="\-" else "")
+    base = base.rename(columns={"Fecha": "Año"})
     del base["Link"]
     return base
 

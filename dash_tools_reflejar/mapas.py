@@ -18,7 +18,7 @@ js_func = assign("""function(feature, context){
                             style.weight = 1;
                             style.dashArray = false;
                         } else {
-                            for (let i = 0; i < classes.length; ++i) {
+                            for (let i = 0; i <= classes.length; ++i) {
                                 if (value >= classes[i]) {
                                     style.fillColor = colorscale[i];
                                     style.weight = 1;
