@@ -24,6 +24,9 @@ pba["Municipios"]=pba["fna"].copy().apply(lambda x: str(x).replace("Partido de "
 # #etuiquetas para el mapa
 # etiquetas=pd.read_csv('pages/ranking_ambiental/data/datos_etiquetas_mapas.csv', sep=";",encoding="latin" )
 
+# Leer diccionario de municipios 
+dicc=pd.read_csv("C:\Reflejar\data pis\dicc_municipios.csv",encoding="latin"  )
+diccionario_municipios = dicc.set_index('Municipio2')['Municipio1'].to_dict()
 
 # Leer archivo parquet
 escuelas=pd.read_parquet('pages/ranking_ambiental/data/escuelas_normativa.parquet')
@@ -60,16 +63,16 @@ def crear_link(x):
         b=x[1].split("--y--")
         c=""
         for i,j in zip(a,b):
-            c=c + "\n" + "[" +"Ord. " + i.strip()+ "]" + '(' + j.strip() + ')'
+            c=c + "\n" + "["  + i.strip()+ "]" + '(' + j.strip() + ')'
         rdo=c
     elif " y " in x[1]:
         a=x[0].strip()
         b=x[1].split("y")
-        rdo= "[" +"Ord. "+ a+ "]" + '(' + b[0].strip() + ')'
+        rdo= "[" + a+ "]" + '(' + b[0].strip() + ')'
     elif x[0]=="" or x[0]=="Sin Ordenanza":
         rdo="Sin Ordenanza"
     else:
-        rdo="[" + "Ord. " + x[0].strip()+ "]" + '(' + x[1].strip() + ')'
+        rdo="["  + x[0].strip()+ "]" + '(' + x[1].strip() + ')'
     return rdo
 
 def preparar_base(base): 
@@ -85,6 +88,7 @@ def preparar_base(base):
     base["Ordenanza"] = base["Ordenanza"].fillna("Sin Ordenanza")
 
     base["Link"] = base["Link"].fillna("")
+    base['Ordenanza'] = base['Ordenanza'].apply(lambda x: x if ("N°" in x) or (x=="") or (x=="Sin Ordenanza") or (x=="S/N") or ("N° " in x) else "N°"+x) 
     base['Ordenanza'] = base[['Ordenanza','Link' ]].apply(crear_link, axis=1) 
 
 
@@ -145,6 +149,10 @@ def crear_classes(base):
     middle_values = np.linspace(min_value, max_value, num=8, endpoint=True)
     return list(middle_values)
 
+def reemplazar_municipios(base):
+    base["Municipios"]=base["Municipios"].replace(diccionario_municipios)
+    return base
+
 clases_escuelas=crear_classes(escuelas)
 clases_transparencia=crear_classes(transparencia)
 clases_agua=crear_classes(agua)
@@ -166,41 +174,41 @@ def crear_geojson (map, tabla_puntaje, etiquetas ):
 # Preparamos datas
 DATA = {
     'escuelas': {
-        'data': escuelas,
         'geojson_pba': crear_geojson(pba,escuelas, etiquetas),
         'geojson_gba': crear_geojson(gba, escuelas, etiquetas),
+        'data': reemplazar_municipios(escuelas),
         'classes': clases_escuelas,
         'color': ROJO,
         'color_claro':ROJO_CLARO
     },
     'transparencia': {
-        'data': transparencia,
         'geojson_pba': crear_geojson(pba,transparencia, etiquetas),
         'geojson_gba': crear_geojson(gba,transparencia,  etiquetas),
+        'data': reemplazar_municipios(transparencia),
         'classes': clases_transparencia,
         'color': LILA,
         'color_claro':LILA_CLARO
     },
     'agua': {
-        'data': agua,
         'geojson_pba': crear_geojson(pba, agua, etiquetas),
         'geojson_gba': crear_geojson(gba, agua,etiquetas),
+        'data': reemplazar_municipios(agua),
         'classes': clases_agua,
         'color': VERDE_AGUA,
         'color_claro':VERDE_AGUA_CLARO
     },
     'poblaciones': {
-        'data': poblaciones,
         'geojson_pba': crear_geojson(pba, poblaciones, etiquetas),
         'geojson_gba': crear_geojson(gba, poblaciones,etiquetas),
+        'data': reemplazar_municipios(poblaciones),
         'classes': clases_poblaciones,
         'color': LIMA,
         'color_claro':LIMA_CLARO
     },
     'apiarios': {
-        'data': apiarios,
         'geojson_pba': crear_geojson(pba, apiarios, etiquetas),
         'geojson_gba': crear_geojson(gba,apiarios,  etiquetas),
+        'data': reemplazar_municipios(apiarios),
         'classes': clases_apiarios,
         'color': NARANJA,
         'color_claro':NARANJA_CLARO
@@ -209,6 +217,7 @@ DATA = {
         'data': agroecologia,
         'geojson_pba': crear_geojson(pba, agroecologia,  etiquetas),
         'geojson_gba': crear_geojson(gba, agroecologia,  etiquetas), 
+        'data': reemplazar_municipios(agroecologia),
         'classes': clases_agroecologia,
         'color': CELESTE,
         'color_claro':CELESTE_CLARO
