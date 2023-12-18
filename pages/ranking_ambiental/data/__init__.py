@@ -25,7 +25,7 @@ pba["Municipios"]=pba["fna"].copy().apply(lambda x: str(x).replace("Partido de "
 # etiquetas=pd.read_csv('pages/ranking_ambiental/data/datos_etiquetas_mapas.csv', sep=";",encoding="latin" )
 
 # Leer diccionario de municipios 
-dicc=pd.read_csv("C:\Reflejar\data pis\dicc_municipios.csv",encoding="latin"  )
+dicc=pd.read_csv("pages/ranking_ambiental/data/dicc_municipios.csv",encoding="latin"  )
 diccionario_municipios = dicc.set_index('Municipio2')['Municipio1'].to_dict()
 
 # Leer archivo parquet
