@@ -16,9 +16,11 @@ window.dash_props = Object.assign({}, window.dash_props, {
             }
             layer.on('popupclose', function(e) {
                 if (layer._map.dragging._enabled === undefined) {
-                    layer._map.setView(layer._map.options.center)
+                    if (layer._map.options.center[0] !== layer._map.getCenter()['lat']) {
+                        layer._map.panTo(layer._map.options.center, layer._map._zoom)
+                    }
                 }
-            });       
+            });
         }
     }
 });
