@@ -25,8 +25,8 @@ pba["Municipios"]=pba["fna"].copy().apply(lambda x: str(x).replace("Partido de "
 # etiquetas=pd.read_csv('pages/ranking_ambiental/data/datos_etiquetas_mapas.csv', sep=";",encoding="latin" )
 
 # Leer diccionario de municipios 
-dicc=pd.read_csv("pages/ranking_ambiental/data/dicc_municipios.csv",encoding="latin"  )
-diccionario_municipios = dicc.set_index('Municipio2')['Municipio1'].to_dict()
+dicc=pd.read_csv("pages/ranking_ambiental/data/dicc_municipios.csv" )
+diccionario_municipios = dicc.set_index('Municipio1')['Municipio2'].to_dict()
 
 # Leer archivo parquet
 escuelas=pd.read_parquet('pages/ranking_ambiental/data/escuelas_normativa.parquet')
@@ -39,14 +39,13 @@ agroecologia=pd.read_parquet('pages/ranking_ambiental/data/agroecologia_normativ
 etiquetas=pd.read_parquet('pages/ranking_ambiental/data/datos_etiquetas_mapas.parquet')
 
 #Crear columnas para unir que tengan los nombres sin acento, para evitar problemas si estan escritos distinto
-etiquetas["Municipios_nombre_original"]=etiquetas["Municipios"]
+etiquetas["Municipios_nombre_original"]=etiquetas["Municipios"].replace(diccionario_municipios)
 pba["Municipios_nombre_original"]=pba["Municipios"]
 gba["Municipios_nombre_original"]=gba["Municipios"]
 
-etiquetas["Municipios"]=etiquetas["Municipios"].str.normalize('NFD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.strip()
+etiquetas["Municipios"]=etiquetas["Municipios"].replace(diccionario_municipios).str.normalize('NFD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.strip()
 pba["Municipios"]=pba["Municipios"].str.normalize('NFD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.strip()
 gba["Municipios"]=gba["Municipios"].str.normalize('NFD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.strip()
-
 
 etiquetas["Municipios"]=etiquetas["Municipios"].str.replace(" - Pigue","")
 
@@ -94,7 +93,7 @@ def preparar_base(base):
 
     base["Fecha"] = base["Fecha"].fillna("\-").apply(lambda x: x[-4:] if len(x)>=4 else x)
 
-    base["Puntaje"]=base["Puntaje"].fillna(0).apply(lambda x:  round(float(x.replace(',', '.')), 2) if isinstance(x, str) else round(x, 2))
+    base["Puntaje"]=base["Puntaje"].fillna(0).apply(lambda x:  round(float(x.replace(',', '.')), 3) if isinstance(x, str) else round(x, 3))
     # Identificar las columnas que no son numéricas
     non_numeric_columns = base.select_dtypes(exclude=['number']).columns
     # Llenar los valores faltantes en las columnas no numéricas con una cadena vacía
@@ -117,11 +116,17 @@ apiarios=preparar_base(apiarios)
 poblaciones=preparar_base(poblaciones)
 agroecologia=preparar_base(agroecologia)
 
+def reemplazar_municipios(base):
+    base["Municipios"]=base["Municipios"].replace(diccionario_municipios)
+    return base
+
 def concatenar_base_mapa(mapa, base):
     """
         función para mergear las bases con la base del mapa
     """    
     a=base.copy()
+    a=reemplazar_municipios(a)
+    a["Municipios"]=a["Municipios"].replace(diccionario_municipios).str.normalize('NFD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.strip()
     final_mapa=pd.merge(mapa, a[['Municipios', "Puntaje"]], on='Municipios', how='left')
     final_mapa["Puntaje"]=final_mapa["Puntaje"].fillna(0)
     return final_mapa
@@ -129,9 +134,11 @@ def concatenar_base_mapa(mapa, base):
 def agregar_etiquetas_mapa(mapa, etiquetas):
     """
         función para agregar tooltip a las bases con el geojson
-    """    
+    """   
+
     final_mapa=pd.merge(mapa, etiquetas, on='Municipios', how='left')
-    #Volver a poner los nombres originales y descartar la columna adicional
+
+    # #Volver a poner los nombres originales y descartar la columna adicional
     final_mapa["Municipios"]=final_mapa["Municipios_nombre_original_y"]
     final_mapa=final_mapa.drop(columns=["Municipios_nombre_original_x","Municipios_nombre_original_y"])
     puntaje=final_mapa["Puntaje"].apply(lambda x: str(x))
@@ -149,9 +156,6 @@ def crear_classes(base):
     middle_values = np.linspace(min_value, max_value, num=8, endpoint=True)
     return list(middle_values)
 
-def reemplazar_municipios(base):
-    base["Municipios"]=base["Municipios"].replace(diccionario_municipios)
-    return base
 
 clases_escuelas=crear_classes(escuelas)
 clases_transparencia=crear_classes(transparencia)
@@ -174,41 +178,41 @@ def crear_geojson (map, tabla_puntaje, etiquetas ):
 # Preparamos datas
 DATA = {
     'escuelas': {
+        'data': escuelas,
         'geojson_pba': crear_geojson(pba,escuelas, etiquetas),
         'geojson_gba': crear_geojson(gba, escuelas, etiquetas),
-        'data': reemplazar_municipios(escuelas),
         'classes': clases_escuelas,
         'color': ROJO,
         'color_claro':ROJO_CLARO
     },
     'transparencia': {
+        'data': transparencia,
         'geojson_pba': crear_geojson(pba,transparencia, etiquetas),
         'geojson_gba': crear_geojson(gba,transparencia,  etiquetas),
-        'data': reemplazar_municipios(transparencia),
         'classes': clases_transparencia,
         'color': LILA,
         'color_claro':LILA_CLARO
     },
     'agua': {
+        'data': agua,
         'geojson_pba': crear_geojson(pba, agua, etiquetas),
         'geojson_gba': crear_geojson(gba, agua,etiquetas),
-        'data': reemplazar_municipios(agua),
         'classes': clases_agua,
         'color': VERDE_AGUA,
         'color_claro':VERDE_AGUA_CLARO
     },
     'poblaciones': {
+        'data': poblaciones,
         'geojson_pba': crear_geojson(pba, poblaciones, etiquetas),
         'geojson_gba': crear_geojson(gba, poblaciones,etiquetas),
-        'data': reemplazar_municipios(poblaciones),
         'classes': clases_poblaciones,
         'color': LIMA,
         'color_claro':LIMA_CLARO
     },
     'apiarios': {
+        'data': apiarios,
         'geojson_pba': crear_geojson(pba, apiarios, etiquetas),
         'geojson_gba': crear_geojson(gba,apiarios,  etiquetas),
-        'data': reemplazar_municipios(apiarios),
         'classes': clases_apiarios,
         'color': NARANJA,
         'color_claro':NARANJA_CLARO
@@ -217,7 +221,6 @@ DATA = {
         'data': agroecologia,
         'geojson_pba': crear_geojson(pba, agroecologia,  etiquetas),
         'geojson_gba': crear_geojson(gba, agroecologia,  etiquetas), 
-        'data': reemplazar_municipios(agroecologia),
         'classes': clases_agroecologia,
         'color': CELESTE,
         'color_claro':CELESTE_CLARO

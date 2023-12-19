@@ -55,10 +55,11 @@ class Tabla:
             },
             style_data_conditional = [
                 {
-                    'if': {
-                        'filter_query': '{{Puntaje}} = {}'.format(self.df['Puntaje'].min()),
+                      'if': {
+                        'filter_query': '{Ordenanza} = "Sin Ordenanza"',
                     },
                     'backgroundColor': '#EEEEEE',
+
                 },
                 {
                     'if': {'state': 'active'},
