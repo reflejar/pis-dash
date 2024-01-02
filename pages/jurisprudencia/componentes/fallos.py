@@ -1,8 +1,12 @@
 from dash import dash, html, dcc, Input, Output, State, callback
 import dash_bootstrap_components as dbc
+from dash_loading_spinners import Hash
+
+from pages.constantes import LIMA
+
 from ..data import DATA
 
-Fallos = dbc.Row(dbc.Col(html.Div(id='fallos-judiciales', className="navbar-nav-scroll", ), class_name="mt-5"))
+Fallos = dbc.Row(dbc.Col(Hash(html.Div(id='fallos-judiciales', className="navbar-nav-scroll", ), color=LIMA), class_name="mt-5"))
 
 @callback(
         Output('fallos-judiciales','children'),
@@ -10,10 +14,9 @@ Fallos = dbc.Row(dbc.Col(html.Div(id='fallos-judiciales', className="navbar-nav-
             Input("select-voces-tematicas",'value'),
             Input("select-provincia",'value'),
             Input("select-tipo-fallo",'value'),
-            Input("select-organismo",'value')
         ]
 )
-def update_fallos(voces, provincia, tipo, organismo):
+def update_fallos(voces, provincia, tipo):
     df = DATA['contenido'].copy()
     cards = []
 
@@ -23,8 +26,6 @@ def update_fallos(voces, provincia, tipo, organismo):
         df = df[df['Provincia']==provincia]
     if tipo:
         df = df[df['Tipo de fallo']==tipo]
-    if organismo:
-        df = df[df['Organismo judicial o administrativo']==organismo]        
 
     for _, row in df.iterrows():
         cards.append(dbc.Card(dbc.CardBody(
