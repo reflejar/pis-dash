@@ -3,7 +3,7 @@ import dash_bootstrap_components as dbc
 
 from ..data import DATA
 
-
+print(DATA['filtros']['provincia'])
 Filtros = dbc.Row([      
                 dbc.Col(
                     html.H5("Filtrar por", className="text-white fw-bold"),
@@ -13,11 +13,10 @@ Filtros = dbc.Row([
                 dbc.Col([
                     dcc.Dropdown(
                         id="select-provincia",
-                        options=DATA['filtros']['provincia'],
+                        options=['Todos los distritos'] + DATA['filtros']['provincia'],
                         searchable = True,
                         placeholder = 'Distrito',
                         className="mt-1",
-                        maxHeight=300
                         )
                     ], 
                     md=12, lg=4
@@ -25,12 +24,11 @@ Filtros = dbc.Row([
                 dbc.Col([
                     dcc.Dropdown(
                         id="select-voces-tematicas",
-                        options=DATA['filtros']['voces-tematicas'],
+                        options=['Todas las voces temáticas'] + DATA['filtros']['voces-tematicas'],
                         searchable = True,
                         placeholder = 'Voces temáticas',
                         className="mt-1",
                         optionHeight=50,
-                        maxHeight=300
                         )
                     ], 
                     md=12, lg=4
@@ -38,12 +36,11 @@ Filtros = dbc.Row([
                 dbc.Col([
                     dcc.Dropdown(
                         id="select-tipo-fallo",
-                        options=DATA['filtros']['tipo-fallo'],
+                        options=['Todos los tipos de fallos'] + DATA['filtros']['tipo-fallo'],
                         searchable = True,
                         placeholder = 'Tipo de fallo',
                         className="mt-1",
                         optionHeight=50,
-                        maxHeight=300
                         )
                     ], 
                     md=12, lg=4
