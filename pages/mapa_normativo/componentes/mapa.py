@@ -43,7 +43,7 @@ MapaNormativo = html.Div(
                     dl.BaseLayer(
                         dl.TileLayer(),
                         name="OpenStreetMaps",
-                        checked=True,
+                        checked=False,
                     ),
                     dl.BaseLayer(
                         dl.TileLayer(
@@ -52,7 +52,7 @@ MapaNormativo = html.Div(
                             maxZoom=17
                         ),
                         name="Satelite",
-                        checked=False,
+                        checked=True,
                     ),
                 ],
             ),
@@ -149,7 +149,7 @@ MapaNormativo = html.Div(
             ),            
         ], 
         # style={'width': '1080px', 'height': '720px'},
-        className="min-vh-50"
+        className="min-vh-75"
         ),
     ]
 , className="mt-4")
