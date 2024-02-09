@@ -156,8 +156,8 @@ Metodologia = dbc.Row(dbc.Col([
         html.P(html.I("""La versión 1.0 sólo mapea Mar Chiquita. Ya estamos trabajando en una versión mejorada para Mar Chiquita 
                       (que incluya la exclusión aérea, las zonificación de parajes rurales y las zonas protegidas por amparo judicial) 
                       y en versiones que incorporen a otros municipios.""")),
-        html.P(html.I(""" *Este proyecto posee un enfoque colectivo, participativo y abierto. Si encontraste algún error o información 
-        desactualizada comunícate a contacto."""))
+        html.P(html.I(['*Este proyecto posee un enfoque colectivo, participativo y abierto. Si encontraste algún error o información desactualizada comunícate a ', html.A("contacto@democraciaenred.org",href="mailto:contacto@democraciaenred.org")])),
+        html.P(html.I(['Acede al data set de esta herramienta ', html.A("acá", href="https://docs.google.com/spreadsheets/d/12XSBKP4HuxNt0YmsBfmm_j_3vbJUfSLN/edit#gid=1355391810", target="_blank")])),
     ],
     id="metodologia-normativa",
     className=" text-white mt-5"
