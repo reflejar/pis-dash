@@ -3,7 +3,6 @@ import dash_bootstrap_components as dbc
 
 from ..data import DATA
 
-print(DATA['filtros']['provincia'])
 Filtros = dbc.Row([      
                 dbc.Col(
                     html.H5("Filtrar por", className="text-white fw-bold"),

@@ -14,7 +14,8 @@ Metodologia = dbc.Row(dbc.Col([
         html.Br(),
         'Conoce sobre la fuente en: https://naturaleza.ar/contenido/164/praxis-juridica-sobre-los-agrotoxicos-fernando-cabaleiro'
     ]),
-    html.P('*Este proyecto posee un enfoque colectivo, participativo y abierto. Si encontraste algún error o información desactualizada comunícate a contacto. También se puede acceder al dataset utilizado para la construcción de la herramienta.')
+        html.P(html.I(['*Este proyecto posee un enfoque colectivo, participativo y abierto. Si encontraste algún error o información desactualizada comunícate a ', html.A("contacto@democraciaenred.org",href="mailto:contacto@democraciaenred.org")])),
+        html.P(html.I(['Acede al data set de esta herramienta ', html.A("acá", href="https://docs.google.com/spreadsheets/d/1Ovex6_AZ0MxMJjvYwWGib4DwcSRXMpTH/edit#gid=365622589", target="_blank")])),
     ],
     id="metodologia-jurisprudencia",
     className=" text-white mt-5"
