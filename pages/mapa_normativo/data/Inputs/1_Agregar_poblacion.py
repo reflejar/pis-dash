@@ -35,7 +35,7 @@ sup_agua_excl=25
 # #### Localidades y parajes #####
 
 # #Leemos input y los transformamos a la proyeccion que usamos
-localidades=gpd.read_file("pages/mapa_normativo/data/Inputs/Localidades.geojson")
+localidades=gpd.read_file("./Localidades.geojson")
 localidades=localidades.reset_index()
 localidades = localidades.to_crs("epsg:4326")
 #Lista de localidades para chequear
@@ -44,7 +44,7 @@ localidades[VAR_NOMBRE_INDEC] = localidades[VAR_NOMBRE_INDEC].str.normalize('NFD
 listado_localidades = localidades[VAR_NOMBRE_INDEC].unique()
 
 # #Parajes
-parajes=gpd.read_file("pages/mapa_normativo/data/Inputs/Parajes.geojson")
+parajes=gpd.read_file("./Parajes.geojson")
 parajes=parajes.reset_index()
 parajes = parajes.to_crs("epsg:4326")
 #Lista de parajes para chequear
@@ -65,7 +65,7 @@ mensaje_repetidos = f'Al comparar la lista de parajes con la lista de localidade
 print(mensaje_repetidos)
 
 #Agregar otros datos a las localidades y parajes
-poblacion=pd.read_excel("pages\mapa_normativo\data\Inputs\Base de Datos - Mar Chiquita.xlsx")
+poblacion=pd.read_excel("./Base de Datos - Mar Chiquita.xlsx")
 poblacion[VAR_NOMBRE_INDEC] = poblacion[VAR_NOMBRE_MANUAL].str.normalize('NFD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.strip()
 poblacion = poblacion[poblacion[VAR_NOMBRE_INDEC].isin(listado_localidades_parajes)]
 listado_poblados = poblacion[VAR_NOMBRE_INDEC].unique()
@@ -95,11 +95,11 @@ base_localidades_parajes[VAR_HABITANTES_HOVER] = base_localidades_parajes.apply(
 
 base_final_paraje = base_localidades_parajes[base_localidades_parajes['Tipo']=='Paraje']
 
-base_final_paraje.to_file('pages/mapa_normativo/data/Inputs/Parajes_Poblacion.geojson', driver = 'GeoJSON')
+base_final_paraje.to_file('./Parajes_Poblacion.geojson', driver = 'GeoJSON')
 
 base_final_localidad = base_localidades_parajes[base_localidades_parajes['Tipo']=='Localidad']
 
-base_final_localidad.to_file('pages/mapa_normativo/data/Inputs/Localidad_Poblacion.geojson', driver = 'GeoJSON')
+base_final_localidad.to_file('./Localidad_Poblacion.geojson', driver = 'GeoJSON')
 
 
 
