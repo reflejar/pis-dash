@@ -20,7 +20,7 @@ pd.options.display.float_format = '{:.0f}'.format
 import pickle
 from itertools import combinations
 
-SAVE_FOLDER = 'pages/mapa_normativo/data/'
+SAVE_FOLDER = '../'
 
 #Definir parametros de zonas de exclusion y amortiguamiento
 local_excl=150
@@ -44,7 +44,7 @@ sup_agua_excl=25
 #### Localidades y parajes #####
 
 #Leemos input y los transformamos a la proyeccion que usamos
-localidades=gpd.read_file(f"{SAVE_FOLDER}Inputs/Localidad_Poblacion.geojson")
+localidades=gpd.read_file(f"./Localidad_Poblacion.geojson")
 localidades = localidades.to_crs("epsg:4326")
 
 #Creamos las zonas de excl y amort haciendo un buffer (borde) al rededor de las geometrias. Cambiamos la proyeccion para que el buffer se mida en metros
@@ -62,12 +62,12 @@ localidades_amort= localidades_amort.to_crs('epsg:4326')
 localidades_amort = localidades_amort.overlay(localidades_excl, how='difference')
 localidades_excl = localidades_excl.overlay(localidades, how='difference')
 
-localidades_excl.to_parquet(f"{SAVE_FOLDER}localidades_excl.parquet")
-localidades_amort.to_parquet(f"{SAVE_FOLDER}localidades_amort.parquet")
+localidades_excl.to_parquet(f"../localidades_excl.parquet")
+localidades_amort.to_parquet(f"../localidades_amort.parquet")
 
 
 #PARAJES
-parajes=gpd.read_file(f"{SAVE_FOLDER}Inputs/Parajes_Poblacion.geojson")
+parajes=gpd.read_file(f"./Parajes_Poblacion.geojson")
 parajes=parajes.reset_index()
 
 parajes = parajes.to_crs("epsg:4326")
@@ -86,24 +86,24 @@ parajes_amort = parajes_amort.overlay(parajes_excl, how='difference')
 parajes_excl = parajes_excl.overlay(parajes, how='difference')
 
 # Guardar parquet de parajes excl y amor
-parajes_excl.to_parquet(f"{SAVE_FOLDER}parajes_excl.parquet")
-parajes_amort.to_parquet(f"{SAVE_FOLDER}parajes_amort.parquet")
+parajes_excl.to_parquet(f"../parajes_excl.parquet")
+parajes_amort.to_parquet(f"../parajes_amort.parquet")
 
 
 #Unir y guardar localidades y parajes
 localidades_parajes=pd.concat([localidades,parajes],ignore_index=True)
 localidades_parajes=localidades_parajes.drop(["index"],axis=1)
 localidades_parajes=localidades_parajes.reset_index()
-localidades_parajes.to_parquet(f"{SAVE_FOLDER}localidades_parajes.parquet")
+localidades_parajes.to_parquet(f"../localidades_parajes.parquet")
 
 #Transformar a json (para mapa) y guardar
 localidades_parajes_geojson=json.loads(localidades_parajes.to_json(na="keep"))
-with open(f'{SAVE_FOLDER}localidades_parajes_geojson.pkl', 'wb') as f:
+with open(f'../localidades_parajes_geojson.pkl', 'wb') as f:
     pickle.dump(localidades_parajes_geojson, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 ################################################### ESCUELAS ###########################################
 
-escuelas_en_parcelas = gpd.read_file(f"{SAVE_FOLDER}Inputs/escuelas_en_parcelas.geojson")
+escuelas_en_parcelas = gpd.read_file(f"./escuelas_en_parcelas.geojson")
 # escuelas_en_parcelas['característica.telefónica']=escuelas_en_parcelas['característica.telefónica'].astype(str).replace('\.0', '', regex=True)
 # escuelas_en_parcelas['teléfono']=escuelas_en_parcelas['teléfono'].astype(str).replace('\.0', '', regex=True)
 # escuelas_en_parcelas.reset_index(inplace=True)
@@ -123,12 +123,12 @@ for idx in [i for i, c in enumerate(escuelas_en_parcelas.columns) if c.startswit
 for idx in [i for i, c in enumerate(escuelas_en_parcelas.columns) if c.startswith("direccion")]:
     escuelas_en_parcelas.iloc[:, idx] = escuelas_en_parcelas.iloc[:, idx].fillna("-")    
 
-escuelas_en_parcelas.to_parquet(f"{SAVE_FOLDER}escuelas_parcelas.parquet")
+escuelas_en_parcelas.to_parquet(f"../escuelas_parcelas.parquet")
 
 
 #Transformar a json (para mapa) y guardar
 escuelas_en_parcelas_geojson=json.loads(escuelas_en_parcelas.to_json(na="keep"))
-with open(f'{SAVE_FOLDER}escuelas_parcelas_geojson.pkl', 'wb') as f:
+with open(f'../escuelas_parcelas_geojson.pkl', 'wb') as f:
     pickle.dump(escuelas_en_parcelas_geojson, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 escuelas_en_parcelas = escuelas_en_parcelas.to_crs("epsg:4326")
@@ -149,8 +149,8 @@ escuelas_amort= escuelas_amort.to_crs('epsg:4326')
 escuelas_amort = escuelas_amort.overlay(escuelas_excl, how='difference')
 escuelas_excl = escuelas_excl.overlay(escuelas_en_parcelas, how='difference')
 
-escuelas_excl.to_parquet(f"{SAVE_FOLDER}escuelas_parcelas_excl.parquet")
-escuelas_amort.to_parquet(f"{SAVE_FOLDER}escuelas_parcelas_amort.parquet")
+escuelas_excl.to_parquet(f"../escuelas_parcelas_excl.parquet")
+escuelas_amort.to_parquet(f"../escuelas_parcelas_amort.parquet")
 
 # escuelas=gpd.read_file("./Inputs/escuelas.geojson")
 # escuelas=escuelas.reset_index()
@@ -177,15 +177,15 @@ escuelas_amort.to_parquet(f"{SAVE_FOLDER}escuelas_parcelas_amort.parquet")
 
 
 ################################################### AGUAS ###########################################
-cuerpos=gpd.read_file(f"{SAVE_FOLDER}Inputs/cuerpos.geojson",encoding="ASCI")
+cuerpos=gpd.read_file(f"./cuerpos.geojson",encoding="ASCI")
 cuerpos=cuerpos.reset_index()
 
-cuerpos.to_parquet(f"{SAVE_FOLDER}cuerpos.parquet")
+cuerpos.to_parquet(f"../cuerpos.parquet")
 
 
 #Transformar a json (para mapa) y guardar
 cuerpos_geojson=json.loads(cuerpos.to_json(na="keep"))
-with open(f'{SAVE_FOLDER}cuerpos_geojson.pkl', 'wb') as f:
+with open(f'../cuerpos_geojson.pkl', 'wb') as f:
     pickle.dump(cuerpos_geojson, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 cuerpos = cuerpos.to_crs("epsg:4326")
@@ -196,7 +196,7 @@ cuerpos_excl.geometry = cuerpos_excl.geometry.buffer(sup_agua_excl, 10)
 cuerpos_excl= cuerpos_excl.to_crs('epsg:4326')  
 
 
-cursos=gpd.read_file(f"{SAVE_FOLDER}Inputs/cursos_agua.geojson")
+cursos=gpd.read_file(f"./cursos_agua.geojson")
 cursos=cursos.reset_index()
 cursos = cursos.to_crs("epsg:4326")
 
@@ -210,25 +210,25 @@ cursos_excl= cursos_excl.to_crs('epsg:4326')
 cuerpos_excl = cuerpos_excl.overlay(cuerpos, how='difference')
 cursos_excl = cursos_excl.overlay(cursos, how='difference')
 
-cuerpos_excl.to_parquet(f"{SAVE_FOLDER}cuerpos_excl.parquet")
-cursos_excl.to_parquet(f"{SAVE_FOLDER}cursos_excl.parquet")
+cuerpos_excl.to_parquet(f"../cuerpos_excl.parquet")
+cursos_excl.to_parquet(f"../cursos_excl.parquet")
 
 
 ###### Generar areas de exclusion y amortiguamiento totales
 
-localidades_excl=gpd.read_parquet(f"{SAVE_FOLDER}localidades_excl.parquet")
-localidades_amort=gpd.read_parquet(f"{SAVE_FOLDER}localidades_amort.parquet")
-parajes_excl=gpd.read_parquet(f"{SAVE_FOLDER}parajes_excl.parquet")
-parajes_amort=gpd.read_parquet(f"{SAVE_FOLDER}parajes_amort.parquet")
-escuelas_parcelas_excl=gpd.read_parquet(f"{SAVE_FOLDER}escuelas_parcelas_excl.parquet")
-escuelas_parcelas_amort=gpd.read_parquet(f"{SAVE_FOLDER}escuelas_parcelas_amort.parquet")
-cuerpos_excl=gpd.read_parquet(f"{SAVE_FOLDER}cuerpos_excl.parquet")
-cursos_excl=gpd.read_parquet(f"{SAVE_FOLDER}cursos_excl.parquet")
+localidades_excl=gpd.read_parquet(f"../localidades_excl.parquet")
+localidades_amort=gpd.read_parquet(f"../localidades_amort.parquet")
+parajes_excl=gpd.read_parquet(f"../parajes_excl.parquet")
+parajes_amort=gpd.read_parquet(f"../parajes_amort.parquet")
+escuelas_parcelas_excl=gpd.read_parquet(f"../escuelas_parcelas_excl.parquet")
+escuelas_parcelas_amort=gpd.read_parquet(f"../escuelas_parcelas_amort.parquet")
+cuerpos_excl=gpd.read_parquet(f"../cuerpos_excl.parquet")
+cursos_excl=gpd.read_parquet(f"../cursos_excl.parquet")
 
-cuerpos=gpd.read_parquet(f"{SAVE_FOLDER}cuerpos.parquet")
-localidades_parajes=gpd.read_parquet(f"{SAVE_FOLDER}localidades_parajes.parquet")
-escuelas_parcelas=gpd.read_parquet(f"{SAVE_FOLDER}escuelas_parcelas.parquet")
-reservas=gpd.read_parquet(f"{SAVE_FOLDER}reservas.parquet")
+cuerpos=gpd.read_parquet(f"../cuerpos.parquet")
+localidades_parajes=gpd.read_parquet(f"../localidades_parajes.parquet")
+escuelas_parcelas=gpd.read_parquet(f"../escuelas_parcelas.parquet")
+reservas=gpd.read_parquet(f"../reservas.parquet")
 
 # puntos_interes=pd.concat([cuerpos,localidades_parajes,escuelas_parcelas,reservas])
 puntos_interes=pd.concat([cuerpos,localidades_parajes,escuelas_parcelas])
@@ -254,16 +254,16 @@ total_amort = total_amort.dissolve().explode(ignore_index=True,index_parts=False
 total_excl.reset_index(inplace=True)
 total_amort.reset_index(inplace=True)
 
-total_excl.to_parquet(f"{SAVE_FOLDER}total_excl.parquet")
-total_amort.to_parquet(f"{SAVE_FOLDER}total_amort.parquet")
+total_excl.to_parquet(f"../total_excl.parquet")
+total_amort.to_parquet(f"../total_amort.parquet")
 
 total_excl_geojson=json.loads(total_excl.to_json(na="keep"))
 total_amort_geojson=json.loads(total_amort.to_json(na="keep"))
 
-with open(f'{SAVE_FOLDER}total_excl_geojson.pkl', 'wb') as f:
+with open(f'../total_excl_geojson.pkl', 'wb') as f:
     pickle.dump(total_excl_geojson, f, protocol=pickle.HIGHEST_PROTOCOL)
 
-with open(f'{SAVE_FOLDER}total_amort_geojson.pkl', 'wb') as f:
+with open(f'../total_amort_geojson.pkl', 'wb') as f:
     pickle.dump(total_amort_geojson, f, protocol=pickle.HIGHEST_PROTOCOL)
     
     
@@ -292,22 +292,22 @@ sum(total_excl_area)/100
 ################################################### RESERVAS ###########################################
 
 
-reservas=gpd.read_file(f"{SAVE_FOLDER}Inputs/Reservas.geojson")
+reservas=gpd.read_file(f"./Reservas.geojson")
 reservas=reservas.reset_index()
 
 #Agregar la palabra "Reserva" al nombre si no esta 
 reservas.loc[~reservas['Name'].str.contains("reserva", case=False),"Name"] = "Reserva "+reservas.loc[~reservas['Name'].str.contains("reserva", case=False),"Name"]
-reservas.to_parquet(f"{SAVE_FOLDER}reservas.parquet")
+reservas.to_parquet(f"../reservas.parquet")
 
 #Transformar a json (para mapa) y guardar
 reservas_geojson=json.loads(reservas.to_json(na="keep"))
-with open(f'{SAVE_FOLDER}reservas_geojson.pkl', 'wb') as f:
+with open(f'../reservas_geojson.pkl', 'wb') as f:
     pickle.dump(reservas_geojson, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 ################################################### CURSOS ###########################################
 
-cursos=gpd.read_file(f"{SAVE_FOLDER}Inputs/cursos_agua.geojson")
-cursos.to_parquet(f"{SAVE_FOLDER}cursos_agua.parquet")
+cursos=gpd.read_file(f"./cursos_agua.geojson")
+cursos.to_parquet(f"../cursos_agua.parquet")
 
 
 
@@ -413,5 +413,5 @@ for i in list(combinaciones):
     amortiguacion=pd.concat([amortiguacion,amortiguacion_x])
 amortiguacion.reset_index(inplace=True)
 
-amortiguacion.to_parquet(f"{SAVE_FOLDER}amortiguacion.parquet")
-exclusion.to_parquet(f"{SAVE_FOLDER}exclusion.parquet")
+amortiguacion.to_parquet(f"../amortiguacion.parquet")
+exclusion.to_parquet(f"../exclusion.parquet")

@@ -80,16 +80,17 @@ FooterNormativo = dbc.Row(dbc.Col(
         html.Br(),        
         html.H4(html.Strong("JURISPRUDENCIA MUNICIPAL:"), className="text-white"),
         html.P([
-            html.Ul([
-                html.Li(["Jurisprudencia::Municipalidad de Mar Chiquita, Provincia de Buenos AiresORGANISMO: Juzgado Civil y Comercial Nº 4. Departamento Judicial de Mar del Plata. Provincia de Buenos Aires.AUTOS: Corrado Souto Guillermo Cristian y otros c/ Agropecuaria SA y otros s/ Accion Preventivo Daños."]),
-                html.Li("Sintesis del fallo:Se interpone ante la justicia provincial una acción preventiva de daño por un grupo de vecinos y vecinas solicitando protección de las fumigaciones/pulverizaciones con agrotóxicos respecto a las viviendas, escuelas y cursos de agua.- En razón de que los cursos de agua derivan al Mar Argentino (recurso interjurisdiccional), el juez se declara incompetente por considerar que el caso corresponde que sea tramitado ante la justicia federal. No obstante hace lugar a la cautelares solicitadas: "),
-                html.Ol([
-                    html.Li("Prohibición de fumigar a menos de 1.500 mts de zonas pobladas, escuelas rurales, núcleos de viviendas habitadas, cursos de agua tales como arroyos lagunas y mar argentino, postas sanitarias, centros asistenciales, villas recreativas y deportivas"),
-                    html.Li("Requerir a las demandadas informen si poseen plantas de almacenamiento, tratamiento y/o disposición final de agroquímicos determinando su ubicación y en su caso justificando su habilitación municipal e inscripción en el Registro Provincial de Generadores y Operadores de Residuos Especiales con la totalidad de la información exigible; "),
-                    html.Li("ordenar a las demandadas y/o a las empresas que se dediquen a la aplicación terrestre de agroquímicos con fines comerciales se abstengan de circular con los equipos de aplicación terrestre por centros poblados y en caso de extrema necesidad, hacerlo sin carga, limpios y sin picos pulverizadores ; "),
-                    html.Li("ordenar a las demandadas que se realice el procedimiento obligatorio para reducir los residuos fitosanitarios en los envaces vacios y para el lavado de envases rígidos de plaguicidas miscibles o dispersables en agua y "),
-                    html.Li("requerir a las demandadas que presenten: estudio de impacto ambiental por la actividad desarrollada, póliza de Seguro Ambiental Obligatorio e inscripciones obligatorias en registros de generadores de residuos especiales y productores agropecuarios."),
-                ])
+            "ORGANISMO: Juzgado Civil y Comercial Nº 4. Departamento Judicial de Mar del Plata. Provincia de Buenos Aires.", html.Br(),
+            "AUTOS: Corrado Souto Guillermo Cristian y otros c/ Agropecuaria SA y otros s/ Acción Preventivo Daños.", html.Br(),
+            "Síntesis del fallo: Se interpone ante la justicia provincial una acción preventiva de daño por un grupo de vecinos y vecinas solicitando protección de las fumigaciones/pulverizaciones con agrotóxicos respecto a las viviendas, escuelas y cursos de agua.- En razón de que los cursos de agua derivan al Mar Argentino (recurso interjurisdiccional), el juez se declara incompetente por considerar que el caso corresponde que sea tramitado ante la justicia federal. No obstante hace lugar a la cautelares solicitadas:", html.Br()
+        ]),
+        html.P([
+            html.Ol([
+                html.Li("Prohibición de fumigar a menos de 1.500 mts de zonas pobladas, escuelas rurales, núcleos de viviendas habitadas, cursos de agua tales como arroyos lagunas y mar argentino, postas sanitarias, centros asistenciales, villas recreativas y deportivas."),
+                html.Li("Requerir a las demandadas informen si poseen plantas de almacenamiento, tratamiento y/o disposición final de agroquímicos determinando su ubicación y en su caso justificando su habilitación municipal e inscripción en el Registro Provincial de Generadores y Operadores de Residuos Especiales con la totalidad de la información exigible;"),
+                html.Li("Ordenar a las demandadas y/o a las empresas que se dediquen a la aplicación terrestre de agroquímicos con fines comerciales se abstengan de circular con los equipos de aplicación terrestre por centros poblados y en caso de extrema necesidad, hacerlo sin carga, limpios y sin picos pulverizadores;"),
+                html.Li("Ordenar a las demandadas que se realice el procedimiento obligatorio para reducir los residuos fitosanitarios en los envases vacíos y para el lavado de envases rígidos de plaguicidas miscibles o dispersables en agua y"),
+                html.Li("Requerir a las demandadas que presenten: estudio de impacto ambiental por la actividad desarrollada, póliza de Seguro Ambiental Obligatorio e inscripciones obligatorias en registros de generadores de residuos especiales y productores agropecuarios."),
             ])
         ]),
         html.Br(),
