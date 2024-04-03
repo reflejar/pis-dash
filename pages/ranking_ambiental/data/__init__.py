@@ -30,6 +30,8 @@ diccionario_municipios = dicc.set_index('Municipio1')['Municipio2'].to_dict()
 
 # Leer archivo parquet
 escuelas=pd.read_parquet('pages/ranking_ambiental/data/escuelas_normativa.parquet')
+escuelas['Exclusión aérea'] = escuelas['Exclusión aérea'].fillna(0).astype(int).astype(str)
+escuelas['Exclusión aérea'] = escuelas['Exclusión aérea'].apply(lambda x: x if int(x) > 2000 else f'2000*')
 transparencia=pd.read_parquet('pages/ranking_ambiental/data/transparencia_normativa.parquet')
 agua=pd.read_parquet('pages/ranking_ambiental/data/agua_normativa.parquet')
 apiarios=pd.read_parquet('pages/ranking_ambiental/data/apiarios_normativa.parquet')
