@@ -57,7 +57,7 @@ establec_educativos_completo = establec_educativos_completo.rename(columns = {VA
 establec_educativos_completo[VAR_CODIGO_UNICO] = establec_educativos_completo[VAR_COD_POSTAL] + ' - ' +  establec_educativos_completo[VAR_CUE].astype(str) + ' - ' + establec_educativos_completo[VAR_SEDE_ANEXO_EXT]
 
 # Base de datos actualizada manualmente
-escuelas_informacion_manual = pd.read_csv('est_educativos_actualizacion_provincial.csv', encoding = 'latin1', on_bad_lines='skip', sep = ";", decimal=",")
+escuelas_informacion_manual = pd.read_csv('est_educativos_actualizacion_provincial.csv', encoding = 'utf-8', on_bad_lines='skip', sep = ";", decimal=",")
 escuelas_informacion_manual = escuelas_informacion_manual.dropna(how= 'all', axis=0)
 escuelas_informacion_manual = escuelas_informacion_manual.dropna(how= 'all', axis=1)
 escuelas_informacion_manual[VAR_CP_MANUAL] =  escuelas_informacion_manual[VAR_CP_MANUAL].astype(int).astype(str).replace({'0': 'S/CP'})

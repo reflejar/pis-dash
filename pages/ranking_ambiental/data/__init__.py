@@ -30,12 +30,12 @@ diccionario_municipios = dicc.set_index('Municipio1')['Municipio2'].to_dict()
 
 # Leer archivo parquet
 escuelas=pd.read_parquet('pages/ranking_ambiental/data/escuelas_normativa.parquet')
-escuelas['Exclusión aérea'] = escuelas['Exclusión aérea'].fillna(0).astype(int).astype(str)
-escuelas['Exclusión aérea'] = escuelas['Exclusión aérea'].apply(lambda x: x if int(x) > 2000 else f'2000*')
 transparencia=pd.read_parquet('pages/ranking_ambiental/data/transparencia_normativa.parquet')
 agua=pd.read_parquet('pages/ranking_ambiental/data/agua_normativa.parquet')
 apiarios=pd.read_parquet('pages/ranking_ambiental/data/apiarios_normativa.parquet')
 poblaciones=pd.read_parquet('pages/ranking_ambiental/data/poblaciones_normativa.parquet')
+poblaciones['Zona Urbana – Exclusión Aérea'] = poblaciones['Zona Urbana – Exclusión Aérea'].fillna(0).astype(int).astype(str)
+poblaciones['Zona Urbana – Exclusión Aérea'] = poblaciones['Zona Urbana – Exclusión Aérea'].apply(lambda x: x if int(x) > 2000 else f'2000*')
 agroecologia=pd.read_parquet('pages/ranking_ambiental/data/agroecologia_normativa.parquet')
 #etuiquetas para el mapa
 etiquetas=pd.read_parquet('pages/ranking_ambiental/data/datos_etiquetas_mapas.parquet')
